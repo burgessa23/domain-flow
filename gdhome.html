@@ -16,7 +16,6 @@
 
 <link rel="Stylesheet" type="text/css" href="./gdhome_files/gd_2014411.min.css">
 <link rel="stylesheet" href="owl-carousel/owl.carousel.min.css">
-<link rel="stylesheet" href="owl-carousel/owl.theme.default.min.css">
 </head>
 <body>
 <div id="MobileBodyContainer" style="min-height: 568px;">
@@ -1296,21 +1295,7 @@ function loadCartItemCount() {
 var cartItemCountContainer = $("#cart-item-count");
 var sideMenuCartContainer = $("#sd-mn-cart");
 var sideMenuCartCountContainer = $("#sd-mn-cart-count");
-$.ajax({
-type: "GET",
-contentType: "application/json; charset=utf-8",
-url: "http://m.nodomain/viewcontrols/apple/shared/ajaxhandlers/applicationheaderajaxhandler.ashx?rand=121144&ajaxmethod=getcartitemcount",
-data: '',
-dataType: "json",
-success: function (count) {
-if (count != '0') {
-cartItemCountContainer.html(count);
-cartItemCountContainer.show();
-sideMenuCartCountContainer.html(count);
-sideMenuCartContainer.show();
-}
-}
-});
+
 $("#menu-btn").click(function () {
 if (typeof (_gaq) != "undefined") {
 _gaq.push(['_trackEvent', 'Shop', 'Click Web Header', 'Click Menu', 1]);
@@ -1490,7 +1475,6 @@ $(document).bind("ready", function() {
 loadingModal.initialize();
 $(".owl-carousel").owlCarousel({
       slideSpeed : 300,
-      paginationSpeed : 400,
       dots: false,
       items: 1,
       autoplay:true,
@@ -1559,5 +1543,5 @@ window.open(linkUrl);
 }
 }
 </script>
-<script src="owl-carousel/owl.carousel.js"></script>
+<script src="owl-carousel/owl.carousel.min.js" defer></script>
 </body></html>
