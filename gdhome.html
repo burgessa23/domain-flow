@@ -12,8 +12,11 @@
 <link href="http://img1.wsimg.com/mobile/img/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
 <link href="http://img1.wsimg.com/mobile/img/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
 <meta name="apple-mobile-web-app-capable" content="no">
-<link rel="Stylesheet" type="text/css" href="./gdhome_files/gd_2014411.min.css">
 
+
+<link rel="Stylesheet" type="text/css" href="./gdhome_files/gd_2014411.min.css">
+<link rel="stylesheet" href="owl-carousel/owl.carousel.min.css">
+<link rel="stylesheet" href="owl-carousel/owl.theme.default.min.css">
 </head>
 <body>
 <div id="MobileBodyContainer" style="min-height: 568px;">
@@ -970,22 +973,50 @@ Email Us
 </div>
 <input name="hdnSearchPage" type="hidden" value="">
 </form>
-<div id="domains423" onclick="window.location=&#39;DomainsTLD.html&#39;;">
-<div class="center" style="color:#fff;background:#FF8B04;box-shadow:inset 0 0 50px #D76800;padding:30px 10px 40px">
-<h2 style="color:#fff;font-weight:bold;line-height:0"><span>Explore</span> <span style="font-size:55px;position:relative;bottom:8px;">100</span><span>s</span><br><span style="position:relative;bottom:10px">of new domains.</span></h2>
-<div class="margin-tp-sm" style="font-size:16px">
-<span style="padding-right:4px">.club</span>
-<span style="opacity:0.5">|</span>
-<span style="padding:0 4px">.email</span>
-<span style="opacity:0.5">|</span>
-<span style="padding:0 4px">.guru</span>
-<span style="opacity:0.5">|</span>
-<span style="padding:0 4px">.reviews</span>
-<span style="opacity:0.5">|</span>
-<span style="padding-left:4px">.today</span>
+
+
+<!-- start MRQ -->
+<div class="owl-carousel">
+  <div>
+    <div id="domainsMain" onclick="window.location=&#39;DomainSearch.html&#39;;">
+      <div class="center" style="color:#fff;background:#FF8B04;box-shadow:inset 0 0 50px #D76800;padding:30px 10px 40px">
+        <h2 style="color:#fff;font-weight:bold;line-height:0"><span>Buy</span> <span style="font-size:55px;position:relative;bottom:8px;">your</span><span></span><br><span style="position:relative;bottom:10px">domain now.</span></h2>
+        <div class="margin-tp-sm" style="font-size:16px">
+          <span style="padding-right:4px">.com</span>
+          <span style="opacity:0.5">|</span>
+          <span style="padding:0 4px">.org</span>
+          <span style="opacity:0.5">|</span>
+          <span style="padding:0 4px">.edu</span>
+          <span style="opacity:0.5">|</span>
+          <span style="padding:0 4px">.mil</span>
+          <span style="opacity:0.5">|</span>
+          <span style="padding-left:4px">.gov</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div id="domains423" onclick="window.location=&#39;DomainsTLD.html&#39;;">
+    <div class="center" style="color:#fff;background:#FF8B04;box-shadow:inset 0 0 50px #D76800;padding:30px 10px 40px">
+      <h2 style="color:#fff;font-weight:bold;line-height:0"><span>Explore</span> <span style="font-size:55px;position:relative;bottom:8px;">100</span><span>s</span><br><span style="position:relative;bottom:10px">of new domains.</span></h2>
+      <div class="margin-tp-sm" style="font-size:16px">
+        <span style="padding-right:4px">.club</span>
+        <span style="opacity:0.5">|</span>
+        <span style="padding:0 4px">.email</span>
+        <span style="opacity:0.5">|</span>
+        <span style="padding:0 4px">.guru</span>
+        <span style="opacity:0.5">|</span>
+        <span style="padding:0 4px">.reviews</span>
+        <span style="opacity:0.5">|</span>
+        <span style="padding-left:4px">.today</span>
+      </div>
+    </div>
+    </div>
 </div>
 </div>
-</div>
+<!-- end MRQ -->
+
+
 <div class="margin-tp-med">
 <div id="site-links">
 <div id="main-site-links">
@@ -1457,6 +1488,15 @@ history.replaceState(JSON.stringify({ name: "home", id: "", href: window.locatio
 <script type="text/javascript">
 $(document).bind("ready", function() {
 loadingModal.initialize();
+$(".owl-carousel").owlCarousel({
+      slideSpeed : 300,
+      paginationSpeed : 400,
+      dots: false,
+      items: 1,
+      autoplay:true,
+      autoplayTimeout:3000,
+      loop: true
+});
 });
 var loadingModal = {
 modal: null,
@@ -1519,4 +1559,5 @@ window.open(linkUrl);
 }
 }
 </script>
+<script src="owl-carousel/owl.carousel.js"></script>
 </body></html>
