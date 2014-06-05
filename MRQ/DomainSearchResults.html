@@ -1887,7 +1887,7 @@ _gaq.push(['_trackEvent', 'Shop', 'Click Web Header', 'Click Cart', 1]);
 </script>
 <script type="text/javascript">
 function SetErrorMessageText(html) {
-if (html != null && html != undefined && html.indexOf("<p>") == -1)
+if (html !== null && html !== undefined && html.indexOf("<p>") == -1)
 {
 html = "<p>" + html + "</p>";
 }
@@ -1902,7 +1902,7 @@ $("#divErrorMessage").html("").hide();
 </script>
 <script type="text/javascript">
 function SetInfoMessageText(html) {
-if (html != null && html != undefined && html.indexOf("<p>") == -1)
+if (html !== null && html !== undefined && html.indexOf("<p>") == -1)
 {
 html = "<p>" + html + "</p>";
 }
@@ -1917,7 +1917,7 @@ $("#divInfoMessage").html("").hide();
 </script>
 <script type="text/javascript">
 $("#btn-domain-search").click(function () {
-if ($("#domain-search").val().length == 0) {
+if ($("#domain-search").val().length === 0) {
 SetErrorMessageText("Please enter a domain name to search on.");
 return false;
 }

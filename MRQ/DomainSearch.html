@@ -1042,14 +1042,14 @@ Email Us
 </ul>
 </div>
 </div>
-<div id="eoi-learn-more" class="white-bg margin-tp-med pad-med" onclick="window.location=&#39;http://m.nodomain/tlds/gtld.aspx?ci=84734&#39;;">
+<div id="eoi-learn-more" class="white-bg margin-tp-med pad-med" onclick="window.location=&#39;DomainsTLD.html&#39;;">
 <div style="font-size:24px;">Game Changer
 </div>
 <div data-src="gc-img" class="margin-tp lazyload-img gc-img"></div>
 <div class="pad margin-bt" style="background-color:#8B8B8B;color:#ffffff;">
 <div style="font-size:24px;">700+ new domain extensions</div>
 </div>
-<a style="font-size:13px;text-decoration:none;" class="clickable" href="http://m.nodomain/tlds/gtld.aspx?ci=84734">Learn more</a>
+<a style="font-size:13px;text-decoration:none;" class="clickable" href="DomainsTLD.html">Learn more</a>
 </div>
 <div class="white-bg margin-tp-med pad-med">
 <div style="font-size:24px;">Why GoDaddy?</div>
@@ -1250,21 +1250,6 @@ function loadCartItemCount() {
 var cartItemCountContainer = $("#cart-item-count");
 var sideMenuCartContainer = $("#sd-mn-cart");
 var sideMenuCartCountContainer = $("#sd-mn-cart-count");
-$.ajax({
-type: "GET",
-contentType: "application/json; charset=utf-8",
-url: "http://m.nodomain/viewcontrols/apple/shared/ajaxhandlers/applicationheaderajaxhandler.ashx?rand=108985&ajaxmethod=getcartitemcount",
-data: '',
-dataType: "json",
-success: function (count) {
-if (count != '0') {
-cartItemCountContainer.html(count);
-cartItemCountContainer.show();
-sideMenuCartCountContainer.html(count);
-sideMenuCartContainer.show();
-}
-}
-});
 $("#menu-btn").click(function () {
 if (typeof (_gaq) != "undefined") {
 _gaq.push(['_trackEvent', 'Shop', 'Click Web Header', 'Click Menu', 1]);
