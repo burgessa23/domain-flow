@@ -961,17 +961,9 @@
       <div id="promoBanner" class="promo-banner" style="display: none;">
       </div>
       <div id="ds-cont">
-        <form id="SearchForm" name="SearchForm" class="ajax-form" data-loadingtext="Searching" method="get" action="DomainSearchResults.html">
-          <div class="table white-bg pad-tp-bt-sm pad-rt-sm gray-brd">
-            <div class="pad-rt max">
-              <input id="domain-search" name="txtDomain" type="text" class="dmn-srch" maxlength="71" value="" placeholder="Search for a new domain">
-            </div>
-            <div class="margin-lt right">
-              <button id="btn-domain-search" type="button" class="btn-sm btn-action clickable" name="forumsubmitbutton" value="Go" onclick="window.location='DomainSearchResults.html'">Go</button>
-            </div>
-          </div>
-          <input name="hdnSearchPage" type="hidden" value="">
-        </form>
+      <!-- <h2 style="padding:8px;background-color:#fff;">
+        GoDaddy
+      </h2> -->
 
 
         <!-- start MRQ -->
@@ -1015,8 +1007,18 @@
         </div>
         <!-- end MRQ -->
 
-
-        <div class="margin-tp-med">
+        <form id="SearchForm" name="SearchForm" class="ajax-form" data-loadingtext="Searching" method="get" action="DomainSearchResults.html">
+          <div class="table white-bg pad-tp-bt-sm pad-rt-sm" style="border-bottom: 1px solid #999;border-top: 1px solid #999;">
+            <div class="pad-rt max">
+              <input id="domain-search" name="txtDomain" type="text" class="dmn-srch" maxlength="71" value="" placeholder="Search for a new domain">
+            </div>
+            <div class="margin-lt right">
+              <button id="btn-domain-search" type="button" class="btn-sm btn-action clickable" name="forumsubmitbutton" value="Go" onclick="window.location='DomainSearchResults.html'">Go</button>
+            </div>
+          </div>
+          <input name="hdnSearchPage" type="hidden" value="">
+        </form>
+        <div>
           <div id="site-links">
             <div id="main-site-links">
               <div id="site-link-domains" class="row pad font-sm main-bg sep-bottom row-clickable" onclick="clickSiteLink(&#39;Find domain names&#39;, &#39;DomainSearch.html', &#39;home&#39;, &#39;false&#39;)">
