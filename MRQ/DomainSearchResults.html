@@ -1872,21 +1872,7 @@ function loadCartItemCount() {
 var cartItemCountContainer = $("#cart-item-count");
 var sideMenuCartContainer = $("#sd-mn-cart");
 var sideMenuCartCountContainer = $("#sd-mn-cart-count");
-$.ajax({
-type: "GET",
-contentType: "application/json; charset=utf-8",
-url: "http://m.nodomain/viewcontrols/apple/shared/ajaxhandlers/applicationheaderajaxhandler.ashx?exppurchasepath=false&rand=970882&ajaxmethod=getcartitemcount",
-data: '',
-dataType: "json",
-success: function (count) {
-if (count != '0') {
-cartItemCountContainer.html(count);
-cartItemCountContainer.show();
-sideMenuCartCountContainer.html(count);
-sideMenuCartContainer.show();
-}
-}
-});
+
 $("#menu-btn").click(function () {
 if (typeof (_gaq) != "undefined") {
 _gaq.push(['_trackEvent', 'Shop', 'Click Web Header', 'Click Menu', 1]);
@@ -2124,20 +2110,12 @@ $(this).parent().slideUp();
 $("div:first-child", pulldownHead).first().html(html);
 $(".mn-spr-chev-up", pulldownHead).removeClass("mn-spr-chev-up").addClass("mn-spr-chev-dn");
 });
-$(window).load(function() {
-try {
-var url = 'domainsearchtracker?dsq=' + 'dsfhsfhdjk.com' + '&dsa=available';
-setTimeout(function() {
-var gaq = _gaq || [];
-gaq.push(['_trackPageview', url]);
-}, 1000);
-} catch(ex) { }
-});
+
 </script>
 <script type="text/javascript" language="javascript">
 $(document).bind("ready", function () {
 var appCache = window.applicationCache;
-if (appCache == null || appCache.status != 0) setCurrentCurrencyDisplay();
+if (appCache === null || appCache.status !== 0) setCurrentCurrencyDisplay();
 });
 function setCurrentCurrencyDisplay() {
 $.get("http://m.nodomain/viewcontrols/shared/ajaxhandlers/cultureajaxhandler.ashx?exppurchasepath=false&rand=808898&ajaxmethod=getcurrencydisplay",
