@@ -57,6 +57,7 @@ background-size: auto 67px;
 <link href="http://img1.wsimg.com/mobile/img/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
 <meta name="apple-mobile-web-app-capable" content="no">
 <link rel="Stylesheet" type="text/css" href="./Domain Search_files/gd_2014411.min.css">
+<link rel="stylesheet" href="owl-carousel/owl.carousel.min.css">
 </head><body>
 <div id="MobileBodyContainer" style="min-height: 568px;">
 <div id="sd-mn">
@@ -1002,72 +1003,282 @@ Email Us
 <div id="promoBanner" class="promo-banner" style="display: none;">
 </div>
 <div id="ds-lp">
-<div class="white-bg pad-bt-med">
-<div class="pad-lt-rt-med pad-tp-bt" style="font-size:30px;">Search for a domain</div>
+  <div style="background-color: #7db701;">
+  <h1 class="pad-lt-rt-med pad-tp-bt" style="font-size:30px;background-color:#fff;">Search for a domain</h1>
+<!-- start MRQ -->
+<div class="owl-carousel">
+  <div>
+    <div id="domainsMain" onclick="window.location=&#39;DomainSearch.html&#39;;">
+      <div class="center" style="color:#fff;background:#FF8B04;box-shadow:inset 0 0 50px #D76800;padding:30px 10px 40px">
+        <h2 style="color:#fff;font-weight:bold;line-height:0"><span>Robin's</span> <span style="font-size:55px;position:relative;bottom:8px;">great</span><span></span><br><span style="position:relative;bottom:10px">design #1.</span></h2>
+        <div class="margin-tp-sm" style="font-size:16px">
+          <span style="padding-right:4px">.com</span>
+          <span style="opacity:0.5">|</span>
+          <span style="padding:0 4px">.org</span>
+          <span style="opacity:0.5">|</span>
+          <span style="padding:0 4px">.edu</span>
+          <span style="opacity:0.5">|</span>
+          <span style="padding:0 4px">.mil</span>
+          <span style="opacity:0.5">|</span>
+          <span style="padding-left:4px">.gov</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div id="domains423" onclick="window.location=&#39;DomainsTLD.html&#39;;">
+      <div class="center" style="color:#fff;background:#FF8B04;box-shadow:inset 0 0 50px #D76800;padding:30px 10px 40px">
+        <h2 style="color:#fff;font-weight:bold;line-height:0"><span>Robin's</span> <span style="font-size:55px;position:relative;bottom:8px;">great</span><span></span><br><span style="position:relative;bottom:10px">design #2.</span></h2>
+        <div class="margin-tp-sm" style="font-size:16px">
+          <span style="padding-right:4px">.club</span>
+          <span style="opacity:0.5">|</span>
+          <span style="padding:0 4px">.email</span>
+          <span style="opacity:0.5">|</span>
+          <span style="padding:0 4px">.guru</span>
+          <span style="opacity:0.5">|</span>
+          <span style="padding:0 4px">.reviews</span>
+          <span style="opacity:0.5">|</span>
+          <span style="padding-left:4px">.today</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div id="domains423" onclick="window.location=&#39;DomainsTLD.html&#39;;">
+      <div class="center" style="color:#fff;background:#FF8B04;box-shadow:inset 0 0 50px #D76800;padding:30px 10px 40px">
+        <h2 style="color:#fff;font-weight:bold;line-height:0"><span>Robin's</span> <span style="font-size:55px;position:relative;bottom:8px;">great</span><span></span><br><span style="position:relative;bottom:10px">design #3.</span></h2>
+        <div class="margin-tp-sm" style="font-size:16px">
+          <span style="padding-right:4px">.club</span>
+          <span style="opacity:0.5">|</span>
+          <span style="padding:0 4px">.email</span>
+          <span style="opacity:0.5">|</span>
+          <span style="padding:0 4px">.guru</span>
+          <span style="opacity:0.5">|</span>
+          <span style="padding:0 4px">.reviews</span>
+          <span style="opacity:0.5">|</span>
+          <span style="padding-left:4px">.today</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end MRQ -->
+
+<div class="margin-med pad-bt-med" style="margin: 15px 15px 0 15px;">
 <form id="SearchForm" name="SearchForm" class="ajax-form" data-loadingtext="Searching" method="get" action="DomainSearchResults.html">
-<div class="margin-lt-rt-med">
-<div class="table white-bg pad-tp-bt-sm pad-rt-sm gray-brd">
-<div class="pad-rt max">
-<input id="domain-search" name="txtDomain" type="text" class="dmn-srch" maxlength="71" value="" placeholder="Search for a new domain">
-</div>
-<div class="margin-lt right">
-<button id="btn-domain-search" type="button" class="btn-sm btn-action clickable" name="forumsubmitbutton" value="Go"  onclick="window.location='DomainSearchResults.html'">Go</button>
-</div>
-</div>
-</div>
-<input name="hdnSearchPage" type="hidden" value="search">
+  <div class="table white-bg pad-tp-bt-sm pad-rt-sm " style="border: 1px solid #999;">
+    <div class="pad-rt max">
+      <input id="domain-search" name="txtDomain" type="text" class="dmn-srch" maxlength="71" value="" placeholder="Search for a new domain">
+    </div>
+    <div class="margin-lt right">
+      <button id="btn-domain-search" type="button" class="btn-sm btn-action clickable" name="forumsubmitbutton" value="Go" onclick="window.location='DomainSearchResults.html'">Go</button>
+    </div>
+  </div>
+  <input name="hdnSearchPage" type="hidden" value="">
 </form>
-<div class="pad-lt-med margin-tp" style="font-size:13px;">
-<a id="bulk-domain-search" class="clickable" href="http://m.nodomain/bulk-domain-search.aspx?ci=80836">Bulk domain search</a>
 </div>
 </div>
-<div class="white-bg margin-tp-med pad-med">
-<div style="font-size:24px;">Register with us and get:</div>
-<ul class="font-sm margin-tp" style="list-style:disc;margin-left:18px;font-size:14px;">
-<li class="margin-tp-sm">Big savings over other registrars.</li>
-<li class="margin-tp-sm">Multi-year registrations.</li>
-<li class="margin-tp-sm">Bulk discounts on 6 or more domains.</li>
-<li class="margin-tp-sm">24/7 help building your online business.</li>
+
+<h6 class="pad-sm color-blk-bg">Find a Domain</h6>
+<div class="font-sm">
+<ul class="pad-lt pad-tp">
+<li>1. Filter by category</li>
+<li>2. Follow the domains you like</li>
+<li>3. Get alerted when registration starts</li>
 </ul>
-<div class="center tld-img" style="width:80%;"></div>
+<div class="margin-tp pad-lt-rt">
+<div id="list-btn-gtld-category" class="list-btn table" style="padding-top:0;">
+<div class="max"><button id="gtld-category" type="button" class="list list-text max">Featured</button></div>
+<button type="button" class="list list-arrow"><span class="triangle triangle-dn center-triangle"></span>Choose</button>
 </div>
-<div class="white-bg margin-tp-med pad-med">
-<div style="font-size:24px;">Great names make great sites</div>
-<div class="margin-tp font-sm">Picking the right domain is huge. Look for a name that's memorable, easy to spell and fits your personal style.</div>
+<div id="gtld-category-modal" class="list-sel" style="display:none;">
+<div id="gtld-category-list">
+<div id="category-40" class="gtld-category-popin pad groove clickable msg-info" data-catid="40">
+<div class="category-name" style="font-size:14px;">Featured</div>
+</div>
+<div id="category-41" class="gtld-category-popin pad groove clickable " data-catid="41">
+<div class="category-name" style="font-size:14px;">Now Available</div>
+</div>
+<div id="category-42" class="gtld-category-popin pad groove clickable " data-catid="42">
+<div class="category-name" style="font-size:14px;">Pre-Registration</div>
+</div>
+<div id="category-23" class="gtld-category-popin pad groove clickable " data-catid="23">
+<div class="category-name" style="font-size:14px;">Business</div>
+</div>
+<div id="category-35" class="gtld-category-popin pad groove clickable " data-catid="35">
+<div class="category-name" style="font-size:14px;">Commerce</div>
+</div>
+<div id="category-36" class="gtld-category-popin pad groove clickable " data-catid="36">
+<div class="category-name" style="font-size:14px;">Education</div>
+</div>
+<div id="category-32" class="gtld-category-popin pad groove clickable " data-catid="32">
+<div class="category-name" style="font-size:14px;">Food &amp; Drink</div>
+</div>
+<div id="category-38" class="gtld-category-popin pad groove clickable " data-catid="38">
+<div class="category-name" style="font-size:14px;">Generic</div>
+</div>
+<div id="category-39" class="gtld-category-popin pad groove clickable " data-catid="39">
+<div class="category-name" style="font-size:14px;">Geographic</div>
+</div>
+<div id="category-37" class="gtld-category-popin pad groove clickable " data-catid="37">
+<div class="category-name" style="font-size:14px;">Government</div>
+</div>
+<div id="category-34" class="gtld-category-popin pad groove clickable " data-catid="34">
+<div class="category-name" style="font-size:14px;">Health</div>
+</div>
+<div id="category-27" class="gtld-category-popin pad groove clickable " data-catid="27">
+<div class="category-name" style="font-size:14px;">International -IDN</div>
+</div>
+<div id="category-24" class="gtld-category-popin pad groove clickable " data-catid="24">
+<div class="category-name" style="font-size:14px;">Industry</div>
+</div>
+<div id="category-26" class="gtld-category-popin pad groove clickable " data-catid="26">
+<div class="category-name" style="font-size:14px;">Lifestyle &amp; Identity</div>
+</div>
+<div id="category-31" class="gtld-category-popin pad groove clickable " data-catid="31">
+<div class="category-name" style="font-size:14px;">Media</div>
+</div>
+<div id="category-25" class="gtld-category-popin pad groove clickable " data-catid="25">
+<div class="category-name" style="font-size:14px;">Money &amp; Finance</div>
+</div>
+<div id="category-33" class="gtld-category-popin pad groove clickable " data-catid="33">
+<div class="category-name" style="font-size:14px;">Professional</div>
+</div>
+<div id="category-28" class="gtld-category-popin pad groove clickable " data-catid="28">
+<div class="category-name" style="font-size:14px;">Real Estate</div>
+</div>
+<div id="category-29" class="gtld-category-popin pad groove clickable " data-catid="29">
+<div class="category-name" style="font-size:14px;">Sport</div>
+</div>
+<div id="category-30" class="gtld-category-popin pad groove clickable " data-catid="30">
+<div class="category-name" style="font-size:14px;">Technology</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+
+
+<div id="gtld-ext-list" class="groove-btm">
+<div id="gtld-extensions-bar" class="max margin-tp pad-lt" style="background-color: #9D9D9D; font-size: 15px; color:#fff;">Domains</div>
+<div id="gtld-ext-xyz" class="groove">
+<div class="row pad-lt-rt pad-tp-bt-sm ">
 <div>
-<ul class="font-sm margin-tp" style="list-style:disc;margin-left:18px;font-size:14px;">
-<li class="margin-tp-sm">Stake your claim.</li>
-<li class="margin-tp-sm">Tell them what you do.</li>
-<li class="margin-tp-sm">Keep the lights on 24/7.</li>
-</ul>
+<div class="font-lg">.xyz</div>
+<div class="font-xsm">Now available for registration</div>
+</div>
+<div id="gtld-ext-btn-xyz" class="pad-lt right">
+<button id="gtld-ext-reg-xyz" class="btn-sm btn-action" style="font-size:1.4em;" onclick="window.location='http://m.nodomain/tlds/xyz-domain?ci=85059'">Register</button>
 </div>
 </div>
-<div id="eoi-learn-more" class="white-bg margin-tp-med pad-med" onclick="window.location=&#39;DomainsTLD.html&#39;;">
-<div style="font-size:24px;">Game Changer
 </div>
-<div data-src="gc-img" class="margin-tp lazyload-img gc-img"></div>
-<div class="pad margin-bt" style="background-color:#8B8B8B;color:#ffffff;">
-<div style="font-size:24px;">700+ new domain extensions</div>
+<div id="gtld-ext-club" class="groove">
+<div class="row pad-lt-rt pad-tp-bt-sm ">
+<div>
+<div class="font-lg">.club</div>
+<div class="font-xsm">Now available for registration</div>
 </div>
-<a style="font-size:13px;text-decoration:none;" class="clickable" href="DomainsTLD.html">Learn more</a>
+<div id="gtld-ext-btn-club" class="pad-lt right">
+<button id="gtld-ext-reg-club" class="btn-sm btn-action" style="font-size:1.4em;" onclick="window.location='http://m.nodomain/tlds/club-domain?ci=85059'">Register</button>
 </div>
-<div class="white-bg margin-tp-med pad-med">
-<div style="font-size:24px;">Why GoDaddy?</div>
-<div class="center" style="width:50%;"><div data-src="dmn-img" class="margin-tp center lazyload-img dmn-img"></div></div>
-<div class="margin-tp-sm font-med center">Better Domain Products</div>
-<div class="margin-tp-sm font-sm">However fast you grow, we're ready with products like Domain Privacy that keeps your contact info safe.</div>
-<div class="center" style="width:50%;"><div data-src="tld2-img" class="margin-tp center lazyload-img tld2-img"></div></div>
-<div class="margin-tp-sm font-med center">More Domain Options</div>
-<div class="margin-tp-sm font-sm">We have all the best and latest extensions under one roof so you never have to go anywhere else.</div>
-<div class="center" style="width:50%;"><div data-src="sup-img" class="margin-tp center lazyload-img sup-img"></div></div>
-<div class="margin-tp-sm font-med center">World-Class Support</div>
-<div class="margin-tp-sm font-sm">You're never stuck thanks to our consultants at the ready 24/7. Call them anytime.</div>
+</div>
+</div>
+<div id="gtld-ext-menu" class="groove">
+<div class="row pad-lt-rt pad-tp-bt-sm ">
+<div>
+<div class="font-lg">.menu</div>
+<div class="font-xsm">Now available for registration</div>
+</div>
+<div id="gtld-ext-btn-menu" class="pad-lt right">
+<button id="gtld-ext-reg-menu" class="btn-sm btn-action" style="font-size:1.4em;" onclick="window.location='http://m.nodomain/tlds/menu-domain?ci=85059'">Register</button>
+</div>
+</div>
+</div>
+<div id="gtld-ext-ninja" class="groove">
+<div class="row pad-lt-rt pad-tp-bt-sm ">
+<div>
+<div class="font-lg">.ninja</div>
+<div class="font-xsm">Now available for registration</div>
+</div>
+<div id="gtld-ext-btn-ninja" class="pad-lt right">
+<button id="gtld-ext-reg-ninja" class="btn-sm btn-action" style="font-size:1.4em;" onclick="window.location='http://m.nodomain/tlds/ninja-domain?ci=85059'">Register</button>
+</div>
+</div>
+</div>
+<div id="gtld-ext-wiki" class="groove">
+<div class="row pad-lt-rt pad-tp-bt-sm ">
+<div>
+<div class="font-lg">.wiki</div>
+<div class="font-xsm">Now available for registration</div>
+</div>
+<div id="gtld-ext-btn-wiki" class="pad-lt right">
+<button id="gtld-ext-reg-wiki" class="btn-sm btn-action" style="font-size:1.4em;" onclick="window.location='http://m.nodomain/tlds/wiki-domain?ci=85059'">Register</button>
+</div>
+</div>
+</div>
+<div id="gtld-ext-expert" class="groove">
+<div class="row pad-lt-rt pad-tp-bt-sm ">
+<div>
+<div class="font-lg">.expert</div>
+<div class="font-xsm">Now available for registration</div>
+</div>
+<div id="gtld-ext-btn-expert" class="pad-lt right">
+<button id="gtld-ext-reg-expert" class="btn-sm btn-action" style="font-size:1.4em;" onclick="window.location='http://m.nodomain/tlds/expert-domain?ci=85059'">Register</button>
+</div>
+</div>
+</div>
+<div id="gtld-ext-email" class="groove">
+<div class="row pad-lt-rt pad-tp-bt-sm ">
+<div>
+<div class="font-lg">.email</div>
+<div class="font-xsm">Now available for registration</div>
+</div>
+<div id="gtld-ext-btn-email" class="pad-lt right">
+<button id="gtld-ext-reg-email" class="btn-sm btn-action" style="font-size:1.4em;" onclick="window.location='http://m.nodomain/tlds/email-domain?ci=85059'">Register</button>
+</div>
+</div>
+</div>
+<div id="gtld-ext-guru" class="groove">
+<div class="row pad-lt-rt pad-tp-bt-sm ">
+<div>
+<div class="font-lg">.guru</div>
+<div class="font-xsm">Now available for registration</div>
+</div>
+<div id="gtld-ext-btn-guru" class="pad-lt right">
+<button id="gtld-ext-reg-guru" class="btn-sm btn-action" style="font-size:1.4em;" onclick="window.location='http://m.nodomain/tlds/guru-domain?ci=85059'">Register</button>
+</div>
+</div>
+</div>
+<div id="gtld-ext-photography" class="groove">
+<div class="row pad-lt-rt pad-tp-bt-sm ">
+<div>
+<div class="font-lg">.photography</div>
+<div class="font-xsm">Now available for registration</div>
+</div>
+<div id="gtld-ext-btn-photography" class="pad-lt right">
+<button id="gtld-ext-reg-photography" class="btn-sm btn-action" style="font-size:1.4em;" onclick="window.location='http://m.nodomain/tlds/photography-domain?ci=85059'">Register</button>
+</div>
+</div>
+</div>
+<div id="gtld-ext-london" class="groove">
+<div class="row pad-lt-rt pad-tp-bt-sm ">
+<div>
+<div class="font-lg">.london</div>
+<div class="font-xsm">Now available for pre-registration</div>
+</div>
+<div id="gtld-ext-btn-london" class="pad-lt right">
+<button id="gtld-ext-prereg-london" class="btn-sm btn-action" style="font-size:1.4em;" onclick="window.location='http://m.nodomain/tlds/london-domain?ci=85058'">Pre-Register</button>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div id="divTrafficImageContainer" style="position:relative;height:0;">
 <img style="position:absolute;top:0;left:0;" src="./Domain Search_files/image.aspx">
 </div>
-<div id="main-footer" class="margin-tp-med">
+<div id="main-footer" class="">
 <div id="footer-btns" class="margin-bt-med">
 <div id="call-us-foot" class="row pad pad-lt-med font-sm white-bg clickable sep-bottom" onclick="window.location=&#39;tel:(480) 505-8877&#39;">
 <div>
@@ -1240,11 +1451,20 @@ $("#curr-list").hide();
 $("#lang-close-link").click(function () {
 $("#MobileContentContainer").show();
 $("#lang-list").hide();
+
 });
 </script>
 <script type="text/javascript" language="javascript">
 $(document).bind("ready", function() {
 setTimeout(function() { loadCartItemCount(); }, 300);
+$(".owl-carousel").owlCarousel({
+  slideSpeed : 300,
+    dots: false,
+    items: 1,
+    autoplay:true,
+    autoplayTimeout:3000,
+    loop: true
+  });
 });
 function loadCartItemCount() {
 var cartItemCountContainer = $("#cart-item-count");
@@ -1465,6 +1685,15 @@ setTimeout(callback, callbackTimeout);
 };
 </script>
 <script type="text/javascript">
+$("#list-btn-gtld-category").click(function () {
+if (!$("#gtld-category-modal").is(":visible")) {
+$("#gtld-category-modal").slideDown();
+$("#list-btn-gtld-category").children().addClass("open");
+} else {
+$("#gtld-category-modal").slideUp();
+$("#list-btn-gtld-category").children().removeClass("open");
+}
+});
 $("#bulk-domain-search").click(function () {
 if (typeof (_gaq) != "undefined") {
 _gaq.push(['_trackEvent', 'Shop', 'Click Domain Search LP', 'Click Bulk Search Link', 1]);
@@ -1476,4 +1705,5 @@ _gaq.push(['_trackEvent', 'Shop', 'Click Domain Search LP', 'Click EOI Link', 1]
 }
 });
 </script>
+<script src="owl-carousel/owl.carousel.min.js" defer></script>
 </body></html>

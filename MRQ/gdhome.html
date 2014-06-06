@@ -12,7 +12,10 @@
   <link href="http://img1.wsimg.com/mobile/img/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
   <link href="http://img1.wsimg.com/mobile/img/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
   <meta name="apple-mobile-web-app-capable" content="no">
-
+  <style>
+    .product_icon_sprite{background:url(//img1.wsimg.com/mya/icons/mya_product_icon_sprite_small_20130827.png) top left;background-repeat:no-repeat}
+    .productpad{float:left;margin-right:10px}
+  </style>
 
   <link rel="Stylesheet" type="text/css" href="./gdhome_files/gd_2014411.min.css">
   <link rel="stylesheet" href="owl-carousel/owl.carousel.min.css">
@@ -960,7 +963,7 @@
       <div id="divInfoMessage" class="pad-med font-sm msg-info wrap" style="display:none;"></div>
       <div id="promoBanner" class="promo-banner" style="display: none;">
       </div>
-      <div id="ds-cont">
+      <div id="ds-cont" style="background-color: #7db701;">
       <!-- <h2 style="padding:8px;background-color:#fff;">
         GoDaddy
       </h2> -->
@@ -1026,9 +1029,9 @@
         <!-- end MRQ -->
 
         <form id="SearchForm" name="SearchForm" class="ajax-form" data-loadingtext="Searching" method="get" action="DomainSearchResults.html">
-          <div class="table white-bg pad-tp-bt-sm pad-rt-sm" style="border-bottom: 1px solid #999;border-top: 1px solid #999;">
+          <div class="table white-bg pad-tp-bt-sm pad-rt-sm margin-med" style="border: 1px solid #999;">
             <div class="pad-rt max">
-              <input id="domain-search" name="txtDomain" type="text" class="dmn-srch" maxlength="71" value="" placeholder="Search for a new domain">
+              <input id="domain-search" name="txtDomain" type="text" class="dmn-srch" maxlength="71" value="" placeholder="Find your domain name">
             </div>
             <div class="margin-lt right">
               <button id="btn-domain-search" type="button" class="btn-sm btn-action clickable" name="forumsubmitbutton" value="Go" onclick="window.location='DomainSearchResults.html'">Go</button>
@@ -1040,18 +1043,22 @@
           <div id="site-links">
             <div id="main-site-links">
               <div id="site-link-domains" class="row pad font-sm main-bg sep-bottom row-clickable" onclick="clickSiteLink(&#39;Find domain names&#39;, &#39;DomainSearch.html', &#39;home&#39;, &#39;false&#39;)">
+                <div class="product_icon_sprite productpad" style="background-position: 0px 0px; width:30px; height:30px;"></div>
                 <div class="margin-lt-med max">Find domain names</div>
                 <div><div class="mn-spr-chevron"></div></div>
               </div>
               <div id="site-link-wsb" class="row pad font-sm main-bg sep-bottom row-clickable" onclick="clickSiteLink(&#39;Build your website&#39;, &#39;http://m.nodomain/products/website-builder.aspx?ci=83252&#39;, &#39;home&#39;, &#39;false&#39;)">
+                <div class="product_icon_sprite productpad" style="background-position: -155px -93px; width:30px; height:30px;"></div>
                 <div class="margin-lt-med max">Build your website</div>
                 <div><div class="mn-spr-chevron"></div></div>
               </div>
               <div id="site-link-hosting" class="row pad font-sm main-bg sep-bottom row-clickable" onclick="clickSiteLink(&#39;Get website hosting&#39;, &#39;http://m.nodomain/products/web-hosting.aspx?ci=83250&#39;, &#39;home&#39;, &#39;false&#39;)">
+                <div class="product_icon_sprite productpad" style="background-position: -124px -31px; width:30px; height:30px;"></div>
                 <div class="margin-lt-med max">Get website hosting</div>
                 <div><div class="mn-spr-chevron"></div></div>
               </div>
               <div id="site-link-email" class="row pad font-sm main-bg sep-bottom row-clickable" onclick="clickSiteLink(&#39;Sign up for business email&#39;, &#39;http://m.nodomain/products/email-hosting.aspx?ci=83251&#39;, &#39;home&#39;, &#39;false&#39;)">
+                <!-- <div class="product_icon_sprite productpad" style="background-position: -124px 0px; width:30px; height:30px;"></div> -->
                 <div class="margin-lt-med max">Sign up for business email</div>
                 <div><div class="mn-spr-chevron"></div></div>
               </div>
@@ -1114,7 +1121,7 @@
                 <div><div class="mn-spr-chevron"></div></div>
               </div>
             </div>
-            <div id="gomobile-mini-banner" onclick="window.location=&#39;https://itunes.apple.com/app/id565017826?ci=88234&#39;">
+            <!-- <div id="gomobile-mini-banner" onclick="window.location=&#39;https://itunes.apple.com/app/id565017826?ci=88234&#39;">
               <div class="pad-med main-bg sep-bottom" style="color:#679B08">
                 <div class="row">
                   <div>
@@ -1127,7 +1134,7 @@
                 </div>
                 <button id="btn-download" class="btn-sm btn-action max margin-tp">Download now for free</button>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
