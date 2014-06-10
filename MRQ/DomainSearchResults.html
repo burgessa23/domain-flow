@@ -1051,7 +1051,7 @@ left: 3px;
         </div>
         <input id="hdnDomainSelected_0" name="hdnDomainSelected_0" type="hidden" value="1">
         <input id="hdnSearchDomainName_0" name="hdnSearchDomainName_0" type="hidden" value="doublerainbow.com">
-        <div id="divDomainSelected_1" class="table pad-med sep-top white-bg" onclick="AvailItemClick(1);">
+        <div id="divDomainSelected_1" class="table pad-med sep-top white-bg" onclick="AvailItemClick(1);" >
           <div class="right pad-lt" style="padding-left: 0px;padding-right: 12px;">
             <div id="chkDomainSelected_1" class="checkbox">
               <span>✔</span>
@@ -1131,6 +1131,7 @@ left: 3px;
         </div>
         <input id="hdnDomainSelected_6" name="hdnDomainSelected_6" type="hidden" value="0">
         <input name="hdnSearchDomainName_6" type="hidden" value="doublerainbow.us">
+
         <div id="addn-avail-dom-cont" class="white-bg"></div>
         <div id="addn-dom-link" class="center pad-med sep-top white-bg" onclick="toggleSection('add-dom-header-toggle', 'add-dom-cont')">
           <p><a class="font-sm">Show More Domains</a></p>
@@ -1686,6 +1687,20 @@ left: 3px;
               </div>
               <input id="hdnDomainSelected_33" name="hdnDomainSelected_33" type="hidden" value="0">
               <input name="hdnSearchDomainName_33" type="hidden" value="doublerainbow.ag">
+              <div class="additional-domains table pad-med sep-top" onclick="AvailItemClick(33);" style="display:none;">
+                <div class="wrap max pad-rt font-sm">
+                  <span class="wrap">doublerainbow</span><span class="bold-lt">.AG</span>
+                </div>
+                <div class="center-rt nowrap font-sm">$109.99/yr</div>
+                <div class="right pad-lt">
+                  <div id="chkDomainSelected_33" class="checkbox">
+                    <span>✔</span>
+                  </div>
+                </div>
+              </div>
+              <input id="hdnDomainSelected_33" name="hdnDomainSelected_33" type="hidden" value="0">
+              <input name="hdnSearchDomainName_33" type="hidden" value="doublerainbow.ag">
+
               <!-- <div style="display:block;">
                 <div id="view-more-addn" class="center pad-med sep-top sep-bottom" onclick="\$(this).hide();\$(&#39;div.additional-domains&#39;).show();\$(&#39;#cont-reg&#39;).addClass(&#39;sep-top&#39;);">
                   <p><a class="font-sm">View More Additional</a></p>
@@ -1806,6 +1821,10 @@ var MENU_SLIDE_DURATION = 300;
 $(document).ready(function () {
   $("#MobileBodyContainer").css("min-height", ($(window).height() + "px"));
   $('.searchBoxFixed').scrollToFixed();
+  $('#cont-reg').scrollToFixed( {
+        bottom: 0,
+        limit: $('#cont-reg').offset().top
+    });
 });
 $("#menu-btn").click(function () {
   $("#sd-mn").animate({
@@ -2136,6 +2155,13 @@ function toggleSection(toggle, cont) {
 $("#addn-dom-link").click(function() {
   $("#other-domain-types").show();
   $("#cont-reg").addClass("pad-tp-med");
+  setTimeout(function(){
+    $('#cont-reg').scrollToFixed( {
+          bottom: 0,
+          limit: $('#cont-reg').offset().top
+      });  
+  },1000);
+
 });
 $("#premium-dom-link").click(function() {
   $('#premium-msg').slideToggle(250);
