@@ -1013,7 +1013,7 @@
             <h1 class="pad-lt-rt-med pad-tp-bt" style="font-size:26px;background-color:#fff;">Order<span style="float:right;">$21.16</span></h1>
             <h6 class="pad-sm color-blk-bg wrap" style="padding:2px;"></h6>
             <div id="other-pay-row" class="pay-opt-row table pad-med clickable sep-bottom" data-paytype="paymentMethod">
-              <input type="radio" name="some_name" value=""><span style="font-size:14px;padding-left: 20px;width:100%;">Use Express Checkout card XXXX</span>
+              <input type="radio" name="some_name" value="" checked="checked"><span style="font-size:14px;padding-left: 20px;width:100%;">Use Express Checkout card XXXX</span>
 
             </div>
             <div id="other-pay-row" class="pay-opt-row table pad-med clickable sep-bottom" data-paytype="paymentMethod">
@@ -1446,7 +1446,7 @@
         }
         $("#paymentTypeRadio").val(payType);
         if (!hasCheckedItem() && !isFreeOrder) {
-          $("#place-order-button").attr("disabled", true);
+          //$("#place-order-button").attr("disabled", true);
         } else {
           $("#place-order-button").removeAttr("disabled");
         }
