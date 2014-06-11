@@ -52,24 +52,24 @@
   width:500px;
 }
 .checkbox.checked {
-border: 1px solid #679b08;
+  border: 1px solid #679b08;
 }
 .checkbox {
-background-color: #fff;
-border: 1px solid #575757;
-width: 16px;
-height: 16px;
-cursor: pointer;
-position: relative;
+  background-color: #fff;
+  border: 1px solid #575757;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  position: relative;
 }
 .checkbox>span {
-color: #679b08;
-font-size: 14px;
-/* font-weight: bold; */
-visibility: hidden;
-position: absolute;
-top: 0px;
-left: 3px;
+  color: #679b08;
+  font-size: 14px;
+  /* font-weight: bold; */
+  visibility: hidden;
+  position: absolute;
+  top: 0px;
+  left: 3px;
 }
 .clearable{
   /*background:url(http://i.imgur.com/z7ZSYjt.png) no-repeat right -10px center;*/
@@ -100,108 +100,12 @@ left: 3px;
       <div id="sd-mn-cont">
         <div id="sd-mn-wrap">
           <div id="sd-mn-home" class="sd-mn-rw" onclick="clickSiteLink(&#39;Home&#39;, &#39;gdhome.html&#39;, &#39;menu&#39;, &#39;false&#39;)"><span>Home</span></div>
-          <div id="sd-mn-cart" class="sd-mn-rw" onclick="clickSiteLink(&#39;Your Cart&#39;, &#39;Cart.html&#39;, &#39;menu&#39;, &#39;false&#39;)" style="display:none;">
-            <span>Your Cart</span>
-            <div id="sd-mn-cart-count" class="cart-count margin-tp-sm" style="float:right;margin-right:6px;"></div>
-          </div>
-          <div class="sd-mn-dv sd-mn-color">
-            SHOP &amp; RENEW
-          </div>
-          <div id="sd-mn-domains" class="sd-mn-rw" onclick="clickSiteLink(&#39;Find Domain Names&#39;, &#39;http://m.nodomain/domains/search.aspx?exppurchasepath=false&amp;ci=82934&#39;, &#39;menu&#39;, &#39;false&#39;)">
+
+
+          <div id="sd-mn-domains" class="sd-mn-rw" onclick="clickSiteLink(&#39;Find Domain Names&#39;, &#39;DomainSearch.html&#39;, &#39;menu&#39;, &#39;false&#39;)">
             Find Domain Names
           </div>
-          <div id="sd-mn-wsb" class="sd-mn-rw" onclick="clickSiteLink(&#39;Build Your Website&#39;, &#39;http://m.nodomain/products/website-builder.aspx?exppurchasepath=false&amp;ci=82939&#39;, &#39;menu&#39;, &#39;false&#39;)">
-            Build Your Website
-          </div>
-          <div id="sd-mn-hosting" class="sd-mn-rw" onclick="clickSiteLink(&#39;Get Website Hosting&#39;, &#39;http://m.nodomain/products/web-hosting.aspx?exppurchasepath=false&amp;ci=82937&#39;, &#39;menu&#39;, &#39;false&#39;)">
-            Get Website Hosting
-          </div>
-          <div id="sd-mn-auctions" class="sd-mn-rw" onclick="clickSiteLink(&#39;Find Domain Auctions&#39;, &#39;https://mya.m.nodomain/auctions/auctionsearch.aspx?clean=1&amp;exppurchasepath=false&amp;ci=82957&#39;, &#39;menu&#39;, &#39;false&#39;)">
-            Find Domain Auctions
-          </div>
-          <div id="sd-mn-renewals" class="sd-mn-rw" onclick="clickSiteLink(&#39;Renew Products&#39;, &#39;https://mya.m.nodomain/renewals/renewals.aspx?exppurchasepath=false&amp;ci=82948&#39;, &#39;menu&#39;, &#39;false&#39;)">
-            Renew Products
-          </div>
-          <div id="shop-more-products" class="sd-mn-rw" onclick="showMenuHiddenProducts($(this));">
-            Shop More Products
-          </div>
-          <div id="hidden-shop-products" style="display:none;">
-            <div id="sd-mn-email" class="sd-mn-rw" onclick="clickSiteLink(&#39;Email&#39;, &#39;http://m.nodomain/products/email-hosting.aspx?exppurchasepath=false&amp;ci=82938&#39;, &#39;menu&#39;, &#39;false&#39;)">
-              Email
-            </div>
-            <div id="sd-mn-eoi" class="sd-mn-rw" onclick="clickSiteLink(&#39;New Domain Extensions&#39;, &#39;http://m.nodomain/tlds/gtld.aspx?exppurchasepath=false&amp;ci=82935&#39;, &#39;menu&#39;, &#39;false&#39;)">
-              New Domain Extensions
-            </div>
-            <div id="sd-mn-bulkdomains" class="sd-mn-rw" onclick="clickSiteLink(&#39;Bulk Somain Search&#39;, &#39;http://m.nodomain/bulk-domain-search.aspx?exppurchasepath=false&amp;ci=83035&#39;, &#39;menu&#39;, &#39;false&#39;)">
-              Bulk Domain Search
-            </div>
-            <div id="sd-mn-locu" class="sd-mn-rw" onclick="clickSiteLink(&#39;Get Found&#39;, &#39;http://m.nodomain/products/business-marketing.aspx?exppurchasepath=false&amp;ci=86547&#39;, &#39;menu&#39;, &#39;false&#39;)">
-              Get Found
-            </div>
-            <div id="sd-mn-onbook" class="sd-mn-rw" onclick="clickSiteLink(&#39;Online Bookkeeping&#39;, &#39;http://m.nodomain/products/accounting-software.aspx?exppurchasepath=false&amp;ci=82936&#39;, &#39;menu&#39;, &#39;false&#39;)">
-              Online Bookkeeping
-            </div>
-            <div id="sd-mn-onstore" class="sd-mn-rw" onclick="clickSiteLink(&#39;Online Store&#39;, &#39;http://m.nodomain/products/shopping-cart.aspx?exppurchasepath=false&amp;ci=82940&#39;, &#39;menu&#39;, &#39;false&#39;)">
-              Online Store
-            </div>
-            <div id="sd-mn-ssl" class="sd-mn-rw" onclick="clickSiteLink(&#39;SSL Certificates&#39;, &#39;http://m.nodomain/products/ssl-certificates.aspx?exppurchasepath=false&amp;ci=82941&#39;, &#39;menu&#39;, &#39;false&#39;)">
-              SSL Certificates
-            </div>
-            <div id="sd-mn-onstorage" class="sd-mn-rw" onclick="clickSiteLink(&#39;Online Storage&#39;, &#39;http://m.nodomain/products/onlinefilefolder.aspx?exppurchasepath=false&amp;ci=82942&#39;, &#39;menu&#39;, &#39;false&#39;)">
-              Online Storage
-            </div>
-            <div id="sd-mn-sev" class="sd-mn-rw" onclick="clickSiteLink(&#39;Search Engine Visibility&#39;, &#39;http://m.nodomain/products/sev.aspx?exppurchasepath=false&amp;ci=82943&#39;, &#39;menu&#39;, &#39;false&#39;)">
-              Search Engine Visibility
-            </div>
-            <div id="sd-mn-ded" class="sd-mn-rw" onclick="clickSiteLink(&#39;Private Servers&#39;, &#39;http://m.nodomain/products/dedicatedhosting.aspx?exppurchasepath=false&amp;ci=82944&#39;, &#39;menu&#39;, &#39;false&#39;)">
-              Private Servers
-            </div>
-            <div id="sd-mn-vded" class="sd-mn-rw" onclick="clickSiteLink(&#39;Virtual Private Servers&#39;, &#39;http://m.nodomain/products/virtualhosting.aspx?exppurchasepath=false&amp;ci=82945&#39;, &#39;menu&#39;, &#39;false&#39;)">
-              Virtual Private Servers
-            </div>
-            <div id="sd-mn-auctionsmem" class="sd-mn-rw" onclick="clickSiteLink(&#39;Auction Management&#39;, &#39;http://m.nodomain/products/auctionsproduct.aspx?exppurchasepath=false&amp;ci=82946&#39;, &#39;menu&#39;, &#39;false&#39;)">
-              Auctions Membership
-            </div>
-          </div>
-          <div class="sd-mn-dv sd-mn-color">
-            MANAGE
-          </div>
-          <div id="sd-mn-domainmgmt" class="sd-mn-rw" onclick="clickSiteLink(&#39;Domain Management&#39;, &#39;https://mya.m.nodomain/domains/domainlist.aspx?exppurchasepath=false&amp;ci=82947&#39;, &#39;menu&#39;, &#39;False&#39;)">
-            Domain Management
-          </div>
-          <div id="sd-mn-hdvdmgmt" class="sd-mn-rw" onclick="clickSiteLink(&#39;Server Management&#39;, &#39;https://mya.m.nodomain/hdvd/hdvdaccountlist.aspx?exppurchasepath=false&amp;ci=82961&#39;, &#39;menu&#39;, &#39;False&#39;)">
-            Server Management
-          </div>
-          <div id="sd-mn-storemgmt" class="sd-mn-rw" onclick="clickSiteLink(&#39;Online Store Management&#39;, &#39;https://mya.m.nodomain/qsc/qscaccountlist.aspx?exppurchasepath=false&amp;ci=82962&#39;, &#39;menu&#39;, &#39;False&#39;)">
-            Online Store Management
-          </div>
-          <div id="sd-mn-emailmgmt" class="sd-mn-rw" onclick="clickSiteLink(&#39;Email Management&#39;, &#39;https://mya.m.nodomain/ecc/emailaccountlist.aspx?exppurchasepath=false&amp;ci=82958&#39;, &#39;menu&#39;, &#39;False&#39;)">
-            Email Management
-          </div>
-          <div id="sd-mn-auctionmgmt" class="sd-mn-rw" onclick="clickSiteLink(&#39;Auction Management&#39;, &#39;https://mya.m.nodomain/auctions/auctionmemberarea.aspx?exppurchasepath=false&amp;ci=82963&#39;, &#39;menu&#39;, &#39;False&#39;)">
-            Auction Management
-          </div>
-          <div id="sd-mn-checkemail" class="sd-mn-rw" onclick="clickSiteLink(&#39;Check Email&#39;, &#39;http://img.nodomain/redirect.aspx?target=https://login.secureserver.net/?app=mmail&amp;ci=82967&#39;, &#39;menu&#39;, &#39;True&#39;)">
-            Check Email
-          </div>
-          <div id="sd-mn-myaccount" class="sd-mn-rw" onclick="clickSiteLink(&#39;My Account&#39;, &#39;https://mya.m.nodomain/myaccount/myaccounthome.aspx?exppurchasepath=false&amp;ci=82959&#39;, &#39;menu&#39;, &#39;False&#39;)">
-            My Account
-          </div>
-          <div class="sd-mn-dv sd-mn-color">
-            RESOURCES
-          </div>
-          <div id="sd-mn-gd-trn-hub" class="sd-mn-rw" onclick="clickSiteLinkTargetWindow(&#39;GoDaddy Training Hub&#39;, &#39;http://img.nodomain/redirect.aspx?target=http://www.godaddytraininghub.com?marketid=en-us&amp;ci=89638&#39;, &#39;menu&#39;, &#39;GodaddyCareersWindow&#39;)">
-            GoDaddy Training Hub
-          </div>
-          <div id="sd-mn-gd-jobs" class="sd-mn-rw" onclick="clickSiteLink(&#39;GoDaddy Jobs&#39;, &#39;http://img.nodomain/redirect.aspx?target=https://hire.jobvite.com/CompanyJobs/Careers.aspx?c=qCH9Vfw7&amp;cs=9jTaVfw1&amp;&amp;ci=82964&#39;, &#39;menu&#39;, &#39;false&#39;)">
-            GoDaddy Jobs
-          </div>
-          <div id="sd-mn-legal" class="sd-mn-rw" onclick="clickSiteLink(&#39;Legal&#39;, &#39;http://m.nodomain/legal/termsconditions.aspx?refurl=http%253a%252f%252fm.nodomain%252fdomains%252fdomainsearchlist1.aspx%253fexppurchasepath%253dfalse%2526ci%253d80075&amp;exppurchasepath=false&amp;ci=82954&#39;, &#39;menu&#39;, &#39;false&#39;)">
-            Legal
-          </div>
-          <div id="sd-mn-supp-email" class="sd-mn-rw" onclick="window.location=&#39;mailto:support@nodomain&#39;">
-            Email Us
-          </div>
+
         </div>
       </div>
     </div>
@@ -1028,20 +932,20 @@ left: 3px;
       </div>
       <h1 class="pad-lt-rt-med pad-tp-bt" style="font-size:30px;background-color:#fff;">Domain search</h1>
       <div class="searchBoxFixed" style="background-color:#E4E4E4;">
-      <div class="margin-med pad-bt-med" style="margin: 15px 15px 0 15px;">
-        <form id="SearchForm" name="SearchForm" class="ajax-form" data-loadingtext="Searching" method="get" action="DomainSearchResults.html">
-          <div class="table white-bg pad-tp-bt-sm pad-rt-sm " style="border: 1px solid #999;">
-            <div class="pad-rt max">
-              <input id="domain-search" name="txtDomain" type="text" class="dmn-srch clearable" maxlength="71" value="" placeholder="doublerainbow">
+        <div class="margin-med pad-bt-med" style="margin: 15px 15px 0 15px;">
+          <form id="SearchForm" name="SearchForm" class="ajax-form" data-loadingtext="Searching" method="get" action="DomainSearchResults.html">
+            <div class="table white-bg pad-tp-bt-sm pad-rt-sm " style="border: 1px solid #999;">
+              <div class="pad-rt max">
+                <input id="domain-search" name="txtDomain" type="text" class="dmn-srch clearable" maxlength="71" value="" placeholder="doublerainbow">
+              </div>
+              <div class="margin-lt right">
+                <button id="btn-domain-search" type="button" class="btn-sm btn-action clickable" name="forumsubmitbutton" value="Go" onclick="window.location='DomainSearchResults.html'">Go</button>
+              </div>
             </div>
-            <div class="margin-lt right">
-              <button id="btn-domain-search" type="button" class="btn-sm btn-action clickable" name="forumsubmitbutton" value="Go" onclick="window.location='DomainSearchResults.html'">Go</button>
-            </div>
-          </div>
-          <input name="hdnSearchPage" type="hidden" value="">
-        </form>
+            <input name="hdnSearchPage" type="hidden" value="">
+          </form>
+        </div>
       </div>
-    </div>
       <div id="domain-container">
 
         <div id="premium-msg" class="pad-med white-bg sep-bottom" style="display:none;">
@@ -1077,7 +981,7 @@ left: 3px;
             <div><span>$12.99</span></div></div>
           </div>
 
-        </div>
+
         <input id="hdnDomainSelected_1" name="hdnDomainSelected_1" type="hidden" value="0">
         <input id="hdnSearchDomainName_1" name="hdnSearchDomainName_1" type="hidden" value="doublerainbow.co">
         <div id="divDomainSelected_2" class="table pad-med sep-top white-bg" onclick="AvailItemClick(2);">
@@ -1150,181 +1054,7 @@ left: 3px;
           <p><a class="font-sm">Show More Domains</a></p>
         </div>
         <div id="other-domain-types" style="display:none;">
-          <!-- <div class="margin-tp-bt-med white-bg">
-            <div id="prem-header" class="row pad-med" onclick="toggleSection(&#39;prem-header-toggle&#39;, &#39;prem-cont&#39;)">
-              <div class="font-med">Premium Domains</div>
-              <div class="right">
-                <div id="prem-header-toggle" class="mn-spr-plus"></div>
-              </div>
-            </div>
-            <div id="prem-cont" class="white-bg" style="display:none;">
-              <div class="table pad-med sep-top" onclick="PremiumItemClick(0);">
-                <div class="wrap max pad-rt font-sm">
-                  <span>hsn</span><span class="bold-lt">.ORG</span>
-                </div>
-                <div class="center-rt nowrap font-sm">
-                  <div class="bold highlight">Premium</div>
-                  <div>\,800.00</div>
-                </div>
-                <div class="right pad-lt">
-                  <div id="chkPremiumSelected_0" class="checkbox">
-                    <span>✔</span>
-                  </div>
-                </div>
-              </div>
-              <input id="hdnPremiumSelected_0" name="hdnPremiumSelected_0" type="hidden" value="0">
-              <input name="hdnPremiumDomainName_0" type="hidden" value="HsN.org">
-              <div class="table pad-med sep-top" onclick="PremiumItemClick(1);">
-                <div class="wrap max pad-rt font-sm">
-                  <span>bahs</span><span class="bold-lt">.NET</span>
-                </div>
-                <div class="center-rt nowrap font-sm">
-                  <div class="bold highlight">Premium</div>
-                  <div>\.00</div>
-                </div>
-                <div class="right pad-lt">
-                  <div id="chkPremiumSelected_1" class="checkbox">
-                    <span>✔</span>
-                  </div>
-                </div>
-              </div>
-              <input id="hdnPremiumSelected_1" name="hdnPremiumSelected_1" type="hidden" value="0">
-              <input name="hdnPremiumDomainName_1" type="hidden" value="BaHs.net">
-              <div id="view-more-prem" class="center pad-med sep-top sep-bottom" onclick="\$(this).hide();\$(&#39;#premium-more&#39;).slideDown();">
-                <p><a class="font-sm">View More Premium</a></p>
-              </div>
-              <div id="premium-more" style="display:none;">
-                <div class="table pad-med sep-top" onclick="PremiumItemClick(2);">
-                  <div class="wrap max pad-rt font-sm">
-                    <span>yhs</span><span class="bold-lt">.CO</span>
-                  </div>
-                  <div class="center-rt nowrap font-sm">
-                    <div class="bold highlight">Premium</div>
-                    <div>\.00</div>
-                  </div>
-                  <div class="right pad-lt">
-                    <div id="chkPremiumSelected_2" class="checkbox">
-                      <span>✔</span>
-                    </div>
-                  </div>
-                </div>
-                <input id="hdnPremiumSelected_2" name="hdnPremiumSelected_2" type="hidden" value="0">
-                <input name="hdnPremiumDomainName_2" type="hidden" value="YHs.co">
-                <div class="table pad-med sep-top" onclick="PremiumItemClick(3);">
-                  <div class="wrap max pad-rt font-sm">
-                    <span>hsct</span><span class="bold-lt">.COM</span>
-                  </div>
-                  <div class="center-rt nowrap font-sm">
-                    <div class="bold highlight">Premium</div>
-                    <div>\,800.00</div>
-                  </div>
-                  <div class="right pad-lt">
-                    <div id="chkPremiumSelected_3" class="checkbox">
-                      <span>✔</span>
-                    </div>
-                  </div>
-                </div>
-                <input id="hdnPremiumSelected_3" name="hdnPremiumSelected_3" type="hidden" value="0">
-                <input name="hdnPremiumDomainName_3" type="hidden" value="HsCt.com">
-                <div class="table pad-med sep-top" onclick="PremiumItemClick(4);">
-                  <div class="wrap max pad-rt font-sm">
-                    <span>arhs</span><span class="bold-lt">.COM</span>
-                  </div>
-                  <div class="center-rt nowrap font-sm">
-                    <div class="bold highlight">Premium</div>
-                    <div>\,800.00</div>
-                  </div>
-                  <div class="right pad-lt">
-                    <div id="chkPremiumSelected_4" class="checkbox">
-                      <span>✔</span>
-                    </div>
-                  </div>
-                </div>
-                <input id="hdnPremiumSelected_4" name="hdnPremiumSelected_4" type="hidden" value="0">
-                <input name="hdnPremiumDomainName_4" type="hidden" value="ArHs.com">
-                <div class="table pad-med sep-top" onclick="PremiumItemClick(5);">
-                  <div class="wrap max pad-rt font-sm">
-                    <span>tdhs</span><span class="bold-lt">.COM</span>
-                  </div>
-                  <div class="center-rt nowrap font-sm">
-                    <div class="bold highlight">Premium</div>
-                    <div>\,000.00</div>
-                  </div>
-                  <div class="right pad-lt">
-                    <div id="chkPremiumSelected_5" class="checkbox">
-                      <span>✔</span>
-                    </div>
-                  </div>
-                </div>
-                <input id="hdnPremiumSelected_5" name="hdnPremiumSelected_5" type="hidden" value="0">
-                <input name="hdnPremiumDomainName_5" type="hidden" value="TdHs.com">
-                <div class="table pad-med sep-top" onclick="PremiumItemClick(6);">
-                  <div class="wrap max pad-rt font-sm">
-                    <span>hssl</span><span class="bold-lt">.NET</span>
-                  </div>
-                  <div class="center-rt nowrap font-sm">
-                    <div class="bold highlight">Premium</div>
-                    <div>\.00</div>
-                  </div>
-                  <div class="right pad-lt">
-                    <div id="chkPremiumSelected_6" class="checkbox">
-                      <span>✔</span>
-                    </div>
-                  </div>
-                </div>
-                <input id="hdnPremiumSelected_6" name="hdnPremiumSelected_6" type="hidden" value="0">
-                <input name="hdnPremiumDomainName_6" type="hidden" value="HsSl.net">
-                <div class="table pad-med sep-top" onclick="PremiumItemClick(7);">
-                  <div class="wrap max pad-rt font-sm">
-                    <span>fhlp</span><span class="bold-lt">.COM</span>
-                  </div>
-                  <div class="center-rt nowrap font-sm">
-                    <div class="bold highlight">Premium</div>
-                    <div>\,500.00</div>
-                  </div>
-                  <div class="right pad-lt">
-                    <div id="chkPremiumSelected_7" class="checkbox">
-                      <span>✔</span>
-                    </div>
-                  </div>
-                </div>
-                <input id="hdnPremiumSelected_7" name="hdnPremiumSelected_7" type="hidden" value="0">
-                <input name="hdnPremiumDomainName_7" type="hidden" value="FhLp.com">
-                <div class="table pad-med sep-top" onclick="PremiumItemClick(8);">
-                  <div class="wrap max pad-rt font-sm">
-                    <span>lahs</span><span class="bold-lt">.NET</span>
-                  </div>
-                  <div class="center-rt nowrap font-sm">
-                    <div class="bold highlight">Premium</div>
-                    <div>\.00</div>
-                  </div>
-                  <div class="right pad-lt">
-                    <div id="chkPremiumSelected_8" class="checkbox">
-                      <span>✔</span>
-                    </div>
-                  </div>
-                </div>
-                <input id="hdnPremiumSelected_8" name="hdnPremiumSelected_8" type="hidden" value="0">
-                <input name="hdnPremiumDomainName_8" type="hidden" value="LaHs.net">
-                <div class="table pad-med sep-top" onclick="PremiumItemClick(9);">
-                  <div class="wrap max pad-rt font-sm">
-                    <span>cmns</span><span class="bold-lt">.NET</span>
-                  </div>
-                  <div class="center-rt nowrap font-sm">
-                    <div class="bold highlight">Premium</div>
-                    <div>\,800.00</div>
-                  </div>
-                  <div class="right pad-lt">
-                    <div id="chkPremiumSelected_9" class="checkbox">
-                      <span>✔</span>
-                    </div>
-                  </div>
-                </div>
-                <input id="hdnPremiumSelected_9" name="hdnPremiumSelected_9" type="hidden" value="0">
-                <input name="hdnPremiumDomainName_9" type="hidden" value="CmHs.net">
-              </div>
-            </div>
-          </div> -->
+
           <div class="margin-bt-med white-bg ">
             <div id="add-dom-header" class="row pad-med" style="display:none;" onclick="toggleSection(&#39;add-dom-header-toggle&#39;, &#39;add-dom-cont&#39;)">
               <div class="font-med">Additional Domains</div>
@@ -1358,8 +1088,8 @@ left: 3px;
                   <span class="wrap">doublerainbow</span><span class="bold-lt">.biz</span>
                 </div>
                 <div class="center-rt nowrap font-sm">
-            <div><div class="table right nowrap"><span>$7.99</span></div></div>
-          </div>
+                  <div><div class="table right nowrap"><span>$7.99</span></div></div>
+                </div>
 
               </div>
               <input id="hdnDomainSelected_8" name="hdnDomainSelected_8" type="hidden" value="0">
@@ -1374,8 +1104,8 @@ left: 3px;
                   <span class="wrap">doublerainbow</span><span class="bold-lt">.me</span>
                 </div>
                 <div class="center-rt nowrap font-sm">
-            <div><div class="table right nowrap"><span>$2.99</span></div></div>
-          </div>
+                  <div><div class="table right nowrap"><span>$2.99</span></div></div>
+                </div>
 
               </div>
               <input id="hdnDomainSelected_9" name="hdnDomainSelected_9" type="hidden" value="0">
@@ -1390,8 +1120,8 @@ left: 3px;
                   <span class="wrap">doublerainbow</span><span class="bold-lt">.mobi</span>
                 </div>
                 <div class="center-rt nowrap font-sm">
-            <div><div class="table right nowrap"><span>$2.99</span></div></div>
-          </div>
+                  <div><div class="table right nowrap"><span>$2.99</span></div></div>
+                </div>
 
               </div>
               <input id="hdnDomainSelected_10" name="hdnDomainSelected_10" type="hidden" value="0">
@@ -1420,8 +1150,8 @@ left: 3px;
                   <span class="wrap">doublerainbow</span><span class="bold-lt">.ws</span>
                 </div>
                 <div class="center-rt nowrap font-sm">
-            <div><div class="table right nowrap"><span>$2.99</span></div></div>
-          </div>
+                  <div><div class="table right nowrap"><span>$2.99</span></div></div>
+                </div>
 
               </div>
               <input id="hdnDomainSelected_12" name="hdnDomainSelected_12" type="hidden" value="0">
@@ -1715,108 +1445,108 @@ left: 3px;
               <input name="hdnSearchDomainName_33" type="hidden" value="doublerainbow.ag">
 
               <!-- <div style="display:block;">
-                <div id="view-more-addn" class="center pad-med sep-top sep-bottom" onclick="\$(this).hide();\$(&#39;div.additional-domains&#39;).show();\$(&#39;#cont-reg&#39;).addClass(&#39;sep-top&#39;);">
-                  <p><a class="font-sm">View More Additional</a></p>
-                </div>
-              </div> -->
+              <div id="view-more-addn" class="center pad-med sep-top sep-bottom" onclick="\$(this).hide();\$(&#39;div.additional-domains&#39;).show();\$(&#39;#cont-reg&#39;).addClass(&#39;sep-top&#39;);">
+              <p><a class="font-sm">View More Additional</a></p>
             </div>
-          </div>
-        </div>
-        <div id="cont-reg" class="white-bg pad-med sep-top">
-          <button id="continue-reg" name="forumsubmitbutton" class="btn-med btn-action max" type="button"  onclick="window.location='DomainOptions.html'"value="Continue Registration">
-            Add to Cart
-          </button>
-        </div>
-
-      </form>
-
-      <!-- <div class="white-bg margin-tp-bt-med pad-tp-bt-med">
-        <form id="SearchForm" name="SearchForm" class="ajax-form" data-loadingtext="Searching" method="get" action="#">
-          <div class="margin-lt-rt-med">
-            <div class="table white-bg pad-tp-bt-sm pad-rt-sm gray-brd">
-              <div class="pad-rt max">
-                <input id="domain-search" name="txtDomain" type="text" class="dmn-srch" maxlength="71" value="" placeholder="Find another domain">
-              </div>
-              <div class="margin-lt right">
-                <button id="btn-domain-search" type="submit" class="btn-sm btn-action clickable" name="forumsubmitbutton" value="Go">Go</button>
-              </div>
-            </div>
-          </div>
-          <input name="hdnSearchPage" type="hidden" value="domainsearchlist1">
-        </form>
-      </div> -->
-      <div class="white-bg margin-bt-med pad-med">
-        <div class="font-xsm">All prices based on first year registration.</div>
-        <div class="font-xsm margin-tp-sm">
-          * Plus ICANN fee of $0.18 per year.
+          </div> -->
         </div>
       </div>
     </div>
-    <div id="addn-avail-template" style="display:none;">
-      <div class="table pad-med sep-top" onclick="moreDomainTypeClick({idx});">
-        <div class="wrap max pad-rt font-sm">
-          <span class="wrap">{sld}</span><span class="bold-lt">.{tld}</span>
-        </div>
-        <div class="nowrap font-sm">
-          <div class="center-rt">{price}</div>
-        </div>
-        <div class="right pad-lt">
-          <div id="{cbsel}" class="checkbox">
-            <span>✔</span>
-          </div>
-        </div>
-      </div>
-      <input id="{selinput}" name="{selinput}" type="hidden" value="0">
-      <input name="{dominput}" type="hidden" value="{domainandtld}">
+    <div id="cont-reg" class="white-bg pad-med sep-top">
+      <button id="continue-reg" name="forumsubmitbutton" class="btn-med btn-action max" type="button"  onclick="window.location='DomainOptions.html'"value="Continue Registration">
+        Add to Cart
+      </button>
     </div>
-    <div id="main-footer" class="">
-      <div id="footer-btns" class="margin-bt-med">
-        <div id="call-us-foot" class="row pad pad-lt-med font-sm white-bg clickable sep-bottom" onclick="window.location=&#39;tel:(480) 505-8877&#39;">
+
+  </form>
+
+  <!-- <div class="white-bg margin-tp-bt-med pad-tp-bt-med">
+  <form id="SearchForm" name="SearchForm" class="ajax-form" data-loadingtext="Searching" method="get" action="#">
+  <div class="margin-lt-rt-med">
+  <div class="table white-bg pad-tp-bt-sm pad-rt-sm gray-brd">
+  <div class="pad-rt max">
+  <input id="domain-search" name="txtDomain" type="text" class="dmn-srch" maxlength="71" value="" placeholder="Find another domain">
+</div>
+<div class="margin-lt right">
+<button id="btn-domain-search" type="submit" class="btn-sm btn-action clickable" name="forumsubmitbutton" value="Go">Go</button>
+</div>
+</div>
+</div>
+<input name="hdnSearchPage" type="hidden" value="domainsearchlist1">
+</form>
+</div> -->
+<div class="white-bg margin-bt-med pad-med">
+  <div class="font-xsm">All prices based on first year registration.</div>
+  <div class="font-xsm margin-tp-sm">
+    * Plus ICANN fee of $0.18 per year.
+  </div>
+</div>
+
+<div id="addn-avail-template" style="display:none;">
+  <div class="table pad-med sep-top" onclick="moreDomainTypeClick({idx});">
+    <div class="wrap max pad-rt font-sm">
+      <span class="wrap">{sld}</span><span class="bold-lt">.{tld}</span>
+    </div>
+    <div class="nowrap font-sm">
+      <div class="center-rt">{price}</div>
+    </div>
+    <div class="right pad-lt">
+      <div id="{cbsel}" class="checkbox">
+        <span>✔</span>
+      </div>
+    </div>
+  </div>
+  <input id="{selinput}" name="{selinput}" type="hidden" value="0">
+  <input name="{dominput}" type="hidden" value="{domainandtld}">
+</div>
+<div id="main-footer" class="">
+  <div id="footer-btns" class="margin-bt-med">
+    <div id="call-us-foot" class="row pad pad-lt-med font-sm white-bg clickable sep-bottom" onclick="window.location=&#39;tel:(480) 505-8877&#39;">
+      <div>
+        <a>(480) 505-8877</a><span> - 24/7 Support</span>
+      </div>
+    </div>
+  </div>
+  <div id="footer-links-top" class="left pad pad-lt-med font-sm color-white" style="background-color: #585858;border-bottom:2px solid #878787">
+    <div class="table">
+      <div id="lang-foot" class="clickable">
+        <div class="pad-tp-bt row">
           <div>
-            <a>(480) 505-8877</a><span> - 24/7 Support</span>
+            <div class="mn-spr-globe pad-lt-med"></div>
+          </div>
+          <div class="pad-rt-med" style="border-right:2px solid #FFF;;">
+            United States - English
           </div>
         </div>
       </div>
-      <div id="footer-links-top" class="left pad pad-lt-med font-sm color-white" style="background-color: #585858;border-bottom:2px solid #878787">
-        <div class="table">
-          <div id="lang-foot" class="clickable">
-            <div class="pad-tp-bt row">
-              <div>
-                <div class="mn-spr-globe pad-lt-med"></div>
-              </div>
-              <div class="pad-rt-med" style="border-right:2px solid #FFF;;">
-                United States - English
-              </div>
-            </div>
-          </div>
-          <div id="currency-foot" class="clickable">
-            <div class="pad-tp-bt">
-              <div class="pad-lt-rt-med">USD ($)</div>
-            </div>
-          </div>
+      <div id="currency-foot" class="clickable">
+        <div class="pad-tp-bt">
+          <div class="pad-lt-rt-med">USD ($)</div>
         </div>
-      </div>
-      <div id="footer-links" class="left pad pad-med font-sm color-white" style="background-color: #333;">
-        <div class="table">
-          <div id="manage-foot" class="clickable" onclick="window.location=&#39;https://mya.m.nodomain/?exppurchasepath=false&amp;ci=82956&#39;;">
-            <div class="pad-rt-med" style="border-right:2px solid #FFF;;">Manage</div>
-          </div>
-          <form id="fos-redirect-form" name="fos-redirect-form" method="post" action="http://m.nodomain/viewcontrols/shared/posthandlers/redirectposthandler.ashx?exppurchasepath=false&rand=808898">
-            <div id="fullsite-foot" class="clickable" onclick="$(&#39;#fos-submit&#39;).click()">
-              <div class="pad-lt-rt-med">Full Site</div>
-            </div>
-            <input id="fos-submit" type="submit" name="forumsubmitbutton" style="display:none;" value="fos">
-          </form>
-        </div>
-        <div class="margin-tp" style="font-size:10px;">Copyright © 1999 - 2014 GoDaddy Operating Company, LLC. All Rights Reserved.</div>
       </div>
     </div>
+  </div>
+  <div id="footer-links" class="left pad pad-med font-sm color-white" style="background-color: #333;">
+    <div class="table">
+      <div id="manage-foot" class="clickable" onclick="window.location=&#39;https://mya.m.nodomain/?exppurchasepath=false&amp;ci=82956&#39;;">
+        <div class="pad-rt-med" style="border-right:2px solid #FFF;;">Manage</div>
+      </div>
+      <form id="fos-redirect-form" name="fos-redirect-form" method="post" action="http://m.nodomain/viewcontrols/shared/posthandlers/redirectposthandler.ashx?exppurchasepath=false&rand=808898">
+        <div id="fullsite-foot" class="clickable" onclick="$(&#39;#fos-submit&#39;).click()">
+          <div class="pad-lt-rt-med">Full Site</div>
+        </div>
+        <input id="fos-submit" type="submit" name="forumsubmitbutton" style="display:none;" value="fos">
+      </form>
+    </div>
+    <div class="margin-tp" style="font-size:10px;">Copyright © 1999 - 2014 GoDaddy Operating Company, LLC. All Rights Reserved.</div>
+  </div>
+</div>
 
-  </div>
-  <div id="menu-overlay"></div>
-  <div id="divTrafficImageContainer" style="position:relative;height:0;">
-    <img style="position:absolute;top:0;left:0;" src="./DomainSearchResults_files/image.aspx">
-  </div>
+</div>
+<div id="menu-overlay"></div></div>
+<div id="divTrafficImageContainer" style="position:relative;height:0;">
+  <img style="position:absolute;top:0;left:0;" src="./DomainSearchResults_files/image.aspx">
+</div>
 </div>
 <script src="./DomainSearchResults_files/jquery.min.js"></script>
 <script type="text/javascript" src="./DomainSearchResults_files/mobile-core.min.20131231.js"></script>
@@ -2167,9 +1897,9 @@ $("#addn-dom-link").click(function() {
   $("#cont-reg").addClass("pad-tp-med");
   setTimeout(function(){
     $('#cont-reg').scrollToFixed( {
-          bottom: 0,
-          limit: $('#cont-reg').offset().top
-      });
+      bottom: 0,
+      limit: $('#cont-reg').offset().top
+    });
   },1000);
 
 });
@@ -2270,24 +2000,24 @@ $(document).bind("ready", function() {
     var $this = $(this);
     var event = $this.data("event");
     if (event == null || event == undefined)
-{
-  if ($this.hasClass("close-menu"))
-  {
-    data = {name: "home", id: "", href: data.href};
-  }
-  else {
-    data = {
-      name: "menu",
-      id: $this.attr("id"),
-      href: $this.data("href") || window.location,
-      event: $this.hasClass("open-menu") ? "forward" : "back"
-    };
-  }
-  if (history.pushState) {
-    history.pushState(JSON.stringify(data), "", data.href);
-  }
-}
-});
+    {
+      if ($this.hasClass("close-menu"))
+      {
+        data = {name: "home", id: "", href: data.href};
+      }
+      else {
+        data = {
+          name: "menu",
+          id: $this.attr("id"),
+          href: $this.data("href") || window.location,
+          event: $this.hasClass("open-menu") ? "forward" : "back"
+        };
+      }
+      if (history.pushState) {
+        history.pushState(JSON.stringify(data), "", data.href);
+      }
+    }
+  });
 });
 SiteHistory.handleEventState = function(state) {
   if (state) {
