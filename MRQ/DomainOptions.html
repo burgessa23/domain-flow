@@ -76,7 +76,11 @@ background-color: transparent;
 border: 3px solid #ff6c00;
 color: #ff6c00;
 }
-</style></head>
+</style> <script>
+            if (localStorage.getItem('authKey')!== 'true') {
+                window.location='/domain-flow/index.html';
+            }
+        </script></head>
 <body>
   <div id="MobileBodyContainer" style="min-height: 974px;">
     <div id="sd-mn">

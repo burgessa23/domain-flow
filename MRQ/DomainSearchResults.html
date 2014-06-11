@@ -85,7 +85,11 @@
   cursor:pointer;
 }
 </style>
-</head><body>
+ <script>
+            if (localStorage.getItem('authKey')!== 'true') {
+                window.location='/domain-flow/index.html';
+            }
+        </script></head><body>
   <div id="MobileBodyContainer" style="min-height: 974px;">
     <div id="sd-mn">
       <div id="sd-mn-hd" class="row" style="padding:7px">

@@ -19,7 +19,11 @@
 
   <link rel="Stylesheet" type="text/css" href="./gdhome_files/gd_2014411.min.css">
   <link rel="stylesheet" href="owl-carousel/owl.carousel.min.css">
-</head>
+ <script>
+            if (localStorage.getItem('authKey')!== 'true') {
+                window.location='/domain-flow/index.html';
+            }
+        </script></head>
 <body>
   <div id="MobileBodyContainer" style="min-height: 568px;">
     <div id="sd-mn">

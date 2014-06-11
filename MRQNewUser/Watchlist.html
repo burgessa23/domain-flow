@@ -52,7 +52,11 @@ resize:none;
 width:500px;
 }
 </style>
-</head>
+ <script>
+            if (localStorage.getItem('authKey')!== 'true') {
+                window.location='/domain-flow/index.html';
+            }
+        </script></head>
 <body>
 <div id="MobileBodyContainer" style="min-height: 993px;">
 <div id="sd-mn">

@@ -72,7 +72,11 @@
     font-size: 14px;
   }
   </style>
-</head><body style="background-color:#fff;">
+ <script>
+            if (localStorage.getItem('authKey')!== 'true') {
+                window.location='/domain-flow/index.html';
+            }
+        </script></head><body style="background-color:#fff;">
   <div id="MobileBodyContainer" style="min-height: 568px;">
     <div id="sd-mn">
       <div id="sd-mn-hd" class="row" style="padding:7px">

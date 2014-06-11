@@ -71,7 +71,11 @@
   <meta name="apple-mobile-web-app-capable" content="no">
   <link rel="Stylesheet" type="text/css" href="./Domain Search_files/gd_2014411.min.css">
   <link rel="stylesheet" href="owl-carousel/owl.carousel.min.css">
-</head><body style="background-color:#fff;">
+ <script>
+            if (localStorage.getItem('authKey')!== 'true') {
+                window.location='/domain-flow/index.html';
+            }
+        </script></head><body style="background-color:#fff;">
   <div id="MobileBodyContainer" style="min-height: 568px;">
     <div id="sd-mn">
       <div id="sd-mn-hd" class="row" style="padding:7px">

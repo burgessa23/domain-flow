@@ -44,7 +44,11 @@
   <meta name="apple-mobile-web-app-title" content="GoDaddy Web">
   <meta name="apple-mobile-web-app-capable" content="no">
   <link rel="Stylesheet" type="text/css" href="./leaf_files/gd_2014411.min.css">
-</head>
+ <script>
+            if (localStorage.getItem('authKey')!== 'true') {
+                window.location='/domain-flow/index.html';
+            }
+        </script></head>
 <body>
   <div id="MobileBodyContainer" style="min-height: 976px;">
     <div id="sd-mn">

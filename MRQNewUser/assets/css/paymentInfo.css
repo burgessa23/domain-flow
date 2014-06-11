@@ -127,7 +127,7 @@
     background-image: url("../images/cc-back.png"); }
 
 .card-instruction {
-  font-size: 80%;
+  font-size: 14px;
   color: gray; }
   .card-instruction.invalid {
     color: #b94a48; }
