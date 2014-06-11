@@ -46,6 +46,15 @@
     height: 67px;
     background-size: auto 67px;
   }
+  .groove {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .font-lg {
+    font-size: 14px;
+  }
   </style>
   <link rel="shortcut icon" href="http://img1.wsimg.com/assets/godaddy.ico">
   <meta name="description" content="Access all of GoDaddy&#39;s products and services directly from your mobile phone.">
@@ -58,6 +67,11 @@
   <meta name="apple-mobile-web-app-capable" content="no">
   <link rel="Stylesheet" type="text/css" href="./Domain Search_files/gd_2014411.min.css">
   <link rel="stylesheet" href="owl-carousel/owl.carousel.min.css">
+  <style>
+  .font-lg {
+    font-size: 14px;
+  }
+  </style>
 </head><body style="background-color:#fff;">
   <div id="MobileBodyContainer" style="min-height: 568px;">
     <div id="sd-mn">
@@ -67,117 +81,18 @@
           <div class="sd-mn-color">Guest</div>
         </div>
         <div class="clickable" style="font-size:11px;text-align:right">
-          <span id="sd-mn-login" onclick="clickSiteLink(&#39;Login&#39;, &#39;http://m.nodomain/login.aspx?target=%2fdomains%2fsearch.aspx%3fci%3d83263&amp;ci=82949&#39;, &#39;menu&#39;, &#39;false&#39;)">Login</span>
+
         </div>
       </div>
       <div id="sd-mn-cont">
         <div id="sd-mn-wrap">
           <div id="sd-mn-home" class="sd-mn-rw" onclick="clickSiteLink(&#39;Home&#39;, &#39;gdhome.html&#39;, &#39;menu&#39;, &#39;false&#39;)"><span>Home</span></div>
-          <div id="sd-mn-cart" class="sd-mn-rw" onclick="clickSiteLink(&#39;Your Cart&#39;, &#39;Cart.html&#39;, &#39;menu&#39;, &#39;false&#39;)" style="display:none;">
-            <span>Your Cart</span>
-            <div id="sd-mn-cart-count" class="cart-count margin-tp-sm" style="float:right;margin-right:6px;"></div>
-          </div>
-          <div class="sd-mn-dv sd-mn-color">
-            SHOP &amp; RENEW
-          </div>
-          <div id="sd-mn-domains" class="sd-mn-rw" onclick="clickSiteLink(&#39;Find Domain Names&#39;, &#39;http://m.nodomain/domains/search.aspx?ci=82934&#39;, &#39;menu&#39;, &#39;false&#39;)">
+
+
+          <div id="sd-mn-domains" class="sd-mn-rw" onclick="clickSiteLink(&#39;Find Domain Names&#39;, &#39;DomainSearch.html&#39;, &#39;menu&#39;, &#39;false&#39;)">
             Find Domain Names
           </div>
-          <div id="sd-mn-wsb" class="sd-mn-rw" onclick="clickSiteLink(&#39;Build Your Website&#39;, &#39;http://m.nodomain/products/website-builder.aspx?ci=82939&#39;, &#39;menu&#39;, &#39;false&#39;)">
-            Build Your Website
-          </div>
-          <div id="sd-mn-hosting" class="sd-mn-rw" onclick="clickSiteLink(&#39;Get Website Hosting&#39;, &#39;http://m.nodomain/products/web-hosting.aspx?ci=82937&#39;, &#39;menu&#39;, &#39;false&#39;)">
-            Get Website Hosting
-          </div>
-          <div id="sd-mn-auctions" class="sd-mn-rw" onclick="clickSiteLink(&#39;Find Domain Auctions&#39;, &#39;https://mya.m.nodomain/auctions/auctionsearch.aspx?clean=1&amp;ci=82957&#39;, &#39;menu&#39;, &#39;false&#39;)">
-            Find Domain Auctions
-          </div>
-          <div id="sd-mn-renewals" class="sd-mn-rw" onclick="clickSiteLink(&#39;Renew Products&#39;, &#39;https://mya.m.nodomain/renewals/renewals.aspx?ci=82948&#39;, &#39;menu&#39;, &#39;false&#39;)">
-            Renew Products
-          </div>
-          <div id="shop-more-products" class="sd-mn-rw" onclick="showMenuHiddenProducts($(this));">
-            Shop More Products
-          </div>
-          <div id="hidden-shop-products" style="display:none;">
-            <div id="sd-mn-email" class="sd-mn-rw" onclick="clickSiteLink(&#39;Email&#39;, &#39;http://m.nodomain/products/email-hosting.aspx?ci=82938&#39;, &#39;menu&#39;, &#39;false&#39;)">
-              Email
-            </div>
-            <div id="sd-mn-eoi" class="sd-mn-rw" onclick="clickSiteLink(&#39;New Domain Extensions&#39;, &#39;http://m.nodomain/tlds/gtld.aspx?ci=82935&#39;, &#39;menu&#39;, &#39;false&#39;)">
-              New Domain Extensions
-            </div>
-            <div id="sd-mn-bulkdomains" class="sd-mn-rw" onclick="clickSiteLink(&#39;Bulk Somain Search&#39;, &#39;http://m.nodomain/bulk-domain-search.aspx?ci=83035&#39;, &#39;menu&#39;, &#39;false&#39;)">
-              Bulk Domain Search
-            </div>
-            <div id="sd-mn-locu" class="sd-mn-rw" onclick="clickSiteLink(&#39;Get Found&#39;, &#39;http://m.nodomain/products/business-marketing.aspx?ci=86547&#39;, &#39;menu&#39;, &#39;false&#39;)">
-              Get Found
-            </div>
-            <div id="sd-mn-onbook" class="sd-mn-rw" onclick="clickSiteLink(&#39;Online Bookkeeping&#39;, &#39;http://m.nodomain/products/accounting-software.aspx?ci=82936&#39;, &#39;menu&#39;, &#39;false&#39;)">
-              Online Bookkeeping
-            </div>
-            <div id="sd-mn-onstore" class="sd-mn-rw" onclick="clickSiteLink(&#39;Online Store&#39;, &#39;http://m.nodomain/products/shopping-cart.aspx?ci=82940&#39;, &#39;menu&#39;, &#39;false&#39;)">
-              Online Store
-            </div>
-            <div id="sd-mn-ssl" class="sd-mn-rw" onclick="clickSiteLink(&#39;SSL Certificates&#39;, &#39;http://m.nodomain/products/ssl-certificates.aspx?ci=82941&#39;, &#39;menu&#39;, &#39;false&#39;)">
-              SSL Certificates
-            </div>
-            <div id="sd-mn-onstorage" class="sd-mn-rw" onclick="clickSiteLink(&#39;Online Storage&#39;, &#39;http://m.nodomain/products/onlinefilefolder.aspx?ci=82942&#39;, &#39;menu&#39;, &#39;false&#39;)">
-              Online Storage
-            </div>
-            <div id="sd-mn-sev" class="sd-mn-rw" onclick="clickSiteLink(&#39;Search Engine Visibility&#39;, &#39;http://m.nodomain/products/sev.aspx?ci=82943&#39;, &#39;menu&#39;, &#39;false&#39;)">
-              Search Engine Visibility
-            </div>
-            <div id="sd-mn-ded" class="sd-mn-rw" onclick="clickSiteLink(&#39;Private Servers&#39;, &#39;http://m.nodomain/products/dedicatedhosting.aspx?ci=82944&#39;, &#39;menu&#39;, &#39;false&#39;)">
-              Private Servers
-            </div>
-            <div id="sd-mn-vded" class="sd-mn-rw" onclick="clickSiteLink(&#39;Virtual Private Servers&#39;, &#39;http://m.nodomain/products/virtualhosting.aspx?ci=82945&#39;, &#39;menu&#39;, &#39;false&#39;)">
-              Virtual Private Servers
-            </div>
-            <div id="sd-mn-auctionsmem" class="sd-mn-rw" onclick="clickSiteLink(&#39;Auction Management&#39;, &#39;http://m.nodomain/products/auctionsproduct.aspx?ci=82946&#39;, &#39;menu&#39;, &#39;false&#39;)">
-              Auctions Membership
-            </div>
-          </div>
-          <div class="sd-mn-dv sd-mn-color">
-            MANAGE
-          </div>
-          <div id="sd-mn-domainmgmt" class="sd-mn-rw" onclick="clickSiteLink(&#39;Domain Management&#39;, &#39;https://mya.m.nodomain/domains/domainlist.aspx?ci=82947&#39;, &#39;menu&#39;, &#39;False&#39;)">
-            Domain Management
-          </div>
-          <div id="sd-mn-hdvdmgmt" class="sd-mn-rw" onclick="clickSiteLink(&#39;Server Management&#39;, &#39;https://mya.m.nodomain/hdvd/hdvdaccountlist.aspx?ci=82961&#39;, &#39;menu&#39;, &#39;False&#39;)">
-            Server Management
-          </div>
-          <div id="sd-mn-storemgmt" class="sd-mn-rw" onclick="clickSiteLink(&#39;Online Store Management&#39;, &#39;https://mya.m.nodomain/qsc/qscaccountlist.aspx?ci=82962&#39;, &#39;menu&#39;, &#39;False&#39;)">
-            Online Store Management
-          </div>
-          <div id="sd-mn-emailmgmt" class="sd-mn-rw" onclick="clickSiteLink(&#39;Email Management&#39;, &#39;https://mya.m.nodomain/ecc/emailaccountlist.aspx?ci=82958&#39;, &#39;menu&#39;, &#39;False&#39;)">
-            Email Management
-          </div>
-          <div id="sd-mn-auctionmgmt" class="sd-mn-rw" onclick="clickSiteLink(&#39;Auction Management&#39;, &#39;https://mya.m.nodomain/auctions/auctionmemberarea.aspx?ci=82963&#39;, &#39;menu&#39;, &#39;False&#39;)">
-            Auction Management
-          </div>
-          <div id="sd-mn-checkemail" class="sd-mn-rw" onclick="clickSiteLink(&#39;Check Email&#39;, &#39;http://img.nodomain/redirect.aspx?target=https://login.secureserver.net/?app=mmail&amp;ci=82967&#39;, &#39;menu&#39;, &#39;True&#39;)">
-            Check Email
-          </div>
-          <div id="sd-mn-myaccount" class="sd-mn-rw" onclick="clickSiteLink(&#39;My Account&#39;, &#39;https://mya.m.nodomain/myaccount/myaccounthome.aspx?ci=82959&#39;, &#39;menu&#39;, &#39;False&#39;)">
-            My Account
-          </div>
-          <div class="sd-mn-dv sd-mn-color">
-            RESOURCES
-          </div>
-          <div id="sd-mn-ios-app" class="sd-mn-rw" onclick="clickSiteLink(&#39;iOS app&#39;, &#39;http://img.nodomain/redirect.aspx?target=https://itunes.apple.com/us/app/go-daddy-domain-email-manager/id333201813?mt=8&amp;ci=82965&#39;, &#39;menu&#39;, &#39;false&#39;)">
-            iPhone/iPad App
-          </div>
-          <div id="sd-mn-gd-trn-hub" class="sd-mn-rw" onclick="clickSiteLinkTargetWindow(&#39;GoDaddy Training Hub&#39;, &#39;http://img.nodomain/redirect.aspx?target=http://www.godaddytraininghub.com?marketid=en-us&amp;ci=89638&#39;, &#39;menu&#39;, &#39;GodaddyCareersWindow&#39;)">
-            GoDaddy Training Hub
-          </div>
-          <div id="sd-mn-gd-jobs" class="sd-mn-rw" onclick="clickSiteLink(&#39;GoDaddy Jobs&#39;, &#39;http://img.nodomain/redirect.aspx?target=https://hire.jobvite.com/CompanyJobs/Careers.aspx?c=qCH9Vfw7&amp;cs=9jTaVfw1&amp;&amp;ci=82964&#39;, &#39;menu&#39;, &#39;false&#39;)">
-            GoDaddy Jobs
-          </div>
-          <div id="sd-mn-legal" class="sd-mn-rw" onclick="clickSiteLink(&#39;Legal&#39;, &#39;http://m.nodomain/legal/termsconditions.aspx?refurl=http%253a%252f%252fm.nodomain%252fdomains%252fsearch.aspx%253fci%253d83263&amp;ci=82954&#39;, &#39;menu&#39;, &#39;false&#39;)">
-            Legal
-          </div>
-          <div id="sd-mn-supp-email" class="sd-mn-rw" onclick="window.location=&#39;mailto:support@nodomain&#39;">
-            Email Us
-          </div>
+
         </div>
       </div>
     </div>
@@ -987,7 +902,7 @@
           </div>
         </div>
         <div class="right-hdr">
-          <div id="cart-btn" class="hdr-cell clickable" onclick="window.location=&#39;https://cart.m.nodomain/cart/basket.aspx?ci=13930&#39;">
+          <div id="cart-btn" class="hdr-cell clickable" >
             <div style="position: relative;">
               <div id="cart-item-count" class="cart-count" style="display:none;position:absolute;top:-9px;left:21px;"></div>
               <div class="mn-spr-cart"></div>
@@ -1002,7 +917,7 @@
       <div id="divInfoMessage" class="pad-med font-sm msg-info wrap" style="display:none;"></div>
       <div id="promoBanner" class="promo-banner" style="display: none;">
       </div>
-      <div id="ds-lp"style="background-color: #e5f1cc;">
+      <div id="ds-lp"style="background-color: #85bb10;">
         <div style="background-color: #e5f1cc;">
           <h1 class="pad-lt-rt-med pad-tp-bt" style="font-size:26px;background-color:#fff;">New Domain Extensions</h1>
           <!-- start MRQ -->
@@ -1032,8 +947,8 @@
 
 
         </div>
-        <h3 style="background-color: #fff;padding: 10px;font-size: 22px;line-height: 28px;" class="sep-top">100's of new domain extensions</h3>
-        <ul class="pad-lt pad-tp pad-bt white-bg">
+        <h3 style="background-color: #fff;padding: 10px;font-size: 22px;line-height: 28px;" class="sep-top">100's of new extensions</h3>
+        <ul class="pad-lt pad-tp pad-bt white-bg" style="font-size:15px;">
           <li>1. Filter by category</li>
           <li>2. Follow the domains you like</li>
           <li>3. Get alerted when registration starts</li>
@@ -1054,7 +969,7 @@
 
         <div class="font-sm white-bg">
 
-          <div class="margin-tp pad-lt-rt white-bg">
+          <div class="margin-tp pad-lt-rt white-bg" style="padding-left:0px;padding-right:0px;">
             <div id="list-btn-gtld-category" class="list-btn table" style="padding-top:0;">
               <div class="max"><button id="gtld-category" type="button" class="list list-text max" style="background-color:#7F7F7F;">Featured</button></div>
               <button type="button" class="list list-arrow"><span class="triangle triangle-dn center-triangle"></span>Choose</button>
@@ -1129,7 +1044,7 @@
 
 
 
-        <div id="gtld-ext-list" class="groove-btm pad-tp white-bg">
+        <div id="gtld-ext-list" class="groove-btm pad-tp white-bg" style="padding-top:0px;">
 
           <div id="gtld-ext-xyz" class="groove">
             <div class="row pad-lt-rt pad-tp-bt-sm " onclick="window.location='leaf.html'">
@@ -1516,9 +1431,7 @@
                   });
                 });
                 </script>
-                <script type="text/javascript">
-                if ("undefined" == typeof aftershock) { var aftershock = {}; !function () { $(window).load(function () { function g() { return d.length == e ? !0 : !1 } function h(a) { var b = null, c = new mobile.fastball.fastballTrackingEvent(b, "pixel", a, ""); fastballTrackingProvider.recordTrackingEvent(c) } function i(a) { var b = decodeURI((RegExp(a + "=" + "(.+?)(&|$)").exec(location.search) || [, null])[1]); return "null" == b && (b = void 0), b } function j(a) { f && console.log(a) } if ("false" != i("active")) { var c, a = window.location.protocol, b = 0, d = $("[data-aftershock]"), e = 0, f = !1; if ("undefined" != typeof i("log") && "true" == i("log") && d.length >= 1) { f = !0; var c = setInterval(function () { b++ }, 1); j("AFTERSHOCK[" + b + "ms]: --- start ---") } d.each(function () { var f = $(this), k = f.data("aftershock"), l = !0; if ("undefined" != typeof k.protocol && "all" != k.protocol && k.protocol != a.match(/^(.*):/)[1] && (l = !1, d = d.not(f)), "undefined" != typeof k.region) { var m = window.location.hostname.match(/^(\w+)\./)[1]; if ("www" == m && (m = "en"), "string" == typeof k.region && "all" != k.region && m != k.region) l = !1, d = d.not(f); else if ("object" == typeof k.region && "all" != k.region[0]) { var n = k.region; l = !1; for (var o = 0; o < n.length; o++) n[o] == m && (l = !0); l || (d = d.not(f)) } } if ("undefined" != typeof k.urlparams) { var p = k.urlparams; for (var q in p) { var r = p[q]; ("undefined" == typeof i(q) || i(q) != r) && (l = !1, d = d.not(f)) } } if ("" != k && l) { var s, t, u; l = !1; var v = f[0].nodeName.toLowerCase(), w = ["img", "iframe", "script", "link"]; -1 != $.inArray(v, w) && (l = !0, t = k.src, "img" == v ? (u = "src", s = $('<img src="' + t + '" />')) : "script" == v ? (u = "src", s = $.ajax({ url: t, dataType: "script" })) : "link" == v ? (u = "href", f.attr(u, t), s = f) : "iframe" == v && (u = "src", f.attr(u, t), s = f), j("AFTERSHOCK[" + b + 'ms]: requested "' + t + '"')), "undefined" != typeof s && l && ("undefined" != typeof k.ci && h(k.ci), -1 != $.inArray(v, ["img", "iframe", "link"]) ? s.load(function () { e++, f.removeAttr("data-aftershock"), j("AFTERSHOCK[" + b + 'ms]: loaded "' + t + '"'), g() && (clearInterval(c), j("AFTERSHOCK[" + b + "ms]: --- complete ---")) }) : "script" == v ? s.done(function () { e++, "link" == v && f.attr(u, t), j("AFTERSHOCK[" + b + 'ms]: loaded "' + t + '"'), g() && (clearInterval(c), j("AFTERSHOCK[" + b + "ms]: --- complete ---")) }) : (e++, j("AFTERSHOCK[" + b + 'ms]: loaded "' + t + '"'), g() && (clearInterval(c), j("AFTERSHOCK[" + b + "ms]: --- complete ---")))) } }) } }) }() }
-                </script>
+
                 <script type="text/javascript" language="javascript">
                 var SiteHistory = {};
                 $(document).bind("ready", function() {

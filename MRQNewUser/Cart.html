@@ -1052,20 +1052,20 @@ left: 3px;
 
 
               <div id="other-pay-row" class="pay-opt-row table clickable" style="padding: 15px 15px 0 15px" data-paytype="paymentMethod">
-                <span style="font-size:14px;width:100%;">Password</span>
+                <span style="font-size:14px;width:100%;">Password</span><span style="float:right;font-size:12px;padding-right:10px;">hide</span>
 
               </div>
               <div id="other-pay-row" class="pay-opt-row table clickable " style="padding: 3px 15px 0 15px" data-paytype="paymentMethod">
-                <input type="password" placeholder="" style="width: 320px;">
+                <input type="text" id="passwd" placeholder="" style="width: 320px;">
 
               </div>
 
               <div id="other-pay-row" class="pay-opt-row table clickable" style="padding: 15px 15px 0 15px" data-paytype="paymentMethod">
-                <span style="font-size:14px;width:100%;">Call-in PIN</span>
+                <span style="font-size:14px;width:100%;">Call-in PIN</span><span style="float:right;font-size:12px;padding-right:10px;">hide</span>
 
               </div>
               <div id="other-pay-row" class="pay-opt-row table clickable " style="padding: 3px 15px 0 15px" data-paytype="paymentMethod">
-                <input type="password" placeholder="" style="width: 320px;">
+                <input type="text" placeholder="" style="width: 320px;">
 
               </div>
 
@@ -1074,7 +1074,7 @@ left: 3px;
                 <div class="font-xsm"><span>By clicking on</span> <span class="bold">Place Order</span> <span>you acknowledge that you have read and agree to the terms of the</span> <span></span><a id="agreement0" class="blue" href="https://cart.m.nodomain/cart/agreement.aspx?pageid=UTOS&agreename=VW5pdmVyc2FsIFRlcm1zIG9mIFNlcnZpY2UgQWdyZWVtZW50&isc=gdbbm1463&ci=17514" target="_self">Universal Terms of Service Agreement</a><span>, </span><a id="agreement1" class="blue" href="https://cart.m.nodomain/cart/agreement.aspx?pageid=reg_sa&agreename=RG9tYWluIE5hbWUgUmVnaXN0cmF0aW9uIEFncmVlbWVudA%253d%253d&isc=gdbbm1463&ci=17514" target="_self">Domain Name Registration Agreement</a><span>.</span></div>
               </div> -->
               <div class="pad-med">
-                <button id="place-order-button" class="btn-buy btn-med max" type="button" onclick="window.location='PaymentMethod.html'">Continue</button>
+                <button id="place-order-button" class="btn-action btn-med max" type="button" onclick="window.location='PaymentMethod.html'">Continue</button>
               </div>
             </div>
 
@@ -1344,24 +1344,7 @@ left: 3px;
   $(document).ready(
     function() {
       //setup ajax call to get and load banners
-      $.ajax({
-        type: "GET",
-        contentType: "application/json; charset=utf-8",
-        url: "https://cart.m.nodomain/viewcontrols/android/shared/ajaxhandlers/promobannerajaxhandler.ashx?isc=gdbbm1463&rand=241650&ajaxmethod=getpromobanners",
-        data: '',
-        dataType: "json",
-        success: function (msg)
-        {
-          var promoBanner = $("#promoBanner");
-          //foreach item returned, write out banner
-          for (var iCounter = 0; iCounter < msg.length; iCounter++)
-          {
-            html = "<div class='wrap'><span>" + msg[iCounter].BannerText + "</span></div>";
-            promoBanner.html(html);
-            promoBanner.slideDown(500);
-          }
-        }
-      });
+
     });
     </script>
     <script type="text/javascript">
@@ -1658,7 +1641,7 @@ left: 3px;
     </script>
     <script type="text/javascript">
     $(document).ready(function () {
-      $("#divKeepAliveImageContainer").html("<img src=\"https://idp.m.nodomain/keepalive.aspx?infomsg=1&showPaymentMethod=1&isc=gdbbm1463&ci=17519&loginredirect=1&newshopper=0\" alt=\"\" />");
+      //$("#divKeepAliveImageContainer").html("<img src=\"https://idp.m.nodomain/keepalive.aspx?infomsg=1&showPaymentMethod=1&isc=gdbbm1463&ci=17519&loginredirect=1&newshopper=0\" alt=\"\" />");
     });
     </script>
     <script type="text/javascript" language="javascript">

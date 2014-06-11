@@ -1,60 +1,31 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <title>Domain Flow prototypes</title>
-        <link rel="shortcut icon" href="http://img1.wsimg.com/assets/godaddy.ico">
-        <meta name="description" content="Access all of GoDaddy&#39;s products and services directly from your mobile phone.">
-        <link rel="canonical" href="gdhome_files/gdhome.html">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
-        <meta name="apple-mobile-web-app-title" content="GoDaddy Web">
+<head>
 
-        <link href="http://img1.wsimg.com/mobile/img/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
-        <link href="http://img1.wsimg.com/mobile/img/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
-        <link href="http://img1.wsimg.com/mobile/img/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
-        <meta name="apple-mobile-web-app-capable" content="no">
-        <link rel="Stylesheet" type="text/css" href="MRQ/gdhome_files/gd_2014411.min.css">
-    </head>
+</head>
 
-    <body>
-        <div id="MobileBodyContainer" style="min-height: 568px;">
-            <div id="MobileContentContainer">
-            <div id="main-hdr" class="main-hdr">
-<div class="left-hdr">
-</div>
-<div class="right-hdr">
+<body onLoad="passWord()">
+<SCRIPT>
+function passWord() {
+    var testV = 1;
+    var pass1 = prompt('Please Enter Your Password',' ');
+    while (testV < 3) {
+        if (!pass1)
+        //history.go(-1);
+            return;
+        if (pass1.toLowerCase() == "letmeindppflow") {
+            window.location='index2.html';
+            break;
+        }
+        testV+=1;
+        var pass1 =
+        prompt('Access Denied - Password Incorrect, Please Try Again.','Password');
+    }
+    if (pass1.toLowerCase()!=="password" & testV ==3)
+    //history.go(-1);
+    return " ";
+}
+</SCRIPT>
 
-</div>
-<div id="hdr-logo" style="display: inline-block;margin-top: 8px; font-size: 20px;">UX Mobile project dashboard</div>
-
-</div>
-
-        <h1 class="pad-lt-rt-med pad-tp-bt" style="font-size:22px;background-color:#fff;">Mobile DPP conversion exercise</h1>
-
-        <div id="site-links" style="border-top: 3px solid #999;">
-        <div id="main-site-links">
-        <div id="site-link-domains" class="row pad font-sm main-bg sep-bottom row-clickable" onclick="window.location='http://m.godaddy.com'">
-        <div class="margin-lt-med max">Current Production Flow</div>
-        <div><div class="mn-spr-chevron"></div></div>
-        </div>
-        <div id="site-link-wsb" class="row pad font-sm main-bg sep-bottom row-clickable" onclick="window.location='MRQ/gdhome.html'">
-        <div class="margin-lt-med max">Domain Sales Optimized Flow - Auth</div>
-        <div><div class="mn-spr-chevron"></div></div>
-        </div>
-        <div id="site-link-wsb" class="row pad font-sm main-bg sep-bottom row-clickable" onclick="window.location='MRQNewUser/gdhome.html'">
-        <div class="margin-lt-med max">Domain Sales Optimized Flow - New</div>
-        <div><div class="mn-spr-chevron"></div></div>
-        </div>
-
-
-
-
-        </div>
-
-        </div>
-        </div>
-    </div>
-        <script src="MRQ/gdhome_files/jquery.min.js"></script>
-        <script type="text/javascript" src="MRQ/gdhome_files/mobile-core.min.20131231.js"></script>
-    </body>
+</body>
 </html>

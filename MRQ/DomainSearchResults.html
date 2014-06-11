@@ -94,7 +94,7 @@
           <div class="sd-mn-color">Guest</div>
         </div>
         <div class="clickable" style="font-size:11px;text-align:right">
-          <span id="sd-mn-login" onclick="clickSiteLink(&#39;Login&#39;, &#39;http://m.nodomain/login.aspx?exppurchasepath=false&amp;target=%2fdomains%2fdomainsearchlist1.aspx%3fexppurchasepath%3dfalse%26ci%3d80075&amp;ci=82949&#39;, &#39;menu&#39;, &#39;false&#39;)">Login</span>
+
         </div>
       </div>
       <div id="sd-mn-cont">
@@ -915,7 +915,7 @@
           </div>
         </div>
         <div class="right-hdr">
-          <div id="cart-btn" class="hdr-cell clickable" onclick="window.location=&#39;https://cart.m.nodomain/cart/basket.aspx?exppurchasepath=false&amp;ci=13930&#39;">
+          <div id="cart-btn" class="hdr-cell clickable" >
             <div style="position: relative;">
               <div id="cart-item-count" class="cart-count" style="display:none;position:absolute;top:-9px;left:21px;"></div>
               <div class="mn-spr-cart"></div>
@@ -1774,30 +1774,8 @@ function moreDomainTypeClick(index) {
 }
 AddnTlds.SearchDomains = function(page) {
   loadingModal.show("Loading...");
-  $.ajax({
-    type: "GET",
-    url: "http://m.nodomain/viewcontrols/apple/domains/ajaxhandlers/domainsearchajaxhandler.ashx?exppurchasepath=false&rand=808898&ajaxmethod=searchdomains",
-    data: {page: page,  sld: 'doublerainbow', lastidx: AddnTlds.lastIndex},
-    dataType: "json",
-    success: function (searchResults) {
-      loadingModal.hide();
-      if(searchResults != null && searchResults.availitems != null && searchResults.availitems.length > 0){
-        var addSearchCont = $("#addn-avail-dom-cont");
-        addSearchCont.addnSearchSource(searchResults.availitems);
-        addSearchCont.addnSearchTemplate($('#addn-avail-template'));
-        addSearchCont.bindAddnSearch();
-        AddnTlds.lastIndex = searchResults.lastidx;
-        if (searchResults.lastpage === true)
-        {
-          AddnTlds.link.hide();
-        }
-      }
-      else {
-        AddnTlds.link.hide();
-      }
-    },
-    error: function (req, status, err) {AddnTlds.link.hide();loadingModal.hide();}
-  });
+  AddnTlds.link.hide();loadingModal.hide();
+
 };
 jQuery.fn.extend({
   addnSearchSource: function(json) {

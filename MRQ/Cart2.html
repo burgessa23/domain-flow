@@ -1037,7 +1037,7 @@ color: #ff6c00;
                 <button id="place-order-button" class="btn-action btn-med max" type="button">Place Order</button>
               </div>
               <div class="pad-med" style="padding-top: 0px;">
-                <button id="review-order-button" class="btn-med max outlineBtn" type="button">Review Cart</button>
+                <button id="review-order-button" class="btn-med max outlineBtn" type="button" onclick="window.location='DomainOptions.html'">Review Cart</button>
               </div>
             </div>
 
@@ -1310,24 +1310,7 @@ color: #ff6c00;
   $(document).ready(
     function() {
       //setup ajax call to get and load banners
-      $.ajax({
-        type: "GET",
-        contentType: "application/json; charset=utf-8",
-        url: "https://cart.m.nodomain/viewcontrols/android/shared/ajaxhandlers/promobannerajaxhandler.ashx?isc=gdbbm1463&rand=241650&ajaxmethod=getpromobanners",
-        data: '',
-        dataType: "json",
-        success: function (msg)
-        {
-          var promoBanner = $("#promoBanner");
-          //foreach item returned, write out banner
-          for (var iCounter = 0; iCounter < msg.length; iCounter++)
-          {
-            html = "<div class='wrap'><span>" + msg[iCounter].BannerText + "</span></div>";
-            promoBanner.html(html);
-            promoBanner.slideDown(500);
-          }
-        }
-      });
+
     });
     </script>
     <script type="text/javascript">
@@ -1624,7 +1607,7 @@ color: #ff6c00;
     </script>
     <script type="text/javascript">
     $(document).ready(function () {
-      $("#divKeepAliveImageContainer").html("<img src=\"https://idp.m.nodomain/keepalive.aspx?infomsg=1&showPaymentMethod=1&isc=gdbbm1463&ci=17519&loginredirect=1&newshopper=0\" alt=\"\" />");
+      //$("#divKeepAliveImageContainer").html("<img src=\"https://idp.m.nodomain/keepalive.aspx?infomsg=1&showPaymentMethod=1&isc=gdbbm1463&ci=17519&loginredirect=1&newshopper=0\" alt=\"\" />");
     });
     </script>
     <script type="text/javascript" language="javascript">
