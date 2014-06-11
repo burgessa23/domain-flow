@@ -7,6 +7,10 @@
 <body onLoad="passWord()">
 <SCRIPT>
 function passWord() {
+    if (localStorage.getItem('authKey')=== 'true') {
+        window.location='index2.html';
+        return;
+    }
     var testV = 1;
     var pass1 = prompt('Please Enter Your Password','');
     while (testV < 3) {
