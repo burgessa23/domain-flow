@@ -1063,7 +1063,7 @@ color: #ff6c00;
           </div>
           <div id="cart-cont" class="pad-med groove groove-btm white-bg">
             <input id="hdnOptionsMode" name="hdnOptionsMode" type="hidden" value="1">
-            <button id="xs-add-to-cart" name="forumsubmitbutton" class="btn-action btn-med max" type="button" value="Add to Cart"  onclick="window.location='Login.html'">Check out</button>
+            <button id="xs-add-to-cart" name="forumsubmitbutton" class="btn-action btn-med max" type="button" value="Add to Cart"  onclick="doCheckProto();">Check out</button>
             <button id="xs-add-to-cart" name="forumsubmitbutton" class="btn-med max margin-tp-med outlineBtn" type="button" value="Add to Cart"  onclick="window.location='DomainSearchResults.html'">Find more domains</button>
           </div>
         </form>
@@ -1129,6 +1129,13 @@ color: #ff6c00;
     <div id="loadingSpinnerText" class="font-med"></div>
   </div>
   <script type="text/javascript">
+  function doCheckProto() {
+    if (window.location.search.indexOf('hasAcct=true')=== -1) {
+      window.location='Login.html';
+    } else {
+      window.location='Cart2.html';
+    }
+  }
   var MENU_SLIDE_DURATION = 300;
   $(document).ready(function () {
     $("#MobileBodyContainer").css("min-height", ($(window).height() + "px"));
