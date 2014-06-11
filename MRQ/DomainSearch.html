@@ -49,9 +49,9 @@ background-size: auto 67px;
 .clearable{
   background:url(http://i.imgur.com/z7ZSYjt.png) no-repeat right -10px center;
   border:1px solid #999;
-  padding:3px 18px 3px 4px; /* USE the same right padding in jQ! */
+  padding:3px 0 3px 4px; /* USE the same right padding in jQ! */
   border-radius:3px;
-  transition: background 0.4s; /*REMOVE THIS LINE IF YOU ENCOUNTER ISSUES IN Chrome (Bug 02.2014)*/
+
 }
 .clearable.x{
   background-position: right 5px center;
@@ -1577,6 +1577,7 @@ jQuery(function($) {
 
   $(document).on('input', '.clearable', function(){
     $(this)[tog(this.value)]('x');
+    $(this)[tog(this.value)]('onX');
   }).on('mousemove', '.x', function( e ){
     $(this)[tog(this.offsetWidth-18 < e.clientX-this.getBoundingClientRect().left)]('onX');
   }).on('click', '.onX', function(){
