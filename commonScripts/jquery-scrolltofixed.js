@@ -1,7 +1,7 @@
 /*
  * ScrollToFixed
  * https://github.com/bigspotteddog/ScrollToFixed
- * 
+ *
  * Copyright (c) 2011 Joseph Cava-Lynch
  * MIT license
  */
@@ -150,9 +150,9 @@
                 if (!base.options.dontSetWidth){ cssOptions['width']=target.width(); };
 
                 target.css(cssOptions);
-                
+
                 target.addClass(base.options.baseClassName);
-                
+
                 if (base.options.className) {
                     target.addClass(base.options.className);
                 }
@@ -466,6 +466,10 @@
             // When the window scrolls, check to see if we need to fix or unfix
             // the target element.
             $(window).bind('scroll.ScrollToFixed', windowScroll);
+
+            if ('ontouchmove' in window) {
+                $(window).bind('touchmove.ScrollToFixed', checkScroll);
+            }
 
             if (base.options.preFixed) {
                 target.bind('preFixed.ScrollToFixed', base.options.preFixed);
