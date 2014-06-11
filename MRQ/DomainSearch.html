@@ -46,6 +46,19 @@ width: 144px;
 height: 67px;
 background-size: auto 67px;
 }
+.clearable{
+  background:url(http://i.imgur.com/z7ZSYjt.png) no-repeat right -10px center;
+  border:1px solid #999;
+  padding:3px 18px 3px 4px; /* USE the same right padding in jQ! */
+  border-radius:3px;
+  transition: background 0.4s; /*REMOVE THIS LINE IF YOU ENCOUNTER ISSUES IN Chrome (Bug 02.2014)*/
+}
+.clearable.x{
+  background-position: right 5px center;
+}
+.clearable.onX{
+  cursor:pointer;
+}
 </style>
 <link rel="shortcut icon" href="http://img1.wsimg.com/assets/godaddy.ico">
 <meta name="description" content="Access all of GoDaddy&#39;s products and services directly from your mobile phone.">
@@ -1045,7 +1058,7 @@ Email Us
 <form id="SearchForm" name="SearchForm" class="ajax-form" data-loadingtext="Searching" method="get" action="DomainSearchResults.html">
   <div class="table white-bg pad-tp-bt-sm pad-rt-sm " style="border: 1px solid #999;">
     <div class="pad-rt max">
-      <input id="domain-search" name="txtDomain" data-type="search" type="text" class="dmn-srch" maxlength="71" value="" placeholder="Search for your domain name">
+      <input id="domain-search" name="txtDomain" type="text" class="dmn-srch clearable" maxlength="71" value="" placeholder="Search for your domain name">
     </div>
     <div class="margin-lt right">
       <button id="btn-domain-search" type="button" class="btn-sm btn-action clickable" name="forumsubmitbutton" value="Go" onclick="window.location='DomainSearchResults.html'">Go</button>
@@ -1557,6 +1570,19 @@ $("#eoi-learn-more").click(function () {
 if (typeof (_gaq) != "undefined") {
 _gaq.push(['_trackEvent', 'Shop', 'Click Domain Search LP', 'Click EOI Link', 1]);
 }
+});
+jQuery(function($) {
+
+  function tog(v){return v?'addClass':'removeClass';}
+
+  $(document).on('input', '.clearable', function(){
+    $(this)[tog(this.value)]('x');
+  }).on('mousemove', '.x', function( e ){
+    $(this)[tog(this.offsetWidth-18 < e.clientX-this.getBoundingClientRect().left)]('onX');
+  }).on('click', '.onX', function(){
+    $(this).removeClass('x onX').val('');
+  });
+
 });
 </script>
 <script src="owl-carousel/owl.carousel.min.js" defer></script>

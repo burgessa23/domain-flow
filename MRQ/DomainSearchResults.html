@@ -71,6 +71,19 @@ position: absolute;
 top: 0px;
 left: 3px;
 }
+.clearable{
+  /*background:url(http://i.imgur.com/z7ZSYjt.png) no-repeat right -10px center;*/
+  border:1px solid #999;
+  padding:3px 8px 3px 4px; /* USE the same right padding in jQ! */
+  border-radius:3px;
+  transition: background 0.4s; /*REMOVE THIS LINE IF YOU ENCOUNTER ISSUES IN Chrome (Bug 02.2014)*/
+}
+.clearable.x{
+  background-position: right 5px center;
+}
+.clearable.onX{
+  cursor:pointer;
+}
 </style>
 </head><body>
   <div id="MobileBodyContainer" style="min-height: 974px;">
@@ -1019,7 +1032,7 @@ left: 3px;
         <form id="SearchForm" name="SearchForm" class="ajax-form" data-loadingtext="Searching" method="get" action="DomainSearchResults.html">
           <div class="table white-bg pad-tp-bt-sm pad-rt-sm " style="border: 1px solid #999;">
             <div class="pad-rt max">
-              <input id="domain-search" name="txtDomain" type="text" class="dmn-srch" maxlength="71" value="" placeholder="doublerainbow">
+              <input id="domain-search" name="txtDomain" type="text" class="dmn-srch clearable" maxlength="71" value="" placeholder="doublerainbow">
             </div>
             <div class="margin-lt right">
               <button id="btn-domain-search" type="button" class="btn-sm btn-action clickable" name="forumsubmitbutton" value="Go" onclick="window.location='DomainSearchResults.html'">Go</button>
@@ -1821,10 +1834,7 @@ var MENU_SLIDE_DURATION = 300;
 $(document).ready(function () {
   $("#MobileBodyContainer").css("min-height", ($(window).height() + "px"));
   $('.searchBoxFixed').scrollToFixed();
-  $('#cont-reg').scrollToFixed( {
-        bottom: 0,
-        limit: $('#cont-reg').offset().top
-    });
+  
 });
 $("#menu-btn").click(function () {
   $("#sd-mn").animate({
@@ -2159,7 +2169,7 @@ $("#addn-dom-link").click(function() {
     $('#cont-reg').scrollToFixed( {
           bottom: 0,
           limit: $('#cont-reg').offset().top
-      });  
+      });
   },1000);
 
 });
@@ -2350,6 +2360,19 @@ var loadingModal = {
     }
   }
 };
+jQuery(function($) {
+
+  function tog(v){return v?'addClass':'removeClass';}
+
+  $(document).on('input', '.clearable', function(){
+    $(this)[tog(this.value)]('x');
+  }).on('mousemove', '.x', function( e ){
+    $(this)[tog(this.offsetWidth-8 < e.clientX-this.getBoundingClientRect().left)]('onX');
+  }).on('click', '.onX', function(){
+    $(this).removeClass('x onX').val('');
+  });
+
+});
 </script>
 <script src="../commonScripts/jquery-scrolltofixed-min.js" charset="utf-8"></script>
 </body></html>
