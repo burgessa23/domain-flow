@@ -1577,8 +1577,6 @@ jQuery(function($) {
   $(document).on('input', '.clearable', function(){
     $(this)[tog(this.value)]('x');
     $(this)[tog(this.value)]('onX');
-  }).on('mousemove', '.x', function( e ){
-    $(this)[tog(this.offsetWidth-18 < e.clientX-this.getBoundingClientRect().left)]('onX');
   }).on('click', '.onX', function(){
     $(this).removeClass('x onX').val('');
   });

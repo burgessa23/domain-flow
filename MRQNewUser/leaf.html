@@ -1013,7 +1013,7 @@
         <input id="domain-search" name="txtDomain" type="text" class="dmn-srch" maxlength="71" value="" placeholder="Search for a new domain">
       </div>
       <div class="margin-lt right">
-        <button id="btn-domain-search" type="button" class="btn-sm btn-action clickable" name="forumsubmitbutton" value="Go" onclick="window.location='DomainSearchResults.html'">Go</button>
+        <button id="btn-domain-search" type="button" class="btn-sm btn-action clickable" name="forumsubmitbutton" value="Go" >Go</button>
       </div>
     </div>
     <input name="hdnSearchPage" type="hidden" value="">
@@ -1639,10 +1639,11 @@ function getCurrentPrice(phaseData) {
 }
 $("#btn-domain-search").click(function () {
   var value = $("#domain-search").val();
-  var tld = ".xyz";
+  var tld = ".ninja";
   if (value.indexOf(".") == -1) {
     $("#domain-search").val(value + tld);
   }
+  window.location='DomainSearchResults.html';
 });
 $("#watch-gtld").click(function () {
   if (typeof (_gaq) != "undefined") {
