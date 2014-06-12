@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title></title>
+  <link rel="shortcut icon" href="http://img1.wsimg.com/assets/godaddy.ico">
+
+  <link rel="canonical" href="./gdhome_files/gdhome.html">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+
+  <link href="http://img1.wsimg.com/mobile/img/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+  <link href="http://img1.wsimg.com/mobile/img/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+  <link href="http://img1.wsimg.com/mobile/img/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+  <meta name="apple-mobile-web-app-capable" content="no">
+  <style>
+  .product_icon_sprite{background:url(//img1.wsimg.com/mya/icons/mya_product_icon_sprite_small_20130827.png) top left;background-repeat:no-repeat}
+  .productpad{float:left;margin-right:10px}
+  </style>
+<style>
+#divLoadingModal
+{
+  width:225px;
+  height:140px;
+  padding:5px;
+  background:#fff;
+  border:1px #777 solid;
+  overflow:hidden;
+}
+#divLoadingModal div
+{
+  display:table-cell;
+  vertical-align:middle;
+}
+#loadingSpinnerText
+{
+  height:100px;
+  padding: 5px;
+}
+
+.modal-cont
+{
+  box-shadow:black 0 3px 6px;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+  background-color: #E6E6E6;
+  border-bottom-left-radius:10px 10px;
+  border-bottom-right-radius:10px 10px;
+  border-top-left-radius:10px 10px;
+  border-top-right-radius:10px 10px;
+  font:normal normal normal 13px/normal Helvetica;
+  overflow:auto;
+  padding:10px;
+  resize:none;
+  width:500px;
+}
+.checkbox.checked {
+  border: 1px solid #679b08;
+}
+.checkbox {
+  background-color: #fff;
+  border: 1px solid #575757;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  position: relative;
+}
+.checkbox>span {
+  color: #679b08;
+  font-size: 14px;
+  /* font-weight: bold; */
+  visibility: hidden;
+  position: absolute;
+  top: 0px;
+  left: 3px;
+}
+.clearable{
+  /*background:url(http://i.imgur.com/z7ZSYjt.png) no-repeat right -10px center;*/
+  border:1px solid #999;
+  padding:3px 8px 3px 4px; /* USE the same right padding in jQ! */
+  border-radius:3px;
+  transition: background 0.4s; /*REMOVE THIS LINE IF YOU ENCOUNTER ISSUES IN Chrome (Bug 02.2014)*/
+}
+.clearable.x{
+  background-position: right 5px center;
+}
+.clearable.onX{
+  cursor:pointer;
+}
+</style>
+  <link rel="Stylesheet" type="text/css" href="MRQ/gdhome_files/gd_2014411.min.css">
+  <link rel="stylesheet" href="MRQ/owl-carousel/owl.carousel.min.css">
+  <script>
+  if (localStorage.getItem('authKey')!== 'true') {
+    window.location='/domain-flow/index.html';
+  }
+  function instructions () {
+    loadingModal.show('Scroll to pause the carousel, Swipe to restart<br/><br/>these images are the UX exploration for the Homepage redesign');
+    $('#mobile-modal-overlay').bind('click', function(){
+      loadingModal.hide();
+    });
+    $('#mobile-modal').bind('click', function(){
+      loadingModal.hide();
+    });
+  }
+  </script></head>
+  <body onload="instructions();">
+
+    <!-- start MRQ -->
+    <div class="owl-carousel">
+      <div>
+        <div id="domains423">
+          <img src="commonImg/005_gd_EJ.png"/>
+        </div>
+      </div>
+      <div>
+        <div id="domains423">
+          <img src="commonImg/004_godaddy_mobile_domain_RB.png"/>
+        </div>
+      </div>
+      <div>
+        <div id="domains423">
+          <img src="commonImg/004_gd_EJ.png"/>
+        </div>
+      </div>
+      <div>
+        <div id="domains423">
+          <img src="commonImg/HP-Reskin_EJ.png"/>
+        </div>
+      </div>
+      <div>
+        <div id="domains423">
+          <img src="commonImg/HP-Reskin1_EJ.png"/>
+        </div>
+      </div>
+    </div>
+    <script src="MRQ/gdhome_files/jquery.min.js"></script>
+    <script type="text/javascript" src="MRQ/gdhome_files/mobile-core.min.20131231.js"></script>
+    <div id="divLoadingModal" class="modal-cont" style="display:none;">
+      <div id="loadingSpinner">
+      </div>
+      <div id="loadingSpinnerText" class="font-med"></div>
+    </div>
+    <!-- end MRQ -->
+    <script type="text/javascript">
+    $(document).bind("ready", function() {
+      loadingModal.initialize();
+
+      $(".owl-carousel").owlCarousel({
+        slideSpeed : 300,
+          dots: false,
+          items: 1,
+          autoplay:true,
+          autoplayTimeout:6000,
+          loop: true
+        });
+      });
+      var loadingModal = {
+        modal: null,
+        initialize: function () {
+          this.modal = $("#divLoadingModal");
+        },
+        show: function (msg, options) {
+          //$("#loadingSpinner").html('<img id="loadingModalImg" style="width:32px;height:32px;display:block;margin-left:auto;margin-right:auto;" src="http://img1.wsimg.com/mobile/img/1/ajax-spinner.gif"/>');
+          if (!msg) { msg = "Loading..."; }
+          $(this.modal.children()[1]).html(msg);
+          this.modal.data("rotatecount", 0);
+          if (options && options.keepalive === true) {
+            this.modal.data("timecount", 0);
+          }
+          else {
+            this.modal.data("timeouthandle", 100);
+            this.modal.data("timecount", 0);
+          }
+          this.modal.showModal();
+        },
+        hide: function (callback) {
+          clearTimeout(this.modal.data("timeouthandle"));
+          clearTimeout(this.modal.data("delayid"));
+          var callbackTimeout = 500;
+          if (this.modal.data("timecount") < 1000) {
+            setTimeout(function () { loadingModal.modal.closeModal(); }, 1000);
+            callbackTimeout = 1500;
+          }
+          else {
+            this.modal.closeModal();
+          }
+          if (callback) {
+            setTimeout(callback, callbackTimeout);
+          }
+        }
+      };
+      </script>
+    <script src="MRQ/owl-carousel/owl.carousel.min.js" defer></script>
+  </body>
+  </html>
