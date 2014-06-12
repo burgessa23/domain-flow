@@ -44,872 +44,965 @@
   <meta name="apple-mobile-web-app-title" content="GoDaddy Web">
   <meta name="apple-mobile-web-app-capable" content="no">
   <link rel="Stylesheet" type="text/css" href="./leaf_files/gd_2014411.min.css">
- <script>
-            if (localStorage.getItem('authKey')!== 'true') {
-                window.location='/domain-flow/index.html';
-            }
-        </script></head>
-<body>
-  <div id="MobileBodyContainer" style="min-height: 976px;">
-    <div id="sd-mn">
-      <div id="sd-mn-hd" class="row" style="padding:7px">
-        <div class="pad-rt">
-          <div style="font-size:9px;">WELCOME</div>
-          <div class="sd-mn-color">Guest</div>
+  <script>
+  if (localStorage.getItem('authKey')!== 'true') {
+    window.location='/domain-flow/index.html';
+  }
+  </script></head>
+  <body>
+    <div id="MobileBodyContainer" style="min-height: 976px;">
+      <div id="sd-mn" >
+        <div id="sd-mn-hd" class="row" style="padding:7px">
+          <div class="pad-rt">
+            <div style="font-size:9px;">WELCOME</div>
+            <div class="sd-mn-color">Guest</div>
+          </div>
+          <div class="clickable" style="font-size:11px;text-align:right">
+            <span id="sd-mn-login" >Login</span>
+          </div>
         </div>
-        <div class="clickable" style="font-size:11px;text-align:right">
+        <div id="sd-mn-cont">
+          <div id="sd-mn-wrap">
+            <div id="sd-mn-home" class="sd-mn-rw" onclick="clickSiteLink('Home', 'gdhome.html', 'menu', 'false')"><span>Home</span></div>
 
+            <div class="sd-mn-dv sd-mn-color">
+              SHOP &amp; RENEW
+            </div>
+            <div id="sd-mn-domains" class="sd-mn-rw" onclick="clickSiteLink('Find Domain Names', 'DomainSearch.html', 'menu', 'false')">
+              Find Domain Names
+            </div>
+            <div id="sd-mn-wsb" class="sd-mn-rw" >
+              Build Your Website
+            </div>
+            <div id="sd-mn-hosting" class="sd-mn-rw" >
+              Get Website Hosting
+            </div>
+            <div id="sd-mn-auctions" class="sd-mn-rw" >
+              Find Domain Auctions
+            </div>
+            <div id="sd-mn-renewals" class="sd-mn-rw" >
+              Renew Products
+            </div>
+            <div id="shop-more-products" class="sd-mn-rw" onclick="showMenuHiddenProducts($(this));">
+              Shop More Products
+            </div>
+            <div id="hidden-shop-products" style="display:none;">
+              <div id="sd-mn-email" class="sd-mn-rw" >
+                Email
+              </div>
+              <div id="sd-mn-eoi" class="sd-mn-rw" >
+                New Domain Extensions
+              </div>
+              <div id="sd-mn-bulkdomains" class="sd-mn-rw" >
+                Bulk Domain Search
+              </div>
+              <div id="sd-mn-locu" class="sd-mn-rw" >
+                Get Found
+              </div>
+              <div id="sd-mn-onbook" class="sd-mn-rw" >
+                Online Bookkeeping
+              </div>
+              <div id="sd-mn-onstore" class="sd-mn-rw" >
+                Online Store
+              </div>
+              <div id="sd-mn-ssl" class="sd-mn-rw" >
+                SSL Certificates
+              </div>
+              <div id="sd-mn-onstorage" class="sd-mn-rw" >
+                Online Storage
+              </div>
+              <div id="sd-mn-sev" class="sd-mn-rw" >
+                Search Engine Visibility
+              </div>
+              <div id="sd-mn-ded" class="sd-mn-rw" >
+                Private Servers
+              </div>
+              <div id="sd-mn-vded" class="sd-mn-rw" >
+                Virtual Private Servers
+              </div>
+              <div id="sd-mn-auctionsmem" class="sd-mn-rw" >
+                Auctions Membership
+              </div>
+            </div>
+            <div class="sd-mn-dv sd-mn-color">
+              MANAGE
+            </div>
+            <div id="sd-mn-domainmgmt" class="sd-mn-rw" >
+              Domain Management
+            </div>
+            <div id="sd-mn-hdvdmgmt" class="sd-mn-rw" >
+              Server Management
+            </div>
+            <div id="sd-mn-storemgmt" class="sd-mn-rw" >
+              Online Store Management
+            </div>
+            <div id="sd-mn-emailmgmt" class="sd-mn-rw" >
+              Email Management
+            </div>
+            <div id="sd-mn-auctionmgmt" class="sd-mn-rw" >
+              Auction Management
+            </div>
+            <div id="sd-mn-checkemail" class="sd-mn-rw" >
+              Check Email
+            </div>
+            <div id="sd-mn-myaccount" class="sd-mn-rw" >
+              My Account
+            </div>
+            <div class="sd-mn-dv sd-mn-color">
+              RESOURCES
+            </div>
+            <div id="sd-mn-gd-trn-hub" class="sd-mn-rw" >
+              GoDaddy Training Hub
+            </div>
+            <div id="sd-mn-gd-jobs" class="sd-mn-rw" >
+              GoDaddy Jobs
+            </div>
+            <div id="sd-mn-legal" class="sd-mn-rw" >
+              Legal
+            </div>
+            <div id="sd-mn-supp-email" class="sd-mn-rw" >
+              Email Us
+            </div>
+          </div>
         </div>
       </div>
-      <div id="sd-mn-cont">
-        <div id="sd-mn-wrap">
-          <div id="sd-mn-home" class="sd-mn-rw" onclick="clickSiteLink(&#39;Home&#39;, &#39;gdhome.html&#39;, &#39;menu&#39;, &#39;false&#39;)"><span>Home</span></div>
+      <div id="curr-list" style="width:100%; display:none;position:relative;">
+        <div class="row pad-med white-bg">
+          <div class="font-lg">Choose your currency</div>
+          <div class="center-rt">
+            <a id="currency-close-link" style="font-size: 15px;">Cancel</a>
+          </div>
+        </div>
+        <div id="primary-curr-list" class="margin-tp-bt-med font-xsm">
+          <div id="USD" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="USD">
+            <div>
+              <div><b>USD</b> -$</div>
+            </div>
+            <div class="right">
+              <div class="mn-spr-chevron"></div>
+            </div>
+          </div>
+        </div>
+        <div id="secondary-curr-list" class="margin-tp-bt-med font-xsm">
+          <div id="AED" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="AED">
+            <div>
+              <div><b>AED</b> -د.إ</div>
+            </div>
+            <div class="right">
+              <div class="mn-spr-chevron"></div>
+            </div>
+          </div>
+          <div id="ARS" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="ARS">
+            <div>
+              <div><b>ARS</b> -AR$</div>
+            </div>
+            <div class="right">
+              <div class="mn-spr-chevron"></div>
+            </div>
+          </div>
+          <div id="AUD" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="AUD">
+            <div>
+              <div><b>AUD</b> -A$</div>
+            </div>
+            <div class="right">
+              <div class="mn-spr-chevron"></div>
+            </div>
+          </div>
+          <div id="BRL" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="BRL">
+            <div>
+              <div><b>BRL</b> -R$</div>
+            </div>
+            <div class="right">
+              <div class="mn-spr-chevron"></div>
+            </div>
+          </div>
+          <div id="CAD" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="CAD">
+            <div>
+              <div><b>CAD</b> -C$</div>
+            </div>
+            <div class="right">
+              <div class="mn-spr-chevron"></div>
+            </div>
+          </div>
+          <div id="CHF" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="CHF">
+            <div>
+              <div><b>CHF</b> -CHF</div>
+            </div>
+            <div class="right">
+              <div class="mn-spr-chevron"></div>
+            </div>
+          </div>
+          <div id="CLP" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="CLP">
+            <div>
+              <div><b>CLP</b> -CL$</div>
+            </div>
+            <div class="right">
+              <div class="mn-spr-chevron"></div>
+            </div>
+          </div>
+          <div id="CNY" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="CNY">
+            <div>
+              <div><b>CNY</b> -¥</div>
+            </div>
+            <div class="right">
+              <div class="mn-spr-chevron"></div>
+            </div>
+          </div>
+          <div id="COP" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="COP">
+            <div>
+              <div><b>COP</b> -CO$</div>
+            </div>
+            <div class="right">
+              <div class="mn-spr-chevron"></div>
+            </div>
+          </div>
+          <div id="CZK" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="CZK">
+            <div>
+              <div><b>CZK</b> -Kč</div>
+            </div>
+            <div class="right">
+              <div class="mn-spr-chevron"></div>
+            </div>
+          </div>
+          <div id="DKK" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="DKK">
+            <div>
+              <div><b>DKK</b> -kr</div>
+            </div>
+            <div class="right">
+              <div class="mn-spr-chevron"></div>
+            </div>
+          </div>
+          <div id="EGP" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="EGP">
+            <div>
+              <div><b>EGP</b> -£</div>
+            </div>
+            <div class="right">
+              <div class="mn-spr-chevron"></div>
+            </div>
+          </div>
+          <div id="EUR" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="EUR">
+            <div>
+              <div><b>EUR</b> -€</div>
+            </div>
+            <div class="right">
+              <div class="mn-spr-chevron"></div>
+            </div>
+          </div>
+          <div id="GBP" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="GBP">
+            <div>
+              <div><b>GBP</b> -£</div>
+            </div>
+            <div class="right">
+              <div class="mn-spr-chevron"></div>
+            </div>
+          </div>
+          <div id="HKD" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="HKD">
+            <div>
+              <div><b>HKD</b> -HK$</div>
+            </div>
+            <div class="right">
+              <div class="mn-spr-chevron"></div>
+            </div>
+          </div>
+          <div id="HUF" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="HUF">
+            <div>
+              <div><b>HUF</b> -Ft</div>
+            </div>
+            <div class="right">
+              <div class="mn-spr-chevron"></div>
+            </div>
+          </div>
+          <div id="IDR" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="IDR">
+            <div>
+              <div><b>IDR</b> -Rp</div>
+            </div>
+            <div class="right">
+              <div class="mn-spr-chevron"></div>
+            </div>
+          </div>
+          <div id="ILS" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="ILS">
+            <div>
+              <div><b>ILS</b> -₪</div>
+            </div>
+            <div class="right">
+              <div class="mn-spr-chevron"></div>
+            </div>
+          </div>
+          <div id="INR" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="INR">
+            <div>
+              <div><b>INR</b> -₨</div>
+            </div>
+            <div class="right">
+              <div class="mn-spr-chevron"></div>
+            </div>
+          </div>
+          <div id="JPY" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="JPY">
+            <div>
+              <div><b>JPY</b> -¥</div>
+            </div>
+            <div class="right">
+              <div class="mn-spr-chevron"></div>
+            </div>
+          </div>
+          <div id="KRW" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="KRW">
+            <div>
+              <div><b>KRW</b> -₩</div>
+            </div>
+            <div class="right">
+              <div class="mn-spr-chevron"></div>
+            </div>
+          </div>
+          <div id="MAD" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="MAD">
+            <div>
+              <div><b>MAD</b> -.د.م</div>
+            </div>
+            <div class="right">
+              <div class="mn-spr-chevron"></div>
+            </div>
+          </div>
+          <div id="MXN" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="MXN">
+            <div>
+              <div><b>MXN</b> -MXN</div>
+            </div>
+            <div class="right">
+              <div class="mn-spr-chevron"></div>
+            </div>
+          </div>
+          <div id="MYR" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="MYR">
+            <div>
+              <div><b>MYR</b> -RM</div>
+            </div>
+            <div class="right">
+              <div class="mn-spr-chevron"></div>
+            </div>
+          </div>
+          <div id="NOK" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="NOK">
+            <div>
+              <div><b>NOK</b> -kr</div>
+            </div>
+            <div class="right">
+              <div class="mn-spr-chevron"></div>
+            </div>
+          </div>
+          <div id="NZD" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="NZD">
+            <div>
+              <div><b>NZD</b> -NZ$</div>
+            </div>
+            <div class="right">
+              <div class="mn-spr-chevron"></div>
+            </div>
+          </div>
+          <div id="PEN" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="PEN">
+            <div>
+              <div><b>PEN</b> -S/.</div>
+            </div>
+            <div class="right">
+              <div class="mn-spr-chevron"></div>
+            </div>
+          </div>
+          <div id="PHP" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="PHP">
+            <div>
+              <div><b>PHP</b> -₱</div>
+            </div>
+            <div class="right">
+              <div class="mn-spr-chevron"></div>
+            </div>
+          </div>
+          <div id="PKR" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="PKR">
+            <div>
+              <div><b>PKR</b> -₨</div>
+            </div>
+            <div class="right">
+              <div class="mn-spr-chevron"></div>
+            </div>
+          </div>
+          <div id="PLN" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="PLN">
+            <div>
+              <div><b>PLN</b> -zł</div>
+            </div>
+            <div class="right">
+              <div class="mn-spr-chevron"></div>
+            </div>
+          </div>
+          <div id="RON" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="RON">
+            <div>
+              <div><b>RON</b> -lei</div>
+            </div>
+            <div class="right">
+              <div class="mn-spr-chevron"></div>
+            </div>
+          </div>
+          <div id="RUB" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="RUB">
+            <div>
+              <div><b>RUB</b> -руб</div>
+            </div>
+            <div class="right">
+              <div class="mn-spr-chevron"></div>
+            </div>
+          </div>
+          <div id="SAR" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="SAR">
+            <div>
+              <div><b>SAR</b> -﷼</div>
+            </div>
+            <div class="right">
+              <div class="mn-spr-chevron"></div>
+            </div>
+          </div>
+          <div id="SEK" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="SEK">
+            <div>
+              <div><b>SEK</b> -kr</div>
+            </div>
+            <div class="right">
+              <div class="mn-spr-chevron"></div>
+            </div>
+          </div>
+          <div id="SGD" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="SGD">
+            <div>
+              <div><b>SGD</b> -SG$</div>
+            </div>
+            <div class="right">
+              <div class="mn-spr-chevron"></div>
+            </div>
+          </div>
+          <div id="THB" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="THB">
+            <div>
+              <div><b>THB</b> -฿</div>
+            </div>
+            <div class="right">
+              <div class="mn-spr-chevron"></div>
+            </div>
+          </div>
+          <div id="TRY" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="TRY">
+            <div>
+              <div><b>TRY</b> -TL</div>
+            </div>
+            <div class="right">
+              <div class="mn-spr-chevron"></div>
+            </div>
+          </div>
+          <div id="TWD" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="TWD">
+            <div>
+              <div><b>TWD</b> -NT$</div>
+            </div>
+            <div class="right">
+              <div class="mn-spr-chevron"></div>
+            </div>
+          </div>
+          <div id="UAH" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="UAH">
+            <div>
+              <div><b>UAH</b> -₴</div>
+            </div>
+            <div class="right">
+              <div class="mn-spr-chevron"></div>
+            </div>
+          </div>
+          <div id="UYU" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="UYU">
+            <div>
+              <div><b>UYU</b> -$U</div>
+            </div>
+            <div class="right">
+              <div class="mn-spr-chevron"></div>
+            </div>
+          </div>
+          <div id="VEF" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="VEF">
+            <div>
+              <div><b>VEF</b> -Bs.</div>
+            </div>
+            <div class="right">
+              <div class="mn-spr-chevron"></div>
+            </div>
+          </div>
+          <div id="VND" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="VND">
+            <div>
+              <div><b>VND</b> -₫</div>
+            </div>
+            <div class="right">
+              <div class="mn-spr-chevron"></div>
+            </div>
+          </div>
+          <div id="ZAR" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="ZAR">
+            <div>
+              <div><b>ZAR</b> -R</div>
+            </div>
+            <div class="right">
+              <div class="mn-spr-chevron"></div>
+            </div>
+          </div>
+        </div>
+        <form method="post" action="http://nodomain/viewcontrols/shared/posthandlers/currencyposthandler.ashx?refurl=http%3a%2f%2fnodomain%2ftlds%2fxyz-domain%3fci%3d85059%26isc%3dgdbbm1463&isc=gdbbm1463&rand=360835">
+          <input id="currency-input" name="ddlInternalCurrecnyType" type="hidden" value="">
+          <input id="currency-submit" name="forumsubmitbutton" value="save" type="submit" style="display:none;">
+        </form>
+      </div>
+      <div id="lang-list" style="width:100%;display:none;position:relative">
+        <div class="row pad-med white-bg">
+          <div class="font-lg">Choose your site</div>
+          <div class="center-rt">
+            <a id="lang-close-link" style="font-size: 15px;">Cancel</a>
+          </div>
+        </div>
+        <div id="countryListContainer" class="margin-tp-bt-med font-xsm">
+          <a id="es-AR" href="http://ar.nodomain/" style="text-decoration:none;color:#2E383E;">
+            <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=ar&amp;marketid=es-AR&#39;;return false;">
+              <div>
+                <span><b>Argentina</b> - Español</span>
+              </div>
+              <div class="right">
+                <div class="mn-spr-chevron"></div>
+              </div>
+            </div>
+          </a>
+          <a id="en-AU" href="http://au.nodomain/" style="text-decoration:none;color:#2E383E;">
+            <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=au&amp;marketid=en-AU&#39;;return false;">
+              <div>
+                <span><b>Australia</b> - English</span>
+              </div>
+              <div class="right">
+                <div class="mn-spr-chevron"></div>
+              </div>
+            </div>
+          </a>
+          <a id="nl-BE" href="http://be.nodomain/" style="text-decoration:none;color:#2E383E;">
+            <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=be&amp;marketid=nl-BE&#39;;return false;">
+              <div>
+                <span><b>België</b> - Nederlands</span>
+              </div>
+              <div class="right">
+                <div class="mn-spr-chevron"></div>
+              </div>
+            </div>
+          </a>
+          <a id="fr-BE" href="http://be.nodomain/fr/" style="text-decoration:none;color:#2E383E;">
+            <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=be&amp;marketid=fr-BE&#39;;return false;">
+              <div>
+                <span><b>Belgique</b> - Français</span>
+              </div>
+              <div class="right">
+                <div class="mn-spr-chevron"></div>
+              </div>
+            </div>
+          </a>
+          <a id="pt-BR" href="http://br.nodomain/" style="text-decoration:none;color:#2E383E;">
+            <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=br&amp;marketid=pt-BR&#39;;return false;">
+              <div>
+                <span><b>Brasil</b> - Português</span>
+              </div>
+              <div class="right">
+                <div class="mn-spr-chevron"></div>
+              </div>
+            </div>
+          </a>
+          <a id="en-CA" href="http://ca.nodomain/" style="text-decoration:none;color:#2E383E;">
+            <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=ca&amp;marketid=en-CA&#39;;return false;">
+              <div>
+                <span><b>Canada</b> - English</span>
+              </div>
+              <div class="right">
+                <div class="mn-spr-chevron"></div>
+              </div>
+            </div>
+          </a>
+          <a id="fr-CA" href="http://ca.nodomain/fr/" style="text-decoration:none;color:#2E383E;">
+            <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=ca&amp;marketid=fr-CA&#39;;return false;">
+              <div>
+                <span><b>Canada</b> - Français</span>
+              </div>
+              <div class="right">
+                <div class="mn-spr-chevron"></div>
+              </div>
+            </div>
+          </a>
+          <a id="es-CL" href="http://cl.nodomain/" style="text-decoration:none;color:#2E383E;">
+            <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=cl&amp;marketid=es-CL&#39;;return false;">
+              <div>
+                <span><b>Chile</b> - Español</span>
+              </div>
+              <div class="right">
+                <div class="mn-spr-chevron"></div>
+              </div>
+            </div>
+          </a>
+          <a id="es-CO" href="http://co.nodomain/" style="text-decoration:none;color:#2E383E;">
+            <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=co&amp;marketid=es-CO&#39;;return false;">
+              <div>
+                <span><b>Colombia</b> - Español</span>
+              </div>
+              <div class="right">
+                <div class="mn-spr-chevron"></div>
+              </div>
+            </div>
+          </a>
+          <a id="da-DK" href="http://dk.nodomain/" style="text-decoration:none;color:#2E383E;">
+            <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=dk&amp;marketid=da-DK&#39;;return false;">
+              <div>
+                <span><b>Danmark</b> - Dansk</span>
+              </div>
+              <div class="right">
+                <div class="mn-spr-chevron"></div>
+              </div>
+            </div>
+          </a>
+          <a id="de-DE" href="http://de.nodomain/" style="text-decoration:none;color:#2E383E;">
+            <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=de&amp;marketid=de-DE&#39;;return false;">
+              <div>
+                <span><b>Deutschland</b> - Deutsch</span>
+              </div>
+              <div class="right">
+                <div class="mn-spr-chevron"></div>
+              </div>
+            </div>
+          </a>
+          <a id="es-ES" href="http://es.nodomain/" style="text-decoration:none;color:#2E383E;">
+            <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=es&amp;marketid=es-ES&#39;;return false;">
+              <div>
+                <span><b>España</b> - Español</span>
+              </div>
+              <div class="right">
+                <div class="mn-spr-chevron"></div>
+              </div>
+            </div>
+          </a>
+          <a id="es-US" href="http://nodomain/es/" style="text-decoration:none;color:#2E383E;">
+            <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=www&amp;marketid=es-US&#39;;return false;">
+              <div>
+                <span><b>Estados Unidos</b> - Español</span>
+              </div>
+              <div class="right">
+                <div class="mn-spr-chevron"></div>
+              </div>
+            </div>
+          </a>
+          <a id="fr-FR" href="http://fr.nodomain/" style="text-decoration:none;color:#2E383E;">
+            <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=fr&amp;marketid=fr-FR&#39;;return false;">
+              <div>
+                <span><b>France</b> - Français</span>
+              </div>
+              <div class="right">
+                <div class="mn-spr-chevron"></div>
+              </div>
+            </div>
+          </a>
+          <a id="en-IN" href="http://in.nodomain/" style="text-decoration:none;color:#2E383E;">
+            <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=in&amp;marketid=en-IN&#39;;return false;">
+              <div>
+                <span><b>India</b> - English</span>
+              </div>
+              <div class="right">
+                <div class="mn-spr-chevron"></div>
+              </div>
+            </div>
+          </a>
+          <a id="en-IE" href="http://ie.nodomain/" style="text-decoration:none;color:#2E383E;">
+            <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=ie&amp;marketid=en-IE&#39;;return false;">
+              <div>
+                <span><b>Ireland</b> - English</span>
+              </div>
+              <div class="right">
+                <div class="mn-spr-chevron"></div>
+              </div>
+            </div>
+          </a>
+          <a id="it-IT" href="http://it.nodomain/" style="text-decoration:none;color:#2E383E;">
+            <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=it&amp;marketid=it-IT&#39;;return false;">
+              <div>
+                <span><b>Italia</b> - Italiano</span>
+              </div>
+              <div class="right">
+                <div class="mn-spr-chevron"></div>
+              </div>
+            </div>
+          </a>
+          <a id="en-MY" href="http://my.nodomain/" style="text-decoration:none;color:#2E383E;">
+            <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=my&amp;marketid=en-MY&#39;;return false;">
+              <div>
+                <span><b>Malaysia</b> - English</span>
+              </div>
+              <div class="right">
+                <div class="mn-spr-chevron"></div>
+              </div>
+            </div>
+          </a>
+          <a id="es-MX" href="http://mx.nodomain/" style="text-decoration:none;color:#2E383E;">
+            <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=mx&amp;marketid=es-MX&#39;;return false;">
+              <div>
+                <span><b>México</b> - Español</span>
+              </div>
+              <div class="right">
+                <div class="mn-spr-chevron"></div>
+              </div>
+            </div>
+          </a>
+          <a id="nl-NL" href="http://nl.nodomain/" style="text-decoration:none;color:#2E383E;">
+            <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=nl&amp;marketid=nl-NL&#39;;return false;">
+              <div>
+                <span><b>Nederland</b> - Nederlands</span>
+              </div>
+              <div class="right">
+                <div class="mn-spr-chevron"></div>
+              </div>
+            </div>
+          </a>
+          <a id="en-NZ" href="http://nz.nodomain/" style="text-decoration:none;color:#2E383E;">
+            <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=nz&amp;marketid=en-NZ&#39;;return false;">
+              <div>
+                <span><b>New Zealand</b> - English</span>
+              </div>
+              <div class="right">
+                <div class="mn-spr-chevron"></div>
+              </div>
+            </div>
+          </a>
+          <a id="nb-NO" href="http://no.nodomain/" style="text-decoration:none;color:#2E383E;">
+            <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=no&amp;marketid=nb-NO&#39;;return false;">
+              <div>
+                <span><b>Norge</b> - Bokmål</span>
+              </div>
+              <div class="right">
+                <div class="mn-spr-chevron"></div>
+              </div>
+            </div>
+          </a>
+          <a id="de-AT" href="http://at.nodomain/" style="text-decoration:none;color:#2E383E;">
+            <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=at&amp;marketid=de-AT&#39;;return false;">
+              <div>
+                <span><b>Österreich</b> - Deutsch</span>
+              </div>
+              <div class="right">
+                <div class="mn-spr-chevron"></div>
+              </div>
+            </div>
+          </a>
+          <a id="en-PK" href="http://pk.nodomain/" style="text-decoration:none;color:#2E383E;">
+            <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=pk&amp;marketid=en-PK&#39;;return false;">
+              <div>
+                <span><b>Pakistan</b> - English</span>
+              </div>
+              <div class="right">
+                <div class="mn-spr-chevron"></div>
+              </div>
+            </div>
+          </a>
+          <a id="es-PE" href="http://pe.nodomain/" style="text-decoration:none;color:#2E383E;">
+            <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=pe&amp;marketid=es-PE&#39;;return false;">
+              <div>
+                <span><b>Perú</b> - Español</span>
+              </div>
+              <div class="right">
+                <div class="mn-spr-chevron"></div>
+              </div>
+            </div>
+          </a>
+          <a id="en-PH" href="http://ph.nodomain/" style="text-decoration:none;color:#2E383E;">
+            <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=ph&amp;marketid=en-PH&#39;;return false;">
+              <div>
+                <span><b>Philippines</b> - English</span>
+              </div>
+              <div class="right">
+                <div class="mn-spr-chevron"></div>
+              </div>
+            </div>
+          </a>
+          <a id="pl-PL" href="http://pl.nodomain/" style="text-decoration:none;color:#2E383E;">
+            <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=pl&amp;marketid=pl-PL&#39;;return false;">
+              <div>
+                <span><b>Polska</b> - Polski</span>
+              </div>
+              <div class="right">
+                <div class="mn-spr-chevron"></div>
+              </div>
+            </div>
+          </a>
+          <a id="pt-PT" href="http://pt.nodomain/" style="text-decoration:none;color:#2E383E;">
+            <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=pt&amp;marketid=pt-PT&#39;;return false;">
+              <div>
+                <span><b>Portugal</b> - Português</span>
+              </div>
+              <div class="right">
+                <div class="mn-spr-chevron"></div>
+              </div>
+            </div>
+          </a>
+          <a id="de-CH" href="http://ch.nodomain/" style="text-decoration:none;color:#2E383E;">
+            <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=ch&amp;marketid=de-CH&#39;;return false;">
+              <div>
+                <span><b>Schweiz</b> - Deutsch</span>
+              </div>
+              <div class="right">
+                <div class="mn-spr-chevron"></div>
+              </div>
+            </div>
+          </a>
+          <a id="en-SG" href="http://sg.nodomain/" style="text-decoration:none;color:#2E383E;">
+            <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=sg&amp;marketid=en-SG&#39;;return false;">
+              <div>
+                <span><b>Singapore</b> - English</span>
+              </div>
+              <div class="right">
+                <div class="mn-spr-chevron"></div>
+              </div>
+            </div>
+          </a>
+          <a id="en-ZA" href="http://za.nodomain/" style="text-decoration:none;color:#2E383E;">
+            <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=za&amp;marketid=en-ZA&#39;;return false;">
+              <div>
+                <span><b>South Africa</b> - English</span>
+              </div>
+              <div class="right">
+                <div class="mn-spr-chevron"></div>
+              </div>
+            </div>
+          </a>
+          <a id="fr-CH" href="http://ch.nodomain/fr/" style="text-decoration:none;color:#2E383E;">
+            <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=ch&amp;marketid=fr-CH&#39;;return false;">
+              <div>
+                <span><b>Suisse</b> - Français</span>
+              </div>
+              <div class="right">
+                <div class="mn-spr-chevron"></div>
+              </div>
+            </div>
+          </a>
+          <a id="fi-FI" href="http://fi.nodomain/" style="text-decoration:none;color:#2E383E;">
+            <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=fi&amp;marketid=fi-FI&#39;;return false;">
+              <div>
+                <span><b>Suomi</b> - Suomi</span>
+              </div>
+              <div class="right">
+                <div class="mn-spr-chevron"></div>
+              </div>
+            </div>
+          </a>
+          <a id="sv-SE" href="http://se.nodomain/" style="text-decoration:none;color:#2E383E;">
+            <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=se&amp;marketid=sv-SE&#39;;return false;">
+              <div>
+                <span><b>Sverige</b> - Svenska</span>
+              </div>
+              <div class="right">
+                <div class="mn-spr-chevron"></div>
+              </div>
+            </div>
+          </a>
+          <a id="it-CH" href="http://ch.nodomain/it/" style="text-decoration:none;color:#2E383E;">
+            <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=ch&amp;marketid=it-CH&#39;;return false;">
+              <div>
+                <span><b>Svizzera</b> - Italiano</span>
+              </div>
+              <div class="right">
+                <div class="mn-spr-chevron"></div>
+              </div>
+            </div>
+          </a>
+          <a id="tr-TR" href="http://tr.nodomain/" style="text-decoration:none;color:#2E383E;">
+            <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=tr&amp;marketid=tr-TR&#39;;return false;">
+              <div>
+                <span><b>Türkiye</b> - Türkçe</span>
+              </div>
+              <div class="right">
+                <div class="mn-spr-chevron"></div>
+              </div>
+            </div>
+          </a>
+          <a id="en-GB" href="http://uk.nodomain/" style="text-decoration:none;color:#2E383E;">
+            <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=uk&amp;marketid=en-GB&#39;;return false;">
+              <div>
+                <span><b>United Kingdom</b> - English</span>
+              </div>
+              <div class="right">
+                <div class="mn-spr-chevron"></div>
+              </div>
+            </div>
+          </a>
+          <a id="en-US" href="http://nodomain/" style="text-decoration:none;color:#2E383E;">
+            <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=www&amp;marketid=en-US&#39;;return false;">
+              <div>
+                <span><b>United States</b> - English</span>
+              </div>
+              <div class="right">
+                <div class="mn-spr-chevron"></div>
+              </div>
+            </div>
+          </a>
+          <a id="es-VE" href="http://ve.nodomain/" style="text-decoration:none;color:#2E383E;">
+            <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=ve&amp;marketid=es-VE&#39;;return false;">
+              <div>
+                <span><b>Venezuela</b> - Español</span>
+              </div>
+              <div class="right">
+                <div class="mn-spr-chevron"></div>
+              </div>
+            </div>
+          </a>
+          <a id="el-GR" href="http://gr.nodomain/" style="text-decoration:none;color:#2E383E;">
+            <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=gr&amp;marketid=el-GR&#39;;return false;">
+              <div>
+                <span><b>Ελλάδα</b> - Ελληνικά</span>
+              </div>
+              <div class="right">
+                <div class="mn-spr-chevron"></div>
+              </div>
+            </div>
+          </a>
+          <a id="ru-RU" href="http://ru.nodomain/" style="text-decoration:none;color:#2E383E;">
+            <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=ru&amp;marketid=ru-RU&#39;;return false;">
+              <div>
+                <span><b>Россия</b> - Русский</span>
+              </div>
+              <div class="right">
+                <div class="mn-spr-chevron"></div>
+              </div>
+            </div>
+          </a>
+          <a id="uk-UA" href="http://ua.nodomain/" style="text-decoration:none;color:#2E383E;">
+            <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=ua&amp;marketid=uk-UA&#39;;return false;">
+              <div>
+                <span><b>Україна</b> - Українська</span>
+              </div>
+              <div class="right">
+                <div class="mn-spr-chevron"></div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div id="MobileContentContainer">
+        <div id="main-hdr" class="main-hdr">
+          <div class="left-hdr">
+            <div id="menu-btn" class="hdr-cell clickable">
+              <div id="menu-btn-img" class="mn-spr-menu"></div>
+            </div>
+          </div>
+          <div class="right-hdr">
+            <div id="cart-btn" class="hdr-cell clickable" >
+              <div style="position: relative;">
+                <div id="cart-item-count" class="cart-count" style="display:none;position:absolute;top:-9px;left:21px;"></div>
+                <div class="mn-spr-cart"></div>
+              </div>
+            </div>
+          </div>
+          <div class="hdr-logo">
+            <div id="hdr-logo" class="mn-spr-logo" style="display: inline-block;" onclick="window.location='gdhome.html'"></div>
+          </div>
+        </div>
 
 
-          <div id="sd-mn-domains" class="sd-mn-rw" onclick="clickSiteLink(&#39;Find Domain Names&#39;, &#39;DomainSearch.html&#39;, &#39;menu&#39;, &#39;false&#39;)">
-            Find Domain Names
+        <div style="background-color: #7db701;">
+          <h1 class="pad-lt-rt-med pad-tp-bt" style="font-size:26px;background-color:#fff;">.ninja domains</h1>
+          <div id="tld-banner-img" style="background-image: none;">
+            <img src="/domain-flow/commonImg/ninja_marquee_001.png" style="width:100%;">
           </div>
-
+          <!-- <div class="white-bg pad-tp-bt-med">
+          <form id="SearchForm" name="SearchForm" class="ajax-form" data-loadingtext="Searching" method="post" action="DomainSearchResults.html">
+          <div class="margin-lt-rt-med">
+          <div class="table white-bg pad-tp-bt-sm pad-rt-sm gray-brd">
+          <div class="pad-rt max">
+          <input id="domain-search" name="txtDomain" type="text" class="dmn-srch" maxlength="71" value="" placeholder=".uk">
         </div>
+        <div class="margin-lt right">
+        <button id="btn-domain-search" type="submit" class="btn-sm btn-action clickable" name="forumsubmitbutton" value="Go">Go</button>
       </div>
-    </div>
-    <div id="curr-list" style="width:100%; display:none;position:relative;">
-      <div class="row pad-med white-bg">
-        <div class="font-lg">Choose your currency</div>
-        <div class="center-rt">
-          <a id="currency-close-link" style="font-size: 15px;">Cancel</a>
-        </div>
-      </div>
-      <div id="primary-curr-list" class="margin-tp-bt-med font-xsm">
-        <div id="USD" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="USD">
-          <div>
-            <div><b>USD</b> -$</div>
-          </div>
-          <div class="right">
-            <div class="mn-spr-chevron"></div>
-          </div>
-        </div>
-      </div>
-      <div id="secondary-curr-list" class="margin-tp-bt-med font-xsm">
-        <div id="AED" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="AED">
-          <div>
-            <div><b>AED</b> -د.إ</div>
-          </div>
-          <div class="right">
-            <div class="mn-spr-chevron"></div>
-          </div>
-        </div>
-        <div id="ARS" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="ARS">
-          <div>
-            <div><b>ARS</b> -AR$</div>
-          </div>
-          <div class="right">
-            <div class="mn-spr-chevron"></div>
-          </div>
-        </div>
-        <div id="AUD" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="AUD">
-          <div>
-            <div><b>AUD</b> -A$</div>
-          </div>
-          <div class="right">
-            <div class="mn-spr-chevron"></div>
-          </div>
-        </div>
-        <div id="BRL" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="BRL">
-          <div>
-            <div><b>BRL</b> -R$</div>
-          </div>
-          <div class="right">
-            <div class="mn-spr-chevron"></div>
-          </div>
-        </div>
-        <div id="CAD" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="CAD">
-          <div>
-            <div><b>CAD</b> -C$</div>
-          </div>
-          <div class="right">
-            <div class="mn-spr-chevron"></div>
-          </div>
-        </div>
-        <div id="CHF" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="CHF">
-          <div>
-            <div><b>CHF</b> -CHF</div>
-          </div>
-          <div class="right">
-            <div class="mn-spr-chevron"></div>
-          </div>
-        </div>
-        <div id="CLP" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="CLP">
-          <div>
-            <div><b>CLP</b> -CL$</div>
-          </div>
-          <div class="right">
-            <div class="mn-spr-chevron"></div>
-          </div>
-        </div>
-        <div id="CNY" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="CNY">
-          <div>
-            <div><b>CNY</b> -¥</div>
-          </div>
-          <div class="right">
-            <div class="mn-spr-chevron"></div>
-          </div>
-        </div>
-        <div id="COP" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="COP">
-          <div>
-            <div><b>COP</b> -CO$</div>
-          </div>
-          <div class="right">
-            <div class="mn-spr-chevron"></div>
-          </div>
-        </div>
-        <div id="CZK" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="CZK">
-          <div>
-            <div><b>CZK</b> -Kč</div>
-          </div>
-          <div class="right">
-            <div class="mn-spr-chevron"></div>
-          </div>
-        </div>
-        <div id="DKK" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="DKK">
-          <div>
-            <div><b>DKK</b> -kr</div>
-          </div>
-          <div class="right">
-            <div class="mn-spr-chevron"></div>
-          </div>
-        </div>
-        <div id="EGP" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="EGP">
-          <div>
-            <div><b>EGP</b> -£</div>
-          </div>
-          <div class="right">
-            <div class="mn-spr-chevron"></div>
-          </div>
-        </div>
-        <div id="EUR" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="EUR">
-          <div>
-            <div><b>EUR</b> -€</div>
-          </div>
-          <div class="right">
-            <div class="mn-spr-chevron"></div>
-          </div>
-        </div>
-        <div id="GBP" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="GBP">
-          <div>
-            <div><b>GBP</b> -£</div>
-          </div>
-          <div class="right">
-            <div class="mn-spr-chevron"></div>
-          </div>
-        </div>
-        <div id="HKD" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="HKD">
-          <div>
-            <div><b>HKD</b> -HK$</div>
-          </div>
-          <div class="right">
-            <div class="mn-spr-chevron"></div>
-          </div>
-        </div>
-        <div id="HUF" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="HUF">
-          <div>
-            <div><b>HUF</b> -Ft</div>
-          </div>
-          <div class="right">
-            <div class="mn-spr-chevron"></div>
-          </div>
-        </div>
-        <div id="IDR" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="IDR">
-          <div>
-            <div><b>IDR</b> -Rp</div>
-          </div>
-          <div class="right">
-            <div class="mn-spr-chevron"></div>
-          </div>
-        </div>
-        <div id="ILS" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="ILS">
-          <div>
-            <div><b>ILS</b> -₪</div>
-          </div>
-          <div class="right">
-            <div class="mn-spr-chevron"></div>
-          </div>
-        </div>
-        <div id="INR" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="INR">
-          <div>
-            <div><b>INR</b> -₨</div>
-          </div>
-          <div class="right">
-            <div class="mn-spr-chevron"></div>
-          </div>
-        </div>
-        <div id="JPY" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="JPY">
-          <div>
-            <div><b>JPY</b> -¥</div>
-          </div>
-          <div class="right">
-            <div class="mn-spr-chevron"></div>
-          </div>
-        </div>
-        <div id="KRW" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="KRW">
-          <div>
-            <div><b>KRW</b> -₩</div>
-          </div>
-          <div class="right">
-            <div class="mn-spr-chevron"></div>
-          </div>
-        </div>
-        <div id="MAD" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="MAD">
-          <div>
-            <div><b>MAD</b> -.د.م</div>
-          </div>
-          <div class="right">
-            <div class="mn-spr-chevron"></div>
-          </div>
-        </div>
-        <div id="MXN" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="MXN">
-          <div>
-            <div><b>MXN</b> -MXN</div>
-          </div>
-          <div class="right">
-            <div class="mn-spr-chevron"></div>
-          </div>
-        </div>
-        <div id="MYR" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="MYR">
-          <div>
-            <div><b>MYR</b> -RM</div>
-          </div>
-          <div class="right">
-            <div class="mn-spr-chevron"></div>
-          </div>
-        </div>
-        <div id="NOK" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="NOK">
-          <div>
-            <div><b>NOK</b> -kr</div>
-          </div>
-          <div class="right">
-            <div class="mn-spr-chevron"></div>
-          </div>
-        </div>
-        <div id="NZD" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="NZD">
-          <div>
-            <div><b>NZD</b> -NZ$</div>
-          </div>
-          <div class="right">
-            <div class="mn-spr-chevron"></div>
-          </div>
-        </div>
-        <div id="PEN" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="PEN">
-          <div>
-            <div><b>PEN</b> -S/.</div>
-          </div>
-          <div class="right">
-            <div class="mn-spr-chevron"></div>
-          </div>
-        </div>
-        <div id="PHP" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="PHP">
-          <div>
-            <div><b>PHP</b> -₱</div>
-          </div>
-          <div class="right">
-            <div class="mn-spr-chevron"></div>
-          </div>
-        </div>
-        <div id="PKR" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="PKR">
-          <div>
-            <div><b>PKR</b> -₨</div>
-          </div>
-          <div class="right">
-            <div class="mn-spr-chevron"></div>
-          </div>
-        </div>
-        <div id="PLN" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="PLN">
-          <div>
-            <div><b>PLN</b> -zł</div>
-          </div>
-          <div class="right">
-            <div class="mn-spr-chevron"></div>
-          </div>
-        </div>
-        <div id="RON" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="RON">
-          <div>
-            <div><b>RON</b> -lei</div>
-          </div>
-          <div class="right">
-            <div class="mn-spr-chevron"></div>
-          </div>
-        </div>
-        <div id="RUB" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="RUB">
-          <div>
-            <div><b>RUB</b> -руб</div>
-          </div>
-          <div class="right">
-            <div class="mn-spr-chevron"></div>
-          </div>
-        </div>
-        <div id="SAR" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="SAR">
-          <div>
-            <div><b>SAR</b> -﷼</div>
-          </div>
-          <div class="right">
-            <div class="mn-spr-chevron"></div>
-          </div>
-        </div>
-        <div id="SEK" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="SEK">
-          <div>
-            <div><b>SEK</b> -kr</div>
-          </div>
-          <div class="right">
-            <div class="mn-spr-chevron"></div>
-          </div>
-        </div>
-        <div id="SGD" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="SGD">
-          <div>
-            <div><b>SGD</b> -SG$</div>
-          </div>
-          <div class="right">
-            <div class="mn-spr-chevron"></div>
-          </div>
-        </div>
-        <div id="THB" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="THB">
-          <div>
-            <div><b>THB</b> -฿</div>
-          </div>
-          <div class="right">
-            <div class="mn-spr-chevron"></div>
-          </div>
-        </div>
-        <div id="TRY" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="TRY">
-          <div>
-            <div><b>TRY</b> -TL</div>
-          </div>
-          <div class="right">
-            <div class="mn-spr-chevron"></div>
-          </div>
-        </div>
-        <div id="TWD" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="TWD">
-          <div>
-            <div><b>TWD</b> -NT$</div>
-          </div>
-          <div class="right">
-            <div class="mn-spr-chevron"></div>
-          </div>
-        </div>
-        <div id="UAH" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="UAH">
-          <div>
-            <div><b>UAH</b> -₴</div>
-          </div>
-          <div class="right">
-            <div class="mn-spr-chevron"></div>
-          </div>
-        </div>
-        <div id="UYU" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="UYU">
-          <div>
-            <div><b>UYU</b> -$U</div>
-          </div>
-          <div class="right">
-            <div class="mn-spr-chevron"></div>
-          </div>
-        </div>
-        <div id="VEF" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="VEF">
-          <div>
-            <div><b>VEF</b> -Bs.</div>
-          </div>
-          <div class="right">
-            <div class="mn-spr-chevron"></div>
-          </div>
-        </div>
-        <div id="VND" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="VND">
-          <div>
-            <div><b>VND</b> -₫</div>
-          </div>
-          <div class="right">
-            <div class="mn-spr-chevron"></div>
-          </div>
-        </div>
-        <div id="ZAR" class="curr-list row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" data-currency="ZAR">
-          <div>
-            <div><b>ZAR</b> -R</div>
-          </div>
-          <div class="right">
-            <div class="mn-spr-chevron"></div>
-          </div>
-        </div>
-      </div>
-      <form method="post" action="http://nodomain/viewcontrols/shared/posthandlers/currencyposthandler.ashx?refurl=http%3a%2f%2fnodomain%2ftlds%2fxyz-domain%3fci%3d85059%26isc%3dgdbbm1463&isc=gdbbm1463&rand=360835">
-        <input id="currency-input" name="ddlInternalCurrecnyType" type="hidden" value="">
-        <input id="currency-submit" name="forumsubmitbutton" value="save" type="submit" style="display:none;">
-      </form>
-    </div>
-    <div id="lang-list" style="width:100%;display:none;position:relative">
-      <div class="row pad-med white-bg">
-        <div class="font-lg">Choose your site</div>
-        <div class="center-rt">
-          <a id="lang-close-link" style="font-size: 15px;">Cancel</a>
-        </div>
-      </div>
-      <div id="countryListContainer" class="margin-tp-bt-med font-xsm">
-        <a id="es-AR" href="http://ar.nodomain/" style="text-decoration:none;color:#2E383E;">
-          <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=ar&amp;marketid=es-AR&#39;;return false;">
-            <div>
-              <span><b>Argentina</b> - Español</span>
-            </div>
-            <div class="right">
-              <div class="mn-spr-chevron"></div>
-            </div>
-          </div>
-        </a>
-        <a id="en-AU" href="http://au.nodomain/" style="text-decoration:none;color:#2E383E;">
-          <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=au&amp;marketid=en-AU&#39;;return false;">
-            <div>
-              <span><b>Australia</b> - English</span>
-            </div>
-            <div class="right">
-              <div class="mn-spr-chevron"></div>
-            </div>
-          </div>
-        </a>
-        <a id="nl-BE" href="http://be.nodomain/" style="text-decoration:none;color:#2E383E;">
-          <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=be&amp;marketid=nl-BE&#39;;return false;">
-            <div>
-              <span><b>België</b> - Nederlands</span>
-            </div>
-            <div class="right">
-              <div class="mn-spr-chevron"></div>
-            </div>
-          </div>
-        </a>
-        <a id="fr-BE" href="http://be.nodomain/fr/" style="text-decoration:none;color:#2E383E;">
-          <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=be&amp;marketid=fr-BE&#39;;return false;">
-            <div>
-              <span><b>Belgique</b> - Français</span>
-            </div>
-            <div class="right">
-              <div class="mn-spr-chevron"></div>
-            </div>
-          </div>
-        </a>
-        <a id="pt-BR" href="http://br.nodomain/" style="text-decoration:none;color:#2E383E;">
-          <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=br&amp;marketid=pt-BR&#39;;return false;">
-            <div>
-              <span><b>Brasil</b> - Português</span>
-            </div>
-            <div class="right">
-              <div class="mn-spr-chevron"></div>
-            </div>
-          </div>
-        </a>
-        <a id="en-CA" href="http://ca.nodomain/" style="text-decoration:none;color:#2E383E;">
-          <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=ca&amp;marketid=en-CA&#39;;return false;">
-            <div>
-              <span><b>Canada</b> - English</span>
-            </div>
-            <div class="right">
-              <div class="mn-spr-chevron"></div>
-            </div>
-          </div>
-        </a>
-        <a id="fr-CA" href="http://ca.nodomain/fr/" style="text-decoration:none;color:#2E383E;">
-          <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=ca&amp;marketid=fr-CA&#39;;return false;">
-            <div>
-              <span><b>Canada</b> - Français</span>
-            </div>
-            <div class="right">
-              <div class="mn-spr-chevron"></div>
-            </div>
-          </div>
-        </a>
-        <a id="es-CL" href="http://cl.nodomain/" style="text-decoration:none;color:#2E383E;">
-          <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=cl&amp;marketid=es-CL&#39;;return false;">
-            <div>
-              <span><b>Chile</b> - Español</span>
-            </div>
-            <div class="right">
-              <div class="mn-spr-chevron"></div>
-            </div>
-          </div>
-        </a>
-        <a id="es-CO" href="http://co.nodomain/" style="text-decoration:none;color:#2E383E;">
-          <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=co&amp;marketid=es-CO&#39;;return false;">
-            <div>
-              <span><b>Colombia</b> - Español</span>
-            </div>
-            <div class="right">
-              <div class="mn-spr-chevron"></div>
-            </div>
-          </div>
-        </a>
-        <a id="da-DK" href="http://dk.nodomain/" style="text-decoration:none;color:#2E383E;">
-          <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=dk&amp;marketid=da-DK&#39;;return false;">
-            <div>
-              <span><b>Danmark</b> - Dansk</span>
-            </div>
-            <div class="right">
-              <div class="mn-spr-chevron"></div>
-            </div>
-          </div>
-        </a>
-        <a id="de-DE" href="http://de.nodomain/" style="text-decoration:none;color:#2E383E;">
-          <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=de&amp;marketid=de-DE&#39;;return false;">
-            <div>
-              <span><b>Deutschland</b> - Deutsch</span>
-            </div>
-            <div class="right">
-              <div class="mn-spr-chevron"></div>
-            </div>
-          </div>
-        </a>
-        <a id="es-ES" href="http://es.nodomain/" style="text-decoration:none;color:#2E383E;">
-          <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=es&amp;marketid=es-ES&#39;;return false;">
-            <div>
-              <span><b>España</b> - Español</span>
-            </div>
-            <div class="right">
-              <div class="mn-spr-chevron"></div>
-            </div>
-          </div>
-        </a>
-        <a id="es-US" href="http://nodomain/es/" style="text-decoration:none;color:#2E383E;">
-          <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=www&amp;marketid=es-US&#39;;return false;">
-            <div>
-              <span><b>Estados Unidos</b> - Español</span>
-            </div>
-            <div class="right">
-              <div class="mn-spr-chevron"></div>
-            </div>
-          </div>
-        </a>
-        <a id="fr-FR" href="http://fr.nodomain/" style="text-decoration:none;color:#2E383E;">
-          <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=fr&amp;marketid=fr-FR&#39;;return false;">
-            <div>
-              <span><b>France</b> - Français</span>
-            </div>
-            <div class="right">
-              <div class="mn-spr-chevron"></div>
-            </div>
-          </div>
-        </a>
-        <a id="en-IN" href="http://in.nodomain/" style="text-decoration:none;color:#2E383E;">
-          <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=in&amp;marketid=en-IN&#39;;return false;">
-            <div>
-              <span><b>India</b> - English</span>
-            </div>
-            <div class="right">
-              <div class="mn-spr-chevron"></div>
-            </div>
-          </div>
-        </a>
-        <a id="en-IE" href="http://ie.nodomain/" style="text-decoration:none;color:#2E383E;">
-          <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=ie&amp;marketid=en-IE&#39;;return false;">
-            <div>
-              <span><b>Ireland</b> - English</span>
-            </div>
-            <div class="right">
-              <div class="mn-spr-chevron"></div>
-            </div>
-          </div>
-        </a>
-        <a id="it-IT" href="http://it.nodomain/" style="text-decoration:none;color:#2E383E;">
-          <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=it&amp;marketid=it-IT&#39;;return false;">
-            <div>
-              <span><b>Italia</b> - Italiano</span>
-            </div>
-            <div class="right">
-              <div class="mn-spr-chevron"></div>
-            </div>
-          </div>
-        </a>
-        <a id="en-MY" href="http://my.nodomain/" style="text-decoration:none;color:#2E383E;">
-          <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=my&amp;marketid=en-MY&#39;;return false;">
-            <div>
-              <span><b>Malaysia</b> - English</span>
-            </div>
-            <div class="right">
-              <div class="mn-spr-chevron"></div>
-            </div>
-          </div>
-        </a>
-        <a id="es-MX" href="http://mx.nodomain/" style="text-decoration:none;color:#2E383E;">
-          <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=mx&amp;marketid=es-MX&#39;;return false;">
-            <div>
-              <span><b>México</b> - Español</span>
-            </div>
-            <div class="right">
-              <div class="mn-spr-chevron"></div>
-            </div>
-          </div>
-        </a>
-        <a id="nl-NL" href="http://nl.nodomain/" style="text-decoration:none;color:#2E383E;">
-          <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=nl&amp;marketid=nl-NL&#39;;return false;">
-            <div>
-              <span><b>Nederland</b> - Nederlands</span>
-            </div>
-            <div class="right">
-              <div class="mn-spr-chevron"></div>
-            </div>
-          </div>
-        </a>
-        <a id="en-NZ" href="http://nz.nodomain/" style="text-decoration:none;color:#2E383E;">
-          <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=nz&amp;marketid=en-NZ&#39;;return false;">
-            <div>
-              <span><b>New Zealand</b> - English</span>
-            </div>
-            <div class="right">
-              <div class="mn-spr-chevron"></div>
-            </div>
-          </div>
-        </a>
-        <a id="nb-NO" href="http://no.nodomain/" style="text-decoration:none;color:#2E383E;">
-          <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=no&amp;marketid=nb-NO&#39;;return false;">
-            <div>
-              <span><b>Norge</b> - Bokmål</span>
-            </div>
-            <div class="right">
-              <div class="mn-spr-chevron"></div>
-            </div>
-          </div>
-        </a>
-        <a id="de-AT" href="http://at.nodomain/" style="text-decoration:none;color:#2E383E;">
-          <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=at&amp;marketid=de-AT&#39;;return false;">
-            <div>
-              <span><b>Österreich</b> - Deutsch</span>
-            </div>
-            <div class="right">
-              <div class="mn-spr-chevron"></div>
-            </div>
-          </div>
-        </a>
-        <a id="en-PK" href="http://pk.nodomain/" style="text-decoration:none;color:#2E383E;">
-          <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=pk&amp;marketid=en-PK&#39;;return false;">
-            <div>
-              <span><b>Pakistan</b> - English</span>
-            </div>
-            <div class="right">
-              <div class="mn-spr-chevron"></div>
-            </div>
-          </div>
-        </a>
-        <a id="es-PE" href="http://pe.nodomain/" style="text-decoration:none;color:#2E383E;">
-          <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=pe&amp;marketid=es-PE&#39;;return false;">
-            <div>
-              <span><b>Perú</b> - Español</span>
-            </div>
-            <div class="right">
-              <div class="mn-spr-chevron"></div>
-            </div>
-          </div>
-        </a>
-        <a id="en-PH" href="http://ph.nodomain/" style="text-decoration:none;color:#2E383E;">
-          <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=ph&amp;marketid=en-PH&#39;;return false;">
-            <div>
-              <span><b>Philippines</b> - English</span>
-            </div>
-            <div class="right">
-              <div class="mn-spr-chevron"></div>
-            </div>
-          </div>
-        </a>
-        <a id="pl-PL" href="http://pl.nodomain/" style="text-decoration:none;color:#2E383E;">
-          <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=pl&amp;marketid=pl-PL&#39;;return false;">
-            <div>
-              <span><b>Polska</b> - Polski</span>
-            </div>
-            <div class="right">
-              <div class="mn-spr-chevron"></div>
-            </div>
-          </div>
-        </a>
-        <a id="pt-PT" href="http://pt.nodomain/" style="text-decoration:none;color:#2E383E;">
-          <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=pt&amp;marketid=pt-PT&#39;;return false;">
-            <div>
-              <span><b>Portugal</b> - Português</span>
-            </div>
-            <div class="right">
-              <div class="mn-spr-chevron"></div>
-            </div>
-          </div>
-        </a>
-        <a id="de-CH" href="http://ch.nodomain/" style="text-decoration:none;color:#2E383E;">
-          <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=ch&amp;marketid=de-CH&#39;;return false;">
-            <div>
-              <span><b>Schweiz</b> - Deutsch</span>
-            </div>
-            <div class="right">
-              <div class="mn-spr-chevron"></div>
-            </div>
-          </div>
-        </a>
-        <a id="en-SG" href="http://sg.nodomain/" style="text-decoration:none;color:#2E383E;">
-          <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=sg&amp;marketid=en-SG&#39;;return false;">
-            <div>
-              <span><b>Singapore</b> - English</span>
-            </div>
-            <div class="right">
-              <div class="mn-spr-chevron"></div>
-            </div>
-          </div>
-        </a>
-        <a id="en-ZA" href="http://za.nodomain/" style="text-decoration:none;color:#2E383E;">
-          <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=za&amp;marketid=en-ZA&#39;;return false;">
-            <div>
-              <span><b>South Africa</b> - English</span>
-            </div>
-            <div class="right">
-              <div class="mn-spr-chevron"></div>
-            </div>
-          </div>
-        </a>
-        <a id="fr-CH" href="http://ch.nodomain/fr/" style="text-decoration:none;color:#2E383E;">
-          <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=ch&amp;marketid=fr-CH&#39;;return false;">
-            <div>
-              <span><b>Suisse</b> - Français</span>
-            </div>
-            <div class="right">
-              <div class="mn-spr-chevron"></div>
-            </div>
-          </div>
-        </a>
-        <a id="fi-FI" href="http://fi.nodomain/" style="text-decoration:none;color:#2E383E;">
-          <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=fi&amp;marketid=fi-FI&#39;;return false;">
-            <div>
-              <span><b>Suomi</b> - Suomi</span>
-            </div>
-            <div class="right">
-              <div class="mn-spr-chevron"></div>
-            </div>
-          </div>
-        </a>
-        <a id="sv-SE" href="http://se.nodomain/" style="text-decoration:none;color:#2E383E;">
-          <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=se&amp;marketid=sv-SE&#39;;return false;">
-            <div>
-              <span><b>Sverige</b> - Svenska</span>
-            </div>
-            <div class="right">
-              <div class="mn-spr-chevron"></div>
-            </div>
-          </div>
-        </a>
-        <a id="it-CH" href="http://ch.nodomain/it/" style="text-decoration:none;color:#2E383E;">
-          <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=ch&amp;marketid=it-CH&#39;;return false;">
-            <div>
-              <span><b>Svizzera</b> - Italiano</span>
-            </div>
-            <div class="right">
-              <div class="mn-spr-chevron"></div>
-            </div>
-          </div>
-        </a>
-        <a id="tr-TR" href="http://tr.nodomain/" style="text-decoration:none;color:#2E383E;">
-          <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=tr&amp;marketid=tr-TR&#39;;return false;">
-            <div>
-              <span><b>Türkiye</b> - Türkçe</span>
-            </div>
-            <div class="right">
-              <div class="mn-spr-chevron"></div>
-            </div>
-          </div>
-        </a>
-        <a id="en-GB" href="http://uk.nodomain/" style="text-decoration:none;color:#2E383E;">
-          <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=uk&amp;marketid=en-GB&#39;;return false;">
-            <div>
-              <span><b>United Kingdom</b> - English</span>
-            </div>
-            <div class="right">
-              <div class="mn-spr-chevron"></div>
-            </div>
-          </div>
-        </a>
-        <a id="en-US" href="http://nodomain/" style="text-decoration:none;color:#2E383E;">
-          <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=www&amp;marketid=en-US&#39;;return false;">
-            <div>
-              <span><b>United States</b> - English</span>
-            </div>
-            <div class="right">
-              <div class="mn-spr-chevron"></div>
-            </div>
-          </div>
-        </a>
-        <a id="es-VE" href="http://ve.nodomain/" style="text-decoration:none;color:#2E383E;">
-          <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=ve&amp;marketid=es-VE&#39;;return false;">
-            <div>
-              <span><b>Venezuela</b> - Español</span>
-            </div>
-            <div class="right">
-              <div class="mn-spr-chevron"></div>
-            </div>
-          </div>
-        </a>
-        <a id="el-GR" href="http://gr.nodomain/" style="text-decoration:none;color:#2E383E;">
-          <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=gr&amp;marketid=el-GR&#39;;return false;">
-            <div>
-              <span><b>Ελλάδα</b> - Ελληνικά</span>
-            </div>
-            <div class="right">
-              <div class="mn-spr-chevron"></div>
-            </div>
-          </div>
-        </a>
-        <a id="ru-RU" href="http://ru.nodomain/" style="text-decoration:none;color:#2E383E;">
-          <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=ru&amp;marketid=ru-RU&#39;;return false;">
-            <div>
-              <span><b>Россия</b> - Русский</span>
-            </div>
-            <div class="right">
-              <div class="mn-spr-chevron"></div>
-            </div>
-          </div>
-        </a>
-        <a id="uk-UA" href="http://ua.nodomain/" style="text-decoration:none;color:#2E383E;">
-          <div class="row pad pad-lt-med font-sm white-bg row-clickable sep-bottom" onclick="window.location=&#39;http://gui.godaddy.com/pcgo/msales/tlds/xyz-domain?ci=85059&amp;isc=gdbbm1463&amp;regionsite=ua&amp;marketid=uk-UA&#39;;return false;">
-            <div>
-              <span><b>Україна</b> - Українська</span>
-            </div>
-            <div class="right">
-              <div class="mn-spr-chevron"></div>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div id="MobileContentContainer">
-      <div id="main-hdr" class="main-hdr">
-        <div class="left-hdr">
-          <div id="menu-btn" class="hdr-cell clickable">
-            <div id="menu-btn-img" class="mn-spr-menu"></div>
-          </div>
-        </div>
-        <div class="right-hdr">
-          <div id="cart-btn" class="hdr-cell clickable" >
-            <div style="position: relative;">
-              <div id="cart-item-count" class="cart-count" style="display:none;position:absolute;top:-9px;left:21px;"></div>
-              <div class="mn-spr-cart"></div>
-            </div>
-          </div>
-        </div>
-        <div class="hdr-logo">
-          <div id="hdr-logo" class="mn-spr-logo" style="display: inline-block;" onclick="window.location='gdhome.html'"></div>
-        </div>
-      </div>
-
-
-      <div style="background-color: #7db701;">
-        <h1 class="pad-lt-rt-med pad-tp-bt" style="font-size:26px;background-color:#fff;">.ninja domains</h1>
-        <div id="tld-banner-img" style="background-image: none;">
-          <img src="/domain-flow/commonImg/ninja_marquee_001.png" style="width:100%;">
-        </div>
-        <!-- <div class="white-bg pad-tp-bt-med">
-        <form id="SearchForm" name="SearchForm" class="ajax-form" data-loadingtext="Searching" method="post" action="DomainSearchResults.html">
-        <div class="margin-lt-rt-med">
-        <div class="table white-bg pad-tp-bt-sm pad-rt-sm gray-brd">
-        <div class="pad-rt max">
-        <input id="domain-search" name="txtDomain" type="text" class="dmn-srch" maxlength="71" value="" placeholder=".uk">
-      </div>
-      <div class="margin-lt right">
-      <button id="btn-domain-search" type="submit" class="btn-sm btn-action clickable" name="forumsubmitbutton" value="Go">Go</button>
     </div>
   </div>
-</div>
-<input name="hdnSearchPage" type="hidden" value="uk-domain">
+  <input name="hdnSearchPage" type="hidden" value="uk-domain">
 </form>
 </div> -->
 <div class="font-sm pad-med white-bg"><h2><span>What is </span><em class="gtld">.ninja</em><span>?</span></h2><p><span> is a fun choice for web developers, game designers, software engineers and anyone looking for a domain name with attitude.</span></p></div>
@@ -942,8 +1035,8 @@
     <div id="prereg-lr-tooltip" style="position:relative;display:none;top:-8px;">
       <div class="max" style="top:-8px">
         <div class="margin-tp-sm margin-bt-sm">
-This period gives you early access to sought after domains. Anyone may purchase a domain during this phase. Multiple registrations for the same domain registered during each priority pre-registration phase will go to a registry auction. If you are not awarded the domain name, a refund is given minus the $14.99 non-refundable application fee.
-</div>
+          This period gives you early access to sought after domains. Anyone may purchase a domain during this phase. Multiple registrations for the same domain registered during each priority pre-registration phase will go to a registry auction. If you are not awarded the domain name, a refund is given minus the $14.99 non-refundable application fee.
+        </div>
       </div>
 
     </div>
@@ -982,27 +1075,27 @@ This period gives you early access to sought after domains. Anyone may purchase 
       <div id="site-link-domains" class="row pad font-sm main-bg sep-bottom row-clickable" onclick="clickSiteLink(&#39;Find domain names&#39;, &#39;DomainExt.html', &#39;home&#39;, &#39;false&#39;)">
         <!-- <div class="product_icon_sprite productpad" style="background-position: 0px 0px; width:30px; height:30px;"></div> -->
         <div class="margin-lt-med max">New Domain extensions</div>
-    <div><div class="mn-spr-chevron"></div></div>
-  </div>
-  <div id="site-link-hosting" class="row pad font-sm main-bg sep-bottom row-clickable">
-    <!-- <div class="product_icon_sprite productpad" style="background-position: -124px -31px; width:30px; height:30px;"></div> -->
-    <div class="margin-lt-med max">Transfer domains</div>
-    <div><div class="mn-spr-chevron"></div></div>
-  </div>
-  <div id="site-link-email" class="row pad font-sm main-bg sep-bottom row-clickable" >
-    <!-- <div class="product_icon_sprite productpad" style="background-position: -124px 0px; width:30px; height:30px;"></div> -->
-    <div class="margin-lt-med max">Domain auctions</div>
-    <div><div class="mn-spr-chevron"></div></div>
-  </div>
-  <div id="site-link-myaccount" class="row pad font-sm main-bg sep-bottom row-clickable" >
-    <div class="margin-lt-med max">GoDaddy Domain Club (Investor Tools)</div>
-    <div><div class="mn-spr-chevron"></div></div>
-  </div>
-</div>
-<div id="shop-all-products" class="row pad font-sm main-bg sep-bottom row-clickable" >
-  <div class="margin-lt-med max">Bulk Domain Search</div>
-  <div><div class="mn-spr-chevron"></div></div>
-</div>
+        <div><div class="mn-spr-chevron"></div></div>
+      </div>
+      <div id="site-link-hosting" class="row pad font-sm main-bg sep-bottom row-clickable">
+        <!-- <div class="product_icon_sprite productpad" style="background-position: -124px -31px; width:30px; height:30px;"></div> -->
+        <div class="margin-lt-med max">Transfer domains</div>
+        <div><div class="mn-spr-chevron"></div></div>
+      </div>
+      <div id="site-link-email" class="row pad font-sm main-bg sep-bottom row-clickable" >
+        <!-- <div class="product_icon_sprite productpad" style="background-position: -124px 0px; width:30px; height:30px;"></div> -->
+        <div class="margin-lt-med max">Domain auctions</div>
+        <div><div class="mn-spr-chevron"></div></div>
+      </div>
+      <div id="site-link-myaccount" class="row pad font-sm main-bg sep-bottom row-clickable" >
+        <div class="margin-lt-med max">GoDaddy Domain Club (Investor Tools)</div>
+        <div><div class="mn-spr-chevron"></div></div>
+      </div>
+    </div>
+    <div id="shop-all-products" class="row pad font-sm main-bg sep-bottom row-clickable" >
+      <div class="margin-lt-med max">Bulk Domain Search</div>
+      <div><div class="mn-spr-chevron"></div></div>
+    </div>
     <div id="hidden-shop-products" style="display:none;">
       <div id="site-link-auctions" class="row pad font-sm main-bg sep-bottom row-clickable" onclick="clickSiteLink(&#39;Domain auctions&#39;, &#39;https://mya.m.nodomain/auctions/auctionsearch.aspx?ci=83265&amp;clean=1&#39;, &#39;home&#39;, &#39;false&#39;)">
         <div class="margin-lt-med max">Domain Auctions</div>
@@ -1570,15 +1663,15 @@ function showPreregGaTooltip() {
     $("#preRegGASign").removeClass('mn-spr-minus').addClass('mn-spr-plus');
 
   }
-$("#prereg-ga-tooltip").slideToggle();
+  $("#prereg-ga-tooltip").slideToggle();
 }
 function showPreregLrTooltip() {
-if ($('#prereg-lr-tooltip').is(':hidden')) {
-  $("#preRegLRSign").removeClass('mn-spr-plus').addClass('mn-spr-minus');
-}  else {
-  $("#preRegLRSign").removeClass('mn-spr-minus').addClass('mn-spr-plus');
+  if ($('#prereg-lr-tooltip').is(':hidden')) {
+    $("#preRegLRSign").removeClass('mn-spr-plus').addClass('mn-spr-minus');
+  }  else {
+    $("#preRegLRSign").removeClass('mn-spr-minus').addClass('mn-spr-plus');
 
-}
+  }
   $("#prereg-lr-tooltip").slideToggle();
 
 }
