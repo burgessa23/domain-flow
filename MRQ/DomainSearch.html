@@ -48,13 +48,12 @@
   }
   .clearable{
     background:url(http://i.imgur.com/z7ZSYjt.png) no-repeat right -10px center;
-    border:1px solid #999;
+    /*border:1px solid #999;*/
     padding:3px 0 3px 4px; /* USE the same right padding in jQ! */
     border-radius:3px;
-
   }
   .clearable.x{
-    background-position: right 5px center;
+    background-position: right 13px center;
   }
   .clearable.onX{
     cursor:pointer;
@@ -1057,10 +1056,11 @@
           <form id="SearchForm" name="SearchForm" class="ajax-form" data-loadingtext="Searching" method="get" action="DomainSearchResults.html">
             <div class="table white-bg pad-tp-bt-sm pad-rt-sm " style="border: 1px solid #999;">
               <div class="pad-rt max">
-                <input id="domain-search" name="txtDomain" type="text" class="dmn-srch clearable" maxlength="71" value="" placeholder="Search for your domain name">
+                <input id="domain-search" name="txtDomain" type="text" class="dmn-srch" maxlength="71" value="" style="float:left"placeholder="Search for your domain name">
+                <a id="domainSearchClearButton" href="" class="" style="width: 30px;height: 30px;position: absolute;right: 84px;float: right;display:none;"></a>
               </div>
               <div class="margin-lt right">
-                <button id="btn-domain-search" type="button" class="btn-sm btn-action clickable" name="forumsubmitbutton" value="Go" onclick="window.location='DomainSearchResults.html'">Go</button>
+                <button id="btn-domain-search" type="button" class="btn-sm btn-action clickable" name="forumsubmitbutton" value="Go">Go</button>
               </div>
             </div>
             <input name="hdnSearchPage" type="hidden" value="">
@@ -1380,16 +1380,9 @@ function ClearInfoMessageText() {
 </script>
 <script type="text/javascript">
 $("#btn-domain-search").click(function () {
-  if ($("#domain-search").val().length == 0) {
-    SetErrorMessageText("Please enter a domain name to search on.");
-    return false;
-  }
+	window.location='DomainSearchResults.html'
 });
-$("#btn-domain-search").click(function () {
-  if (typeof (_gaq) != "undefined") {
-    _gaq.push(['_trackEvent', 'Shop', 'Click Domain Search', 'Click Search Button', 1]);
-  }
-});
+
 </script>
 <script type="text/javascript" language="javascript">
 $(document).bind("ready", function () {
@@ -1455,6 +1448,15 @@ if ("undefined" == typeof aftershock) { var aftershock = {}; !function () { $(wi
 <script type="text/javascript" language="javascript">
 var SiteHistory = {};
 $(document).bind("ready", function() {
+  $('#domain-search').on('input', function(){
+		$('#domainSearchClearButton').show().addClass('clearable x onX');
+	});
+	$('#SearchForm').on('click', '.onX', function(e){
+		e.preventDefault();
+		$(this).removeClass('x onX').hide();
+		$('#domain-search').val('');
+	});
+
   $(document).on("click", ".open-menu, .close-menu", function (e) {
     var $this = $(this);
     var event = $this.data("event");
@@ -1570,18 +1572,7 @@ $("#eoi-learn-more").click(function () {
     _gaq.push(['_trackEvent', 'Shop', 'Click Domain Search LP', 'Click EOI Link', 1]);
   }
 });
-jQuery(function($) {
 
-  function tog(v){return v?'addClass':'removeClass';}
-
-  $(document).on('input', '.clearable', function(){
-    $(this)[tog(this.value)]('x');
-    $(this)[tog(this.value)]('onX');
-  }).on('click', '.onX', function(){
-    $(this).removeClass('x onX').val('');
-  });
-
-});
 </script>
 <script src="owl-carousel/owl.carousel.min.js" defer></script>
 </body></html>
