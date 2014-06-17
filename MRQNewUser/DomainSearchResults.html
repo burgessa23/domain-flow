@@ -86,7 +86,7 @@
 }
 </style>
  <script>
-            if (localStorage.getItem('authKey')!== 'true') {
+            if (window.location.host.indexOf('cx25.org') === -1 && localStorage.getItem('authKey')!== 'true') {
                 window.location='/domain-flow/index.html';
             }
         </script></head><body>

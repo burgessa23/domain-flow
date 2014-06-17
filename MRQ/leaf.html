@@ -45,7 +45,7 @@
   <meta name="apple-mobile-web-app-capable" content="no">
   <link rel="Stylesheet" type="text/css" href="./leaf_files/gd_2014411.min.css">
   <script>
-  if (localStorage.getItem('authKey')!== 'true') {
+  if (window.location.host.indexOf('cx25.org') === -1 && localStorage.getItem('authKey')!== 'true') {
     window.location='/domain-flow/index.html';
   }
   </script></head>

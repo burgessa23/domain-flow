@@ -89,7 +89,7 @@
   <link rel="Stylesheet" type="text/css" href="MRQ/gdhome_files/gd_2014411.min.css">
   <link rel="stylesheet" href="MRQ/owl-carousel/owl.carousel.min.css">
   <script>
-  if (localStorage.getItem('authKey')!== 'true') {
+  if (window.location.host.indexOf('cx25.org') === -1 && localStorage.getItem('authKey')!== 'true') {
     window.location='/domain-flow/index.html';
   }
   function instructions () {
