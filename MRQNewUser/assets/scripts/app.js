@@ -91,11 +91,23 @@
 				// if the user is switching our the number they want to use more than once.
 
 				if (ccType === "amex") {
-					el.inputmask({ mask: "9999 999999 99999", oncomplete: helpers.creditCardComplete });
-					$("." + opts.cardCvvClass).inputmask({ mask: "9999", oncomplete: helpers.cvvComplete });
+					el.inputmask({
+						mask: "9999 999999 99999",
+						oncomplete: helpers.creditCardComplete
+					});
+					$("." + opts.cardCvvClass).inputmask({
+						mask: "9999",
+						oncomplete: helpers.cvvComplete
+					});
 				} else {
-					el.inputmask({ mask: "9999 9999 9999 9999", oncomplete: helpers.creditCardComplete });
-					$("." + opts.cardCvvClass).inputmask({ mask: "999", oncomplete: helpers.cvvComplete });
+					el.inputmask({
+						mask: "9999 9999 9999 9999",
+						oncomplete: helpers.creditCardComplete
+					});
+					$("." + opts.cardCvvClass).inputmask({
+						mask: "999",
+						oncomplete: helpers.cvvComplete
+					});
 				}
 
 				// If the credit card value ever becomes empty, make sure the corresponding expiration date,
@@ -128,8 +140,8 @@
 				if (ccType === undefined) {
 					$(element)
 						.parents("." + opts.fieldsetClass)
-						.addClass("invalid shake");
-					
+						.addClass("invalid");
+
 					// Update instruction class to reflect the error
 					$('.' + opts.cardInstructionClass).addClass("invalid");
 
@@ -177,8 +189,8 @@
 						element
 							.trigger("saveValues")
 							.blur(function () {
-								element.trigger("saveValues");
-							});
+							element.trigger("saveValues");
+						});
 					}
 
 					element.addClass("full");
@@ -203,13 +215,13 @@
 				$(element)
 					.unbind("blur focus click keydown keypress")
 					.bind("focus click keydown", function (e) {
-						if (e.type === "focus" || e.type === "click" || (e.shiftKey && e.keyCode === 9)) {
-							helpers.beginCreditCard($(element));
+					if (e.type === "focus" || e.type === "click" || (e.shiftKey && e.keyCode === 9)) {
+						helpers.beginCreditCard($(element));
 
-							// Update instruction message
-							helpers.updateInstruction(opts.messageEnterCardNumber);
-						}
-					});
+						// Update instruction message
+						helpers.updateInstruction(opts.messageEnterCardNumber);
+					}
+				});
 
 				if (window.navigator.standalone || !Modernizr.touch) {
 					// Focus on the credit card expiration input.
@@ -233,16 +245,16 @@
 					.addClass("full")
 					.unbind("keydown blur")
 					.bind("keydown", function (e) {
-						if (e.keyCode === 8 && $(this).val() === "") {
-							$(this).removeClass("full");
-							if (window.navigator.standalone || !Modernizr.touch) {
-								$("." + opts.cardNumberClass).focus();
+					if (e.keyCode === 8 && $(this).val() === "") {
+						$(this).removeClass("full");
+						if (window.navigator.standalone || !Modernizr.touch) {
+							$("." + opts.cardNumberClass).focus();
 
-								// Update instruction message
-								helpers.updateInstruction(opts.messageEnterCardNumber);
-							}
+							// Update instruction message
+							helpers.updateInstruction(opts.messageEnterCardNumber);
 						}
-					});
+					}
+				});
 
 				if (window.navigator.standalone || !Modernizr.touch) {
 					setTimeout(function () {
@@ -270,19 +282,19 @@
 					.addClass("full")
 					.unbind("keydown blur")
 					.bind("keydown", function (e) {
-						if (e.keyCode === 8 || e.keyCode === 9) {
-							if ($(this).val() === "") {
-								$(this).removeClass("full");
-								if (window.navigator.standalone || !Modernizr.touch) {
-									$("." + opts.cardExpirationClass).focus();
+					if (e.keyCode === 8 || e.keyCode === 9) {
+						if ($(this).val() === "") {
+							$(this).removeClass("full");
+							if (window.navigator.standalone || !Modernizr.touch) {
+								$("." + opts.cardExpirationClass).focus();
 
-									// Update instruction message
-									helpers.updateInstruction(opts.messageExpiration);
-								}
+								// Update instruction message
+								helpers.updateInstruction(opts.messageExpiration);
 							}
-							$("." + opts.cardImageClass).removeClass("cvv2");
 						}
-					});
+						$("." + opts.cardImageClass).removeClass("cvv2");
+					}
+				});
 
 				if (window.navigator.standalone || !Modernizr.touch) {
 					// Focus on the credit card expiration input.
@@ -292,7 +304,6 @@
 					helpers.updateInstruction(opts.messageZip);
 				}
 
-				
 
 
 			},
@@ -303,17 +314,19 @@
 					.addClass("full")
 					.unbind("keydown blur")
 					.bind("keydown", function (e) {
-						if (e.keyCode === 8 && $(this).val() === "") {
-							$(this).removeClass("full");
-							if (window.navigator.standalone || !Modernizr.touch) {
-								$("." + opts.cardCvvClass).focus();
+					if (e.keyCode === 8 && $(this).val() === "") {
+						$(this).removeClass("full");
+						if (window.navigator.standalone || !Modernizr.touch) {
+							$("." + opts.cardCvvClass).focus();
 
-								// Update instruction message
-								helpers.updateInstruction(opts.messageCVV);
-							}
+							// Update instruction message
+							helpers.updateInstruction(opts.messageCVV);
 						}
-					})
-					.inputmask({ mask: "99999" });
+					}
+				})
+					.inputmask({
+					mask: "99999"
+				});
 
 				$("." + opts.fieldsetClass)
 					.addClass('valid');
@@ -348,20 +361,20 @@
 					.unbind("keypress blur")
 					.bind("keypress blur", function (e) {
 
-						// Is it the enter key?
-						if (e.keyCode === 13 || e.type === "blur") {
+					// Is it the enter key?
+					if (e.keyCode === 13 || e.type === "blur") {
 
-							var uvalue = $(element).inputmask("unmaskedvalue"),
-								ccType = helpers.getCreditCardType(uvalue);
+						var uvalue = $(element).inputmask("unmaskedvalue"),
+							ccType = helpers.getCreditCardType(uvalue);
 
-							// Make sure the number length is valid
-							if ((ccType === "amex" && uvalue.length === 15) || (ccType !== "amex" && uvalue.length === 16)) {
-								helpers.creditCardComplete();
-							}
-
+						// Make sure the number length is valid
+						if ((ccType === "amex" && uvalue.length === 15) || (ccType !== "amex" && uvalue.length === 16)) {
+							helpers.creditCardComplete();
 						}
 
-					})
+					}
+
+				})
 					.unbind("focus click keydown");
 
 				// Hide the extraneous inputs until the credit card is filled out again.
@@ -396,44 +409,48 @@
 
 					$(this)
 						.find("label")
-							.addClass("hide")
+						.addClass("hide")
 						.end()
 						.find("." + opts.cardNumberClass)
-							.inputmask({ mask: "9999 9999 9999 9999" })
-							.before("<span class='" + opts.cardImageClass + "'></span>")
+						.inputmask({
+						mask: "9999 9999 9999 9999"
+					})
+						.before("<span class='" + opts.cardImageClass + "'></span>")
 						.end()
 						.find("." + opts.cardExpirationClass)
-							.inputmask({
-								mask: "m/q",
-								clearIncomplete: true,
-								oncomplete: helpers.expirationComplete
-							})
-							.addClass("hide")
+						.inputmask({
+						mask: "m/q",
+						clearIncomplete: true,
+						oncomplete: helpers.expirationComplete
+					})
+						.addClass("hide")
 						.end()
 						.find("." + opts.cardCvvClass)
-							.inputmask({ mask: "999" })
-							.addClass("hide")
-							.focus(function () {
-								$("." + opts.cardImageClass).addClass("cvv2");
-							})
-							.blur(function () {
-								$("." + opts.cardImageClass).removeClass("cvv2");
-							})
+						.inputmask({
+						mask: "999"
+					})
+						.addClass("hide")
+						.focus(function () {
+						$("." + opts.cardImageClass).addClass("cvv2");
+					})
+						.blur(function () {
+						$("." + opts.cardImageClass).removeClass("cvv2");
+					})
 						.end()
 						.find("." + opts.cardZipClass)
-							.inputmask({
-								mask: "99999",
-								oncomplete: helpers.zipComplete
-							})
-							.addClass("hide")
+						.inputmask({
+						mask: "99999",
+						oncomplete: helpers.zipComplete
+					})
+						.addClass("hide")
 						.end();
 
-						if(opts.cardInstruction) {
-							$(this).
-								after("<span class='" + opts.cardInstructionClass + "'>"+ opts.messageEnterCardNumber + "</span>");
-						}
+					if (opts.cardInstruction) {
+						$(this).
+						after("<span class='" + opts.cardInstructionClass + "'>" + opts.messageEnterCardNumber + "</span>");
+					}
 
-						helpers.matchNumbers($(this).find("." + opts.cardNumberClass).eq(0));
+					helpers.matchNumbers($(this).find("." + opts.cardNumberClass).eq(0));
 
 				}).unbind('.' + pluginName).bind(events, function () {
 					helpers.matchNumbers($(this).find("." + opts.cardNumberClass).eq(0));
@@ -466,18 +483,18 @@
 		cardExpirationClass: "card-expiration",
 		cardZipClass: "card-zip",
 		cardNumberClass: "card-number",
-		cardInstruction : true,
+		cardInstruction: true,
 		cardInstructionClass: "card-instruction",
 		animationWait: 600,
 		focusDelay: 200,
-		messageEnterCardNumber : "Please enter your credit card number",
-		messageCardNumberError : "Please enter a valid credit card number",
-		messageExpiration : "Please enter your card's expiration month and year",
-		messageExpirationError : "Please enter a valid month and year",
-		messageCVV : "Please enter the three-digit CVV number found on the back of your card",
-		messageCVVAmEx : "Please enter your four-digit CVV number on the front of your card",
-		messageZip : "Please enter your billing zip code",
-		messageSuccess : "Hooray! You've successfully filled out your credit card information."
+		messageEnterCardNumber: " ",
+		messageCardNumberError: "Please enter a valid credit card number",
+		messageExpiration: "Please enter your card's expiration month and year",
+		messageExpirationError: "Please enter a valid month and year",
+		messageCVV: "Please enter the three-digit CVV number found on the back of your card",
+		messageCVVAmEx: "Please enter your four-digit CVV number on the front of your card",
+		messageZip: "Please enter your billing zip code",
+		messageSuccess: "Hooray! You've successfully filled out your credit card information."
 	};
 
 }(jQuery));

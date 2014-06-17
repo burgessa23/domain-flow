@@ -1057,7 +1057,7 @@
             <div class="table white-bg pad-tp-bt-sm pad-rt-sm " style="border: 1px solid #999;">
               <div class="pad-rt max">
                 <input id="domain-search" name="txtDomain" type="text" class="dmn-srch" maxlength="71" value="" style="float:left"placeholder="Search for your domain name">
-                <a id="domainSearchClearButton" href="" class="" style="width: 30px;height: 30px;position: absolute;right: 84px;float: right;display:none;"></a>
+                <a id="domainSearchClearButton" href="" class="" style="width: 30px;height: 30px;position: absolute;right: 90px;float: right;display:none;"></a>
               </div>
               <div class="margin-lt right">
                 <button id="btn-domain-search" type="button" class="btn-sm btn-action clickable" name="forumsubmitbutton" value="Go">Go</button>
@@ -1455,6 +1455,7 @@ $(document).bind("ready", function() {
 		e.preventDefault();
 		$(this).removeClass('x onX').hide();
 		$('#domain-search').val('');
+		$('#domain-search').focus();
 	});
 
   $(document).on("click", ".open-menu, .close-menu", function (e) {

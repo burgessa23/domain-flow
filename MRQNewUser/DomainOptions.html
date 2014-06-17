@@ -1034,7 +1034,7 @@ color: #ff6c00;
             </div>
           </div>
           <div id="cart-cont" class="pad-med groove white-bg">
-            <span style="font-size: 16px;font-weight:bold;">doublerainbow.com</span><span style="float:right;font-size:13px;line-height: 20px;">remove</span>
+            <span style="font-size: 16px;font-weight:bold;">doublerainbow.com</span><span style="float:right;font-size:13px;line-height: 20px;color:#3182E6;">remove</span>
 
             <div style="clear:both;margin-bottom:8px;"></div>
             <span style="font-size: 14px;">1 year .com domain registration</span><span style="float:right;font-size:14px;line-height: 20px;">$12.99</span>
@@ -1054,18 +1054,21 @@ color: #ff6c00;
 
           </div>
           <div id="cart-cont" class="pad-med groove white-bg">
-            <span style="font-size: 14px;padding-left:116px;">ICANN Fees</span><span style="float:right;font-size:14px;line-height: 20px;">$0.18</span>
+            <span style="font-size: 14px;padding-left:52px;">ICANN Fees</span><span style="float:right;font-size:14px;line-height: 20px;">$0.18</span>
 
             <div style="clear:both;margin-bottom:8px;"></div>
-            <span style="font-size: 14px;padding-left:130px;">you saved</span><span style="float:right;font-size:14px;line-height: 20px;">-$4.00</span>
+            <span style="font-size: 14px;padding-left:66px;">you saved</span><span style="float:right;font-size:14px;line-height: 20px;">-$4.00</span>
+
+            <div style="clear:both;margin-bottom:8px;"></div>
+            <span style="font-size: 14px;padding-left:53px;">promo code</span><input id="promoCode" type="text" pattern="[0-9]*" size="6" maxlength="6" style="margin-left:20px;"> <span id="promoValue" style="float:right;font-size:14px;line-height: 20px;display:none;">-$4.00</span>
           </div>
           <div id="cart-cont" class="pad-med groove white-bg">
-            <span style="font-size: 16px;font-weight:bold;">Total due now</span><span style="float:right;font-size:16px;line-height: 20px;font-weight:bold;">$21.16</span>
+            <span style="font-size: 16px;font-weight:bold;">Total due now</span><span id="totalPrice" style="float:right;font-size:16px;line-height: 20px;font-weight:bold;">$21.16</span>
           </div>
           <div id="cart-cont" class="pad-med groove groove-btm white-bg">
             <input id="hdnOptionsMode" name="hdnOptionsMode" type="hidden" value="1">
-            <button id="xs-add-to-cart" name="forumsubmitbutton" class="btn-action btn-med max" type="button" value="Add to Cart"  onclick="doCheckProto();">Check out</button>
-            <button id="xs-add-to-cart2" name="forumsubmitbutton" class="btn-med max margin-tp-med outlineBtn" type="button" value="Add to Cart"  onclick="window.location='DomainSearchResults.html'">Find more domains</button>
+            <button id="xs-add-to-cart" name="forumsubmitbutton" class="btn-action btn-med max" type="button" value="Add to Cart"  onclick="doCheckProto();">Check Out</button>
+            <button id="xs-add-to-cart2" name="forumsubmitbutton" class="btn-med max margin-tp-med outlineBtn" type="button" value="Add to Cart"  onclick="window.location='DomainSearchResults.html'">Find More Domains</button>
           </div>
         </form>
       </div>
@@ -1130,6 +1133,18 @@ color: #ff6c00;
     <div id="loadingSpinnerText" class="font-med"></div>
   </div>
   <script type="text/javascript">
+  function textLength(value){
+   var maxLength = 6;
+   if(value.length == maxLength) return false;
+   return true;
+}
+
+document.getElementById('promoCode').onkeyup = function(){
+     if(!textLength(this.value)) {
+     	$('#promoValue').show();
+     	$('#totalPrice').html('$17.16');
+     }
+}
   function doCheckProto() {
     if (window.location.search.indexOf('hasAcct=true')=== -1) {
       window.location='Login.html';
