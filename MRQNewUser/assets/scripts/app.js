@@ -494,7 +494,7 @@
 		messageCVV: "Please enter the three-digit CVV number found on the back of your card",
 		messageCVVAmEx: "Please enter your four-digit CVV number on the front of your card",
 		messageZip: "Please enter your billing zip code",
-		messageSuccess: "Hooray! You've successfully filled out your credit card information."
+		messageSuccess: " "
 	};
 
 }(jQuery));
