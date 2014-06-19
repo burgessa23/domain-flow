@@ -52,6 +52,121 @@
     <body>
         <div id="MobileBodyContainer" style="min-height: 568px;">
             <div id="MobileContentContainer">
+            <div id="sd-mn" >
+      <div id="sd-mn-hd" class="row" style="padding:7px">
+        <div class="pad-rt">
+          <div style="font-size:9px;">WELCOME</div>
+          <div class="sd-mn-color">Guest</div>
+        </div>
+        <div class="clickable" style="font-size:11px;text-align:right">
+          <span id="sd-mn-login" >Login</span>
+        </div>
+      </div>
+      <div id="sd-mn-cont">
+        <div id="sd-mn-wrap">
+          <div id="sd-mn-home" class="sd-mn-rw" onclick="clickSiteLink('Home', 'gdhome.html', 'menu', 'false')"><span>Home</span></div>
+
+          <div class="sd-mn-dv sd-mn-color">
+            SHOP &amp; RENEW
+          </div>
+          <div id="sd-mn-domains" class="sd-mn-rw" onclick="clickSiteLink('Find Domain Names', 'DomainSearch.html', 'menu', 'false')">
+            Find Domain Names
+          </div>
+          <div id="sd-mn-wsb" class="sd-mn-rw" >
+            Build Your Website
+          </div>
+          <div id="sd-mn-hosting" class="sd-mn-rw" >
+            Get Website Hosting
+          </div>
+          <div id="sd-mn-auctions" class="sd-mn-rw" >
+            Find Domain Auctions
+          </div>
+          <div id="sd-mn-renewals" class="sd-mn-rw" >
+            Renew Products
+          </div>
+          <div id="shop-more-products" class="sd-mn-rw" onclick="showMenuHiddenProducts($(this));">
+            Shop More Products
+          </div>
+          <div id="hidden-shop-products" style="display:none;">
+            <div id="sd-mn-email" class="sd-mn-rw" >
+              Email
+            </div>
+            <div id="sd-mn-eoi" class="sd-mn-rw" >
+              New Domain Extensions
+            </div>
+            <div id="sd-mn-bulkdomains" class="sd-mn-rw" >
+              Bulk Domain Search
+            </div>
+            <div id="sd-mn-locu" class="sd-mn-rw" >
+              Get Found
+            </div>
+            <div id="sd-mn-onbook" class="sd-mn-rw" >
+              Online Bookkeeping
+            </div>
+            <div id="sd-mn-onstore" class="sd-mn-rw" >
+              Online Store
+            </div>
+            <div id="sd-mn-ssl" class="sd-mn-rw" >
+              SSL Certificates
+            </div>
+            <div id="sd-mn-onstorage" class="sd-mn-rw" >
+              Online Storage
+            </div>
+            <div id="sd-mn-sev" class="sd-mn-rw" >
+              Search Engine Visibility
+            </div>
+            <div id="sd-mn-ded" class="sd-mn-rw" >
+              Private Servers
+            </div>
+            <div id="sd-mn-vded" class="sd-mn-rw" >
+              Virtual Private Servers
+            </div>
+            <div id="sd-mn-auctionsmem" class="sd-mn-rw" >
+              Auctions Membership
+            </div>
+          </div>
+          <div class="sd-mn-dv sd-mn-color">
+            MANAGE
+          </div>
+          <div id="sd-mn-domainmgmt" class="sd-mn-rw" >
+            Domain Management
+          </div>
+          <div id="sd-mn-hdvdmgmt" class="sd-mn-rw" >
+            Server Management
+          </div>
+          <div id="sd-mn-storemgmt" class="sd-mn-rw" >
+            Online Store Management
+          </div>
+          <div id="sd-mn-emailmgmt" class="sd-mn-rw" >
+            Email Management
+          </div>
+          <div id="sd-mn-auctionmgmt" class="sd-mn-rw" >
+            Auction Management
+          </div>
+          <div id="sd-mn-checkemail" class="sd-mn-rw" >
+            Check Email
+          </div>
+          <div id="sd-mn-myaccount" class="sd-mn-rw" >
+            My Account
+          </div>
+          <div class="sd-mn-dv sd-mn-color">
+            RESOURCES
+          </div>
+          <div id="sd-mn-gd-trn-hub" class="sd-mn-rw" >
+            GoDaddy Training Hub
+          </div>
+          <div id="sd-mn-gd-jobs" class="sd-mn-rw" >
+            GoDaddy Jobs
+          </div>
+          <div id="sd-mn-legal" class="sd-mn-rw" >
+            Legal
+          </div>
+          <div id="sd-mn-supp-email" class="sd-mn-rw" >
+            Email Us
+          </div>
+        </div>
+      </div>
+    </div>
                  <div id="master-header">
         <div id="main-hdr" class="main-hdr">
           <div class="left-hdr">
@@ -111,11 +226,40 @@
 
 
             </div>
+        <div id="menu-overlay"></div>
         </div>
+
         <script src="MRQ/gdhome_files/jquery.min.js"></script>
         <script type="text/javascript" src="MRQ/gdhome_files/mobile-core.min.20131231.js"></script>
         <script>
-        	// Create the dropdown base
+        	var MENU_SLIDE_DURATION = 300;
+        	jQuery(document).ready(function($) {
+        		  $("#menu-btn").click(function () {
+				    $("#sd-mn").animate({
+				      left: 0
+				    }, MENU_SLIDE_DURATION, function () {
+				      adjustMenuOpenMinHeight();
+				    });
+				    $("#MobileContentContainer").animate({
+				      marginLeft: $("#sd-mn").outerWidth()
+				    }, MENU_SLIDE_DURATION);
+				    $("#MobileBodyContainer").addClass("menu-open");
+				    $("#menu-btn-img").removeClass("mn-spr-menu").addClass("mn-spr-menu-open");
+				  });
+				  $("#menu-overlay").click(function () {
+				    $("#sd-mn").animate({
+				      left: -$("#sd-mn").outerWidth()
+				    }, MENU_SLIDE_DURATION);
+				    $("#MobileContentContainer").animate({
+				      marginLeft: 0
+				    }, MENU_SLIDE_DURATION, function () {
+				      $("#MobileBodyContainer").removeClass("menu-open");
+				      $("#menu-btn-img").removeClass("mn-spr-menu-open").addClass("mn-spr-menu");
+				      $("#MobileBodyContainer").css("min-height", ($(window).height() + "px"));
+				      hideMenuHiddenProducts();
+				    });
+				  });
+				  // Create the dropdown base
 			$("<select />").appendTo("nav");
 
 			// Create default option "Go to..."
@@ -137,6 +281,25 @@
 			$("nav select").change(function() {
 			  window.location = $(this).find("option:selected").val();
 			});
+        	});
+			function adjustMenuOpenMinHeight() {
+    var minHeight = $(window).height() >= $("#sd-mn-wrap").height() + $("#sd-mn-hd").outerHeight() ?
+    $(window).height() : $("#sd-mn-wrap").height() + $("#sd-mn-hd").outerHeight();
+    $("#MobileBodyContainer").css("min-height", minHeight);
+  }
+  function showMenuHiddenProducts() {
+    var cont = $("#shop-more-products").siblings("#hidden-shop-products");
+    cont.slideDown("med", function () {
+      $("#shop-more-products").hide();
+      adjustMenuOpenMinHeight();
+    });
+  }
+  function hideMenuHiddenProducts() {
+    $("#shop-more-products").show();
+    var cont = $("#shop-more-products").siblings("#hidden-shop-products");
+    cont.slideUp("med");
+  }
+
         </script>
     </body>
     </html>
