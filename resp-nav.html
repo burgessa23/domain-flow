@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>UX Mobile project dashboard</title>
+    <link rel="shortcut icon" href="http://img1.wsimg.com/assets/godaddy.ico">
+    <meta name="description" content="Access all of GoDaddy&#39;s products and services directly from your mobile phone.">
+    <link rel="canonical" href="gdhome_files/gdhome.html">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="apple-mobile-web-app-title" content="GoDaddy Web">
+
+    <link href="http://img1.wsimg.com/mobile/img/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+    <link href="http://img1.wsimg.com/mobile/img/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+    <link href="http://img1.wsimg.com/mobile/img/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+    <meta name="apple-mobile-web-app-capable" content="no">
+    <link rel="Stylesheet" type="text/css" href="MRQ/gdhome_files/gd_2014411.min.css">
+
+    <script>
+    if (window.location.host.indexOf('cx25.org') === -1 && localStorage.getItem('authKey')!== 'true') {
+        window.location='/domain-flow/index.html';
+    }
+    </script>
+
+	<style>
+		nav select {
+		  display: none;
+		  margin-left: 15px;
+		}
+		nav ul {
+			list-style: none;
+		    display: inline-block;
+		    margin-left: 15px;
+		    /*position: relative;
+		    right: 286px;
+		    */z-index: 9;
+		    height: 26px;
+		    padding: 4px 4px 4px 4px;
+		    font-weight: bold;
+		}
+		nav ul li {
+			float: right;
+    		margin-right: 10px;
+    		font-size: 14px;
+		}
+		@media (max-width: 480px) {
+		  nav ul     { display: none; }
+		  nav select { display: inline-block; }
+		}
+	</style>
+    </head>
+
+    <body>
+        <div id="MobileBodyContainer" style="min-height: 568px;">
+            <div id="MobileContentContainer">
+                 <div id="master-header">
+        <div id="main-hdr" class="main-hdr">
+          <div class="left-hdr">
+            <div id="menu-btn" class="hdr-cell clickable">
+              <div id="menu-btn-img" class="mn-spr-menu" style="display:inline-block;"></div>
+            </div>
+          </div>
+          <div class="hdr-logo" style="padding-top: 8px;">
+            <div id="hdr-logo" class="mn-spr-logo" style="display: inline-block;" onclick="window.location='gdhome.html'"></div>
+          </div>
+        </div>
+        <div id="divInfoMessage" class="pad-med font-sm msg-info wrap" style="display:none;"></div>
+        <div id="divErrorMessage" class="pad-med font-sm msg-attn wrap" style="display:none;"></div>
+        <div id="promoBanner" class="promo-banner" style="display: none;"></div>
+      </div>
+
+                <h1 class="pad-lt-rt-med pad-tp-bt" style="font-size:22px;background-color:#fff;">Responsive 2nd tier nav test</h1>
+				<nav>
+
+				  <ul>
+				    <li><a href="#" class="active">Domains</a></li>
+				    <li><a href="#">Websites</a></li>
+				    <li><a href="#">Hosting &amp; SSL</a></li>
+				    <li><a href="#">Get Found</a></li>
+				    <li><a href="#">Email and tools</a></li>
+				  </ul>
+
+
+				</nav>
+                <div id="site-links" style="border-top: 3px solid #999;">
+                    <div id="main-site-links">
+                        <div id="site-link-domains" class="row pad font-sm main-bg sep-bottom row-clickable">
+                            <div class="margin-lt-med max">Foo</div>
+                            <div><div class="mn-spr-chevron"></div></div>
+                        </div>
+                        <div id="site-link-wsb" class="row pad font-sm main-bg sep-bottom row-clickable">
+                            <div class="margin-lt-med max">Bar</div>
+                            <div><div class="mn-spr-chevron"></div></div>
+                        </div>
+                        <div id="site-link-wsb" class="row pad font-sm main-bg sep-bottom row-clickable">
+                            <div class="margin-lt-med max">Baz</div>
+                            <div><div class="mn-spr-chevron"></div></div>
+                        </div>
+                        <div id="site-link-wsb" class="row pad font-sm main-bg sep-bottom row-clickable">
+                            <div class="margin-lt-med max">Bat</div>
+                            <div><div class="mn-spr-chevron"></div></div>
+                        </div>
+
+
+
+
+                    </div>
+
+                </div>
+
+
+
+
+            </div>
+        </div>
+        <script src="MRQ/gdhome_files/jquery.min.js"></script>
+        <script type="text/javascript" src="MRQ/gdhome_files/mobile-core.min.20131231.js"></script>
+        <script>
+        	// Create the dropdown base
+			$("<select />").appendTo("nav");
+
+			// Create default option "Go to..."
+			$("<option />", {
+			   "selected": "selected",
+			   "value"   : "",
+			   "text"    : "Go to..."
+			}).appendTo("nav select");
+
+			// Populate dropdown with menu items
+			$("nav a").each(function() {
+			 var el = $(this);
+			 $("<option />", {
+			     "value"   : el.attr("href"),
+			     "text"    : el.text()
+			 }).appendTo("nav select");
+			});
+
+			$("nav select").change(function() {
+			  window.location = $(this).find("option:selected").val();
+			});
+        </script>
+    </body>
+    </html>
