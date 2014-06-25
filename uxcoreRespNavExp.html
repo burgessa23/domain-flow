@@ -41,6 +41,7 @@
 	.sampleClass {float:left;}
 @media only screen and (max-width: 800px){
 	.sampleClass {float:none;}
+	#uxh-nav-app-menu {display: none;}
 }
 </style>
 <body class="admin">
@@ -604,7 +605,7 @@
   $(document).ready(function($) {
   	// check our media-query placeholder to verify breakpoint on load
 	if ($(".sampleClass").css("float") === "none" ){
-		$('#uxh-nav-app-menu').hide();
+		//$('#uxh-nav-app-menu').hide();
 		doResponsiveStuff();
 	} else {
 		stopResponsiveStuff();
