@@ -553,7 +553,7 @@
   }
 
   function doResponsiveStuff() {
-
+  	$('#uxh-nav-app-menu').hide();
   	$('#firstSubnavItem').show();
   	$('#uxh-nav-app-menu li').not(":first-child").hide();
   	$('#uxh-nav-app-menu li').children('a').css({'background-color': '#679b08', 'font-size': '14px'});
@@ -575,6 +575,8 @@
   		$('#uxh-nav-app-menu li').not(":first-child").toggle();
   		$('#uxh-nav-app-menu .dropdown').addClass('open');
   	});
+
+  	$('#uxh-nav-app-menu').show();
   }
 
   function stopResponsiveStuff () {
