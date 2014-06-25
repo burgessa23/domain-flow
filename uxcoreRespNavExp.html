@@ -553,7 +553,7 @@
   }
 
   function doResponsiveStuff() {
-  	$('#uxh-nav-app-menu').hide();
+
   	$('#firstSubnavItem').show();
   	$('#uxh-nav-app-menu li').not(":first-child").hide();
   	$('#uxh-nav-app-menu li').children('a').css({'background-color': '#679b08', 'font-size': '14px'});
@@ -604,6 +604,7 @@
   $(document).ready(function($) {
   	// check our media-query placeholder to verify breakpoint on load
 	if ($(".sampleClass").css("float") === "none" ){
+		$('#uxh-nav-app-menu').hide();
 		doResponsiveStuff();
 	} else {
 		stopResponsiveStuff();
