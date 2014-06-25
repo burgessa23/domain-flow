@@ -393,10 +393,11 @@
 
 
   	$('#uxh-nav-app-menu li').not(":first-child").hide();
-  	var $headLinkInnerText = $('#uxh-nav-app-menu a:first-child span').first().html();
+  	var headLinkInnerText = $('#uxh-nav-app-menu a:first-child span').first().html();
+
   	if ($('#injectedHeader').length === 0) {
   		$('#uxh-nav-app-menu a:first-child').first().append('<b id="caretForFirstItem" class="caret" style="float: right;padding-top: 5px;"></b>');
-  		$('#uxh-nav-header').append('<span id="injectedHeader" style="font-size: 18px;width: 50%;float: right;line-height: 32px;">'+ $headLinkInnerText +'</span>');
+  		$('#uxh-nav-header').append('<span id="injectedHeader" style="font-size: 18px;width: 50%;float: right;line-height: 32px;">Online Store</span>');
   	}
 
   	$('#firstSubnavItem').on('click', function (e) {
