@@ -40,6 +40,13 @@
 @media only screen and (max-width: 800px){
 	.sampleClass {float:none;}
 	#uxh-nav-app-menu {display: none;}
+	#uxh-nav-app-menu li:hover{
+		background-color: #77b309;
+	}
+	.dropdown-toggle {
+		padding: 7px 15px;
+	}
+
 }
 </style>
 <body class="admin">
@@ -556,6 +563,11 @@
   	$('#firstSubnavItem').show();
   	$('#uxh-nav-app-menu li').not(":first-child").hide();
   	$('#uxh-nav-app-menu li').children('a').css({'background-color': '#679b08', 'font-size': '16px'});
+  	$('#uxh-nav-app-menu li').not("#firstSubnavItem").not('.dropdown').children('a').hover(function(){
+  		$(this).css({'background-color': '#77b309'})
+  	}, function () {
+  		$(this).css({'background-color': '#679b08'})
+  	});
   	$('#uxh-nav-app-menu .dropdown-toggle').not('#firstSubnavItem').css({'color': '#263E06'});
   	$('#uxh-nav-app-menu li').children('.dropdown-toggle').attr('data-toggle', '');
   	$('.caret').not('#caretForFirstItem').hide();
