@@ -62,7 +62,7 @@
           <div id="uxh-nav-collapse" class="navbar-collapse collapse uxc-header-nav">
             <ul id="uxh-nav-breadcrumbs" class="nav navbar-nav navbar-left" role="menubar">
 
-              <li id="uxh-nav-mya-link"><a role="menuitem" href="https://mya.godaddy.com/default.aspx?">My Account</a></li>
+              <li id="uxh-nav-mya-link"><a role="menuitem" href="">My Account</a></li>
 
               <li class="dropdown uxh-logged-in" style="" id="uxh-s-productsmenu">
                   <a role="button" class="dropdown-toggle" href="/admin#" data-toggle="dropdown"><span id="uxh-product">Online Store</span> <b id="uxh-products-arrow" class="caret uxh-ctrl-s-products" style="display: none;"></b></a>
@@ -73,9 +73,9 @@
 
             </ul>
             <ul id="uxh-nav-right" class="nav navbar-nav navbar-right" role="menubar">
-                <li id="uxh-nav-support"><a id="uxhNavSupportLink" role="menuitem" href="https://www.godaddy.com/support/support.aspx?">Support</a></li>
+                <li id="uxh-nav-support"><a id="uxhNavSupportLink" role="menuitem" href="">Support</a></li>
                 <li id="uxh-nav-user" class="dropdown">
-                    <a id="uxh-nav-user-link" role="button" class="dropdown-toggle" href="/admin#" data-toggle="dropdown"><span id="uxh-s-name-prefix" style="display: none;">Customer #</span><span id="uxh-s-name">Andrew</span><span id="logoutLinkMobile" style="font-size: 12px;color:#ddd;line-height:37px;width:35%;padding-left:10px;"></span> <b class="caret"></b></a>
+                    <a id="uxh-nav-user-link" role="button" class="dropdown-toggle" href="/admin#" data-toggle="dropdown"><span id="uxh-s-name-prefix" style="display: none;">Customer #</span><span id="uxh-s-name">Andrew</span><span id="logoutLinkMobile" style="font-size: 12px;color:#ddd;line-height:37px;padding-left:10px;"></span> <b class="caret"></b></a>
                     <ul id="uxh-nav-user-menu" class="dropdown-menu shopper-menu" role="menu">
                         <li id="uxh-s-header" class="uxh-logged-in shopper-header dropdown-header">
                             <div id="uxh-s-fullname" class="uxc-nowrap" style="">Andrew Burgess</div>
@@ -102,7 +102,7 @@
                             </div>
                         </li>
 
-                        <li id="uxh-nav-logged-in" class="uxh-logged-in"><a role="menuitem" href="https://idp.godaddy.com/logout.aspx?&spkey={{pc:spkey}}">Log Out</a></li>
+                        <li id="uxh-nav-logged-in" class="uxh-logged-in"><a role="menuitem" href="">Log Out</a></li>
                         <li id="uxh-nav-logged-out" class="uxh-logged-out" style="display: none;"><a role="menuitem" href="https://www.godaddy.com/?">Log In</a></li>
 
                     </ul>
@@ -565,6 +565,7 @@
   	if ($('#injectedHeader').length === 0) {
   		$('#uxh-nav-app-menu a:first-child').first().append('<b id="caretForFirstItem" class="caret" style="float: right;padding-top: 5px;"></b>');
   		$('#uxh-nav-header').append('<span id="injectedHeader" style="font-size: 18px;width: 50%;float: right;line-height: 32px;">Online Store</span>');
+
   	}
 
   	$('#firstSubnavItem').on('click', function (e) {
@@ -575,7 +576,9 @@
   		$('#uxh-nav-app-menu .dropdown').addClass('open');
   	});
   	$('#uxh-nav-user-link').attr('data-toggle', '');
-  	$('#logoutLinkMobile').append(' Customer#: u9g <span style=\'float:right;font-size:14px;\'>Logout</span>');
+  	$('#logoutLinkMobile').show().html('Andrew - Customer#: u9g');
+  	$('#uxh-s-name').html('Logout');
+
   	$('#uxh-nav-app-menu').show();
   }
 
@@ -591,6 +594,8 @@
 	$('#uxh-nav-app-menu .dropdown-toggle').not('#firstSubnavItem').attr('style', '');
 	$('#uxh-nav-app-menu li').children('.dropdown-toggle').attr('data-toggle', 'dropdown');
 	$('#logoutLinkMobile').hide();
+	$('#uxh-s-name').html('Andrew');
+	$('#uxh-nav-user-link').attr('data-toggle', 'dropdown');
   }
 
   $(window).resize(function(){
