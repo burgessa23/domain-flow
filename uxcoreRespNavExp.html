@@ -608,6 +608,7 @@
 	$('#logoutLinkMobile').hide();
 	$('#uxh-s-name').html('Andrew');
 	$('#uxh-nav-user-link').attr('data-toggle', 'dropdown');
+	$('#uxh-nav-app-menu li').not("#firstSubnavItem").not('.dropdown').children('a').hover().unbind();
   }
 
   $(window).resize(function(){
