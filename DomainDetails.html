@@ -704,20 +704,20 @@ function __doPostBack(eventTarget, eventArgument) {
 									<span class="uxc-shopper-menu-label">Customer #:</span>
 									<span id="uxh-s-id">3pw</span>
 								</div>
-								<div id="uxh-mi-mgrid" class="uxc-nowrap" style="display:none;">
+								<div id="uxh-mi-mgrid" class="uxc-nowrap" style="">
 									<span class="uxc-shopper-menu-label">Manager ID:</span>
-									<span id="uxh-mgr-id"></span>
+									<span id="uxh-mgr-id"23456></span>
 								</div>
-								<div id="uxh-mi-mgrname" class="uxc-nowrap" style="display:none;">
+								<div id="uxh-mi-mgrname" class="uxc-nowrap" style="">
 									<span class="uxc-shopper-menu-label">Manager Name:</span>
-									<span id="uxh-mgr-name"></span>
+									<span id="uxh-mgr-name">Gern Blanston</span>
 								</div>
-								<div id="uxh-vip-info" class="uxc-nowrap" style="display:none;">
+								<div id="uxh-vip-info" class="uxc-nowrap" style="">
 									<span id="uxh-vip-label" class="uxc-shopper-menu-label">VIP Acct Exec:</span>
 									<div id="uhx-vip-details">
-										<div id="uxh-vip-repname"></div>
-										<div id="uxh-vip-phone"></div>
-										<div><a id="uxh-vip-email" href=""></a></div>
+										<div id="uxh-vip-repname">Hector Plasm</div>
+										<div id="uxh-vip-phone">1-800-456-1212</div>
+										<div><a id="uxh-vip-email" href="">hplasm@godaddy.com</a></div>
 									</div>
 								</div>
 							</li>
@@ -1336,10 +1336,11 @@ function __doPostBack(eventTarget, eventArgument) {
 		currentPointIndex : 0
 	});
 
-
+	// the following functions are for "duct-taping" the UX updste for < 768px breakpoint
 
 
 	function flipContent (id, eleClicked) {
+		// this changes the injected li at the top of the list, uses passed in strings for the prototype, in prod should probably be a binding
 		$('.cont-contain').hide();
 		$('#'+id).show();
 		$('#firstSubnavItem').click();
@@ -1347,8 +1348,9 @@ function __doPostBack(eventTarget, eventArgument) {
 	}
 
 	function doResponsiveStuff() {
-
+		// hi-jack the nav at mobile breakpoint
 		$('#firstSubnavItem').show();
+		// roll up the nav li elements EXCEPT the top one that is used for context
 		$('#uxh-nav-app-menu li').not(":first-child").hide();
 		$('#uxh-nav-app-menu li').children('a').css({'background-color': '#679b08', 'font-size': '16px'});
 		$('#uxh-nav-app-menu li').not("#firstSubnavItem").not('.dropdown').children('a').hover(function(){
@@ -1369,20 +1371,23 @@ function __doPostBack(eventTarget, eventArgument) {
 		}
 
 		$('#firstSubnavItem').on('click', function (e) {
+			// stop the bouncing if user hits the toggle trigger multiple times
 			e.stopImmediatePropagation();
 			e.preventDefault();
-
 			$('#uxh-nav-app-menu li').not(":first-child").toggle();
 			$('#uxh-nav-app-menu .dropdown').addClass('open');
 		});
+
 		$('#uxh-nav-user-link').attr('data-toggle', '');
 		$('#logoutLinkMobile').show().html('Garrett - Customer#: 3pw');
 		$('#uxh-s-name').html('Logout');
 
 		$('#uxh-nav-app-menu').show();
+		$('#uxh-s-productsmenu').addClass('open');
 	}
 
 	function stopResponsiveStuff () {
+		// unbind all the stuff we did and give control back
 		$('#firstSubnavItem').hide();
 		$('#injectedHeader').remove();
 		$('#firstSubnavItem').unbind();
