@@ -269,6 +269,12 @@
 				width: 100%;
 				margin-left: 0px;
 			}
+			#uxh-s-productsmenu {
+				display: block!important;
+			}
+			.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+			 color: #FFF;
+			}
     	}
     	.total-container, .container {
     		min-width: 0px;
@@ -679,8 +685,8 @@ function __doPostBack(eventTarget, eventArgument) {
 
 					<li id="uxh-nav-mya-link"><a role="menuitem" href="">My Account</a></li>
 
-					<li class="dropdown uxh-logged-in" style="" id="uxh-s-productsmenu">
-						<a role="button" class="dropdown-toggle" href="" data-toggle="dropdown"><span id="uxh-product">Domains</span> <b id="uxh-products-arrow" class="caret uxh-ctrl-s-products"></b></a>
+					<li class="dropdown uxh-logged-in open" id="uxh-s-productsmenu">
+						<a id="productDropdown" role="button" class="dropdown-toggle" href="" data-toggle="dropdown"><span id="uxh-product">Domains</span> <b id="uxh-products-arrow" class="caret uxh-ctrl-s-products"></b></a>
 						<ul id="uxh-s-products" class="sf-menu-icns dropdown-menu uxh-ctrl-s-products" role="menu" data-showops="True">
 							<li><a class="menuitem" href=""><span class="sf-menu-icn uxicon uxicon-checkmark"></span>Domains</a></li>
 							<li><a class="menuitem" href="">Hosting</a></li>
@@ -706,7 +712,7 @@ function __doPostBack(eventTarget, eventArgument) {
 								</div>
 								<div id="uxh-mi-mgrid" class="uxc-nowrap" style="">
 									<span class="uxc-shopper-menu-label">Manager ID:</span>
-									<span id="uxh-mgr-id"23456></span>
+									<span id="uxh-mgr-id">23456</span>
 								</div>
 								<div id="uxh-mi-mgrname" class="uxc-nowrap" style="">
 									<span class="uxc-shopper-menu-label">Manager Name:</span>
@@ -1348,16 +1354,39 @@ function __doPostBack(eventTarget, eventArgument) {
 	}
 
 	function doResponsiveStuff() {
+
+		$('#uxh-mobile-nav').click(function (e) {
+			if ($('#uxh-nav-app-menu .dropdown').hasClass('open')) {
+				console.log('menu is open');
+				$('#firstSubnavItem').click();
+			}
+			// force a stack frame to step out of jq's animation thread
+			setTimeout(function(){
+				$('#productDropdown').click();
+				//$('#uxh-s-productsmenu').addClass('open');
+			},0);
+		});
+
+
+		$('#productDropdown').hide();
+
 		// hi-jack the nav at mobile breakpoint
 		$('#firstSubnavItem').show();
 		// roll up the nav li elements EXCEPT the top one that is used for context
 		$('#uxh-nav-app-menu li').not(":first-child").hide();
 		$('#uxh-nav-app-menu li').children('a').css({'background-color': '#679b08', 'font-size': '16px'});
+		$('#uxh-s-products li').not('.dropdown').children('a').not('.uxicon').hover(function(){
+			$(this).css({'background-color': '#555'});
+		}, function () {
+			$(this).css({'background-color': '#333'});
+		});
+
 		$('#uxh-nav-app-menu li').not("#firstSubnavItem").not('.dropdown').children('a').hover(function(){
 			$(this).css({'background-color': '#77b309'});
 		}, function () {
 			$(this).css({'background-color': '#679b08'});
 		});
+
 		$('#uxh-nav-app-menu .dropdown-toggle').not('#firstSubnavItem').css({'color': '#263E06'});
 		$('#uxh-nav-app-menu li').children('.dropdown-toggle').attr('data-toggle', '');
 		$('.caret').not('#caretForFirstItem').hide();
@@ -1365,30 +1394,39 @@ function __doPostBack(eventTarget, eventArgument) {
 		$('#firstSubnavItem').children('a').css({'background-color': '#447703'});
 
 		if ($('#injectedHeader').length === 0) {
-			$('#uxh-nav-app-menu a:first-child').first().append('<b id="caretForFirstItem" class="caret" style="float: right;padding-top: 5px;"></b>');
+			$('#uxh-nav-app-menu a:first-child').first().append('<b id="caretForFirstItem" class="caret" style="float: right;padding-top: 5px;padding-bottom:5px;"></b>');
 			$('#uxh-nav-header').append('<span id="injectedHeader" style="font-size: 18px;width: 50%;float: right;line-height: 32px;">Domains</span>');
 
 		}
 
-		$('#firstSubnavItem').on('click', function (e) {
-			// stop the bouncing if user hits the toggle trigger multiple times
-			e.stopImmediatePropagation();
-			e.preventDefault();
-			$('#uxh-nav-app-menu li').not(":first-child").toggle();
+		$('#firstSubnavItem').toggle(function () {
+			if ($('#uxh-nav-collapse').hasClass('in')) {
+				console.log('3bar is open');
+				$('#uxh-nav-collapse').removeClass('in').addClass('collapse');
+			}
+			$('#uxh-nav-app-menu li').not(":first-child").show();
 			$('#uxh-nav-app-menu .dropdown').addClass('open');
+			$('#caretForFirstItem').css({'-webkit-transform': 'rotate(-180deg)'});
+		}, function () {
+			$('#uxh-nav-app-menu li').not(":first-child").hide();
+			$('#uxh-nav-app-menu .dropdown').removeClass('open');
+			$('#caretForFirstItem').css({'-webkit-transform': 'rotate(0deg)'});
 		});
+
+
 
 		$('#uxh-nav-user-link').attr('data-toggle', '');
 		$('#logoutLinkMobile').show().html('Garrett - Customer#: 3pw');
 		$('#uxh-s-name').html('Logout');
 
 		$('#uxh-nav-app-menu').show();
-		$('#uxh-s-productsmenu').addClass('open');
+
 	}
 
 	function stopResponsiveStuff () {
 		// unbind all the stuff we did and give control back
 		$('#firstSubnavItem').hide();
+		$('#productDropdown').css({'display': ''});
 		$('#injectedHeader').remove();
 		$('#firstSubnavItem').unbind();
 		$('#uxh-nav-app-menu li').not(":first-child").show();
@@ -1401,7 +1439,8 @@ function __doPostBack(eventTarget, eventArgument) {
 		$('#logoutLinkMobile').hide();
 		$('#uxh-s-name').html('Garrett');
 		$('#uxh-nav-user-link').attr('data-toggle', 'dropdown');
-		$('#uxh-nav-app-menu li').not("#firstSubnavItem").not('.dropdown').children('a').hover().unbind()
+		$('#uxh-nav-app-menu li').not("#firstSubnavItem").not('.dropdown').children('a').hover().unbind();
+
 	}
 
 	$(window).resize(function(){
