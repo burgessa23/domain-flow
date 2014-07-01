@@ -43,6 +43,9 @@
 	#uxh-nav-app-menu li:hover{
 		background-color: #77b309;
 	}
+	.navbar-nav .open .dropdown-menu>li>a, .navbar-nav .open .dropdown-menu .dropdown-header {
+	padding: 7px 15px 7px 33px;
+	}
 	.dropdown-toggle {
 		padding: 7px 15px;
 	}
@@ -72,7 +75,7 @@
               <li id="uxh-nav-mya-link"><a role="menuitem" href="">My Account</a></li>
 
               <li class="dropdown uxh-logged-in" style="" id="uxh-s-productsmenu">
-                  <a role="button" class="dropdown-toggle" href="/admin#" data-toggle="dropdown"><span id="uxh-product">Online Store</span> <b id="uxh-products-arrow" class="caret uxh-ctrl-s-products" style="display: none;"></b></a>
+                  <a role="button" class="dropdown-toggle" href="/admin#" data-toggle="dropdown"><span class="sf-menu-icn uxicon uxicon-checkmark"></span><span id="uxh-product" style="font-size:14px;padding-left:18px;font-weight:normal;">Online Store</span> <b id="uxh-products-arrow" class="caret uxh-ctrl-s-products" style="display: none;"></b></a>
                   <ul id="uxh-s-products" class="sf-menu-icns uxh-ctrl-s-products" data-showops="False"></ul>
               </li>
               <li id="uxh-i-server" style="display: none;">{{pc:internalversion}}</li>
@@ -125,15 +128,15 @@
           <ul id="uxh-nav-app-menu" class="nav navbar-nav">
 
           <li id="firstSubnavItem" class=""><a class=" icon-file" href=""><span id="pullDownTriggerLabel" class="text">Dashboard</span></a></li>
-              <li class=""><a onclick="flipContent('dashboard', 'Dashboard');return false;" class=" icon-file" href=""><span class="text">Dashboard</span></a></li>
+              <li class=""><a onclick="flipContent('dashboard', 'Dashboard' this);return false;" class=" icon-file" href=""><span class="text">Dashboard</span></a></li>
 
-  <li class=""><a onclick="flipContent('orders', 'Orders');return false;" class=" icon-file" href=""><span class="text">Orders</span></a></li>
+  <li class=""><a onclick="flipContent('orders', 'Orders', this);return false;" class=" icon-file" href=""><span class="text">Orders</span></a></li>
 
   <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">Products <b class="caret"></b></a><ul class="dropdown-menu" role="menu"><li><a data-nav-id="manage_products" href="">All Products</a></li><li><a data-nav-id="categories" href="">Categories</a></li></ul></li>
 
 
 
-<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">Settings <b class="caret"></b></a><ul class="dropdown-menu" role="menu"><li><a data-nav-id="business_info" href="">Business Info</a></li><li><a data-nav-id="payment" onclick="flipContent('payments', 'Payments');return false;" href="">Payments</a></li><li><a data-nav-id="shipping" href="">Shipping</a></li><li><a data-nav-id="tax" href="">Tax</a></li></ul></li>
+<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">Settings <b class="caret"></b></a><ul class="dropdown-menu" role="menu"><li><a data-nav-id="business_info" href="">Business Info</a></li><li><a data-nav-id="payment" onclick="flipContent('payments', 'Payments', this);return false;" href=""><span id="currentViewCheckmark" class="sf-menu-icn uxicon uxicon-checkmark" style="margin-top:-5px;"></span>Payments</a></li><li><a data-nav-id="shipping" href="">Shipping</a></li><li><a data-nav-id="tax" href="">Tax</a></li></ul></li>
 
 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">Promotions <b class="caret"></b></a><ul class="dropdown-menu" role="menu"><li><a data-nav-id="promote" href="">Promote</a></li><li><a data-nav-id="coupons" href="">Coupons</a></li></ul></li>
 <li class=""><a href="">Store Design</a></li>
@@ -551,14 +554,25 @@
   });
 
 
-  function flipContent (id, eleClicked) {
+  function flipContent (id, eleClicked, element) {
   	$('.cont-contain').hide();
   	$('#'+id).show();
   	$('#firstSubnavItem').click();
   	$('#pullDownTriggerLabel').html(eleClicked);
+  	if (eleClicked === 'Payments') {
+  		$('#currentViewCheckmark').show();
+  	}
+
+
   }
 
   function doResponsiveStuff() {
+  	$('#uxh-mobile-nav').click(function (e) {
+			if ($('#uxh-nav-app-menu .dropdown').hasClass('open')) {
+				console.log('menu is open');
+				$('#firstSubnavItem').click();
+			}
+		});
 
   	$('#firstSubnavItem').show();
   	$('#uxh-nav-app-menu li').not(":first-child").hide();
@@ -580,13 +594,19 @@
 
   	}
 
-  	$('#firstSubnavItem').on('click', function (e) {
-  		e.stopImmediatePropagation();
-  		e.preventDefault();
-
-  		$('#uxh-nav-app-menu li').not(":first-child").toggle();
-  		$('#uxh-nav-app-menu .dropdown').addClass('open');
-  	});
+  	$('#firstSubnavItem').toggle(function () {
+			if ($('#uxh-nav-collapse').hasClass('in')) {
+				console.log('3bar is open');
+				$('#uxh-nav-collapse').removeClass('in').addClass('collapse');
+			}
+			$('#uxh-nav-app-menu li').not(":first-child").show();
+			$('#uxh-nav-app-menu .dropdown').addClass('open');
+			$('#caretForFirstItem').css({'-webkit-transform': 'rotate(-180deg)'});
+		}, function () {
+			$('#uxh-nav-app-menu li').not(":first-child").hide();
+			$('#uxh-nav-app-menu .dropdown').removeClass('open');
+			$('#caretForFirstItem').css({'-webkit-transform': 'rotate(0deg)'});
+		});
   	$('#uxh-nav-user-link').attr('data-toggle', '');
   	$('#logoutLinkMobile').show().html('Andrew - Customer#: u9g');
   	$('#uxh-s-name').html('Logout');
@@ -629,6 +649,7 @@
 		stopResponsiveStuff();
 	}
   });
+  $('#currentViewCheckmark').hide();
   </script>
 
 
