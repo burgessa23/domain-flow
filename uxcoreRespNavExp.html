@@ -46,6 +46,13 @@
 	.navbar-nav .open .dropdown-menu>li>a, .navbar-nav .open .dropdown-menu .dropdown-header {
 	padding: 7px 15px 7px 33px;
 	}
+
+	.navbar-nav .open .dropdown-menu>li>a:hover {
+	color: #FFF;
+	}
+	.uxicon-checkmark {
+    			display: none;
+    		}
 	.dropdown-toggle {
 		padding: 7px 15px;
 	}
@@ -75,7 +82,7 @@
               <li id="uxh-nav-mya-link"><a role="menuitem" href="">My Account</a></li>
 
               <li class="dropdown uxh-logged-in" style="" id="uxh-s-productsmenu">
-                  <a role="button" class="dropdown-toggle" href="/admin#" data-toggle="dropdown"><span class="sf-menu-icn uxicon uxicon-checkmark"></span><span id="uxh-product" style="font-size:14px;padding-left:18px;font-weight:normal;">Online Store</span> <b id="uxh-products-arrow" class="caret uxh-ctrl-s-products" style="display: none;"></b></a>
+                  <a role="button" class="dropdown-toggle" href="/admin#" data-toggle="dropdown"><span id="prodStoreCheck" class="sf-menu-icn uxicon uxicon-checkmark"></span><span id="uxh-product" style="font-size:14px;padding-left:18px;font-weight:normal;">Online Store</span> <b id="uxh-products-arrow" class="caret uxh-ctrl-s-products" style="display: none;"></b></a>
                   <ul id="uxh-s-products" class="sf-menu-icns uxh-ctrl-s-products" data-showops="False"></ul>
               </li>
               <li id="uxh-i-server" style="display: none;">{{pc:internalversion}}</li>
@@ -128,7 +135,7 @@
           <ul id="uxh-nav-app-menu" class="nav navbar-nav">
 
           <li id="firstSubnavItem" class=""><a class=" icon-file" href=""><span id="pullDownTriggerLabel" class="text">Dashboard</span></a></li>
-              <li class=""><a onclick="flipContent('dashboard', 'Dashboard' this);return false;" class=" icon-file" href=""><span class="text">Dashboard</span></a></li>
+              <li class=""><a onclick="flipContent('dashboard', 'Dashboard', this);return false;" class=" icon-file" href=""><span class="text">Dashboard</span></a></li>
 
   <li class=""><a onclick="flipContent('orders', 'Orders', this);return false;" class=" icon-file" href=""><span class="text">Orders</span></a></li>
 
@@ -562,8 +569,6 @@
   	if (eleClicked === 'Payments') {
   		$('#currentViewCheckmark').show();
   	}
-
-
   }
 
   function doResponsiveStuff() {
@@ -574,6 +579,8 @@
 			}
 		});
 
+  	$('#uxh-product').attr('style', 'font-size:14px;padding-left:18px;font-weight:normal;');
+	$('#prodStoreCheck').show();
   	$('#firstSubnavItem').show();
   	$('#uxh-nav-app-menu li').not(":first-child").hide();
   	$('#uxh-nav-app-menu li').children('a').css({'background-color': '#679b08', 'font-size': '16px'});
@@ -629,6 +636,9 @@
 	$('#uxh-s-name').html('Andrew');
 	$('#uxh-nav-user-link').attr('data-toggle', 'dropdown');
 	$('#uxh-nav-app-menu li').not("#firstSubnavItem").not('.dropdown').children('a').hover().unbind();
+	$('#uxh-product').attr('style', '');
+	$('#prodStoreCheck').hide();
+	$('#currentViewCheckmark').hide();
   }
 
   $(window).resize(function(){

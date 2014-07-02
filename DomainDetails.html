@@ -269,15 +269,23 @@
 				width: 100%;
 				margin-left: 0px;
 			}
+			.uxicon-checkmark {
+    			display: none;
+    		}
 			.navbar-nav .open .dropdown-menu>li>a, .navbar-nav .open .dropdown-menu .dropdown-header {
 				padding: 7px 15px 7px 33px;
 				}
+
+			.navbar-nav .open .dropdown-menu>li>a:hover {
+			color: #FFF;
+			}
 			#uxh-s-productsmenu {
 				display: block!important;
 			}
 			.navbar-default .navbar-nav .open .dropdown-menu>li>a {
 			 color: #FFF;
 			}
+
     	}
     	.total-container, .container {
     		min-width: 0px;
@@ -688,12 +696,12 @@ function __doPostBack(eventTarget, eventArgument) {
 
 					<li id="uxh-nav-mya-link"><a role="menuitem" href="">My Account</a></li>
 
-					<li class="dropdown uxh-logged-in open" id="uxh-s-productsmenu">
+					<li class="dropdown uxh-logged-in" id="uxh-s-productsmenu">
 						<a id="productDropdown" role="button" class="dropdown-toggle" href="" data-toggle="dropdown"><span id="uxh-product">Domains</span> <b id="uxh-products-arrow" class="caret uxh-ctrl-s-products"></b></a>
 						<ul id="uxh-s-products" class="sf-menu-icns dropdown-menu uxh-ctrl-s-products" role="menu" data-showops="True">
 							<li><a class="menuitem" id="domainProdLink" href=""><span class="sf-menu-icn uxicon uxicon-checkmark"></span>Domains</a></li>
-							<li><a class="menuitem" href="">Hosting</a></li>
-							<li><a class="menuitem" href="">Email</a></li>
+							<li><a class="menuitem" href="hosting.html">Hosting</a></li>
+							<li><a class="menuitem" href="email.html">Email</a></li>
 						</ul>
 					</li>
 					<li id="uxh-i-server" style="display: none;"></li>
@@ -745,7 +753,41 @@ function __doPostBack(eventTarget, eventArgument) {
 	<nav id="uxh-nav-app" class="navbar uxc-nav" role="navigation">
 		<div class="container">
 			<ul id="uxh-nav-app-menu" class="nav navbar-nav">
-				<li id="firstSubnavItem" class=""><a class=" icon-file" href=""><span id="pullDownTriggerLabel" class="text">All Domains</span></a></li><li id="dnlDomains" class="active dropdown"><a href="" onclick="return false;" fastball="event" event="click" ci="61445" role="button" class="active dropdown-toggle" data-toggle="dropdown">Domains <b class="caret"></b></a><ul class="dropdown-menu" role="menu"><li id="dnlAllDomains"><a role="menuitem" class="active" href="" onclick="flipContent('domains', 'All Domains');return false;" fastball="event" event="click" ci="61446" id="domainProdLinkGreen"><span class="sf-menu-icn uxicon uxicon-checkmark" style="top: 63px;left: 3px;"></span>All Domains</a></li><li id="dnlTransfers"><a role="menuitem" href="" onclick="return false;" fastball="event" event="click" ci="61447">Transfers</a></li><li id="dnlOwnership"><a role="menuitem" href="" onclick=";return false;" fastball="event" event="click" ci="61448">Pending Account Changes</a></li><li id="dnlExpired"><a role="menuitem" href="" onclick="return false;" fastball="event" event="click" ci="61449">Expired Domains</a></li><li id="dnlPreReg"><a role="menuitem" href="" onclick="return false;" fastball="event" event="click" ci="62130">Pre-Registration Domains</a></li></ul></li><ul class="dropdown-menu" role="menu"><li id="dnlAllDomains"><a role="menuitem" class="active" href="" onclick="return false;" fastball="event" event="click" ci="61446">All Domains</a></li><li id="dnlTransfers"><a role="menuitem" href="" onclick="return false;" fastball="event" event="click" ci="61447">Transfers</a></li><li id="dnlOwnership"><a role="menuitem" href="" onclick="return false;" fastball="event" event="click" ci="61448">Pending Account Changes</a></li><li id="dnlExpired"><a role="menuitem" href="" onclick="return false;" fastball="event" event="click" ci="61449">Expired Domains</a></li><li id="dnlPreReg"><a role="menuitem" href="" onclick="return false;" fastball="event" event="click" ci="62130">Pre-Registration Domains</a></li></ul><li id="dnlBuySell" class="dropdown"><a href="" onclick="return false;" fastball="event" event="click" ci="61450" role="button" class="dropdown-toggle" data-toggle="dropdown">Buy &amp; Sell <b class="caret"></b></a><ul class="dropdown-menu" role="menu"><li id="dnlBackorders"><a role="menuitem" href="" onclick="return false;" fastball="event" event="click" ci="61451">Backorders and Monitoring</a></li><li id="dnlInvestorsEgde"><a role="menuitem" href="" onclick="return false;" fastball="event" event="click" ci="61452">Investor’s Edge</a></li><li id="dnlAuctions"><a role="menuitem" href="" fastball="event" event="click" ci="61452">GoDaddy Auctions® Listings</a></li><li id="dnlDomainBuy"><a role="menuitem" href="" onclick="return false;" fastball="event" event="click" ci="61454">Domain Buy</a></li><li id="dnlPremList"><a role="menuitem" href="" onclick="return false;" fastball="event" event="click" ci="61455">Premium Listings</a></li><li id="dnlGeoMap"><a role="menuitem"  href="" fastball="event" event="click" ci="61457">GeoDomainMap</a></li></ul></li><ul class="dropdown-menu" role="menu"><li id="dnlBackorders"><a role="menuitem" href="" onclick="return false;" fastball="event" event="click" ci="61451">Backorders and Monitoring</a></li><li id="dnlInvestorsEgde"><a role="menuitem" href="" onclick="return false;" fastball="event" event="click" ci="61452">Investor’s Edge</a></li><li id="dnlAuctions"><a role="menuitem" href="" fastball="event" event="click" ci="61452">GoDaddy Auctions® Listings</a></li><li id="dnlDomainBuy"><a role="menuitem" href="" onclick="return false;" fastball="event" event="click" ci="61454">Domain Buy</a></li><li id="dnlPremList"><a role="menuitem" href="" onclick="return false;" fastball="event" event="click" ci="61455">Premium Listings</a></li><li id="dnlGeoMap"><a role="menuitem"  href="" fastball="event" event="click" ci="61457">GeoDomainMap</a></li></ul><li id="dnlSettings" class="dropdown"><a href="" onclick="return false;" fastball="event" event="click" ci="61458" role="button" class="dropdown-toggle" data-toggle="dropdown">Settings <b class="caret"></b></a><ul class="dropdown-menu" role="menu"><li id="dnlAcctAdmins"><a role="menuitem" href="" onclick="return false;" fastball="event" event="click" ci="61460">Account Administrators</a></li></ul></li><ul class="dropdown-menu" role="menu"><li id="dnlAcctAdmins"><a role="menuitem" href="" onclick="return false;" fastball="event" event="click" ci="61460">Account Administrators</a></li></ul><li id="dnlHelp" class="dropdown"><a href="" onclick="return false;" fastball="event" event="click" ci="61462" role="button" class="dropdown-toggle" data-toggle="dropdown">Help <b class="caret"></b></a><ul class="dropdown-menu" role="menu"><li id="dnlHelpSupport"><a role="menuitem"  href="" fastball="event" event="click" ci="61463">Domain Support</a></li><li id="dnlHelpDnsMgr"><a role="menuitem" href="" onclick="return false;" fastball="event" event="click" ci="68866">Where Do I Manage DNS?</a></li></ul></li><ul class="dropdown-menu" role="menu"><li id="dnlHelpSupport"><a role="menuitem"  href="" fastball="event" event="click" ci="61463">Domain Support</a></li><li id="dnlHelpDnsMgr"><a role="menuitem" href="" onclick="return false;" fastball="event" event="click" ci="68866">Where Do I Manage DNS?</a></li></ul>
+				<li id="firstSubnavItem" class=""><a class=" icon-file" href=""><span id="pullDownTriggerLabel" class="text">All Domains</span></a></li>
+				<li id="dnlDomains" class="active dropdown">
+					<a href="" onclick="return false;" fastball="event" event="click" ci="61445" role="button" class="active dropdown-toggle" data-toggle="dropdown">Domains <b class="caret"></b></a>
+					<ul class="dropdown-menu" role="menu">
+						<li id="dnlAllDomains">
+							<a role="menuitem" class="active" href="" onclick="flipContent('domains', 'All Domains');return false;" fastball="event" event="click" ci="61446" id="domainProdLinkGreen"><span id="allDomainsCheck" class="sf-menu-icn uxicon uxicon-checkmark" style="top: 63px;left: 3px;"></span>All Domains</a></li>
+							<li id="dnlTransfers"><a role="menuitem" href=""  onclick="flipContent('transfers', 'Transfers');return false;"  fastball="event" event="click" ci="61447">Transfers</a></li>
+							<li id="dnlOwnership"><a role="menuitem" href="" onclick="flipContent('changes', 'Pending Account Changes');return false;" fastball="event" event="click" ci="61448">Pending Account Changes</a></li>
+							<li id="dnlExpired"><a role="menuitem" href="" onclick="flipContent('expired', 'Expired Domains');return false;" fastball="event" event="click" ci="61449">Expired Domains</a></li>
+							<li id="dnlPreReg"><a role="menuitem" href=""  onclick="flipContent('prereg', 'Pre-Registration Domains');return false;" fastball="event" event="click" ci="62130">Pre-Registration Domains</a></li>
+					</ul>
+				</li>
+
+				<li id="dnlBuySell" class="dropdown"><a href="" onclick="return false;" fastball="event" event="click" ci="61450" role="button" class="dropdown-toggle" data-toggle="dropdown">Buy &amp; Sell <b class="caret"></b></a>
+				<ul class="dropdown-menu" role="menu">
+					<li id="dnlBackorders"><a role="menuitem" href=""  onclick="flipContent('backorder', 'Backorders and Monitoring');return false;" fastball="event" event="click" ci="61451">Backorders and Monitoring</a></li>
+					<li id="dnlInvestorsEgde"><a role="menuitem" href=""  onclick="flipContent('invest', 'Investor’s Edge');return false;" fastball="event" event="click" ci="61452">Investor’s Edge</a></li>
+					<li id="dnlAuctions"><a role="menuitem" href="" onclick="flipContent('auction', 'GoDaddy Auctions® Listings');return false;" fastball="event" event="click" ci="61452">GoDaddy Auctions® Listings</a></li>
+					<li id="dnlDomainBuy"><a role="menuitem" href=""  onclick="flipContent('domainbuy', 'Domain Buy');return false;" fastball="event" event="click" ci="61454">Domain Buy</a></li>
+					<li id="dnlPremList"><a role="menuitem" href=""  onclick="flipContent('premium', 'Premium Listings');return false;" fastball="event" event="click" ci="61455">Premium Listings</a></li>
+					<li id="dnlGeoMap"><a role="menuitem"  href="" onclick="flipContent('geo', 'GeoDomainMap');return false;"  fastball="event" event="click" ci="61457">GeoDomainMap</a></li>
+				</ul>
+				</li>
+				<li id="dnlSettings" class="dropdown"><a href="" onclick="return false;" fastball="event" event="click" ci="61458" role="button" class="dropdown-toggle" data-toggle="dropdown">Settings <b class="caret"></b></a>
+				<ul class="dropdown-menu" role="menu">
+					<li id="dnlAcctAdmins"><a role="menuitem" href="" onclick="flipContent('admin', 'Account Administrators');return false;"  fastball="event" event="click" ci="61460">Account Administrators</a></li>
+				</ul>
+				</li>
+				<li id="dnlHelp" class="dropdown"><a href="" onclick="return false;" fastball="event" event="click" ci="61462" role="button" class="dropdown-toggle" data-toggle="dropdown">Help <b class="caret"></b></a>
+				<ul class="dropdown-menu" role="menu">
+					<li id="dnlHelpSupport"><a role="menuitem"  href=""onclick="flipContent('domsupport', 'Domain Support');return false;"  fastball="event" event="click" ci="61463">Domain Support</a></li>
+					<li id="dnlHelpDnsMgr"><a role="menuitem" href="" onclick="flipContent('dnsmanage', 'Where Do I Manage DNS?');return false;" fastball="event" event="click" ci="68866">Where Do I Manage DNS?</a></li>
+				</ul>
+				</li>
+
 			</ul>
 		</div>
 	</nav>
@@ -753,7 +795,7 @@ function __doPostBack(eventTarget, eventArgument) {
 
 
 <div class="container">
-	<h1 class="col-xs-12" style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis; padding: 5px 0; margin: -5px 0;">
+	<h1 class="col-xs-12" style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis; padding: 5px 0; margin: -5px 0;font-size: 28px;" id="pageLabel">
 		Domain Details<span id="ctl00_lblExtraPage"></span>
 	</h1>
 	<div id="ctl00_phSpecialMessages" class="specialMessageContainer" style="display:none;">
@@ -1354,6 +1396,7 @@ function __doPostBack(eventTarget, eventArgument) {
 		$('#'+id).show();
 		$('#firstSubnavItem').click();
 		$('#pullDownTriggerLabel').html(eleClicked);
+		$('#pageLabel').html(eleClicked);
 	}
 
 	function doResponsiveStuff() {
@@ -1376,6 +1419,7 @@ function __doPostBack(eventTarget, eventArgument) {
 
 		// hi-jack the nav at mobile breakpoint
 		$('#firstSubnavItem').show();
+		//$('#allDomainsCheck').show();
 		// roll up the nav li elements EXCEPT the top one that is used for context
 		$('#uxh-nav-app-menu li').not(":first-child").hide();
 		$('#uxh-nav-app-menu li').children('a').css({'background-color': '#679b08', 'font-size': '16px'});
@@ -1446,7 +1490,8 @@ function __doPostBack(eventTarget, eventArgument) {
 		$('#uxh-s-name').html('Garrett');
 		$('#uxh-nav-user-link').attr('data-toggle', 'dropdown');
 		$('#uxh-nav-app-menu li').not("#firstSubnavItem").not('.dropdown').children('a').hover().unbind();
-		$('#uxh-s-products li').not('.dropdown').children('a').hover().unbind();
+		$('#uxh-s-products li').not('.dropdown').children('a').hover().unbind('hover');
+		$('#allDomainsCheck').hide();
 	}
 
 	$(window).resize(function(){
