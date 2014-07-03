@@ -55,7 +55,9 @@
     		}
 	.dropdown-toggle {
 		padding: 7px 15px;
+		cursor: default;
 	}
+
 
 }
 </style>
@@ -92,7 +94,7 @@
             <ul id="uxh-nav-right" class="nav navbar-nav navbar-right" role="menubar">
                 <li id="uxh-nav-support"><a id="uxhNavSupportLink" role="menuitem" href="">Support</a></li>
                 <li id="uxh-nav-user" class="dropdown">
-                    <a id="uxh-nav-user-link" role="button" class="dropdown-toggle" href="/admin#" data-toggle="dropdown"><span id="uxh-s-name-prefix" style="display: none;">Customer #</span><span id="uxh-s-name">Andrew</span><span id="logoutLinkMobile" style="font-size: 12px;color:#ddd;line-height:37px;padding-left:10px;"></span> <b class="caret"></b></a>
+                    <a id="uxh-nav-user-link" role="button" class="dropdown-toggle" href="" data-toggle="dropdown"><span id="uxh-s-name-prefix" style="display: none;">Customer #</span><span id="uxh-s-name">Andrew</span><span id="logoutLinkMobile" style="font-size: 12px;color:#ddd;line-height:37px;padding-left:10px;"></span> <b class="caret"></b></a>
                     <ul id="uxh-nav-user-menu" class="dropdown-menu shopper-menu" role="menu">
                         <li id="uxh-s-header" class="uxh-logged-in shopper-header dropdown-header">
                             <div id="uxh-s-fullname" class="uxc-nowrap" style="">Andrew Burgess</div>
@@ -139,17 +141,17 @@
 
   <li class=""><a onclick="flipContent('orders', 'Orders', this);return false;" class=" icon-file" href=""><span class="text">Orders</span></a></li>
 
-  <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">Products <b class="caret"></b></a><ul class="dropdown-menu" role="menu"><li><a data-nav-id="manage_products" href="">All Products</a></li><li><a data-nav-id="categories" href="">Categories</a></li></ul></li>
+  <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="" onclick="return false;">Products <b class="caret"></b></a><ul class="dropdown-menu" role="menu"><li><a data-nav-id="manage_products" href="" onclick="flipContent('orders', 'All Products', this);return false;">All Products</a></li><li><a data-nav-id="categories" href="" onclick="flipContent('orders', 'Categories', this);return false;">Categories</a></li></ul></li>
 
 
 
-<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">Settings <b class="caret"></b></a><ul class="dropdown-menu" role="menu"><li><a data-nav-id="business_info" href="">Business Info</a></li><li><a data-nav-id="payment" onclick="flipContent('payments', 'Payments', this);return false;" href=""><span id="currentViewCheckmark" class="sf-menu-icn uxicon uxicon-checkmark" style="margin-top:-5px;"></span>Payments</a></li><li><a data-nav-id="shipping" href="">Shipping</a></li><li><a data-nav-id="tax" href="">Tax</a></li></ul></li>
+<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href=""  onclick="return false;">Settings <b class="caret"></b></a><ul class="dropdown-menu" role="menu"><li><a data-nav-id="business_info" href="" onclick="flipContent('orders', 'Business Info', this);return false;">Business Info</a></li><li><a data-nav-id="payment" onclick="flipContent('payments', 'Payments', this);return false;" href=""><span id="currentViewCheckmark" class="sf-menu-icn uxicon uxicon-checkmark" style="margin-top:-5px;"></span>Payments</a></li><li><a data-nav-id="shipping" href="" onclick="flipContent('orders', 'Shipping', this);return false;">Shipping</a></li><li><a data-nav-id="tax" href="" onclick="flipContent('orders', 'Tax', this);return false;">Tax</a></li></ul></li>
 
-<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">Promotions <b class="caret"></b></a><ul class="dropdown-menu" role="menu"><li><a data-nav-id="promote" href="">Promote</a></li><li><a data-nav-id="coupons" href="">Coupons</a></li></ul></li>
-<li class=""><a href="">Store Design</a></li>
+<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="" onclick="return false;">Promotions <b class="caret"></b></a><ul class="dropdown-menu" role="menu"><li><a data-nav-id="promote" href="" onclick="flipContent('orders', 'Promote', this);return false;">Promote</a></li><li><a data-nav-id="coupons" href=""  onclick="flipContent('orders', 'Coupons', this);return false;">Coupons</a></li></ul></li>
+<li class=""><a href=""  onclick="flipContent('orders', 'Store Design', this);return false;">Store Design</a></li>
 
 <li class="nemo-navbar-right">
-      <a href="" id="view_store_link" target="_blank">View Store</a>
+      <a href="" id="view_store_link" onclick="flipContent('orders', 'View Store', this);return false;">View Store</a>
 </li>
 
 
@@ -293,7 +295,7 @@
 		<div class="row">
 			<div class="col-lg-12 clearfix">
 				<div class="pull-left">
-					<h2 class="page-title ">    Orders
+					<h2 class="page-title " id="pageLabel">    Orders
 					</h2>
 				</div>
 			</div>
@@ -566,9 +568,11 @@
   	$('#'+id).show();
   	$('#firstSubnavItem').click();
   	$('#pullDownTriggerLabel').html(eleClicked);
-  	if (eleClicked === 'Payments') {
-  		$('#currentViewCheckmark').show();
-  	}
+  	$('#pageLabel').html(eleClicked);
+
+  	// if (eleClicked === 'Payments') {
+  	// 	$('#currentViewCheckmark').show();
+  	// }
   }
 
   function doResponsiveStuff() {
@@ -596,7 +600,7 @@
   	$('#firstSubnavItem').children('a').css({'background-color': '#447703'});
 
   	if ($('#injectedHeader').length === 0) {
-  		$('#uxh-nav-app-menu a:first-child').first().append('<b id="caretForFirstItem" class="caret" style="float: right;padding-top: 5px;"></b>');
+  		$('#uxh-nav-app-menu a:first-child').first().append('<b id="caretForFirstItem" class="caret" style="float: right;padding-top: 5px;padding-bottom:5px;"></b>');
   		$('#uxh-nav-header').append('<span id="injectedHeader" style="font-size: 18px;width: 50%;float: right;line-height: 32px;">Online Store</span>');
 
   	}

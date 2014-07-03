@@ -285,6 +285,9 @@
 			.navbar-default .navbar-nav .open .dropdown-menu>li>a {
 			 color: #FFF;
 			}
+			.dropdown-toggle {
+				cursor: default;
+			}
 
     	}
     	.total-container, .container {
@@ -776,7 +779,7 @@ function __doPostBack(eventTarget, eventArgument) {
 					<li id="dnlGeoMap"><a role="menuitem"  href="" onclick="flipContent('geo', 'GeoDomainMap');return false;"  fastball="event" event="click" ci="61457">GeoDomainMap</a></li>
 				</ul>
 				</li>
-				<li id="dnlSettings" class="dropdown"><a href="" onclick="return false;" fastball="event" event="click" ci="61458" role="button" class="dropdown-toggle" data-toggle="dropdown">Settings <b class="caret"></b></a>
+				<li id="dnlSettings" class="dropdown"><a href="" onclick="return false;" fastball="event" event="click" ci="61458" role="button" class="dropdown-toggle" data-toggle="dropdown" >Settings <b class="caret"></b></a>
 				<ul class="dropdown-menu" role="menu">
 					<li id="dnlAcctAdmins"><a role="menuitem" href="" onclick="flipContent('admin', 'Account Administrators');return false;"  fastball="event" event="click" ci="61460">Account Administrators</a></li>
 				</ul>
@@ -1400,7 +1403,7 @@ function __doPostBack(eventTarget, eventArgument) {
 	}
 
 	function doResponsiveStuff() {
-		$('#domainProdLink').click(false).css({'cursor':'default'});
+		$('#domainProdLink').click(false);
 
 		$('#uxh-mobile-nav').click(function (e) {
 			if ($('#uxh-nav-app-menu .dropdown').hasClass('open')) {
@@ -1470,7 +1473,7 @@ function __doPostBack(eventTarget, eventArgument) {
 		$('#uxh-s-name').html('Logout');
 
 		$('#uxh-nav-app-menu').show();
-		$('#domainProdLinkGreen').click(false).css({'cursor':'default'});
+		$('#domainProdLinkGreen').click(false);
 	}
 
 	function stopResponsiveStuff () {
