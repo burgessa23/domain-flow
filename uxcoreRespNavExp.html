@@ -37,7 +37,7 @@
 </style><style type="text/css" media="screen">.uv-icon:hover{opacity:1}</style><style type="text/css" media="print">#uvTab,.uv-tray,.uv-icon,.uv-popover,.uv-bubble{display:none!important}</style><link rel="stylesheet" type="text/css" href="./UXCoreFiles/includes.css"></head>
 <style>
 	.sampleClass {float:left;}
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 767px){
 	.sampleClass {float:none;}
 	#uxh-nav-app-menu {display: none;}
 	#uxh-nav-app-menu li:hover{
@@ -57,6 +57,54 @@
 		padding: 7px 15px;
 		cursor: default;
 	}
+	uxc-header .navbar-nav>.open>a, .uxc-header .navbar-nav>.open>a:hover, .uxc-header .navbar-nav>.open>a:focus {
+		color: #fff;
+		background-color: #333;
+		}
+	#uxh-s-fullname{
+		display: none;
+	}
+	.uxc-header-nav .shopper-menu .shopper-header {
+		color: #FFF;
+		background-color: #333;
+	}
+	.logoutlink {
+		background-color: #333;
+		color: #FFF;
+	}
+	.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+ color: #FFF;
+ background-color: #333;
+}
+.uxc-header-nav .uxc-shopper-menu-label {
+color: #7d7d7d;
+}
+.uxc-header-nav #uxh-vip-repname {
+font-weight: 700;
+color: #fff;
+}
+#uhx-vip-details {
+	color: #FFF;
+}
+#uxh-mi-custid {
+	display: none;
+}
+.uxc-header-nav #uxh-vip-info {
+display: table;
+padding-top: 0px;
+}
+
+.navbar-nav .open .dropdown-menu>li>a, .navbar-nav .open .dropdown-menu .dropdown-header {
+padding: 0px 15px 7px 33px;
+}
+
+#userCaret {
+
+float: right;
+padding-bottom: 13px;
+padding-top: 13px;
+
+}
 
 
 }
@@ -94,7 +142,7 @@
             <ul id="uxh-nav-right" class="nav navbar-nav navbar-right" role="menubar">
                 <li id="uxh-nav-support"><a id="uxhNavSupportLink" role="menuitem" href="">Support</a></li>
                 <li id="uxh-nav-user" class="dropdown">
-                    <a id="uxh-nav-user-link" role="button" class="dropdown-toggle" href="" data-toggle="dropdown"><span id="uxh-s-name-prefix" style="display: none;">Customer #</span><span id="uxh-s-name">Andrew</span><span id="logoutLinkMobile" style="font-size: 12px;color:#ddd;line-height:37px;padding-left:10px;"></span> <b class="caret"></b></a>
+                    <a id="uxh-nav-user-link" role="button" class="dropdown-toggle" href="" data-toggle="dropdown"><span id="uxh-s-name-prefix" style="display: none;">Customer #</span><span id="uxh-s-name">Andrew</span><span id="logoutLinkMobile" style="font-size: 12px;color:#ddd;line-height:37px;padding-left:10px;"></span> <b id="userCaret" class="caret"></b></a>
                     <ul id="uxh-nav-user-menu" class="dropdown-menu shopper-menu" role="menu">
                         <li id="uxh-s-header" class="uxh-logged-in shopper-header dropdown-header">
                             <div id="uxh-s-fullname" class="uxc-nowrap" style="">Andrew Burgess</div>
@@ -103,25 +151,25 @@
                                 <span class="uxc-shopper-menu-label">Customer #:</span>
                                 <span id="uxh-s-id">u9g</span>
                             </div>
-                            <div id="uxh-mi-mgrid" class="uxc-nowrap" style="display:none;">
+                            <div id="uxh-mi-mgrid" class="uxc-nowrap" style="">
                                 <span class="uxc-shopper-menu-label">Manager ID:</span>
-                                <span id="uxh-mgr-id"></span>
+                                <span id="uxh-mgr-id" style="margin-left: 31px;">#XXXXX</span>
                             </div>
-                            <div id="uxh-mi-mgrname" class="uxc-nowrap" style="display:none;">
+                            <div id="uxh-mi-mgrname" class="uxc-nowrap" style="">
                                 <span class="uxc-shopper-menu-label">Manager Name:</span>
-                                <span id="uxh-mgr-name"></span>
+                                <span id="uxh-mgr-name" style="margin-left:11px;">Gern Blanston</span>
                             </div>
-                            <div id="uxh-vip-info" class="uxc-nowrap" style="display:none;">
+                            <div id="uxh-vip-info" class="uxc-nowrap" style="">
                                 <span id="uxh-vip-label" class="uxc-shopper-menu-label">VIP Acct Exec:</span>
                                 <div id="uhx-vip-details">
-                                    <div id="uxh-vip-repname"></div>
-                                    <div id="uxh-vip-phone"></div>
-                                    <div><a id="uxh-vip-email" href="/admin#"></a></div>
+                                    <div id="uxh-vip-repname" style="margin-left:15px;">Hector Plasm</div>
+                                    <div id="uxh-vip-phone" style="margin-left:15px;">1-800-555-1212</div>
+                                    <div style="margin-left:15px;">hplasm@godaddy.com</div>
                                 </div>
                             </div>
                         </li>
 
-                        <li id="uxh-nav-logged-in" class="uxh-logged-in"><a role="menuitem" href="">Log Out</a></li>
+                        <li id="uxh-nav-logged-in" class="uxh-logged-in"><a role="menuitem" href="" class="logoutlink">Log Out</a></li>
                         <li id="uxh-nav-logged-out" class="uxh-logged-out" style="display: none;"><a role="menuitem" href="https://www.godaddy.com/?">Log In</a></li>
 
                     </ul>
@@ -582,7 +630,9 @@
 				$('#firstSubnavItem').click();
 			}
 		});
-
+  	$('#userCaret').click(function (e) {
+  		$(this).css('-webkit-transform', 'rotate(-180deg)');
+  	});
   	$('#uxh-product').attr('style', 'font-size:14px;padding-left:18px;font-weight:normal;');
 	$('#prodStoreCheck').show();
   	$('#firstSubnavItem').show();
@@ -595,7 +645,7 @@
   	});
   	$('#uxh-nav-app-menu .dropdown-toggle').not('#firstSubnavItem').css({'color': '#263E06'});
   	$('#uxh-nav-app-menu li').children('.dropdown-toggle').attr('data-toggle', '');
-  	$('.caret').not('#caretForFirstItem').hide();
+  	$('.caret').not('#caretForFirstItem, #userCaret').hide();
   	var headLinkInnerText = $('#uxh-nav-app-menu a:first-child span').first().html();
   	$('#firstSubnavItem').children('a').css({'background-color': '#447703'});
 
@@ -618,9 +668,9 @@
 			$('#uxh-nav-app-menu .dropdown').removeClass('open');
 			$('#caretForFirstItem').css({'-webkit-transform': 'rotate(0deg)'});
 		});
-  	$('#uxh-nav-user-link').attr('data-toggle', '');
-  	$('#logoutLinkMobile').show().html('Andrew - Customer#: u9g');
-  	$('#uxh-s-name').html('Logout');
+  	//$('#uxh-nav-user-link').attr('data-toggle', '');
+  	$('#logoutLinkMobile').show().html(' - Customer#: u9g');
+  	//$('#uxh-s-name').html('Logout');
 
   	$('#uxh-nav-app-menu').show();
   }
