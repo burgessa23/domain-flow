@@ -77,10 +77,10 @@
  background-color: #333;
 }
 .uxc-header-nav .uxc-shopper-menu-label {
-color: #7d7d7d;
+color: #888;
 }
 .uxc-header-nav #uxh-vip-repname {
-font-weight: 700;
+font-weight: 400;
 color: #fff;
 }
 #uhx-vip-details {
@@ -148,22 +148,22 @@ padding-top: 13px;
                             <div id="uxh-s-fullname" class="uxc-nowrap" style="">Andrew Burgess</div>
                             <div id="uxh-s-status" class="uxc-nowrap" style="display: none;"></div>
                             <div id="uxh-mi-custid" class="uxc-nowrap" style="">
-                                <span class="uxc-shopper-menu-label">Customer #:</span>
-                                <span id="uxh-s-id">u9g</span>
+                                <span class="uxc-shopper-menu-label" style="font-size:14px;">Customer #:</span>
+                                <span id="uxh-s-id" style="margin-left:25px;">u9g</span>
                             </div>
-                            <div id="uxh-mi-mgrid" class="uxc-nowrap" style="">
-                                <span class="uxc-shopper-menu-label">Manager ID:</span>
-                                <span id="uxh-mgr-id" style="margin-left: 31px;">#XXXXX</span>
+                            <div id="uxh-mi-mgrid" class="uxc-nowrap" style="font-size: 14px; margin-bottom: 5px;">
+                                <span class="uxc-shopper-menu-label">Manager ID</span>
+                                <span id="uxh-mgr-id" style="margin-left: 31px;">XXXXX</span>
                             </div>
-                            <div id="uxh-mi-mgrname" class="uxc-nowrap" style="">
-                                <span class="uxc-shopper-menu-label">Manager Name:</span>
-                                <span id="uxh-mgr-name" style="margin-left:11px;">Gern Blanston</span>
+                            <div id="uxh-mi-mgrname" class="uxc-nowrap" style="font-size: 14px; margin-bottom: 5px;">
+                                <span class="uxc-shopper-menu-label">Manager Name</span>
+                                <span id="uxh-mgr-name" style="margin-left:7px;">Gern Blanston</span>
                             </div>
-                            <div id="uxh-vip-info" class="uxc-nowrap" style="">
-                                <span id="uxh-vip-label" class="uxc-shopper-menu-label">VIP Acct Exec:</span>
+                            <div id="uxh-vip-info" class="uxc-nowrap" style="font-size: 14px;">
+                                <span id="uxh-vip-label" class="uxc-shopper-menu-label">VIP Acct Exec</span>
                                 <div id="uhx-vip-details">
-                                    <div id="uxh-vip-repname" style="margin-left:15px;">Hector Plasm</div>
-                                    <div id="uxh-vip-phone" style="margin-left:15px;">1-800-555-1212</div>
+                                    <div id="uxh-vip-repname" style="margin-left:15px;margin-bottom:13px;">Hector Plasm</div>
+                                    <div id="uxh-vip-phone" style="margin-left:15px;margin-bottom:10px;">1-800-555-1212</div>
                                     <div style="margin-left:15px;">hplasm@godaddy.com</div>
                                 </div>
                             </div>
@@ -669,7 +669,7 @@ padding-top: 13px;
 			$('#caretForFirstItem').css({'-webkit-transform': 'rotate(0deg)'});
 		});
   	//$('#uxh-nav-user-link').attr('data-toggle', '');
-  	$('#logoutLinkMobile').show().html(' - Customer#: u9g');
+  	$('#logoutLinkMobile').show().html('  (Customer# u9g)');
   	//$('#uxh-s-name').html('Logout');
 
   	$('#uxh-nav-app-menu').show();
