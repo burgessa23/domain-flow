@@ -1,0 +1,6913 @@
+/*----------------------------------------------------------------
+
+         All in one jQuery Header Styles
+
+-----------------------------------------------------------------*/
+
+/*-------------------------------------
+            General Styles
+--------------------------------------*/
+body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, verdana, Helvetica, sans-serif;
+    font-size: 12px;
+    margin: 0;
+    line-height: 1;
+}
+
+a,
+a:link,
+a:visited {
+    /*text-decoration: underline;*/
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.clear-fix:after {
+    content: ".";
+    display: block;
+    visibility: hidden;
+    height: 0;
+    font-size: 1px;
+    clear: both;
+}
+
+.header-container {
+    min-width: 980px;
+    height: auto !important;
+    height: 1%;
+}
+
+/*-------------------------------------
+           End General Styles
+--------------------------------------*/
+
+/*-------------------------------------
+       	General Header Styles
+--------------------------------------*/
+.logo-header-container {
+    background-color: #000000;
+    height: 26px;
+}
+
+.logo-header-container p {
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    float: left;
+	height: 26px;
+	display: inline;
+}
+
+.logo-header-container a,
+.logo-header-container a:link,
+.logo-header-container a:visited,
+.menu-header a,
+.menu-header a:link,
+.menu-header a:visited {
+    color: #a9caf3;
+}
+
+.suite-logo {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-sprite-v3.png);
+	background-position: -499px 0;
+	height: 26px;
+	width: 212px;
+    float: left;
+	background-repeat: no-repeat;
+}
+
+.menu-header {
+    /*background-image: url(https://img1.wsimg.com/wcc/css/images/header-menu-bg.gif);
+    background-repeat: repeat-x;*/
+
+	background: #474747; /* Old browsers */
+	background: -moz-linear-gradient(top, #474747 0%, #000000 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#474747), color-stop(100%,#000000)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #474747 0%,#000000 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #474747 0%,#000000 100%); /* Opera11.10+ */
+	background: -ms-linear-gradient(top, #474747 0%,#000000 100%); /* IE10+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#474747', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+	background: linear-gradient(top, #474747 0%,#000000 100%); /* W3C */
+    height: 36px;
+    font-size: 11px;
+    color: #ffffff;
+    min-width: 980px;
+}
+
+.admin-header h1 {
+    float: left;
+    font-size: 20px;
+    font-weight: normal;
+    font-family: arial, verdana, Helvetica, sans-serif;
+    padding: 15px 0 0 20px;
+    color: #fbab1e;
+}
+
+.top-bar {
+    float: right;
+    color: #ffffff;
+    font-size: 11px;
+    padding: 6px 10px 0 0;
+	height: 19px;
+}
+
+.top-bar li {
+    float: left;
+    margin-left: 25px;
+    display: inline;
+}
+
+.right-content {
+    float: right;
+    padding: 7px 10px 0px 0;
+    margin: 0;
+	list-style: none;
+}
+
+.right-content li {
+	margin-left: 20px;
+	float: right;
+	display: block;
+	padding: 0;
+}
+
+.new-features-icon,
+a.new-features,
+a.new-features:link,
+a.new-features:visited {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/new-features-icon.gif);
+	background-position: left center;
+	background-repeat: no-repeat;
+	padding: 3px 0 3px 20px;
+	display: inline-block;
+}
+
+a.feedback,
+a.feedback:link,
+a.feedback:visited {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/feedback-icon.gif);
+	background-position: left center;
+	background-repeat: no-repeat;
+	padding: 3px 0 3px 20px;
+	display: inline-block;
+}
+
+a.classic-version,
+a.classic-version:link,
+a.classic-version:visited {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/view-classic.gif);
+	background-position: left center;
+	background-repeat: no-repeat;
+	padding: 3px 0 3px 20px;
+	display: inline-block;
+}
+
+a.view-beta,
+a.view-beta:link,
+a.view-beta:visited {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/view-beta.gif);
+	background-position: left center;
+	background-repeat: no-repeat;
+	padding: 3px 0 3px 20px;
+	display: inline-block;
+}
+
+/*-------------------------------------
+       End General Header Styles
+--------------------------------------*/
+
+/*-------------------------------------
+		  Tabs Menu Styles
+--------------------------------------*/
+
+.tabs-menu {
+	margin: -23px 0 0 0;
+	padding-left: 100px;
+	position: relative;
+	float: left;
+	display: inline;
+	z-index: 999;
+}
+
+.tabs-menu ul {
+	margin:0 0 0 0;
+	padding: 0;
+	list-style: none;
+	font-size: 12px;
+	height: 24px;
+	float: left;
+}
+
+.tabs-menu li {
+	margin: 0px 0px 0px 1px; /*-- space between tabs --*/
+	padding: 0px 10px 0px 0px;
+	background-repeat: no-repeat;
+	float: left;
+	position: relative;
+	z-index: 999;
+}
+
+.tabs-menu li.activelink {
+	background-repeat: no-repeat;
+}
+
+.tabs-menu li a,
+.tabs-menu li a:link,
+.tabs-menu li a:visited {
+	display: block;
+	float: left;
+	padding: 5px 3px 0px 15px;
+	text-align: center;
+	white-space: nowrap;
+	background-repeat: no-repeat;
+	text-decoration: none;
+	min-height: 17px;
+	height: 17px;
+	outline: none;
+}
+
+.tabs-menu li.activelink a,
+.tabs-menu li.activelink a:link,
+.tabs-menu li.activelink a:visited {
+	background-repeat: no-repeat;
+}
+
+.tabs-menu li:hover,
+.tabs-menu li.sfhover {
+	background-position: 100% -200px;
+	cursor: pointer;
+	border-bottom: 1px solid #ffffff;
+}
+
+.tabs-menu ul li:hover a,
+.tabs-menu ul li:hover a:link,
+.tabs-menu ul li:hover a:visited,
+.tabs-menu ul li.sfhover a,
+.tabs-menu ul li.sfhover a:link,
+.tabs-menu ul li.sfhover a:visited {
+	background-position: 0 -200px;
+}
+
+.tabs-menu li.activelink:hover {
+	background-position: 100% -200px;
+}
+
+.tabs-menu li.activelink:hover a {
+	background-position: 0 0;
+}
+
+.tabs-menu li a.button,
+.tabs-menu li a.button:link,
+.tabs-menu li a.button:visited,
+.tabs-menu li a.button:hover {
+	background-image: none !important;
+	padding: 0;
+	margin: 1px 0 0 0;
+	display: inline;
+}
+
+.tabs-menu li a.button img {
+	margin-top: 4px;
+	margin-left: 2px;
+}
+
+.arrow-button {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/menu-arrow.gif);
+	background-repeat: no-repeat;
+	height: 13px;
+	width: 13px;
+}
+
+.arrow {
+	margin-left: 2px;
+	height: 13px !important;
+	width: 13px !important;
+	border: 0;
+}
+
+* html .arrow {
+	margin-top: 4px;
+}
+
+/*-------------------------------------
+		  End Tabs Menu Styles
+--------------------------------------*/
+
+/*-------------------------------------
+  		Tabs Drop Down Menu Styles
+--------------------------------------*/
+
+.tabs-menu ul li ul {
+	position: absolute;
+	left: -999em;
+	border-right: 1px solid #c9c9c9;
+	width: 172px;
+	height: auto !important;
+	padding: 0;
+	clear: left;
+	min-width: 0;
+	float: none;
+	background-color: #ffffff;
+	z-index: 999;
+	top: 23px;
+}
+
+.tabs-menu ul li ul li {
+	background-image: none;
+	border-bottom: none;
+	padding: 0;
+	margin: 0;
+}
+
+.tabs-menu ul li ul li a,
+.tabs-menu ul li ul li a:link,
+.tabs-menu ul li ul li a:visited {
+	height: auto !important;
+	text-align: left;
+	display: block;
+	background-image: none !important;
+	padding: 5px 6px 5px 10px;
+	line-height: 17px;
+	width: 155px;
+	background-color: #ffffff;
+	border-bottom: 1px dashed #c9c9c9;
+	border-left: 1px solid #c9c9c9 !important;
+	min-height: 0;
+	white-space: normal;
+}
+
+
+
+.tabs-menu ul li ul li.last-nav-item a,
+.tabs-menu ul li ul li.last-nav-item a:link,
+.tabs-menu ul li ul li.last-nav-item a:visited {
+	border-bottom: 1px solid #c9c9c9 !important;
+}
+
+.tabs-menu ul li ul li li.last-nav-item a,
+.tabs-menu ul li ul li li.last-nav-item a:link,
+.tabs-menu ul li ul li li.last-nav-item a:visited,
+.tabs-menu ul li ul li.last-nav-item a,
+.tabs-menu ul li ul li.last-nav-item a:link,
+.tabs-menu ul li ul li.last-nav-item a:visited,
+.tabs-menu ul li ul li.last-nav-item li.last-nav-item a,
+.tabs-menu ul li ul li.last-nav-item li.last-nav-item a:link,
+.tabs-menu ul li ul li.last-nav-item li.last-nav-item a:visited {
+    border-bottom: 1px solid #c9c9c9 !important;
+	background-image: none !important;
+}
+
+.tabs-menu ul li ul li.last-nav-item li a,
+.tabs-menu ul li ul li.last-nav-item li a:link,
+.tabs-menu ul li ul li.last-nav-item li a:visited {
+	border-bottom: 1px dashed #c9c9c9 !important;
+}
+
+.tabs-menu ul li ul li.first-nav-item a,
+.tabs-menu ul li ul li.first-nav-item a:link,
+.tabs-menu ul li ul li.first-nav-item a:visited {
+	border-bottom: 1px dashed #c9c9c9 !important;
+}
+
+.tabs-menu ul li ul li.first-nav-item {
+
+}
+
+.tabs-menu ul li ul li a:hover {
+	background-color: #f5f5f5 !important;
+}
+
+.tabs-menu ul li:hover ul,
+.tabs-menu ul li.sfhover ul {
+	left: auto;
+
+}
+
+.tabs-menu ul li ul li:hover,
+.tabs-menu ul li ul li.sfhover {
+	border-bottom: none;
+}
+
+.tabs-menu ul ul ul {
+	border-top: 1px solid #c9c9c9;
+}
+
+.tabs-menu ul ul li:hover ul,
+.tabs-menu ul ul li.sfhover ul {
+   left: 172px;
+   margin-top: -1px;
+   margin-left: 0;
+   top: 0;
+}
+
+.tabs-menu ul li.first-nav-item:hover ul,
+.tabs-menu ul li.sfhover.first-nav-item ul {
+	border-top: 0;
+	margin-top: 0;
+}
+
+/*-------------------------------------
+		 Drop Down Menu Styles
+--------------------------------------*/
+
+/*-------------------------------------
+		Drop Down Menu Styles
+--------------------------------------*/
+
+.menu-area {
+    background-image: url(https://img1.wsimg.com/wcc/css/images/secondary-bg.gif);
+    height: 28px;
+    background-repeat: repeat-x;
+    clear: both;
+}
+
+* html .menu-area {
+	height: 31px;
+}
+
+.integrated-menu {
+    float: left;
+    margin: 0 auto;
+    position: relative;
+    z-index: 999;
+}
+
+.integrated-menu ul{
+    margin:0px;
+    padding: 0;
+    list-style: none;
+    font-size: 12px;
+    height: 27px;
+    float: left;
+}
+
+.integrated-menu ul li {
+    float: left;
+    position: relative;
+    background-image: url(https://img1.wsimg.com/wcc/css/images/menu-side-borders.gif);
+    background-repeat: no-repeat;
+    background-position: right 6px;
+    vertical-align: middle;
+	z-index: 999;
+}
+
+.integrated-menu ul li.last {
+    background-image: none;
+}
+
+.integrated-menu ul li.activelink {
+    background-repeat: no-repeat;
+}
+
+.integrated-menu ul li.activelink ul li a,
+.integrated-menu ul li.activelink ul li a:link,
+.integrated-menu ul li.activelink ul li a:visited {
+    background-repeat: no-repeat;
+    font-weight: normal !important;
+}
+
+.integrated-menu ul li a,
+.integrated-menu ul li a:link,
+.integrated-menu ul li a:visited,
+.integrated-menu ul li a:hover {
+    display: block;
+    padding: 7px 15px 9px;
+    color: #000;
+    text-decoration: none;
+	float: left;
+}
+
+* html .integrated-menu ul li a,
+* html .integrated-menu ul li a:link,
+* html .integrated-menu ul li a:visited,
+* html .integrated-menu ul li a:hover  {
+	padding: 7px 15px 9px 11px;
+}
+
+.integrated-menu ul li.dropdown-nav a,
+.integrated-menu ul li.dropdown-nav a:link,
+.integrated-menu ul li.dropdown-nav a:visited {
+    padding: 7px 5px 9px 15px !important;
+}
+
+.integrated-menu ul li a.arrow,
+.integrated-menu ul li a.arrow:link,
+.integrated-menu ul li a.arrow:visited {
+    display: inline !important;
+    margin: 1px 15px 0 2px !important;
+    padding: 0 !important;
+}
+
+.integrated-menu ul li a.arrow img {
+    margin: 11px 0 0 2px;
+}
+
+.integrated-menu ul li a img,
+.integrated-menu ul li a:link img,
+.integrated-menu ul li a:visited img,
+.integrated-menu ul li a:hover img {
+    border: none;
+    vertical-align: middle;
+    font-size: 0;
+    line-height: 0px;
+}
+
+.integrated-menu ul li ul {
+    position: absolute;
+    left: -999em;
+    border-right: 1px solid #c9c9c9;
+    width: 172px;
+    height: auto !important;
+    height: 1%;
+    padding: 0;
+    min-width: 0;
+    float: none;
+    background-color: #ffffff;
+	clear: left;
+	z-index: 999;
+	top: 28px;
+	zoom: 1;
+}
+
+.integrated-menu ul li ul li {
+    background-image: none;
+    border-bottom: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    display: block;
+    height: 1%;
+	z-index: 999;
+}
+
+.integrated-menu ul li.dropdown-nav ul li a,
+.integrated-menu ul li.dropdown-nav ul li a:link,
+.integrated-menu ul li.dropdown-nav ul li a:visited,
+.integrated-menu ul li ul li a,
+.integrated-menu ul li ul li a:link,
+.integrated-menu ul li ul li a:visited {
+	height: auto !important;
+    text-align: left !important;
+    display: block !important;
+    background-image: none !important;
+    padding: 5px 6px 5px 10px !important;
+    width: 155px !important;
+    background-color: #ffffff;
+    border-bottom: 1px dashed #c9c9c9;
+    border-left: 1px solid #c9c9c9 !important;
+    min-height: 0 !important;
+    white-space: normal !important;
+    line-height: 17px !important;
+}
+
+.integrated-menu ul li ul li li.last-nav-item a,
+.integrated-menu ul li ul li li.last-nav-item a:link,
+.integrated-menu ul li ul li li.last-nav-item a:visited,
+.integrated-menu ul li ul li.last-nav-item a,
+.integrated-menu ul li ul li.last-nav-item a:link,
+.integrated-menu ul li ul li.last-nav-item a:visited,
+.integrated-menu ul li ul li.last-nav-item li.last-nav-item a,
+.integrated-menu ul li ul li.last-nav-item li.last-nav-item a:link,
+.integrated-menu ul li ul li.last-nav-item li.last-nav-item a:visited {
+    border-bottom: 1px solid #c9c9c9 !important;
+	background-image: none !important;
+}
+
+.integrated-menu ul li ul li.last-nav-item li a,
+.integrated-menu ul li ul li.last-nav-item li a:link,
+.integrated-menu ul li ul li.last-nav-item li a:visited {
+	border-bottom: 1px dashed #c9c9c9 !important;
+}
+
+.integrated-menu ul li ul li.first-nav-item a,
+.integrated-menu ul li ul li.first-nav-item a:link,
+.integrated-menu ul li ul li.first-nav-item a:visited {
+	border-bottom: 1px dashed #c9c9c9 !important;
+}
+
+.integrated-menu ul li ul li a:hover {
+    background-color: #f5f5f5 !important;
+}
+
+.integrated-menu ul li:hover ul,
+.integrated-menu ul li.sfhover ul {
+    left: auto;
+}
+
+.integrated-menu ul li ul li:hover,
+.integrated-menu ul li ul li.sfhover {
+    border-bottom: none;
+}
+
+.integrated-menu ul ul ul {
+	border-top: 1px solid #c9c9c9;
+}
+
+.integrated-menu ul ul li:hover ul,
+.integrated-menu ul ul li.sfhover ul {
+   left: 172px;
+   margin-top: -1px;
+   top: 0;
+}
+
+ul li.sfhover ul li a.pop-out,
+ul li.sfhover ul li a.pop-out:link,
+ul li.sfhover ul li a.pop-out:visited {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/arrow-out.gif) !important;
+	background-repeat: no-repeat;
+	background-position: 155px center;
+	padding: 5px 18px 5px 11px;
+	width: 142px;
+}
+
+/*-------------------------------------
+       End Drop Down Menu Styles
+--------------------------------------*/
+
+/*-------------------------------------
+      Profile/Business Dropdown
+--------------------------------------*/
+
+.top-dropdown {
+	margin:0;
+	padding: 0;
+	list-style: none;
+	font-size: 12px;
+	float: left;
+}
+
+.top-dropdown li {
+	margin: 0px;
+	padding: 0px;
+	background-repeat: no-repeat;
+	float: left;
+	position: relative;
+	background-image: url(https://img1.wsimg.com/wcc/css/images/biz-dropdown-arrow.gif);
+	background-position: right center;
+}
+
+.top-dropdown li.activelink {
+	background-repeat: no-repeat;
+}
+
+.top-dropdown li a,
+.top-dropdown li a:link,
+.top-dropdown li a:visited {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/profile-arrow.gif);
+	background-repeat: no-repeat;
+	background-position: right 4px;
+	display: block;
+	float: left;
+	padding: 0 10px 0 5px;
+	text-align: center;
+	white-space: nowrap;
+	background-repeat: no-repeat;
+	text-decoration: underline;
+	outline: none;
+    color: #a9caf3;
+	font-size: 11px
+}
+
+.top-dropdown li.activelink a,
+.top-dropdown li.activelink a:link,
+.top-dropdown li.activelink a:visited {
+	background-repeat: no-repeat;
+}
+
+.top-dropdown li:hover,
+.top-dropdown li.sfhover {
+	cursor: pointer;
+}
+
+ul.top-dropdown li a.black-arrow-button,
+ul.top-dropdown li a.black-arrow-button:link,
+ul.top-dropdown li a.black-arrow-button:visited {
+	padding: 0 !important;
+	margin: 0 !important;
+	background-image: url(https://img1.wsimg.com/wcc/css/images/black-down-arrow.gif);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	height: 23px;
+	width: 20px;
+}
+
+ul.top-dropdown li:hover a.black-arrow-button,
+ul.top-dropdown li:hover a.black-arrow-button:link,
+ul.top-dropdown li:hover a.black-arrow-button:visited,
+ul.top-dropdown li.sfhover a.black-arrow-button,
+ul.top-dropdown li.sfhover a.black-arrow-button:link,
+ul.top-dropdown li.sfhover a.black-arrow-button:visited,
+ul.top-dropdown li a.black-arrow-button:hover {
+    background-position: 0 -23px;
+}
+
+ul.top-dropdown li a.black-arrow-button span {
+    display: none;
+}
+
+.top-dropdown li ul {
+	position: absolute;
+	left: -999em;
+	border-right: 1px solid #c9c9c9;
+	border-top: 1px solid #c9c9c9;
+	width: 160px;
+	margin: 12px 0 0 0px;
+	height: auto !important;
+	height: 1%;
+	padding: 0;
+	clear: left;
+	min-width: 0;
+	float: none;
+	background-color: #ffffff;
+	z-index: 999;
+	list-style: none;
+	right: 0;
+}
+
+.top-dropdown li ul li {
+	background-image: none;
+	border-bottom: none;
+	padding: 0;
+	margin: 0;
+}
+
+.top-dropdown li ul li a,
+.top-dropdown li ul li a:link,
+.top-dropdown li ul li a:visited {
+	height: auto !important;
+	text-align: left;
+	display: block;
+	background-image: none !important;
+	padding: 4px 6px 4px 10px;
+	line-height: 17px;
+	width: 143px;
+	background-color: #ffffff;
+	border-bottom: 1px dashed #c9c9c9 !important;
+	border-left: 1px solid #c9c9c9 !important;
+	min-height: 0;
+	white-space: normal;
+	text-decoration: none;
+	font-weight: normal !important;
+	color: #000 !important;
+	font-family: Arial;
+	font-size: 12px;
+}
+
+.top-dropdown li ul li.last-nav-item a,
+.top-dropdown li ul li.last-nav-item a:link,
+.top-dropdown li ul li.last-nav-item a:visited {
+	border-bottom: 1px solid #c9c9c9 !important;
+}
+
+.top-dropdown li ul li.first-nav-item {
+
+}
+
+.top-dropdown li ul li a:hover {
+	background-color: #f5f5f5 !important;
+}
+
+.top-dropdown li:hover ul,
+.top-dropdown li.sfhover ul {
+	left: auto;
+}
+
+/*-------------------------------------
+      End Profile/Business Dropdown
+--------------------------------------*/
+
+/*-------------------------------------
+        Right Button Container
+--------------------------------------*/
+
+.right-menu-button-container {
+	float: right;
+	padding: 2px 10px 0 0;
+}
+
+/*-------------------------------------
+       End Right Button Container
+--------------------------------------*/
+
+/*-------------------------------------
+     New Features/Feedback Flyouts
+--------------------------------------*/
+
+.right-content li {
+	/*position: relative;
+	z-index: 1;*/
+}
+
+.right-content li div#new-features,
+.right-content li div#feedback {
+	position: fixed;
+	left:  -9999em;
+	z-index: 10000;
+}
+
+
+.right-content li.sfhover  {
+	right: 10px;
+	/*margin-top: -12px;*/
+	left: auto;
+}
+
+.right-content li.sfhover div#new-features{
+	/*right: 93px;*/
+	margin-top: -12px;
+	left: auto;
+}
+
+.right-content li.sfhover div#new-features ul li{
+	right: 0px;
+	margin-top: -0px;
+	left: auto;
+}
+
+.right-content li.sfhover div#new-features.box {
+	position:relative !important;
+	left:-100px !important;
+	margin-top:1px;
+	width: 250px;
+	min-height: 120px;
+	background-color: transparent !important;
+	font-size: 12px;
+	font-family: arial;
+}
+
+.nf-popin-top {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/nf-sprite.gif);
+	background-position: 0 0px;
+	background-repeat: no-repeat;
+	height: 8px;
+	width: 250px;
+	font-size: 0;
+}
+
+.nf-popin-main {
+	background-color: #fff;
+	border-left: 1px solid #dcdcdc;
+	border-right: 1px solid #dcdcdc;
+	background-repeat: repeat-y;
+	width: 248px;
+}
+
+.close-nf-popin {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/nf-sprite.gif);
+	background-position: 0 -16px;
+	background-repeat: no-repeat;
+	height: 7px;
+	width: 16px;
+	float: right;
+	text-indent: -999em;
+	padding-right: 20px;
+	margin-bottom: 10px;
+	margin-right: 20px;
+	display: inline-block;
+}
+
+.nf-popin-title {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/nf-dots-border.gif);
+	background-repeat: repeat-x;
+	background-position: bottom;
+	padding: 17px 0 5px;
+	margin: 0 22px;
+	text-align: center;
+	clear: both;
+}
+
+.feedback-title {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/nf-sprite.gif);
+	background-position: -143px -50px;
+	width: 107px;
+	height: 24px;
+	margin: 0 auto;
+}
+
+.new-features-title {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/nf-sprite.gif);
+	background-position: -106px -28px;
+	width: 144px;
+	height: 22px;
+	margin: 0 auto;
+}
+
+.new-features-title span,
+.feedback-title span {
+	display: none;
+}
+
+.updated-text {
+	font-size: 11px;
+	color: #FF8333;
+	padding-top: 3px;
+}
+
+.nf-popin-bottom {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/nf-sprite.gif);
+	background-position: 0 -8px;
+	background-repeat: no-repeat;
+	height: 8px;
+	width: 250px;
+	font-size: 0;
+}
+
+.nf-popin-main ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	margin-top: 10px;
+	padding-bottom: 10px;
+}
+
+.nf-popin-main ul li {
+	position: relative;
+	height: 1%;
+	float: none;
+	margin: 0;
+	padding: 0;
+}
+
+.nf-popin-main ul li.customer-support a,
+.nf-popin-main ul li.customer-support a:link,
+.nf-popin-main ul li.customer-support a:visited {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/support_img.gif);
+	background-repeat: no-repeat;
+	background-position: 20px;
+	color: #000;
+	display: block;
+	line-height: 16px;
+	text-decoration: none;
+	padding: 5px 0 5px 50px;
+	width: 198px;
+	height: 1%;
+}
+
+.nf-popin-main ul li.customer-support a:hover {
+	background-color: #E9F2D1;
+}
+
+.nf-popin-main ul li.product-suggestions a,
+.nf-popin-main ul li.product-suggestions a:link,
+.nf-popin-main ul li.product-suggestions a:visited {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/suggestions_img.gif);
+	background-repeat: no-repeat;
+	background-position: 20px;
+	color: #000;
+	display: block;
+	line-height: 16px;
+	text-decoration: none;
+	padding: 5px 0 5px 50px;
+	width: 198px;
+	height: 1%;
+}
+
+.nf-popin-main ul li.product-suggestions a:hover {
+	background-color: #E9F2D1;
+}
+
+.nf-popin-main ul li.product-help a,
+.nf-popin-main ul li.product-help a:link,
+.nf-popin-main ul li.product-help a:visited {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/question_img.gif);
+	background-repeat: no-repeat;
+	background-position: 20px;
+	color: #000;
+	display: block;
+	line-height: 16px;
+	text-decoration: none;
+	padding: 5px 0 5px 50px;
+	width: 198px;
+	height: 1%;
+}
+
+.nf-popin-main ul li.product-help a:hover {
+	background-color: #E9F2D1;
+}
+
+.new-features li a,
+.new-features li a:link,
+.new-features li a:visited {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/bulletarrowalt.gif);
+	background-repeat: no-repeat;
+	background-position: 20px;
+	color: #000;
+	display: block;
+	line-height: 16px;
+	text-decoration: none;
+	padding: 5px 0 5px 50px;
+	width: 198px;
+	height: 1%;
+}
+
+.new-features li a:focus {
+	outline: none;
+}
+
+.new-features  ul {
+	height:auto;
+}
+
+.new-features li ul {
+	width: 202px;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	left: -999em;
+	margin: -43px 0 0 -202px;
+}
+
+.new-features li ul li {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/nf-sprite.gif);
+	background-position: -48px -16px;
+	background-repeat: no-repeat;
+	padding-top: 12px;
+	background-color: transparent !important;
+}
+
+.new-features li ul li div {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/flyout-main-bg.gif);
+	background-repeat: no-repeat;
+	background-position: bottom;
+	padding: 0 10px 10px;
+	color: #000;
+	line-height: 15px;
+}
+
+.new-features li:hover ul,
+.new-features li.sfhover ul {
+	left: auto;
+}
+
+/*-------------------------------------
+   End New Features/Feedback Flyouts
+--------------------------------------*/
+
+/*-------------------------------------
+        	Menu Gradient
+--------------------------------------*/
+
+.menu-gradient {
+    background-image: url(https://img1.wsimg.com/wcc/css/images/menu-gradient.gif);
+    background-repeat: repeat-x;
+    height: 4px;
+    width: auto;
+    font-size: 0px;
+    line-height: 0;
+}
+
+/*-------------------------------------
+          End Menu Gradient
+--------------------------------------*/
+
+/*-------------------------------------
+		   Title container
+--------------------------------------*/
+
+.title-container {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/page-title-bottom-bg.gif);
+	background-position: left bottom;
+	background-repeat: repeat-x;
+	height: 46px;
+	clear: both;
+	min-width: 980px;
+}
+
+.title-container h1 {
+	color: #000000;
+	float: left;
+	font-size: 24px;
+	font-weight: normal;
+	height: 26px;
+	margin: 0 0 0 20px;
+	max-width: 660px;
+	overflow: hidden;
+	padding-top: 10px;
+	display: inline;
+}
+
+/*-------------------------------------
+		  End Title container
+--------------------------------------*/
+
+
+/*----------------------------------------------------------------
+
+		Login Standard Styles
+
+-----------------------------------------------------------------*/
+
+/*-------------------------------------
+           Reset Styles
+--------------------------------------*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	/*font-size: 12px;*/
+	font-family: inherit;
+	/*font-family: Arial, 'Arial Unicode MS', verdana, Helvetica, sans-serif;*/
+	vertical-align: baseline;
+}
+/* remember to define focus styles! */
+a:focus {
+	outline: 0;
+}
+body {
+	line-height: 1 !important;
+	color: black;
+	background: white;
+}
+ol, ul {
+	list-style: none;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+caption, th {
+	text-align: left;
+	font-weight: normal;
+	white-space: nowrap;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+
+input {
+	margin: 0;
+}
+
+strong {
+    font-weight: bold;
+}
+
+hr {
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
+}
+
+h1, h2, h3, h6 {
+	margin-top: 0px !important;
+	/*margin-bottom: 0px !important;*/
+}
+
+h6 {
+	font-size: 12px !important;
+}
+
+ul, ol {
+	margin-bottom: 0px !important;
+}
+/*-------------------------------------
+           End Reset Styles
+--------------------------------------*/
+
+/*-------------------------------------
+           Generic Styles
+--------------------------------------*/
+
+/*html, body {
+	height: 100%;
+}*/
+
+body {
+	font-size: 12px;
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	background-color: #fff;
+}
+
+a,
+a:link,
+a:visited {
+	color: blue;
+	/*text-decoration: underline;*/
+	cursor: pointer;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float: right;
+}
+
+.clear-fix:after,
+.edit-account-popin:after,
+.account-views li:after,
+.ui-timepicker-div:after,
+.sidebar-account-list li:after,
+.all-accounts-to-switch li:after {
+    content: ".";
+    display: block;
+    visibility: hidden;
+    height: 0;
+    font-size: 1px;
+    clear: both;
+}
+
+.total-container {
+	position: relative;
+	padding-bottom: 30px;
+	border-bottom: 1px solid #ccc;
+	zoom: 1;
+}
+
+.main-container { /* Updated for fluidity */
+	padding-left: 30px !important;
+	min-width: 975px;
+/*	max-width: 1170px;
+	width: 1170px;
+
+	padding: 00px 35px 0px 35px;
+
+*/
+	position: relative;
+	z-index: 1;
+	font-size: 12px;
+	font-family: Arial, 'Arial Unicode MS', verdana, Helvetica, sans-serif;
+
+}
+
+.main-wrapper { /* Added for fluidity */
+	float: left;
+	width: 100%;
+}
+
+.main-content-container { /* Updated for fluidity */
+	margin-right: 278px;
+	position: relative;
+	z-index: 1;
+}
+
+.no-account-owned, .my-own-freakin-modal {
+	background-color: #fff;
+	opacity: .85;
+	filter:Alpha(Opacity=85);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 999 !important;
+	width: 703px;
+	height: 410px;
+	vertical-align: middle;
+}
+
+.no-account-owned-message {
+/*
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-sprite-v3.png);
+	background-position: 0 -199px;
+	height: 70px;
+*/
+	padding-top: 34px;
+	width: 638px;
+
+	font-size: 14px;
+	font-weight: bold;
+	position: absolute;
+	top: 140px;
+	left: 5% !important;
+	right: 5%  !important;
+
+	z-index: 1000 !important;
+	text-align: center;
+}
+
+.sidebar-container { /* Updated for fluidity */
+	float: left;
+	width: 258px;
+	/*margin-left: -258px;*/
+	margin-left: -270px;
+}
+
+.footer {
+	text-align: center;
+	font-size: 11px;
+	color: #545454;
+	padding: 20px 0;
+}
+
+.help-icon {
+	cursor: pointer;
+}
+
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float: right;
+}
+
+.error {
+	color: red;
+       /** padding-top: 4px; **/
+}
+
+.radio-check-input,
+input[type=radio],
+input[type=checkbox] {
+    width: 13px !important;
+    height: 13px !important;
+    /*vertical-align: top;*/
+	vertical-align: middle !important;
+    padding: 0 !important;
+    margin: 0 5px 0 0 !important;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    input[type=radio],
+    input[type=checkbox],
+    .radio-check-input {
+        vertical-align: bottom;
+    }
+}
+
+.hand {
+cursor: pointer;
+}
+
+.redText {
+    color: red;
+}
+
+/*---------Iconic messages-------*/
+
+.over-quota {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-icon-sprite.png);
+	background-position: left 0;
+	background-repeat: no-repeat;
+	padding-left: 25px;
+}
+
+.expiring-soon {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-icon-sprite.png);
+	background-position: left -43px;
+	background-repeat: no-repeat;
+	padding: 2px 7px 3px 25px;
+}
+
+.close-to-quota {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-icon-sprite.png);
+	background-position: left -92px;
+	background-repeat: no-repeat;
+	padding: 2px 7px 3px 25px;
+}
+
+.out-of-relays {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-icon-sprite.png);
+	background-position: left -138px;
+	background-repeat: no-repeat;
+	padding: 2px 7px 3px 25px;
+}
+
+.ribbon-message {
+	background: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-icon-sprite.png) !important;
+	background-position: left -668px !important;
+	height:20px !important;
+	width:20px !important;
+	display:inline-block;
+	background-repeat: no-repeat !important;
+	/*padding-left: 20px;*/
+	z-index:999;
+}
+
+.view-all-icon {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-icon-sprite.png);
+	background-position: left -324px;
+	background-repeat: no-repeat;
+	padding-left: 23px !important;
+}
+
+.folder-icon {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-icon-sprite.png);
+	background-position: left -377px;
+	background-repeat: no-repeat;
+	padding-left: 23px !important;
+}
+
+.arrow-folder-icon {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-icon-sprite.png);
+	background-position: left -420px;
+	background-repeat: no-repeat;
+	padding-left: 23px !important;
+}
+
+.ribbon-message2 {
+	background: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-icon-sprite.png);
+	background-position: left -664px;
+	background-repeat: no-repeat;
+        padding-left: 23px !important;
+
+}
+
+/*--------- End Iconic messages-------*/
+
+/*--------- Table and other Icons -------*/
+
+.check-icon {  /*-- Added 1-25-2012 --*/
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-sprite-v3.png);
+	background-position: -717px -150px;
+	background-repeat: no-repeat;
+	width: 18px;
+	height: 13px;
+	display: inline-block;
+}
+
+.check-icon-nolaunch {  /*-- Added 1-25-2012 --*/
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-sprite-v3.png);
+	background-position: -717px -150px;
+	background-repeat: no-repeat;
+	width: 18px;
+	height: 13px;
+	display: inline-block;
+}
+
+.email-icon {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-sprite-v3.png);
+	background-position: -674px -61px;
+	background-repeat: no-repeat;
+	width: 18px;
+	height: 13px;
+	display: inline-block;
+}
+
+.calendar-icon {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-sprite-v3.png);
+	background-position: -705px -61px;
+	background-repeat: no-repeat;
+	width: 14px;
+	height: 15px;
+	display: inline-block;
+}
+
+.files-icon {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-sprite-v3.png);
+	background-position: -729px -61px;
+	background-repeat: no-repeat;
+	width: 16px;
+	height: 14px;
+	display: inline-block;
+}
+
+.fax-icon {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-sprite-v3.png);
+	background-position: -756px -61px;
+	background-repeat: no-repeat;
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+}
+
+.email-icon-disabled {
+	opacity: .45;
+	filter:Alpha(Opacity=45);
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-sprite-v3.png);
+	background-position: -674px -61px;
+	background-repeat: no-repeat;
+	width: 18px;
+	height: 13px;
+	display: inline-block;
+}
+
+.calendar-icon-disabled {
+	opacity: .45;
+	filter:Alpha(Opacity=45);
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-sprite-v3.png);
+	background-position: -705px -61px;
+	background-repeat: no-repeat;
+	width: 14px;
+	height: 15px;
+	display: inline-block;
+}
+
+.files-icon-disabled {
+	opacity: .45;
+	filter:Alpha(Opacity=45);
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-sprite-v3.png);
+	background-position: -729px -61px;
+	background-repeat: no-repeat;
+	width: 16px;
+	height: 14px;
+	display: inline-block;
+}
+
+.email-icon-disabled span , .calendar-icon-disabled span, .files-icon-disabled span {
+	display:none;
+}
+
+.setting-up {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-sprite-v3.png);
+	background-position: -780px -61px;
+	background-repeat: no-repeat;
+	width: 11px;
+	height: 16px;
+	display: inline-block;
+}
+
+.ok-icon {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-sprite-v3.png);
+	background-position: -684px -88px;
+	background-repeat: no-repeat;
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.large-ok-icon {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/green_checkmark_lrg.png);
+/*	background-position: -684px -88px;*/
+	background-repeat: no-repeat;
+	width: 24px;
+	height: 23px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.notok-icon
+{
+    background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-sprite-v3.png);
+    background-position: -627px -88px;
+    background-repeat: no-repeat;
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -3px;
+}
+
+
+.alert-icon {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-sprite-v3.png);
+	background-position: -783px -90px;
+	background-repeat: no-repeat;
+	width: 17px;
+	height: 15px;
+	display: inline-block;
+	vertical-align: middle;
+        padding-left: 3px;
+}
+
+.expiring-soon-icon {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-icon-sprite.png);
+	background-position: 0 -44px;
+	background-repeat: no-repeat;
+	width: 18px;
+	height: 18px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.over-quota-icon {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-icon-sprite.png);
+	background-position: 0 0px;
+	background-repeat: no-repeat;
+	width: 17px;
+	height: 16px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.close-to-quota-icon {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-icon-sprite.png);
+	background-position: 0 -94px;
+	background-repeat: no-repeat;
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.out-of-relays-icon {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-icon-sprite.png);
+	background-position: 0 -139px;
+	background-repeat: no-repeat;
+	width: 16px;
+	height: 17px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.forwarding-arrow {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-sprite-v3.png);
+	background-position: -690px -151px;
+	background-repeat: no-repeat;
+	width: 13px;
+	height: 9px;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 5px;
+}
+
+.edit-icon {
+	display: inline-block;
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-icon-sprite.png);
+	background-position: left -184px;
+	background-repeat: no-repeat;
+	color: #000;
+	width: 16px;
+	height: 16px;
+	text-decoration: none;
+}
+
+.remove-icon {
+	display: inline-block;
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-sprite-v3.png);
+	background-position: -558px -61px;
+	background-repeat: no-repeat;
+	color: #000;
+	width: 16px;
+	height: 16px;
+	text-decoration: none;
+}
+
+/*--------- Table Icons -------*/
+
+/*---------<a> spans-------*/
+
+.check-icon span, /*-- Added 1-25-2012 --*/
+.remove-icon span,
+.edit-icon span,
+.right-title-cotnainer li.power-user-switch a span,
+.table-top-actions li a span,
+.check-all span,
+.email-icon span,
+.calendar-icon span,
+.files-icon span,
+.fax-icon span,
+.setting-up span,
+a.ui-tooltip-icon span,
+a.ui-dialog-titlebar-close span,
+.ok-icon span,
+a.hide-button span,
+a.show-button span,
+a.pin-this-button span,
+.ui-datepicker-prev span,
+.ui-datepicker-next span,
+.over-quota-icon span,
+.expiring-soon-icon span,
+.close-to-quota-icon span,
+.out-of-relays-icon span {
+	display: none;
+}
+
+
+
+/*-------------------------------------
+           End Generic Styles
+--------------------------------------*/
+
+.quota-amount {
+	color: #959595;
+}
+
+.used-quota {
+	float: left;
+}
+
+.table-progress-bar {
+	float: right;
+}
+
+/*-------------------------------------
+        Title Container Content
+--------------------------------------*/
+
+.right-title-cotnainer {
+	float: right;
+	padding-right: 10px;
+}
+
+.right-title-cotnainer li {
+	float: left;
+}
+
+.right-title-cotnainer li.power-user-switch {
+	padding: 10px 50px 0 0;
+	font-size: 11px;
+}
+
+.right-title-cotnainer li.power-user-switch a,
+.right-title-cotnainer li.power-user-switch a:link,
+.right-title-cotnainer li.power-user-switch a:visited {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-sprite-v3.png);
+	background-repeat: no-repeat;
+	width: 64px;
+	height: 24px;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 7px;
+}
+
+a.power-off,
+a.power-off:link,
+a.power-off:visited {
+	background-position: -571px -31px;
+}
+
+a.power-on,
+a.power-on:link,
+a.power-on:visited {
+	background-position: -643px -31px;
+}
+
+.fastball-ads-container {
+	padding-top: 15px;
+}
+
+/*-------------------------------------
+       End Title Container Content
+--------------------------------------*/
+
+/*-------------------------------------
+       		Sidebars
+--------------------------------------*/
+
+.sidebar-box {
+	border: 1px solid #ccc;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px ;
+	border-radius: 10px;
+	margin-bottom: 15px;
+}
+
+.sidbar-inner-box {
+	border: 3px solid #f5f5f5;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px ;
+	border-radius: 10px;
+
+	padding: 14px;
+}
+
+.sidbar-inner-box h2 {
+	font-size: 15px;
+	font-weight: bold;
+	padding-bottom: 3px;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 13px;
+	margin-top: inherit;
+}
+
+.sidebar-list {
+
+}
+
+.sidebar-list li {
+	margin-bottom: 13px;
+	line-height: 14px;
+}
+
+.sidebar-list li:last-child {
+	margin-bottom: 0;
+}
+
+/*-- Account List --*/
+
+.sidebar-account-list {
+	padding-top: 13px;
+}
+
+.sidebar-account-list li {
+	border: 1px solid #ccc;
+	margin-bottom: 10px;
+}
+
+.sidebar-account-list li:last-child {
+	margin-bottom: 0;
+}
+
+.sidebar-account-list li .available-account-info {
+	float: left;
+	padding: 7px 10px 0;
+	height: 20px;
+}
+
+.sidebar-account-list li .account-numbers {
+	font-size: 18px;
+	text-align: center;
+	background-color: #eee;
+	border-left: 1px solid #ccc;
+	float: right;
+	width: 48px;
+	padding-top: 4px;
+	height: 24px;
+}
+
+/*-- View By List --*/
+
+.view-by-list {
+
+}
+
+.view-by-list li {
+	margin-bottom: 2px;
+}
+
+.view-by-list li a,
+.view-by-list li a:link,
+.view-by-list li a:visited {
+	display: block;
+	padding-left: 1px;
+	padding-top: 4px;
+	height: 19px;
+	color: #000;
+	text-decoration: none;
+}
+
+.view-by-list li a.active {
+	font-weight: bold;
+	background-color: #f5f5f5;
+}
+
+.view-by-list li ul {
+	margin-left: 10px;
+	padding-top: 2px;
+	max-height: 166px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.view-by-list li ul a.active {
+
+}
+
+
+.view-by-list .ribbon-message {
+	background-position: left -666px;
+	padding-left: 23px !important;
+}
+
+
+/*-------------------------------------
+       		End Sidebars
+--------------------------------------*/
+
+/*-------------------------------------
+       		Account Views
+--------------------------------------*/
+
+/*------------------ Updated 1-25-12 -------------------------*/
+
+.account-views {
+	margin-bottom: 3px;
+	width: 980px;
+}
+
+.account-views li {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-sprite-v3.png);
+	background-position: 0 0;
+	width: 184px; /*-- Updated 1-25-12 --*/
+	height: 65px; /*-- Updated 1-25-12 --*/
+	float: left;
+	margin-right: 15px;
+	padding: 10px 10px 0;
+	cursor: pointer;
+	display: inline;
+}
+
+.account-views li:last-child {
+	margin-right: 0px;
+}
+
+.account-views li:hover {
+	background-position: -793px -220px;
+}
+
+.account-views li.active,
+.account-views li.active:hover {
+	background-position: 0 -76px;
+	cursor: default;
+}
+
+.account-view {
+	float: left;
+	padding: 3px 0 0 10px;
+	width: 116px;
+}
+
+.account-view h3 {
+	font-size: 13px;
+	font-weight: normal;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.account-views li.active h3 {
+	font-weight: bold;
+	padding-bottom: 3px;
+}
+
+.account-view p {
+	font-size: 11px;
+	color: #626262;
+}
+
+/*--- large product icons ---*/
+
+.large-top-icon {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-sprite-v3.png);
+	width: 36px;
+	height: 36px;
+	float: left;
+}
+
+.workspace-icon-lg {
+	background-position: -188px -111px;
+}
+
+.email-icon-lg {
+	background-position: -228px -111px;
+}
+
+.calendar-icon-lg {
+	background-position: -268px -111px;
+}
+
+.files-icon-lg {
+	background-position: -308px -111px;
+}
+
+.fax-icon-lg {
+	background-position: -347px -111px;
+}
+
+/*------------------ End Updated 1-25-12 -------------------------*/
+
+
+/*-------------------------------------
+       	  End Account Views
+--------------------------------------*/
+
+/*-------------------------------------
+       	 Create Account Popin
+--------------------------------------*/
+
+.create-account-header {
+	/*padding-bottom: 10px;*/
+}
+
+.create-account-header h3 {
+	float: left;
+}
+
+.edit-account-header h3 {
+	float: left;
+	width: 315px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-bottom: 0px !important;
+
+}
+
+/*.edit-account-header h3:hover {
+	word-wrap: break-word;
+}
+*/
+
+.create-many-forwarding {
+	float: right;
+	padding-top: 5px;
+}
+
+.include-apps {
+	padding-bottom: 15px;
+}
+
+.include-apps li {
+	float: left;
+	padding-right: 20px;
+}
+
+.include-apps li label {
+	vertical-align: middle;
+}
+
+.addtional-options-container {
+	border: 1px solid #ccc;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	margin-bottom: 20px;
+	/*padding-bottom: 15px;*/
+	background-color: #f5f5f5;
+}
+
+.additional-options-top {
+	background-color: #f5f5f5;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	padding: 15px 20px 15px;
+}
+
+.border-bottom {
+	height: 33px;
+	border-bottom: 1px solid #ccc;
+}
+
+a.show-button,
+a.show-button:link,
+a.show-button:visited {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-sprite-v3.png);
+	background-position: -736px -89px;
+	height: 16px;
+	width: 16px;
+	display: inline-block;
+	vertical-align: middle;
+	text-decoration: underline;
+}
+
+a.hide-button,
+a.hide-button:link,
+a.hide-button:visited {
+	background-position: -715px -89px;
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-sprite-v3.png);
+	height: 16px;
+	width: 16px;
+	display: inline-block;
+	vertical-align: middle;
+	text-decoration: underline;
+}
+
+.additional-options-top a.show-button,
+.additional-options-top a.show-button:link,
+.additional-options-top a.show-button:visited {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-icon-sprite.png);
+	background-repeat: no-repeat;
+	background-position: left -768px;
+	height: 16px;
+	width: auto;
+	display: inline-block;
+	vertical-align: middle;
+	padding: 1px 0 0 25px;
+}
+
+.additional-options-top a.hide-button,
+.additional-options-top a.hide-button:link,
+.additional-options-top a.hide-button:visited {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-icon-sprite.png);
+        background-position: left -802px;
+        background-repeat: no-repeat;
+	height: 16px;
+	width: auto;
+	display: inline-block;
+	vertical-align: middle;
+        padding: 1px 0 0 25px;
+}
+
+a.pin-this-button {
+	display: inline-block;
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-sprite-v3.png);
+	background-position: -734px -111px;
+	height: 16px;
+	width: 16px;
+	float: right;
+}
+
+a.pinned-this-button {
+	display: inline-block;
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-sprite-v3.png);
+	background-position: -602px -89px;
+	height: 16px;
+	width: 16px;
+	float: right;
+}
+
+.tabs-content-container {
+	padding-bottom: 15px;
+	background-color: #fff;
+	border-radius: 0 0 10px 10px;
+}
+
+.tab-content {
+	padding: 15px 20px 5px;
+	/*height: 200px;*/
+	min-height: 200px;
+	max-height: 300px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+#popinTabs ul.generic-tabs {
+	padding-left: 20px;
+}
+
+.plan-select {
+	padding-bottom: 5px;
+}
+
+#faxTab .plan-select {
+	padding-bottom: 10px;
+}
+
+.plan-select select {
+	width: 400px;
+	border: 1px solid #ccc;
+}
+
+.email-plan-info {
+	padding-bottom: 5px;
+}
+
+.email-plan-info li {
+	padding-bottom: 7px;
+}
+
+.email-plan-info li.error {
+	color: red;
+	font-size: 11px;
+}
+
+.email-plan-info li input,
+.email-plan-info li label,
+.email-plan-info li span,
+.email-plan-info li img,
+.email-plan-info li select {
+	vertical-align: middle;
+}
+
+.email-plan-info li select {
+	border: 1px solid #ccc;
+}
+
+.email-plan-info li input.quota-textbox {
+	width: 65px;
+	border: 1px solid #ccc;
+	vertical-align: top;
+}
+
+.email-plan-info li input.incoming-email {
+	width: 235px;
+	border: 1px solid #ccc;
+}
+
+.auto-reply-options {
+	border: 1px solid #ccc;
+	background-color: #f5f5f5;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+
+	padding: 15px 20px;
+}
+
+.auto-reply-hide-show-container a.show-button,
+.auto-reply-hide-show-container a.hide-button {
+	float: right;
+}
+
+.auto-reply-container {
+	border-top: 1px dashed #ccc;
+	padding-top: 20px;
+	margin-top: 15px;
+}
+
+.other-text {
+	width: 320px;
+}
+
+.start-time {
+	float: left;
+}
+
+.start-time-picker {
+	border: 0;
+	background-color: transparent;
+	font-size: 12px;
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-icon-sprite.png);
+	background-position: right -832px;
+	background-repeat: no-repeat;
+	width: auto;
+	font-family: arial;
+	padding-right: 15px;
+	width: 110px;
+}
+
+.end-time {
+	float: left;
+	padding-left: 60px;
+}
+
+.end-time-picker {
+	border: 0;
+	background-color: transparent;
+	font-size: 12px;
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-icon-sprite.png);
+	background-position: right -832px;
+	background-repeat: no-repeat;
+	width: auto;
+	font-family: arial;
+	padding-right: 15px;
+	width: 110px;
+}
+
+
+.message-container {
+	margin-top: 20px;
+}
+
+.message-container label {
+	display: block;
+	margin-bottom: 3px;
+}
+
+.message-container textarea {
+	width: 400px;
+	height: 110px;
+	margin-bottom: 10px;
+	resize: none;
+	font-family: arial;
+	font-size: 12px;
+	padding: 2px;
+}
+
+/*-------------------------------------
+       End Create Account Popin
+--------------------------------------*/
+
+/*-------------------------------------
+         Edit Account Popin
+--------------------------------------*/
+
+.edit-account-popin .addtional-options-container {
+	margin-bottom: 0;
+}
+
+.edit-account-left {
+	float: left;
+	width: 508px;
+}
+
+.popin-sidebar {
+	background-color: #eee;
+	float: right;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	-moz-border-radius: 10px 0 0 10px;
+	-webkit-border-radius: 10px 0 0 10px;
+	border-radius: 10px 0 0 10px;
+	min-height: 228px;
+	height: auto !important;
+	height: 228px;
+	width: 180px;
+	padding: 15px;
+}
+
+.popin-sidebar h4 {
+	font-size: 18px;
+	font-weight: normal;
+	padding-bottom: 5px;
+}
+
+a.clear-all-link {
+	font-size: 11px;
+}
+
+.update-account-changes {
+	padding-top: 15px;
+	border-bottom: 1px dashed #ccc;
+	margin-bottom: 15px;
+}
+
+.update-account-changes li {
+	padding-bottom: 10px;
+	line-height: 15px;
+}
+
+.update-account-changes li a {
+	color: #d10000;
+	text-decoration: none;
+	display: block;
+}
+
+a.remove-account {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-icon-sprite.png);
+	background-position: right -888px;
+	background-repeat: no-repeat;
+	padding-right: 20px;
+	padding: 0px 20px 2px 0
+}
+
+/*-------------------------------------
+       End Edit Account Popin
+--------------------------------------*/
+
+/*-------------------------------------
+       		Switch Popin
+--------------------------------------*/
+
+.switch-account-popin label {
+	display: block;
+	margin-bottom: 3px;
+}
+
+.switch-account-popin select {
+	border: 1px solid #ccc;
+}
+
+.all-accounts-to-switch,
+.accounts-to-switch {
+	border: 1px solid #ccc;
+	height: 188px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	margin-bottom: 15px;
+}
+
+.all-accounts-to-switch li,
+.accounts-to-switch li {
+	padding: 10px;
+	cursor: pointer;
+}
+
+.accounts-to-switch li div {
+	padding-bottom: 3px;
+}
+
+.accounts-to-switch li span {
+	color: #898989;
+}
+
+.select-plan-switch {
+	margin-bottom: 20px;
+}
+
+.all-accounts-to-switch li .domain {
+	float: left;
+}
+
+.all-accounts-to-switch li .account-amount {
+	float: right;
+}
+
+.choose-another-regional-plan {
+	padding-bottom: 15px;
+}
+
+.choose-another-regional-plan label {
+	display: block;
+	margin-bottom: 3px;
+	font-weight: bold;
+}
+
+.choose-another-regional-plan select {
+	width: 360px;
+}
+
+/*-------------------------------------
+       	 End Switch Popin
+--------------------------------------*/
+
+/*-------------------------------------
+      Customize Login Screen Popin
+--------------------------------------*/
+
+.login-screen {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-sprite-v3.png);
+	background-position: -806px 0;
+	background-repeat: no-repeat;
+	width: 171px;
+	height: 158px;
+	float: left;
+}
+
+.custom-logo-info {
+	float: right;
+	width: 318px;
+}
+
+
+.custom-logo-info h6 {
+	font-weight: bold !important;
+
+	margin-bottom: 15px;
+}
+
+.custom-logo-info h6 span {
+	font-weight: normal;
+	font-size: 11px;
+	color: #959595;
+}
+
+.max-logo-sizes span {
+	font-size: 22px;
+	vertical-align: baseline;
+}
+
+.logo-change-container {
+	clear: both;
+	margin-top: 20px;
+	border: 1px solid #ccc;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	padding: 20px;
+	background-color: #f5f5f5;
+	position: relative;
+}
+
+.logo-container {
+	float: left;
+	width: 167px;
+	height: 84px;
+}
+
+.logo-container table tr td {
+	text-align: center;
+	vertical-align: middle;
+	width: 167px;
+	height: 84px;
+}
+
+.logo-name {
+	float: left;
+	padding-left: 20px;
+	width: 272px;
+}
+
+.logo-name h6 {
+	font-weight: bold !important;
+	padding-bottom: 3px;
+}
+
+.logo-name-overlay {
+	position: absolute;
+	left: 185px;
+	top: 20px;
+	width: 290px;
+	height: 84px;
+	background-color: #f4f4f4;
+	opacity: .80;
+	filter: alpha(opacity=80);
+}
+
+.logo-edit {
+	float: left;
+	width: 167px;
+	min-height: 150px;
+}
+
+.logo-edit-instructions {
+	float:left;
+	padding-left: 20px;
+	width: 300px;
+}
+
+.popin-button-steps-container {
+	text-align: right;
+	padding-top: 20px;
+}
+
+a.small-silver-pill,
+a.small-silver-pill:link,
+a.small-silver-pill:visited {
+	display: inline-block;
+	background: #f7f7f7; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #eeeeee 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#eeeeee)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* IE10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eeeeee',GradientType=0 ); /* IE6-9 */
+    background: linear-gradient(top, #ffffff 0%,#eeeeee 100%); /* W3C */
+
+    border: 1px solid #ccc;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+	font-size: 11px;
+	text-decoration: none;
+	color: blue;
+	padding: 0 6px 0 6px;
+	height: 19px;
+	vertical-align: middle;
+}
+
+a.small-silver-pill:active {
+	background: #f7f7f7; /* Old browsers */
+    background: -moz-linear-gradient(top, #eeeeee 0%, #ffffff 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #eeeeee 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #eeeeee 0%,#ffffff 100%); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, #eeeeee 0%,#ffffff 100%); /* IE10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+    background: linear-gradient(top, #eeeeee 0%,#ffffff 100%); /* W3C */
+}
+
+a.small-silver-pill:hover {
+	border: 1px solid #afafaf;
+}
+
+a.small-silver-pill span {
+	display: inline-block;
+	padding: 4px 5px 0 20px;
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-icon-sprite.png);
+	background-position: left -469px;
+	background-repeat: no-repeat;
+	height: 16px;
+	vertical-align: top;
+}
+
+/*-------------------------------------
+    End Customize Login Screen Popin
+--------------------------------------*/
+
+/*-------------------------------------
+       Server Settings popin
+--------------------------------------*/
+
+.server-settings-popin h3 {
+	padding-bottom: 3px !important;
+	float: left;
+}
+
+.settings-table {
+	border-top: 1px solid #b2b2b2;
+	border-left: 1px solid #b2b2b2;
+	margin-bottom: 20px;
+	width: 100%;
+}
+
+.settings-table tr td {
+	padding: 10px;
+	border-bottom: 1px solid #b2b2b2;
+	border-right: 1px solid #b2b2b2;
+}
+
+.settings-table tr.odd td {
+	background-color: #f5f5f5;
+}
+
+.server-settings-popin p label {
+	display: block;
+	margin-bottom: 3px;
+}
+
+.server-settings-popin p select {
+	width: 360px;
+}
+
+.mx-records-info {
+	float: left;
+	padding-top: 0px;
+padding-bottom: 10px;
+}
+
+.mx-records-incorrect
+{
+    float: right;
+}
+
+#componentServerSettingsCorrectHeader
+{
+/*  position: absolute;
+    left: 335px;
+    top: 165px;
+*/
+	display:block;
+}
+
+#componentServerSettingsActualHeader
+{
+    display: block;
+    margin-bottom: 7px;
+}
+
+
+/*-------------------------------------
+       End Server Settings popin
+--------------------------------------*/
+
+/*-------------------------------------
+       	  Datepicker
+--------------------------------------*/
+
+.ui-datepicker {
+	border: 1px solid #ccc;
+	background-color: #fff;
+	font-family: arial;
+	width: 180px;
+	padding: 7px 5px 10px;
+}
+
+.ui-datepicker .ui-datepicker-header {
+	height: 22px;
+}
+
+.ui-datepicker .ui-datepicker-title {
+	margin: 0 20px;
+	line-height: 20px;
+	text-align: center;
+}
+
+a.ui-datepicker-prev,
+a.ui-datepicker-prev:link,
+a.ui-datepicker-prev:visited,
+a.ui-datepicker-prev:hover {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-sprite-v3.png);
+	background-position: -660px -131px;
+	background-repeat: no-repeat;
+	width: 14px;
+	height: 14px;
+	display: inline-block;
+	cursor: pointer;
+}
+
+a.ui-datepicker-next,
+a.ui-datepicker-next:link,
+a.ui-datepicker-next:visited,
+a.ui-datepicker-next:hover {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-sprite-v3.png);
+	background-position: -679px -131px;
+	background-repeat: no-repeat;
+	width: 14px;
+	height: 14px;
+	display: inline-block;
+	cursor: pointer;
+}
+
+a.ui-datepicker-prev:active,
+a.ui-datepicker-next:active {
+	cursor: pointer;
+}
+
+.ui-datepicker-calendar {
+	border-bottom: 1px solid #999;
+}
+
+.ui-datepicker-calendar tr th {
+	border-bottom: 1px solid #999;
+	font-weight: normal;
+	padding: 0 0 4px;
+	font-size: 12px;
+
+}
+
+.ui-datepicker-calendar tr td {
+	text-align: center;
+	font-size: 12px;
+}
+
+.ui-datepicker td span,
+.ui-datepicker-calendar tr td a,
+.ui-datepicker-calendar tr td a:link,
+.ui-datepicker-calendar tr td a:visited {
+	color: #000;
+	display: block;
+	padding: 2px 4px;
+	text-decoration: none;
+}
+
+.ui-datepicker-calendar tr td.ui-datepicker-other-month {
+	background-color: #f5f5f5;
+}
+
+.ui-datepicker-calendar tr td.ui-datepicker-other-month a,
+.ui-datepicker-calendar tr td.ui-datepicker-other-month a:link,
+.ui-datepicker-calendar tr td.ui-datepicker-other-month a:visited {
+	color: #aaa;
+}
+
+
+.ui-timepicker-div dl dt {
+	font-weight: bold;
+	color: #545454;
+	width: 45px;
+	float: left;
+	clear: left;
+}
+
+.ui-timepicker-div dl dd {
+	float: right;
+	width: 130px;
+}
+
+.ui-timepicker-div dl dd.ui_tpicker_time {
+	height: 25px;
+}
+
+.ui-timepicker-div dl dd.ui-slider-horizontal {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-sprite-v3.png);
+	background-position: -183px -181px;
+	width: 115px;
+	padding: 0 5px;
+	height: 10px;
+	margin-top: 2px;
+	margin-bottom: 10px;
+}
+
+.ui-slider-horizontal a.ui-slider-handle {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-sprite-v3.png);
+	background-position: -729px -128px;
+	width: 11px;
+	height: 19px;
+	display: inline-block;
+	top: -4px;
+}
+
+.ui-datepicker-buttonpane {
+	clear: both;
+}
+
+
+
+
+.ui-timepicker-div .ui-widget-header{ margin-bottom: 8px; }
+.ui-timepicker-div dl{ text-align: left; }
+.ui-timepicker-div dl dt{ height: 25px; }
+.ui-timepicker-div dl dd{ }
+.ui-timepicker-div td { font-size: 90%; }
+
+
+/*.ui-timepicker-div dl dt { height: 25px; margin-bottom: -25px; }
+.ui-timepicker-div dl dd { margin: 0 10px 10px 65px; }
+.ui-timepicker-div td { font-size: 90%; }
+*/
+.ui-tpicker-grid-label { background: none; border: none; margin: 0; padding: 0; }
+/*-------------------------------------
+       	  End Datepicker
+--------------------------------------*/
+
+/*-------------------------------------
+       	  	Table Area
+--------------------------------------*/
+
+.table-top {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-icon-sprite.png);
+	background-position: 0 -516px;
+	background-repeat: repeat-x;
+	height: 50px;
+	border-top: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	-moz-border-radius: 10px 10px 0 0;
+	-webkit-border-radius: 10px 10px 0 0;
+	border-radius: 10px 10px 0 0;
+}
+
+.table-top-actions {
+	float: left;
+	margin-top: 3px;
+	padding: 0px 0px 0 20px;
+	height: 36px;
+}
+
+.first-actions {
+	border-right: 1px solid #ccc;
+}
+
+.second-actions {
+	border-left: 1px solid #fff;
+}
+
+.table-top-actions li {
+	float: left;
+	margin-right: 20px
+}
+
+.table-top-actions li a,
+.table-top-actions li a:link,
+.table-top-actions li a:visited {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-sprite-v3.png);
+	background-repeat: no-repeat;
+	height: 36px;
+	display: inline-block;
+}
+
+.table-top-actions li a.disabled {
+	cursor: default
+}
+
+/*-- Create Account --*/
+
+.table-top-actions li.create-account a {
+	background-position: -187px 0;
+	width: 35px;
+}
+
+	.table-top-actions li.create-account a:hover {
+		background-position: -187px -36px;
+	}
+
+	.table-top-actions li.create-account a.disabled {
+		background-position: -187px -72px;
+	}
+
+
+/*-- Create Many Accounts --*/
+
+.table-top-actions li.create-many-accounts a {
+	background-position: -224px 0;
+	width: 54px;
+}
+
+	.table-top-actions li.create-many-accounts a:hover {
+		background-position: -224px -36px;
+	}
+
+	.table-top-actions li.create-many-accounts a.disabled {
+		background-position: -224px -72px;
+	}
+
+
+/*-- Forward Email --*/
+
+.table-top-actions li.forward-email a {
+	background-position: -282px 0;
+	width: 62px;
+}
+
+	.table-top-actions li.forward-email a:hover {
+		background-position: -282px -36px
+	}
+
+	.table-top-actions li.forward-email a.disabled {
+		background-position: -282px -72px
+	}
+
+
+/*-- Link Accounts --*/
+
+.table-top-actions li.link-accounts a {
+	background-position: -348px 0;
+	width: 43px;
+}
+
+	.table-top-actions li.link-accounts a:hover {
+		background-position: -348px -36px;
+	}
+
+	.table-top-actions li.link-accounts a.disabled {
+		background-position: -348px -72px;
+	}
+
+
+/*-- Delete --*/
+
+.table-top-actions li.delete a {
+	 background-position: -394px 0;
+	 width: 35px;
+}
+
+	.table-top-actions li.delete a:hover {
+		 background-position: -394px -36px;
+	}
+
+	.table-top-actions li.delete a.disabled {
+		 background-position: -394px -72px;
+	}
+
+
+/*-- Switch plans --*/
+
+.table-top-actions li.switch-plans a {
+	 background-position: -434px 0;
+	 width: 54px;
+}
+
+	.table-top-actions li.switch-plans a:hover {
+		background-position: -434px -36px;
+	}
+
+	.table-top-actions li.switch-plans a.disabled {
+		background-position: -434px -72px;
+	}
+
+
+/*-- Print icon --*/
+.table-top-actions li.print a {
+	background-position: -488px 0;
+	width: 43px;
+}
+
+	.table-top-actions li.print a:hover {
+		background-position: -488px -36px;
+	}
+
+	.table-top-actions li.print a.disabled {
+		background-position: -488px -72px;
+	}
+
+/*-- export icon --*/
+.table-top-actions li.export a {
+	background-position: -538px 0;
+	width: 43px;
+}
+
+	.table-top-actions li.export a:hover {
+		background-position: -538px -36px;
+	}
+
+	.table-top-actions li.export a.disabled {
+		background-position: -538px -72px;
+	}
+
+
+
+/*-- Search Box --*/
+
+.table-top-sear-box {
+	border: 1px solid #ccc;
+	float: right;
+	background-color: #fff;
+	margin: 11px 10px 0 0;
+	padding: 1px 5px 1px 2px;
+}
+
+.table-top-sear-box input.search-field {
+	border: 0;
+	padding: 0;
+	margin: 0;
+	font-size: 12px;
+	width: 150px;
+	color: #838383;
+}
+
+.example {
+	color: #838383;
+	font-style: italic;
+}
+
+.radioLine
+{
+	float:left;
+	clear:both;
+	height:25px;
+	vertical-align:middle;
+	width:100%
+}
+.table-top-sear-box input.search-field-enabled {
+	color: #000;
+}
+
+.table-top-sear-box input.search-button {
+	background-color: transparent;
+	border: 0;
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-sprite-v3.png);
+	width: 14px;
+	height: 14px;
+	display: inline-block;
+	padding: 0;
+	margin: 1px 0 0;
+}
+
+
+/*-- Yellow Bar ---*/
+
+.yellow-table-bar {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-icon-sprite.png);
+	background-position: left -620px;
+	background-repeat: repeat-x;
+	height: 26px;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+}
+
+.viewing-plan {
+	float: left;
+	padding: 7px 0 0 10px;
+}
+
+.expires-bar {
+	float: right;
+	font-size: 11px;
+	padding: 8px 10px 0 0;
+}
+
+/*-- Silver Bar ---*/
+
+.silver-table-bar {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-icon-sprite.png);
+	background-position: left -570px;
+	background-repeat: repeat-x;
+	height: 26px;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+}
+
+
+/*-- Table Flyouts --*/
+
+.flyout-holder {
+	/*position: relative;*/
+        overflow-x: hidden;
+}
+
+
+
+.table-flyout-container {
+	z-index: 98;
+	width: 392px;
+	padding-left: 11px;
+	position: relative;
+	line-height: 1;
+
+	display: none; /*-- Added 1-25-12 --*/
+}
+
+.flyout-show /*
+.table-flyout-button .table-flyout-container*/ { /*-- Changed 1-25-12 --*/
+	position: absolute;
+	display: block;
+	top: -17px;
+	left: 14px;
+}
+
+.table-flyout {
+	border: 1px solid #bcbcbc;
+	background: #fefefe; /* Old browsers */
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top, #ffffff 0%, #fefefe 44%, #ececec 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(44%,#fefefe), color-stop(100%,#ececec)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #ffffff 0%,#fefefe 44%,#ececec 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #ffffff 0%,#fefefe 44%,#ececec 100%); /* Opera11.10+ */
+	background: -ms-linear-gradient(top, #ffffff 0%,#fefefe 44%,#ececec 100%); /* IE10+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ececec',GradientType=0 ); /* IE6-9 */
+	background: linear-gradient(top, #ffffff 0%,#fefefe 44%,#ececec 100%); /* W3C */
+
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+
+	width: 360px;
+	padding: 15px 30px 15px 15px; /*-- Updated 1-25-11 --*/
+	position: relative;
+	z-index: 98;
+}
+
+.flyout-actions {
+	float: left;
+	width: 100px;
+	font-size:12px;
+}
+
+/*.flyout-actions:after {
+	content: "";
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-sprite-v3.png);
+	background-position: -674px -87px;
+	background-repeat: no-repeat;
+	width: 11px;
+	height: 21px;
+	position: absolute;
+	left: -11px;
+	top: 15px;
+}*/
+
+.flyout-actions-corner {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-sprite-v3.png);
+	background-position: -674px -87px;
+	background-repeat: no-repeat;
+	width: 11px;
+	height: 21px;
+	position: absolute;
+	left: 1px;
+	top: 15px;
+	z-index: 99;
+}
+
+.flyout-actions li {
+	padding-bottom: 5px;
+}
+
+.flyout-actions li a,
+.flyout-actions li a:link,
+.flyout-actions li a:visited {
+	display: inline-block;
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-icon-sprite.png);
+	background-repeat: no-repeat;
+	color: #000;
+	padding: 4px 0 5px 30px;
+	text-decoration: none;
+}
+
+.flyout-actions li.edit a {
+	background-position: left -184px;
+}
+
+.flyout-actions li.switch-plans a {
+	background-position: left -704px;
+}
+
+.flyout-actions li.flyout-delete a {
+	background-position: left -226px;
+	margin-top: 4px;
+}
+
+.flyout-actions li.infoCenter a {
+	background-position: left -272px
+}
+
+.right-flyout {
+	float: right;
+	width: 210px;
+	padding-left: 20px;
+	border-left: 1px dashed #ccc;
+}
+
+.right-flyout h3 {
+	font-size: 18px;
+	font-weight: normal;
+	padding-bottom: 7px;
+
+	width: 210px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.right-flyout h6 {
+	font-style: italic;
+	font-weight: normal;
+	width: 210px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	font-size: 11px;
+	line-height: 14px;
+}
+
+.account-amounts {
+	margin-bottom: 10px;
+	line-height: 1; /*-- Updated 1-25-12 --*/
+}
+
+.table-progress-bar,
+.account-amounts li.amount-progress-bar {
+	float: left;
+	width: 98px;
+	height: 8px;
+	border: 1px solid #ccc;
+	background: #fefefe; /* Old browsers */
+	background: -moz-linear-gradient(top, #ffffff 0%, #f5f5f5 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#f5f5f5)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #ffffff 0%,#f5f5f5 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #ffffff 0%,#f5f5f5 100%); /* Opera11.10+ */
+	background: -ms-linear-gradient(top, #ffffff 0%,#f5f5f5 100%); /* IE10+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f5f5f5',GradientType=0 ); /* IE6-9 */
+	background: linear-gradient(top, #ffffff 0%,#f5f5f5 100%); /* W3C */
+	position: relative;
+	z-index: 1;
+	margin-right: 5px;
+}
+
+.table-progress-bar {
+	width: 60px;
+	float: right;
+	margin-top: 2px;
+}
+
+.main-table-style tr td .ui-progressbar-value,
+.account-amounts li.amount-progress-bar .ui-progressbar-value {
+	position: absolute;
+	z-index: 2;
+	border: 1px solid #dea303;
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-icon-sprite.png);
+	background-position: left -745px;
+	height: 8px;
+	font-size: 0;
+}
+
+.account-amounts li.amount-progress-bar-over-quota .ui-progressbar-value,  /*-- Note over-quota for amount-progress-bar --*/
+.main-table-style tr.quota-color td .ui-progressbar-value {
+	position: absolute;
+	z-index: 2;
+	border: 1px solid #a41100;
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-icon-sprite.png);
+	background-position: left -867px;
+	height: 8px;
+	font-size: 0;
+}
+
+.account-amounts li.amout-left {
+	float: left;
+	font-size: 11px;
+	color: #959595;
+}
+
+.account-amounts li.amout-left strong {
+	color: #000;
+}
+
+.account-amounts li.modify-size {
+	float: right;
+	font-size: 11px;
+}
+
+.last-login-password {
+	font-size: 11px;
+	padding-bottom: 10px; /*-- Changed 1-25-2012 --*/
+}
+
+.last-login-password li.last-login {
+	float: left;
+        height: 30px;
+        width: 110px;
+}
+
+.last-login-password li.chane-password {
+	float: right;
+        height: 30px
+}
+
+.flyout-apps-icons li {
+	float: left;
+	margin-right: 10px;
+}
+
+.flyout-apps-icons li a,
+.flyout-apps-icons li a:link,
+.flyout-apps-icons li a:visited {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-sprite-v3.png);
+	width: 35px;
+	height: 25px;
+	display: block;
+}
+
+.flyout-apps-icons li a span {
+	display: none;
+}
+
+.flyout-apps-icons li.email a,  .flyout-apps-icons li.email-crm a {
+	background-position: -837px -158px;
+}
+
+.flyout-apps-icons li.email a:hover {
+	background-position: -837px -183px;
+}
+
+.flyout-apps-icons li.calendar a , .flyout-apps-icons li.calendar-crm a {
+	background-position: -872px -158px;
+}
+
+.flyout-apps-icons li.calendar a:hover {
+	background-position: -872px -183px;
+}
+
+.flyout-apps-icons li.files a , .flyout-apps-icons li.files-crm a {
+	background-position: -907px -158px;
+}
+
+.flyout-apps-icons li.files a:hover {
+	background-position: -907px -183px;
+}
+
+.flyout-apps-icons li.fax a , .flyout-apps-icons li.fax-crm a {
+	background-position: -942px -158px;
+}
+
+.flyout-apps-icons li.fax a:hover {
+	background-position: -942px -183px;
+}
+
+/*-------------------------------------
+       	  End Table Area
+--------------------------------------*/
+
+/*-------------------------------------
+      	   Table Styles
+--------------------------------------*/
+
+.main-table-style {
+    text-align: left;
+}
+
+.main-table-style table {
+    width: 100%;
+    font-size: 12px;
+    font-family: arial, verdana, helvetica, sans-serif;
+    border-left: 1px solid #b2b2b2;
+	border-top: 1px solid #b2b2b2;
+    background-color: #ffffff;
+}
+
+/*-- new 11-1-11 --*/
+.main-table-style table tr th {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-icon-sprite.png);
+	background-position: left -577px;
+    background-repeat: repeat;
+    font-weight: bold;
+    border-right: 1px solid #b2b2b2;
+    border-bottom: 1px solid #b2b2b2;
+   	padding: 0px 5px 0px 10px;
+    font-size: 11px !important;
+    vertical-align: middle;
+    text-align: left;
+	cursor: pointer;
+	height: 22px;
+	vertical-align: middle;
+}
+/*-- new 11-1-11 --*/
+
+.main-table-style table tr th a,
+.main-table-style table tr th a:link,
+.main-table-style table tr th a:visited {
+	color: #000;
+}
+
+/*-- new 11-1-11 --*/
+.main-table-style table tr td {
+    border-right: 1px solid #b2b2b2;
+    border-bottom: 1px solid #b2b2b2;
+  	padding: 0 5px 0 10px;
+    vertical-align: middle;
+	empty-cells: show;
+	/*overflow:hidden;
+	text-overflow: ellipsis;*/
+	height: 28px;
+	vertical-align: middle;
+	white-space: nowrap;
+	line-height: 17px;
+}
+/*-- new 11-1-11 --*/
+
+.main-table-style table tr.odd td {
+    background-color: #f5f5f5;
+}
+
+.main-table-style table tr.tr-hover td {
+	background-color: #fffcd6;
+}
+
+.main-table-style table tr td.td-hover .flyout-holder .table-flyout-container{
+	display: block !important;
+}
+
+.main-table-style table tr td span {
+	padding-bottom: 3px;
+}
+
+.main-table-style table tr td a {
+	/*font-size: 11px;   need to be same size as the rest */
+}
+
+.main-table-style table tr.quota-color td,
+.main-table-style table tr.quota-color td span.quota-amount {
+	color: red;
+}
+
+a.check-all {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-sprite-v3.png);
+	background-position: -624px -61px;
+	background-repeat: no-repeat;
+	display: inline-block;
+	width: 11px;
+	height: 12px;
+	vertical-align: middle;
+	font-size: 0;
+}
+
+/*-- new 11-1-11 --*/
+tr.tr-hover td.placeholder-row {
+	background-color: #f5f5f5 !important;
+}
+
+.placeholder-row {
+	background-color: #f5f5f5;
+	box-shadow: inset 0 0 5px #ccc;
+}
+/*-- new 11-1-11 --*/
+
+
+/*--- Pagination ---*/
+
+.pagination-box {
+	background-color: #DDDDDD;
+	border-bottom: 1px solid #B2B2B2;
+	border-left: 1px solid #B2B2B2;
+	border-right: 1px solid #B2B2B2;
+	padding: 4px 10px 3px;
+	text-align: right;
+	font-size: 11px;
+}
+
+.pagination-container {
+	float: right;
+}
+
+.pagination-box .display-amount {
+	float: left;
+	margin-right: 20px;
+	margin-top:2px !important;
+	vertical-align: bottom;
+}
+
+.pagination-box .display-amount select {
+	vertical-align: middle;
+}
+
+.pagination-box .pages {
+	float: left;
+	margin-top:2px !important;
+}
+
+.pagination-box .pages select {
+	vertical-align: baseline;
+	float: left;
+	margin-right: 5px;
+	margin-top:2px !important;
+}
+
+.page-number {
+	float: left;
+	margin-top: 4px !important;
+}
+
+a.previous-button,
+a.previous-button:link,
+a.previous-button:visited {
+	display: inline-block;
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-sprite-v3.png);
+	background-position: -602px -111px;
+	width: 17px;
+	height: 17px;
+	margin-right: 10px;
+	margin-top: 2px;
+	float: left;
+}
+
+a.previous-button:hover {
+	background-position: -602px -128px;
+}
+
+a.next-button,
+a.next-button:link,
+a.next-button:visited {
+	display: inline-block;
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-sprite-v3.png);
+	background-position: -619px -111px;
+	width: 17px;
+	height: 17px;
+	margin-left: 10px;
+	margin-top: 2px;
+	float: left;
+}
+
+a.next-button:hover {
+	background-position: -619px -128px;
+}
+
+a.previous-button span,
+a.next-button span {
+	display: none;
+}
+
+a.previous-button[disabled=disabled],
+a.previous-button[disabled=true] {
+	background-position: 0 -34px;
+}
+
+
+a.next-button[disabled=disabled],
+a.next-button[disabled=true] {
+	background-position: -17px -34px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+
+	.pagination-box {
+		padding: 2px 10px;
+	}
+
+	a.previous-button,
+	a.previous-button:link,
+	a.previous-button:visited,
+	a.next-button,
+	a.next-button:link,
+	a.next-button:visited {
+		margin-top: 4px;
+	}
+
+	.page-number {
+		margin-top: 7px;
+	}
+
+}
+
+
+/*-------------------------------------
+      	  End Table Styles
+--------------------------------------*/
+
+/*-------------------------------------
+      	  Alert Notifications
+--------------------------------------*/
+
+.notification-box {
+	font-family: arial, verdana, helvetica, sans-serif;
+	position: relative;
+	padding-left: 10px;
+	margin-bottom: 20px;
+	font-size: 12px;
+}
+
+.notification-box p {
+	padding: 15px 15px 15px 36px ;
+	margin: 0 !important;
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
+a.close-notification,
+a.close-notification:link,
+a.close-notification:visited {
+	display: inline-block;
+	background-image: url(https://img1.wsimg.com/wcc/css/images/close.gif);
+	width: 13px;
+	height: 13px;
+	position: absolute;
+	right: 2px;
+	top: 2px;
+}
+
+a.close-notification span {
+	display: none;
+}
+
+/*-- Error Notification --*/
+
+.error-notification {
+	border: 1px solid #d00000;
+	background-color: #ffdcdc;
+}
+
+.error-notification p {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/error-icon.png);
+}
+
+/*-- Alert Notification --*/
+
+.alert-notification {
+	border: 1px solid #e0a61b;
+	background-color: #fffbcc;
+}
+
+.alert-notification p {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/alert-icon.png);
+}
+
+/*-- Success Notification --*/
+
+.success-notification {
+	border: 1px solid #88c236;
+	background-color: #ecfbda;
+}
+
+.success-notification p {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/success-icon.png);
+}
+
+/*-- Informational Notification --*/
+
+.informational-notification {
+	border: 1px solid #3aaedd;
+	background-color: #e1f2f9;
+}
+
+.informational-notification p {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/informational-icon.png);
+}
+
+/*-------------------------------------
+      	 End Alert Notifications
+--------------------------------------*/
+
+/*-------------------------------------
+      	 	  UI Tabs
+--------------------------------------*/
+
+.generic-tabs-menu {
+
+}
+
+.generic-tabs-menu ul.generic-tabs {
+	margin: -23px 0 0 20px;
+	padding: 0;
+	list-style: none;
+	font-size: 12px;
+	height: 23px;
+	position: relative;
+}
+
+.generic-tabs-menu ul.generic-tabs li {
+	margin: 0px 1px 0px 0px;
+	padding: 0px 15px 0px 0px;
+	background-repeat: no-repeat;
+	float: left;
+	background: url(https://img1.wsimg.com/wcc/css/images/generic-tabs.gif) 100% 0px;
+	border-bottom: 1px solid #CDCDCD;
+}
+
+.generic-tabs-menu ul.generic-tabs li a,
+.generic-tabs-menu ul.generic-tabs li a:link,
+.generic-tabs-menu ul.generic-tabs li a:visited {
+	display: block;
+	float: left;
+	padding: 5px 2px 0px 18px;
+	text-align: center;
+	white-space: nowrap;
+	background-repeat: no-repeat;
+	text-decoration: none;
+	min-height: 17px;
+	height: 22px;
+	outline: none;
+	background: url(https://img1.wsimg.com/wcc/css/images/generic-tabs.gif) no-repeat 0 0px;
+	color: #000000;
+
+    line-height: 15px;
+}
+
+/*--selected--*/
+
+.generic-tabs-menu ul.generic-tabs li.ui-tabs-selected {
+	background-repeat: no-repeat;
+	background: url(https://img1.wsimg.com/wcc/css/images/generic-tabs.gif) 100% -200px;
+	border-bottom: 0;
+}
+
+.generic-tabs-menu ul.generic-tabs li.ui-tabs-selected a,
+.generic-tabs-menu ul.generic-tabs li.ui-tabs-selected a:link,
+.generic-tabs-menu ul.generic-tabs li.ui-tabs-selected a:visited {
+	background-repeat: no-repeat;
+	background: url(https://img1.wsimg.com/wcc/css/images/generic-tabs.gif) 0 -200px;
+	color: #000000;
+	padding-bottom: 1px;
+}
+
+/*--selected--*/
+
+/*--hover--*/
+
+.generic-tabs-menu ul.generic-tabs li.ui-state-hover {
+	background-position: 100% -200px;
+	cursor: pointer;
+}
+
+.generic-tabs-menu ul.generic-tabs li.ui-state-hover a,
+.generic-tabs-menu ul.generic-tabs li.ui-state-hover a:link,
+.generic-tabs-menu ul.generic-tabs li.ui-state-hover a:visited {
+	background-position: 0 -200px;
+	color: #000000;
+}
+
+.ui-tabs-hide {
+	display: none;
+}
+
+/*-------------------------------------
+            End UI Tabs
+--------------------------------------*/
+
+/*-------------------------------------
+              Tips
+--------------------------------------*/
+
+.ui-tooltip,
+.qtip{
+	position: absolute;
+	left: -28000px;
+	top: -28000px;
+	display: none;
+	max-width: 280px;
+	min-width: 50px;
+	font-size: 10.5px;
+	line-height: 12px;
+	z-index: 15000;
+}
+
+
+a.ui-tooltip-icon,
+a.ui-tooltip-icon:link,
+a.ui-tooltip-icon:visited {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-sprite-v3.png);
+	background-position: -623px -128px;
+	width: 13px;
+	height: 13px;
+	display: inline-block;
+	border: 0;
+	text-decoration: none;
+}
+
+.ui-tooltip-fluid{
+	display: block;
+	visibility: hidden;
+	position: static !important;
+	float: left !important;
+}
+
+.ui-tooltip-content{
+	position: relative;
+	padding: 5px 9px;
+	overflow: hidden;
+	text-align: left;
+	word-wrap: break-word;
+	overflow: hidden;
+
+	border-bottom: 1px solid #3baedd;
+	border-left: 1px solid #3baedd;
+	border-right: 1px solid #3baedd;
+	border-top: 0;
+}
+
+.ui-tooltip-titlebar{
+	position: relative;
+	min-height: 14px;
+	padding: 5px 35px 5px 10px;
+	overflow: hidden;
+	font-weight: bold;
+
+	border-top: 1px solid #3baedd;
+	border-left: 1px solid #3baedd;
+	border-right: 1px solid #3baedd;
+	border-bottom: 0 ;
+}
+
+.ui-tooltip .ui-tooltip-tip {
+	margin: 0 auto;
+	overflow: hidden;
+	background: transparent !important;
+	border: 0px dashed transparent !important;
+	z-index: 10;
+}
+
+.ui-tooltip .ui-tooltip-tip,
+.ui-tooltip .ui-tooltip-tip {
+	position: absolute;
+	line-height: 0.1px !important;
+	font-size: 0.1px !important;
+	color: #123456;
+	background: transparent;
+	border: 0px dashed transparent;
+}
+
+.ui-tooltip-titlebar,
+.ui-tooltip-content {
+	background-color: #e1f2f9;
+	width: 200px;
+	font-size: 12px;
+}
+
+
+.ui-tooltip-titlebar {
+	padding: 15px 20px 0px 10px;
+}
+
+.ui-tooltip-content {
+	padding: 5px 20px 10px 10px;
+	width: 200px;
+	font-size: 12px;
+}
+
+.ui-tooltip-content p {
+	padding-bottom: 15px;
+	line-height: 15px;
+}
+
+.ui-tooltip-content p:last-child {
+	padding-bottom: 0;
+}
+
+.ui-tooltip-titlebar .ui-state-default{
+	position: absolute;
+	right: 4px;
+	top: 50%;
+	margin-top: -11px;
+
+	cursor: pointer;
+	outline: medium none;
+}
+
+* html .ui-tooltip-titlebar .ui-state-default{ top: 16px; } /* IE fix */
+
+
+/* Applied to 'focused' tooltips e.g. most recently displayed/interacted with */
+.ui-tooltip-focus{
+
+}
+
+/* Applied on hover of tooltips i.e. added/removed on mouseenter/mouseleave respectively */
+.ui-tooltip-hover{
+
+}
+
+
+/* Tips plugin */
+.ui-tooltip .ui-tooltip-tip{
+	margin: 0 auto;
+	overflow: hidden;
+
+	background: transparent !important;
+	border: 0px dashed transparent !important;
+	z-index: 10;
+}
+
+.ui-tooltip .ui-tooltip-tip,
+.ui-tooltip .ui-tooltip-tip *{
+	position: absolute;
+
+	line-height: 0.1px !important;
+	font-size: 0.1px !important;
+	color: #123456;
+
+	background: transparent;
+	border: 0px dashed transparent;
+}
+
+.ui-tooltip .ui-tooltip-tip canvas{ top: 0; left: 0; }
+
+
+
+
+.ui-tooltip-default .ui-tooltip-titlebar{
+	background-color: #e1f2f9;
+}
+
+
+.ui-tooltip-default .ui-tooltip-titlebar .ui-state-hover{
+	border-color: #AAA;
+	color: #111;
+}
+
+
+/*-------------------------------------
+             End Tips
+--------------------------------------*/
+
+
+/*-------------------------------------
+  		 	Popin styles
+--------------------------------------*/
+
+.ui-dialog {
+    border: 1px solid #bcbcbc;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px #000;
+    position: absolute;
+}
+
+.ui-dialog-titlebar {
+   	background: #313131; /* Old browsers */
+	background: -moz-linear-gradient(top, #444444 0%, #090909 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#444444), color-stop(100%,#090909)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #444444 0%,#090909 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #444444 0%,#090909 100%); /* Opera11.10+ */
+	background: -ms-linear-gradient(top, #444444 0%,#090909 100%); /* IE10+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#444444', endColorstr='#090909',GradientType=0 ); /* IE6-9 */
+	background: linear-gradient(top, #444444 0%,#090909 100%); /* W3C */
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    height: 30px;
+    padding: 9px 0 0 10px;
+    position: relative;
+    cursor: default !important;
+}
+
+a.ui-dialog-titlebar-close,
+a.ui-dialog-titlebar-close:link,
+a.ui-dialog-titlebar-close:visited {
+    background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-sprite-v3.png);
+    background-position: -690px -128px;
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: 8px;
+    top: 7px;
+    display: inline-block;
+}
+
+a.ui-dialog-titlebar-close span {
+    display: none;
+}
+
+.ui-dialog-content {
+    height: auto !important;
+    padding: 20px;
+}
+
+.edit-account-popin {
+	padding: 20px 0 20px 20px;
+}
+
+.ui-dialog-content p {
+    line-height: 15px;
+    margin-bottom: 20px;
+}
+
+.popin-button-container {
+    padding: 0px 20px 0px;
+    text-align: center;
+}
+
+.ui-widget-overlay {
+    background-color: #000;
+    opacity: .6;
+    filter:Alpha(Opacity=60);
+	z-index: 100001;
+}
+
+.ui-dialog-content h3 {
+	font-size: 22px;
+	font-weight: normal;
+	padding-bottom: 10px;
+}
+
+.ui-dialog-content h6 {
+	/*padding-bottom: 5px;*/
+	font-weight: normal;
+}
+
+.popin-button-container {
+	clear: both;
+}
+
+.form-elements {
+
+}
+
+.form-elements li {
+	padding-bottom: 10px;
+}
+
+.form-elements li label {
+	display: block;
+	margin-bottom: 3px;
+}
+
+.form-elements li label span {
+	font-size: 11px;
+	color: #959595;
+}
+
+.form-elements li input {
+	width: 290px;
+	vertical-align: middle;
+}
+
+.noTitleDialog div.ui-dialog-titlebar {
+	display:none;
+}
+.noTitleDialog div.ui-dialog-content {
+	background: none;
+}
+.noTitleDialog div.ui-dialog-content textarea {
+	background: none;
+}
+
+/*-------------------------------------
+  		   End Popin styles
+--------------------------------------*/
+
+/*-------------------------------------
+              Buttons
+--------------------------------------*/
+
+a.black-css3-button,
+a.black-css3-button:link,
+a.black-css3-button:visited {
+    background-image: url(https://img1.wsimg.com/wcc/css/images/black-button-bg-all-css3.png);
+    background-position: 0 0;
+    border: 1px solid #000;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    color: #fff;
+    display: inline-block;
+    font-family: verdana;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 10px 5px;
+    text-align: center;
+    line-height: 1;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+a.black-css3-button:hover {
+    background-image: url(https://img1.wsimg.com/wcc/css/images/black-button-bg-all-css3.png);
+    background-position: 0 -34px;
+}
+
+a.black-css3-button:active {
+    background-image: url(https://img1.wsimg.com/wcc/css/images/black-button-bg-all-css3.png);
+    background-position: 0 -66px
+}
+
+a.black-css3-button[disabled=disabled],
+a.black-css3-button-disabled,
+a.black-css3-button-disabled:link,
+a.black-css3-button-disabled:visited {
+    background-image: url(https://img1.wsimg.com/wcc/css/images/black-button-bg-all-css3.png);
+    background-position: 0 -103px;
+    border: 1px solid #a5a5a5;
+    cursor: default;
+	border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    color: #fff;
+    display: inline-block;
+    font-family: verdana;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 10px 5px;
+    text-align: center;
+    line-height: 1;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.button-margin-right {
+	margin-right: 7px;
+}
+
+.button-margin-left {
+	margin-left: 7px;
+}
+
+
+a.orange-css3-button,
+a.orange-css3-button:link,
+a.orange-css3-button:visited {
+    background: #F78D1D;
+    background: -webkit-gradient(linear, left top, left bottom, from(#FD9B42), to(#E87208));
+    background: -moz-linear-gradient(top, #FD9B42, #E87208);
+    border: 1px solid #D87B35;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    color: #fff;
+    display: inline-block;
+    font-family: verdana;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 10px 5px;
+    text-align: center;
+    line-height: 1;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+
+
+input.black-css3-button,
+button.black-css3-button,
+button.ui-datepicker-close {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/black-button-bg-all-css3.png);
+	background-color: transparent;
+	border: 1px solid #000;
+
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	color: #fff;
+	display: inline-block;
+	font-family: verdana;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 2px 10px 3px;
+	/*.padding: 3px 10px 3px;*/
+
+	line-height: 14px;
+	text-decoration: none;
+	vertical-align: middle;
+	cursor: pointer;
+
+	width: auto;
+	overflow: visible;
+}
+
+input.black-css3-button:hover,
+button.black-css3-button:hover,
+button.ui-datepicker-close:hover {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/black-button-bg-all-css3.png);
+    background-position: 0 -34px;
+}
+
+input.black-css3-button:active,
+button.black-css3-button:active,
+button.ui-datepicker-close:active {
+    background-image: url(https://img1.wsimg.com/wcc/css/images/black-button-bg-all-css3.png);
+    background-position: 0 -68px
+}
+
+
+input.silver-button,
+button.ui-datepicker-current {
+    background-color: #eaeaea;
+    background-image: url(https://img1.wsimg.com/wcc/css/images/silver-button-bg.png);
+    background-repeat: repeat;
+    border: 1px solid #b1b1b1;
+    display: inline-block;
+    font-size: 10px;
+    font-weight: bold;
+    font-family: Verdana;
+    padding: 2px 10px 2px 10px;
+    margin: 0 auto 1px auto;
+    width: auto;
+    overflow: visible;
+    cursor: pointer;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+
+button.ui-datepicker-current {
+	margin-top: 3px;
+}
+
+/*-------------------------------------
+             End Buttons
+--------------------------------------*/
+
+/*-------------------------------------
+         Help Slideout Sidebar
+--------------------------------------*/
+
+#help-area {
+	background: #cae8f3;
+	background: -moz-linear-gradient(left, #cae8f3 0%, #a1d5ea 100%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#cae8f3), color-stop(100%,#a1d5ea));
+	background: -webkit-linear-gradient(left, #cae8f3 0%,#a1d5ea 100%);
+	background: -o-linear-gradient(left, #cae8f3 0%,#a1d5ea 100%);
+	background: -ms-linear-gradient(left, #cae8f3 0%,#a1d5ea 100%);
+	background: linear-gradient(left, #cae8f3 0%,#a1d5ea 100%);
+	position: absolute;
+	left: -230px;
+	border-right: 1px solid #88c2d8;
+	-webkit-box-shadow: 0px 0px 15px 0px #858585;
+	-moz-box-shadow: 0px 0px 15px 0px #858585;
+	box-shadow: 0px 0px 15px 0px #858585;
+	z-index: 20000;
+	font-size:12px;
+	line-height:1.3;
+}
+
+#help-area-popout #help-area {
+	border:0 none;
+}
+
+
+/*-- @subsection structure --*/
+
+#help-area #drag-bar {
+	cursor: col-resize;
+	width: 2px;
+	height: 100%;
+	position: absolute;
+	right: 0;
+}
+
+#help-area #drag-bar:hover {
+	background-color:#ffffff;
+}
+
+#help-area .content-container {
+	width: 230px;
+	min-width: 230px;
+	background-image:url(https://img1.wsimg.com/wcc/css/images/question-mark.png);
+	background-repeat:no-repeat;
+	background-position:58px 0;
+	position:relative;
+}
+
+#help-area .tab {
+	width: 16px;
+	height: 72px;
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-sprite-v3.png);
+	background-position: -560px -111px;
+	position: absolute;
+	right: -16px;
+	top: 50%;
+	margin-top: -36px;
+	cursor: pointer;
+	display:block;
+}
+
+#help-area.hidden .tab {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-sprite-v3.png);
+	background-position: -576px -111px;
+}
+
+
+/*-- @subsection header --*/
+
+#help-area h3 {
+	font-size: 24px;
+	font-weight: normal;
+	color: #27728f;
+	text-shadow: 0px 1px 0px #ffffff;
+	padding: 8px 15px 0;
+}
+
+
+/*-- @subsection controls --*/
+
+#help-area #controls {
+	position: absolute;
+	right: 5px;
+	top: 15px;
+}
+
+#help-area #controls .button {
+	width: 16px;
+	height: 15px;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	display:block;
+	float: right;
+	margin-left: 5px;
+	padding: 1px;
+}
+
+#help-area .button.selected {
+	background-color: #66b0c9;
+}
+
+#help-area #pin.button {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-sprite-v3.png);
+	background-position: -734px -111px;
+}
+
+#help-area #popout.button {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-sprite-v3.png);
+	background-position: -692px -111px;
+}
+
+#help-area #popin.button {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-sprite-v3.png);
+	background-position: -713px -111px;
+}
+
+
+/*-- @subsection tabs --*/
+
+#help-area .nav-tabs {
+	padding:2px 0 0 15px;
+	min-height:1%;
+	height:auto !important;
+	height:1%;
+}
+
+#help-area .nav-tabs li {
+	float: left;
+	margin-right: 2px;
+	border: 1px solid #66b0c9;
+	-moz-border-radius-topleft: 8px;
+	-moz-border-radius-topright: 8px;
+	-moz-border-radius-bottomright: 0px;
+	-moz-border-radius-bottomleft: 0px;
+	-webkit-border-radius: 8px 8px 0px 0px;
+	border-radius: 8px 8px 0px 0px;
+	border-bottom: none;
+}
+
+#help-area .nav-tabs li.selected {
+	border-color: #8bc2d7;
+	position: relative;
+	z-index: 5;
+}
+
+#help-area .nav-tabs li a  {
+	text-decoration: none;
+	color: #fff;
+	text-shadow: 0px -1px 0px #45a0c1;
+}
+
+#help-area .nav-tabs li.selected a {
+	color: #28728f;
+	text-shadow: none;
+	display:block;
+}
+
+#help-area .nav-tabs li span {
+	background-color: #6dc3e4;
+	display: block;
+	padding: 2px 8px 4px;
+	-moz-border-radius-topleft: 8px;
+	-moz-border-radius-topright: 8px;
+	-moz-border-radius-bottomright: 0px;
+	-moz-border-radius-bottomleft: 0px;
+	-webkit-border-radius: 8px 8px 0px 0px;
+	border-radius: 8px 8px 0px 0px;
+	border-top: 1px solid #92cfe4;
+	border-left: 1px solid #92cfe4;
+}
+
+#help-area .nav-tabs li.selected span {
+	background-color: #ffffff;
+	border: 1px solid transparent;
+	border-bottom: none;
+}
+
+
+/*-- @subsection content --*/
+
+#help-area .content {
+	clear: both;
+	background-color: #fff;
+	border: 1px solid #8bc2d7;
+	position: relative;
+	z-index: 4;
+	top: -1px;
+	margin: 0 5px 5px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	color: #555555;
+	overflow-y:auto;
+	overflow-x:hidden;
+}
+
+#help-area-popout #help-area .content {
+	margin:0;
+	border-width:1px 0 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+
+#help-area .content .pane{
+	width:100%;
+}
+
+#help-area .content .pane.hidden {
+	display: none;
+}
+
+#help-area .content h5 {
+	font-weight:bold;
+}
+
+#help-area .content li {
+	padding: 11px 11px 0;
+}
+
+#help-area .content li h5:before {
+	content: "\00b7\00a0";
+}
+
+#help-area .content .body {
+	padding: 10px 10px 0;
+}
+
+#help-area .content .body-divider {
+	 border-top: 1px solid #D6EAF3;
+}
+
+#help-area .content .body p {
+	margin:0 0 1em;
+}
+
+
+/*-- @subsection content - steps --*/
+
+#help-area #breadcrumbs {
+	color:#28728F;
+}
+
+#help-area .slider #breadcrumbs {
+	border-bottom: 1px solid #d6eaf3;
+	padding: 7px 11px;
+	font-size:11px;
+}
+#help-area #breadcrumbs #home-crumb {
+	width:18px;
+	height:14px;
+	vertical-align:text-bottom;
+	margin-right:3px;
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-sprite-v3.png);
+	background-position: -761px -111px;
+	display:inline-block;
+}
+
+#help-area .slider li.alt {
+	background: url(https://img1.wsimg.com/wcc/css/images/arrow-right.png) right 50% no-repeat #ebf4f9;
+}
+
+#help-area .slider li {
+	padding: 10px 30px 10px 10px;
+	background: url(https://img1.wsimg.com/wcc/css/images/arrow-right.png) right 50% no-repeat;
+	cursor: pointer;
+	border-bottom: 1px solid #d6eaf3;
+}
+
+#help-area .slider .subpane.hidden {
+	display: none;
+}
+
+#help-area .slider .subpane .breadcrumb-description {
+	display: none;
+}
+
+
+
+/*------------------------------ Added 1-25-12 -------------------------------*/
+
+.flyout-settings-icon {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-sprite-v3.png);
+	background-position: -393px -111px;
+	height: 15px;
+	width: 15px;
+	display: inline-block;
+	position: absolute;
+	right: 5px;
+	top: 5px;
+}
+
+.flyout-settings-icon:hover {
+	background-position: -393px -126px;
+}
+
+.flyout-settings-icon span {
+	display: none;
+}
+
+.sf-qt {
+	z-index: 21000;
+}
+
+.user-name-container {
+	float: left;
+            text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    word-break:break-all;
+
+}
+
+.table-flyout-button {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-sprite-v3.png);
+	background-position: -745px -150px;
+	width: 17px;
+	height: 15px;
+	display: inline-block;
+	float: right;
+	cursor: pointer;
+	position: relative;
+
+}
+
+.table-flyout-button_active {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-sprite-v3.png);
+	background-position: -745px -165px;
+	width: 17px;
+	height: 15px;
+	display: inline-block;
+	float: right;
+	cursor: pointer;
+	position: relative;
+}
+
+
+.table-flyout-button:hover {
+	background-position: -745px -165px;
+}
+
+.flyout-settings-choices {
+	float: left;
+
+}
+
+.flyout-settings-choices li {
+	padding-bottom: 7px;
+}
+
+.flyout-setting-image {
+	border: 4px solid #cadbe3;
+	float: right;
+	margin-bottom: 20px;
+}
+
+.flyout-setting-image img {
+	border: 1px solid #fff;
+}
+
+.main-table-style tr.tr-hover a.check-icon {
+	display: none;
+}
+.main-table-style tr.tr-hover a.email-icon {
+	display: none;
+}
+
+.main-table-style tr.tr-hover a.calendar-icon {
+	display: none;
+}
+.main-table-style tr.tr-hover a.files-icon {
+	display: none;
+}
+
+
+
+
+.main-table-style tr a.launch-app {
+	display: none;
+}
+
+.main-table-style tr a.add-app {
+	display: none;
+}
+
+.main-table-style tr.tr-hover a.launch-app,
+.main-table-style tr.tr-hover a.add-app {
+	display: inline-block;
+	color: #898989;
+}
+
+.main-table-style tr.tr-hover a.check-icon-nolaunch {
+	display: inline-block;
+	color: #898989;
+}
+.main-table-style tr a.check-icon-nolaunch {
+	display: none;
+}
+
+
+
+.overlayer
+{
+    position: absolute;
+    z-index: 83645;
+    background-color: white;
+    border-style:solid;
+    border-width: 1px;
+    border-color: #c9c9c9;
+}
+
+
+
+
+/*--
+UPLOAD STUFF
+
+*/
+.qq-uploader { position:relative; width: 100%;}
+
+.qq-upload-button {
+    display:block; /* or inline-block */
+    width: 105px; padding: 7px 0; text-align:center;
+    background:black; border-bottom:1px solid #ddd;color:#fff;font-family: verdana; font-size: 12px; font-weight: bold;
+    background-image: url(https://img1.wsimg.com/wcc/css/images/black-button-bg-all-css3.png);
+    -moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+    cursor: pointer;
+}
+.qq-upload-button-hover {background-image: url(https://img1.wsimg.com/wcc/css/images/black-button-bg-all-css3.png);
+    background-position: 0 -34px;}
+.qq-upload-button-focus {outline:1px dotted black;}
+
+.qq-upload-drop-area {
+    position:absolute; top:0; left:0; width:100%; height:100%; min-height: 70px; z-index:2;
+    background:#FF9797; text-align:center;
+}
+.qq-upload-drop-area span {
+    display:block; position:absolute; top: 50%; width:100%; margin-top:-8px; font-size:16px;
+}
+.qq-upload-drop-area-active {background:#FF7171;}
+
+.qq-upload-list {margin:15px 35px; padding:0; list-style:disc;}
+.qq-upload-list li { margin:0; padding:0; line-height:15px; font-size:12px;}
+.qq-upload-file, .qq-upload-spinner, .qq-upload-size, .qq-upload-cancel, .qq-upload-failed-text {
+    margin-right: 7px;
+}
+
+.qq-upload-file {}
+.qq-upload-spinner {display:inline-block; background: url(https://img1.wsimg.com/wcc/ajax-loader.gif); width:15px; height:15px; vertical-align:text-bottom;}
+.qq-upload-size,.qq-upload-cancel {font-size:11px;}
+
+.qq-upload-failed-text {display:none;}
+.qq-upload-fail .qq-upload-failed-text {display:inline;}
+
+
+/**
+ * autoComplete
+ */
+
+.ui-autocomplete {
+	height: 300px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+
+
+
+
+
+/** mya **/
+
+.flyouttop {
+background-color: transparent;
+background-image: url(https://img1.wsimg.com/wcc/css/images/flyouttop_middle.gif);
+background-repeat: repeat-x;
+height: 19px;
+margin-left: 19px;
+margin-right: 19px;
+padding: 0;
+width: auto;
+}
+
+td.lh19 span {
+	line-height:19px;
+}
+
+.flyouttop_left {
+background-color: transparent;
+background-image: url(https://img1.wsimg.com/wcc/css/images/flyouttop_left.gif);
+background-repeat: no-repeat;
+height: 19px;
+left: -19px;
+float: left;
+padding: 0;
+position: relative;
+width: 19px;
+}
+
+.flyouttop_right {
+background-color: transparent;
+background-image: url(https://img1.wsimg.com/wcc/css/images/flyouttop_right.gif);
+background-repeat: no-repeat;
+height: 19px;
+right: -19px;
+float: right;
+padding: 0;
+position: relative;
+width: 19px;
+}
+.flyoutside_left {
+background-color: transparent;
+background-image: url(https://img1.wsimg.com/wcc/css/images/flyoutside_left.gif);
+background-repeat: repeat-y;
+height: 100%;
+width: 15px;
+}
+
+.flyoutside_right {
+background-color: transparent;
+background-image: url(https://img1.wsimg.com/wcc/css/images/flyoutside_right.gif);
+background-repeat: repeat-y;
+height: 100%;
+width: 15px;
+}
+
+.flyoutbottom {
+background-color: transparent;
+background-image: url(https://img1.wsimg.com/wcc/css/images/flyout_bottom.gif);
+background-repeat: repeat-x;
+height: 15px;
+margin-left: 15px;
+margin-right: 15px;
+padding: 0;
+width: auto;
+}
+.flyoutbottom_left {
+background-color: transparent;
+background-image: url(https://img1.wsimg.com/wcc/css/images/flyout_bottom_left.gif);
+background-repeat: no-repeat;
+float: left;
+height: 15px;
+left: -15px;
+padding: 0;
+position: relative;
+width: 15px;
+}
+
+.flyoutbottom_right {
+background-color: transparent;
+background-image: url(https://img1.wsimg.com/wcc/css/images/flyout_bottom_right.gif);
+background-repeat: no-repeat;
+float: right;
+height: 15px;
+margin-right: -15px;
+padding: 0;
+position: relative;
+width: 15px;
+}
+.flyouttop_header {
+color:#FFFFFF;
+float:left;
+font-family:Arial;
+font-size:9pt;
+font-weight:bold;
+padding-top:2px;
+vertical-align:text-bottom;
+}
+
+
+.placeholderText { color: #a1a1a1; font-style: italic; }
+
+
+#spinnerLand {
+  background: #333;
+  color: #fff;
+  float: left;
+  width: 150px;
+  height: 150px;
+  margin: 0 20px 20px 0;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  position: absolute;
+  opacity:0.8;
+  filter:alpha(opacity=80); /* For IE8 and earlier */
+  z-index: 9999999;
+}
+
+
+
+/** tos stuf **/
+.EULATitle {
+  font-family: Arial, Verdana;
+  font-size: 14pt;
+  margin-right: 5pt;
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: bold;
+  color: #003366;
+}
+.heading1 {
+  font-family: Arial, Verdana;
+  font-size: 11pt;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #666666;
+}
+.smallTable p, .smallTable ul, .smallTable ol {
+   margin : 1px;
+}
+.heading2 {
+  font-family: Arial, Verdana;
+  font-size: 10pt;
+  margin-right: 5pt;
+  margin-bottom: 5pt;
+  font-weight: bolder;
+}
+
+/*------------------------------------------*/
+.deleteList {
+	border-top: 1px solid #b2b2b2;
+	border-left: 1px solid #b2b2b2;
+	margin-bottom: 20px;
+	width: 100%;
+}
+
+.deleteList tr td {
+	padding: 7px 0px 7px 5px;
+	border-bottom: 1px solid #b2b2b2;
+	border-right: 1px solid #b2b2b2;
+}
+/**/
+
+.deleteList tr.odd td {
+	background-color: #f5f5f5;
+}
+.deleteList div {
+	padding-left: 5px;
+	padding-right: 50px;
+	/*height: 1.1em;*/
+	font-weight:bold;
+	text-overflow:ellipsis;
+	width:260px;
+	overflow:hidden;
+}
+.deleteList TD {
+	padding-left: 5px;
+	padding-top: 5px;
+	border: 1px solid #B2B2B2;
+}
+
+.deleteList, .deleteList table {
+	border: none !important;
+	width:350px;
+	table-layout: fixed;
+}
+.deleteListNoBorder td {
+	border-top: none !important;
+	border-left: none !important;
+	border-right: none !important;
+}
+
+.deleteOverflow {
+	overflow-y: scroll;
+	overflow-x: hidden;
+	max-height:400px;
+}
+
+/**   wcc error buttons **/
+.wccerror {
+	background-image: url(/css/images/updating2.jpg);
+	background-repeat: no-repeat;
+
+	width:800px;
+	height:385px;
+	display:block;
+	font-size: 14px;
+	font-weight: bold;
+	position: relative;
+	left: 36px;
+}
+.bigText {
+    font-size: 72px;
+    font-weight: normal;
+    font-family: "Trebuchet MS";
+	color: #FFF;
+	text-align:left;
+	position:relative;
+	left: 50px;
+	top: 60px;
+	/*text-shadow: 3px 3px #343a3f;*/
+	text-shadow: 3px 3px #343a3f;
+}
+.smallText {
+    font-size: 24px;
+	color: #FFF;
+	font-family: "Trebuchet MS" ;
+	text-shadow: 3px 3px #343a3f;
+	text-align:left;
+	position:relative;
+	left: 50px;
+	top: 80px;
+	width:500px;
+}
+.error-button {
+	position:relative;
+	left: 50px;
+	top: 120px;
+	font-size:15px;
+	padding:6px 15px;
+	vertical-align:middle;
+	vertical-align:baseline;
+	min-width:50px;
+	min-height:20px;
+	cursor:pointer;
+	vertical-align: middle;
+	padding-top: 10px;
+	padding-bottom: 3px;
+
+    display: inline-block;
+    background: #D8D8D8;
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#E3E3E3),color-stop(100%,#B0B0B0));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e3e3e3',endColorstr='#b0b0b0',GradientType=0);
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    font-family: arial;
+    font-weight: bold;
+    text-decoration: none;
+    color: #666;
+    border: 1px solid #AAA;
+    -webkit-box-shadow: inset 0 1px 1px white;
+    box-shadow: inset 0 1px 1px white;
+    text-shadow: 0 1px 1px whiteSmoke;
+    line-height: 1;
+    text-align: center;
+    color: #666;
+}
+
+.error-button:hover{background:#dfdfdf;_background:#d8d8d8;background:-moz-linear-gradient(top,#ebebeb 0,#c2c2c2 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#ebebeb),color-stop(100%,#c2c2c2));background:-webkit-linear-gradient(top,#ebebeb 0,#c2c2c2 100%);background:-o-linear-gradient(top,#ebebeb 0,#c2c2c2 100%);background:-ms-linear-gradient(top,#ebebeb 0,#c2c2c2 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ebebeb',endColorstr='#c2c2c2',GradientType=0);background:linear-gradient(top,#ebebeb 0,#c2c2c2 100%);border:1px solid #cecece;_border:1px solid #aaa;-webkit-box-shadow:inset 0 1px 1px white;box-shadow:inset 0 1px 1px white;text-shadow:0 1px 1px #f5f5f5}
+
+.statusSwitch {
+	height: 35px;
+	width: 65px;
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-sprite-v3.png);
+	background-repeat: no-repeat;
+	top: 5px;
+	position: relative;
+	padding: 5px 35px 5px 30px;
+        cursor: pointer
+}
+.statusSwitch.on {
+	background-position: -730px -31px;
+}
+.statusSwitch.off {
+	background-position: -658px -31px;
+}
+
+.statusText {
+	font-weight: bold;
+	text-shadow: rgb(102, 102, 102) 1px 1px 1px;
+	position: relative;
+	left: -45px;
+	top: 4px;
+        cursor: pointer
+}
+.statusText.on {
+	color: rgb(0, 170, 0);
+	left: -35px;
+}
+
+.statusText.off {
+	color: rgb(170, 0, 0);
+	left: -50px;
+}
+
+/** new new features! **/
+
+.modal {
+	border:8px solid #adadad;
+	width:585px;
+	margin:0 auto;
+	font-family:arial,helvetica,sanserif;
+	font-weight:normal;
+	position:absolute;
+	color:#fff;
+	font-size: 12px;
+	line-height: 1;
+        z-index: 9999;
+}
+.modal .left {
+	float:left;
+}
+.modal .right {
+	float:right;
+}
+.modal .listdisc {
+	list-style:disc;
+	margin:1em 0 1em 1em;
+}
+.modal p {
+	margin-bottom:1em;
+}
+.modal_titlebar {
+	background: #45494d;
+	background: -moz-linear-gradient(top,  #45494d 0%, #010101 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#45494d), color-stop(100%,#010101));
+	background: -webkit-linear-gradient(top,  #45494d 0%,#010101 100%);
+	background: -o-linear-gradient(top,  #45494d 0%,#010101 100%);
+	background: -ms-linear-gradient(top,  #45494d 0%,#010101 100%);
+	background: linear-gradient(top,  #45494d 0%,#010101 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45494d', endColorstr='#010101',GradientType=0 );
+	font-size:30px;
+	text-align:center;
+	padding:15px 25px;
+	border-bottom: 1px solid #323232;
+	-webkit-box-shadow: 0 6px 6px -6px #000000;
+	box-shadow: 0 6px 6px -6px #000000;
+	position: relative;
+	z-index: 1;
+	zoom:1;
+	text-shadow:0 -2px 0 #000;
+}
+
+.modal_banner {
+	position:relative;
+	background:#000;
+	min-height:310px;
+	zoom:1;
+}
+.nav_arrow {
+	background:url(https://img1.wsimg.com/wcc/css/images/newFeaturesModal/feature-sprt.png) no-repeat 0 0;
+	width:47px;
+	height:54px;
+	display:block;
+	position:absolute;
+	text-indent:-99999em;
+	top:196px;
+	z-index:1;
+	cursor:pointer;
+	outline:none;
+}
+.nav_arrow:active{
+	margin-top:2px;
+}
+.left_nav_arrow {
+	background-position:0 0;
+	left:-28px;
+}
+.right_nav_arrow {
+	background-position:-53px 0;
+	right:-28px;
+}
+.left_nav_arrow:hover {
+	background-position:-106px 0;
+}
+.right_nav_arrow:hover {
+	background-position:-159px 0;
+}
+.left_nav_arrow:active {
+	background-position:-212px 0;
+}
+.right_nav_arrow:active {
+	background-position:-265px 0;
+}
+.modal_description {
+	background: #3b3b3b;
+	background: #3b3b3b;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzNiM2IzYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM0ZjRmNGYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top,  #3b3b3b 0%, #4f4f4f 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3b3b3b), color-stop(100%,#4f4f4f));
+    background: -webkit-linear-gradient(top,  #3b3b3b 0%,#4f4f4f 100%);
+    background: -o-linear-gradient(top,  #3b3b3b 0%,#4f4f4f 100%);
+    background: -ms-linear-gradient(top,  #3b3b3b 0%,#4f4f4f 100%);
+    background: linear-gradient(top,  #3b3b3b 0%,#4f4f4f 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b3b3b', endColorstr='#4f4f4f',GradientType=0 );
+    padding:35px 30px 20px;
+	zoom:1;
+	border-top: 1px solid #5d5d5d;
+	-webkit-box-shadow: 0 -6px 6px -6px #000000;
+	box-shadow: 0 -6px 6px -6px #000000;
+	position: relative;
+	z-index: 1;
+	line-height:16px;
+	font-size:12px;
+}
+
+.modal_close {
+	position:absolute;
+	top:10px;
+	right:10px;
+	background-image: url(https://img1.wsimg.com/wcc/css/images/newFeaturesModal/eem-sprite.png);
+    background-repeat: no-repeat;
+    background-position: -65px -63px;
+    width: 15px;
+    height: 15px;
+	text-indent:-99999em;
+	z-index: 2;
+    display: block;
+}
+.page_dots {
+	position:relative;
+	height:0;
+	z-index: 2;
+}
+.page_dots ul{
+	text-align:center;
+	height:12px;
+	width:100%;
+	position:absolute;
+	left:0;
+	bottom:-20px;
+}
+.page_dots li{
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	margin:0 3px;
+}
+.page_dots a {
+	background-image:url(https://img1.wsimg.com/wcc/css/images/newFeaturesModal/feature-sprt.png);
+	display:block;
+	width:12px;
+	height:12px;
+	text-indent:-99999em;
+	cursor:pointer;
+	outline:none;
+}
+.page_dots .page_dot_inactive {
+	background-position:-20px -55px;
+}
+.page_dots .page_dot_active,
+.page_dots .page_dot_inactive:hover{
+	background-position:0 -55px;
+}
+.modal_buttonpane {
+	background:#4f4f4f;
+	padding:0 30px 20px;
+}
+.modal_buttonpane a,
+.modal_buttonpane button,
+.modal_buttonpane input[type=text]{
+	margin-left:7px;
+}
+.modal_buttonpane a:first-child,
+.modal_buttonpane button:first-child,
+.modal_buttonpane input[type=text]:first-child{
+	margin-left:0;
+}
+.modal_buttonpane input[type=checkbox] {
+	vertical-align:-2px;
+	margin:0 2px 0 0;
+	padding:0;
+}
+
+.button_center {
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.g-btn-sm {
+    cursor: pointer;
+    font-size: 12px;
+    min-width: 40px;
+    padding: 4px 10px;
+    vertical-align: baseline;
+}
+
+.g-btn-sec,
+.g-btn-sec:link,
+.g-btn-sec:visited,
+.g-btn-sec-inactive  {
+    background: #e3e3e3;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwcHgiIHN0b3AtY29sb3I9IiNlM2UzZTMiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjYjBiMGIwIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+    background: -moz-linear-gradient(top,  #e3e3e3 0px, #b0b0b0 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0px,#e3e3e3), color-stop(100%,#b0b0b0));
+    background: -webkit-linear-gradient(top,  #e3e3e3 0px,#b0b0b0 100%);
+    background: -o-linear-gradient(top,  #e3e3e3 0px,#b0b0b0 100%);
+    background: -ms-linear-gradient(top,  #e3e3e3 0px,#b0b0b0 100%);
+    background: linear-gradient(top,  #e3e3e3 0px,#b0b0b0 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e3e3e3', endColorstr='#b0b0b0',GradientType=0 );
+    border: 1px solid #AAAAAA;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 1px 1px white inset;
+    color: #666666;
+    display: inline-block;
+    font-family: arial;
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 1px 1px #F5F5F5;
+}
+
+.g-btn-sec-active:hover {
+    color: #666666;
+}
+
+.g-btn-sec-inactive, a.g-btn-sec-inactive {
+    color: #666666 !important;
+    cursor: default;
+    opacity: 0.3;
+    text-decoration: none !important;
+}
+
+:root .g-btn-sec,
+:root .modal_description {
+    filter: none \0/IE9;
+}
+.featureContent{ padding: 20px}
+
+
+.resizableTD
+{
+    overflow: hidden;
+}
+
+.resizeAlert
+{
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: absolute;
+    word-break:break-all;
+    margin-top: -10px;
+}
+
+
+.resizePlanName
+{
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+    position: absolute;
+    word-break:break-all;
+    margin-top: -10px;
+}
+
+.resizeQuota
+{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    word-break:break-all;
+    margin-top: -10px;
+}
+
+.emailQuota
+{
+    width: 160px;
+}
+
+.theGripper
+{
+    background-image: url(https://img1.wsimg.com/wcc/css/images/ui-icons_222222_256x240.png);/*{iconsContent}*/
+    background-position: 0px -224px;
+}
+
+.actionButton ,
+.actionButton a,
+.actionButton a:link,
+.actionButton a:visited,
+.actionButton a:hover {
+	color:black;
+	text-decoration: none !important;
+	position: relative;
+    top:-2px;
+}
+.actionButton DIV {
+	color:black;
+	text-align:center;
+	position: relative;
+	top: 26px;
+	font-family: arial, verdana, helvetica, sans-serif;
+	font-size: 10px;
+	font-style: normal;
+	font-weight: normal;
+	white-space: nowrap;
+}
+
+.imp-button{
+    padding: 15px 0;
+    margin-bottom: 20px;
+    font-size: 23px;
+    width: 159px;
+}
+
+#tourLine1
+{
+    font-size: 16px;
+    font-weight: bold;
+}
+#tourLine2
+{
+    font-size: 12px;
+}
+
+#tourButtonHolder
+{
+    left: 200px;
+    position: relative;
+}
+
+a.main-action-fos-button,
+a.main-action-fos-button:link,
+a.main-action-fos-button:visited,
+a.main-action-fos-button-inactive {
+	display: inline-block;
+	background: #7fb133; /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(153,202,75,1) 0%, rgba(102,153,28,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(153,202,75,1)), color-stop(100%,rgba(102,153,28,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(153,202,75,1) 0%,rgba(102,153,28,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(153,202,75,1) 0%,rgba(102,153,28,1) 100%); /* Opera11.10+ */
+	background: -ms-linear-gradient(top, rgba(153,202,75,1) 0%,rgba(102,153,28,1) 100%); /* IE10+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99ca4b', endColorstr='#66991c',GradientType=0 ); /* IE6-9 */
+	background: linear-gradient(top, rgba(153,202,75,1) 0%,rgba(102,153,28,1) 100%); /* W3C */
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	font-family: arial;
+
+	text-decoration: none;
+	color: #fff;
+	border: 1px solid #668f28;
+	-webkit-box-shadow: inset 0 1px 1px #cde7a4;
+	box-shadow: inset 0 1px 1px #cde7a4;
+	text-shadow:  0 -1px 1px #5a8a11;
+	line-height: 1;
+    text-align: center;
+}
+
+
+a.main-action-fos-button:hover {
+	background: #a3d061; /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(189,224,134,1) 0%, rgba(133,188,52,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(189,224,134,1)), color-stop(100%,rgba(133,188,52,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(189,224,134,1) 0%,rgba(133,188,52,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(189,224,134,1) 0%,rgba(133,188,52,1) 100%); /* Opera11.10+ */
+	background: -ms-linear-gradient(top, rgba(189,224,134,1) 0%,rgba(133,188,52,1) 100%); /* IE10+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bde086', endColorstr='#85bc34',GradientType=0 ); /* IE6-9 */
+	background: linear-gradient(top, rgba(189,224,134,1) 0%,rgba(133,188,52,1) 100%); /* W3C */
+	border: 1px solid #9abf64;
+	-webkit-box-shadow: inset 0 1px 1px #d5ebb1;
+	box-shadow: inset 0 1px 1px #d5ebb1;
+    text-shadow:  0 -1px 1px #7fb134;
+}
+
+a.main-action-fos-button:active {
+	background: #7db032; /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(135,185,64,1) 0%, rgba(114,168,36,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(135,185,64,1)), color-stop(100%,rgba(114,168,36,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(135,185,64,1) 0%,rgba(114,168,36,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(135,185,64,1) 0%,rgba(114,168,36,1) 100%); /* Opera11.10+ */
+	background: -ms-linear-gradient(top, rgba(135,185,64,1) 0%,rgba(114,168,36,1) 100%); /* IE10+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87b940', endColorstr='#72a824',GradientType=0 ); /* IE6-9 */
+	background: linear-gradient(top, rgba(135,185,64,1) 0%,rgba(114,168,36,1) 100%); /* W3C */
+	border: 1px solid #417c0c;
+	-webkit-box-shadow: inset 0 0 3px #376e06;
+	box-shadow: inset 0 0 3px #376e06;
+    text-shadow:  0 -1px 1px #56870d;
+}
+
+a.main-action-fos-button-inactive {
+    opacity:0.3;
+    filter:alpha(opacity=30);
+}
+
+a.main-action-fos-button-inactive span,
+a.main-action-fos-button span {
+    font-size: 11px;
+    color: #e5ffbc;
+    font-weight: normal;
+    display: block;
+    margin-top: 3px;
+}
+
+:root a.main-action-fos-button,
+:root a.main-action-fos-button:hover,
+:root a.main-action-fos-button:active {
+	filter: none \0/IE9; /* IE 9 border-radius/gradient problem fixer */
+}
+
+.output-popin ul {
+	margin-bottom: 20px !important;
+}
+
+.output-popin li {
+	margin-bottom:5px !important;
+}
+
+
+.printData {
+	white-space:nowrap;
+}
+
+
+
+li.print, li.export {
+	/*display:none;*/
+}
+
+#viewByPlans li, #viewByUnused li, #viewByForwarding li {
+	max-height: 40px;
+	word-wrap: break-word;
+	overflow: visible;
+}
+#viewByPlans a, #viewByUnused a, #viewByForwarding a {
+	max-height: 40px;
+	word-wrap: break-word;
+	overflow: visible;
+	min-height: 17px;
+	height: auto;
+	padding-top:3px;
+	padding-bottom:4px;
+}
+#viewByPlans div, #viewByUnused div, #viewByForwarding div {
+	max-height: 40px;
+	min-height: 17px;
+	height: auto;
+	overflow:hidden
+}
+
+
+
+.emailClickToEdit
+{
+    text-decoration: none !important;
+    color: black !important;
+}
+
+.emailClickToEdit:hover
+{
+    color: blue !important;
+    text-decoration: underline !important;
+}
+
+
+.clickToEdit
+{
+    text-decoration: none !important;
+    color: black !important;
+}
+
+.clickToEdit:hover
+{
+    color: blue !important;
+    text-decoration: underline !important;
+}
+
+.attributesprite { background: url('https://img1.wsimg.com/wcc/css/images/attribute_sprite.png') no-repeat top left; width: 18px }
+.attributesprite.icon_remove { background-position: 0px 0px; width: 16px; height: 16px;  }
+.attributesprite.icon_send_copy_to { background-position: 0px -26px; width: 16px; height: 18px;  }
+.attributesprite.icon_catchall { background-position: 0px -54px; width: 17px; height: 16px;  }
+.attributesprite.blank { background-position: 0px -80px; width: 16px; height: 18px;  }
+.attributesprite.icon_auto_reply_on { background-position: 0px -108px; width: 19px; height: 11px;  }
+
+
+
+
+/*-------------------------------------
+            Mobile Modal
+--------------------------------------*/
+
+.mobile-popin-container {
+	border: 8px solid #adadad;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px ;
+	border-radius: 7px;
+	width: 585px;
+	height: 525px;
+	background-image: url(https://img1.wsimg.com/wcc/css/images/mobile-popin-sprite2.png);
+	background-position: 0 0;
+    font-family: Arial,Verdana,Helvetica,sans-serif;
+    font-size: 12px;
+}
+
+.mobile-popin-top {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/email-logo.png);
+	background-position: left 20px;
+	background-repeat: no-repeat;
+	position: relative;
+	padding: 20px 0 25px 80px;
+	margin: 0px 0 0 20px;
+	color: #fff;
+	font-size: 15px;
+}
+
+.mobile-popin-top h3 {
+	width: 417px;
+	height: 34px;
+	background-image: url(https://img1.wsimg.com/wcc/css/images/mobile-popin-sprite.png);
+	background-repeat: no-repeat;
+	background-position: -8px -665px;
+	margin: 3px 0;
+}
+
+a.close-mobile-popin,
+a.close-mobile-popin:link,
+a.close-mobile-popin:visited {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/mobile-popin-sprite.png);
+	background-position: -618px -584px;
+	position: absolute;
+	width: 14px;
+	height: 14px;
+	top: 5px;
+	right: 5px;
+}
+
+.app-stores-container {
+	width: 627px;
+	margin: 306px auto 20px 40px;
+}
+
+.app-stores-containerIE {
+	width: 627px;
+	margin: 306px auto 20px;
+}
+
+.app-stores-container li a span,
+.app-stores-containerIE li a span,
+.mobile-popin-top h3 span,
+a.close-mobile-popin span {
+	display: none;
+}
+
+.app-stores-container li,
+.app-stores-containerIE li {
+	float: left;
+}
+
+.app-stores-container li.android-market,
+.app-stores-containerIE li.android-market {
+	margin: 0 20px;
+}
+
+.app-stores-container li a,
+.app-stores-containerIE li a {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/mobile-popin-sprite.png);
+	height: 79px;
+	display: inline-block;
+}
+
+.apple-app-store a {
+	width: 194px;
+	background-position: -6px -581px;
+}
+
+.android-market a {
+	width: 199px;
+	background-position: -206px -581px;
+}
+
+.blackberry-appworld a {
+	width: 194px;
+	background-position: -414px -581px;
+}
+
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float: right;
+}
+
+.radio-check-input {
+    width: 13px !important;
+    height: 13px !important;
+    /*vertical-align: bottom;*/
+	vertical-align: middle !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.mobile-popin-bottom {
+	padding: 0 40px;
+	color: #fff;
+	text-align: center;
+}
+
+.mobile-popin-bottom a,
+.mobile-popin-bottom a:link,
+.mobile-popin-bottom a:visited {
+	color: #b5d5fb;
+}
+
+/*-------------------------------------
+         End Mobile Modal
+--------------------------------------*/
+.debugDiv {
+	width:715px;
+font-family: arial, helvetica, sanserif;
+font-size: 11px;
+}
+.debugTable td, .debugTable th {
+	border: 1px solid #ccc;
+	padding: 2px 1px 2px 5px;
+}
+.debugTable tr {
+	height:15px;
+	width:100%;
+}
+.debugTable {
+	position:relative;
+	padding-left: 10px;
+	width:100%;
+}
+.debugTable caption {
+	text-shadow: 2px 2px #fff;
+	font-style: italic;
+	font-weight: bold;
+	font-size: 200%;
+}
+
+
+.mxRecordsMoreInfo
+{
+        cursor:pointer; position: relative; top: -5px; color: #707070; left: 10px;
+}
+
+.mxRecordsMoreInfo:hover
+{
+    color: blue;
+	text-decoration: underline;
+        cursor:pointer; position: relative; top: -5px; left: 10px;
+}
+
+
+
+/*--
+componentEasySetup stuff
+-----*/
+.componentEasySetup
+{
+	width: 350px;
+	margin: 10px;
+	background-color: #EFEFEF;
+	border: 1px solid;
+	border-color: #CECECE;
+	margin-left: 50px;
+}
+
+
+.componentEasySetup th{
+	background-color: #9C9C9C;
+	text-align: left;
+	padding-top: 6px;
+	padding-left: 5px;
+	font-weight: bold;
+}
+
+.componentEasySetup tr{
+	height: 25px;
+}
+
+.componentEasySetup td{
+	padding-top: 5px;
+	padding-left: 5px;
+}
+
+
+.componentEasySetupMail
+{
+	width: 350px;
+	margin: 10px;
+	background-color: #EFEFEF;
+	border: 1px solid;
+	border-color: #CECECE;
+}
+
+.componentEasySetupMail th{
+	background-color: #9C9C9C;
+	text-align: left;
+	padding-top: 6px;
+	padding-left: 5px;
+	font-weight: bold;
+}
+
+.componentEasySetupMail tr{
+	height: 25px;
+}
+
+.componentEasySetupMail td{
+	padding-top: 5px;
+	padding-left: 5px;
+}
+
+.componentEasySetupInfo
+{
+	border-left: 1px solid;
+	border-color: #CECECE;
+	color: black; /** #3163CE; **/
+	font-weight: bold;
+}
+
+
+.componentEasySetupButton {
+	width: 410px;
+	height: 50px;
+	border: 1px solid;
+	border-color: grey;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+
+.componentEasySetupSelected {
+	width: 410px;
+	height: 50px;
+	border: 2px solid;
+	border-color: #319C00;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+
+
+.componentEasySetupButton:hover{
+	border: 2px solid;
+	border-color: #319C00;
+	margin-bottom: 8px;
+	cursor: pointer;
+}
+
+.componentEasySetupMobileButtonSelected{
+	border: 2px solid;
+	border-color: green;
+	width: 180px;
+	height: 50px;
+	margin-top: 15px;
+	margin-bottom: 30px;
+	cursor: pointer;
+}
+
+
+.componentEasySetupMobileButton {
+	width: 180px;
+	height: 50px;
+	border: 1px solid;
+	border-color: grey;
+	margin-bottom: 10px;
+	cursor: pointer;
+	margin-top: 15px;
+	margin-bottom: 30px;
+}
+
+.componentEasySetupMobileButton:hover{
+	border: 2px solid;
+	border-color: green;
+	margin-bottom: 8px;
+}
+
+.componentEasySetupButtonHolder {
+	position: relative;
+	top: -15px;
+	left: 80px;
+	font-weight: bold;
+}
+
+.componentEasySetupButtonHolder a {
+	text-decoration: none;
+}
+
+.componentEasySetupMobileActionArea{
+	height: 30px;
+	margin-top: -10px;
+}
+
+#componentEasySetupDiv
+{
+	font-size: 12px;
+}
+
+#componentEasySetupDiv ol
+{
+	list-style-type: decimal;
+	margin: 18px;
+
+}
+
+#componentEasySetupDiv ul
+{
+	list-style-type:disc;
+	color: black;
+	margin-top: 5px
+}
+
+
+#componentEasySetupDiv li
+{
+	margin-top: 15px;
+}
+
+#componentEasySetupDiv h3
+{
+	font-size: 20px;
+}
+
+#componentEasySetupDiv h4
+{
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.componentEasySetupDivAccount
+{
+	color: #737373;
+	font-weight: bold
+}
+
+#componentEasySetupDiv .cancel-button
+{
+	margin-right: 10px;
+}
+
+#iosTable
+{
+	margin-left: 50px;
+}
+
+#iosTable td
+{
+	padding: 2px;
+}
+
+.wordwrap {
+   white-space: pre-wrap;      /* CSS3 */
+   white-space: -moz-pre-wrap; /* Firefox */
+   white-space: -pre-wrap;     /* Opera <7 */
+   white-space: -o-pre-wrap;   /* Opera 7 */
+   word-wrap: break-word;      /* IE */
+}
+
+.componentEasySetupDivSized
+{
+	height: auto !important;
+
+}
+
+.componentEasySetupLongContent
+{
+	height: 290px;
+overflow-y: scroll;
+}
+
+easysetup .sprite { background: url('https://img1.wsimg.com/wcc/css/images/easysetupsprite.png') no-repeat top left;  }
+easysetup .sprite.alert_help_icon { background-position: 0px 0px; width: 24px; height: 23px;  }
+
+easysetup .sprite.icon_dashboard_ad_setup_email { background-position: 0px -213px; width: 70px; height: 70px;  }
+easysetup .sprite.icon_help { background-position: 0px -293px; width: 10px; height: 10px;  }
+
+easysetup .sprite.icon_sm_print { background-position: 0px -452px; width: 16px; height: 16px;  }
+
+
+.easysetup_sprite_icon_dashboard_ad_setup_email
+{
+	background: url('https://img1.wsimg.com/wcc/css/images/easysetupsprite.png') no-repeat top left;
+	 background-position: 0px -213px; width: 70px; height: 70px;
+	cursor: pointer;
+	float: left;
+}
+
+.easysetup_sprite_container_setup_full:hover
+{
+	background: url('https://img1.wsimg.com/wcc/css/images/easysetupsprite.png') no-repeat top left;
+	background-position: 0px -33px; width: 508px; height: 80px;
+}
+.easysetup_sprite_container_setup_full
+{
+	background: url('https://img1.wsimg.com/wcc/css/images/easysetupsprite.png') no-repeat top left;
+	background-position: 0px -123px; width: 508px; height: 80px;
+	cursor: pointer;
+}
+.easysetup_sprite_icon_setup_desktop
+{
+	background: url('https://img1.wsimg.com/wcc/css/images/easysetupsprite.png') no-repeat top left;
+	background-position: 0px -313px; width: 48px; height: 48px;
+	position: relative;
+	top: 15px;
+	left: 20px;
+}
+.easysetup_sprite_icon_setup_mobile
+{
+	background: url('https://img1.wsimg.com/wcc/css/images/easysetupsprite.png') no-repeat top left;
+	background-position: 0px -371px; width: 48px; height: 48px;
+	position: relative;
+	top: 15px;
+	left: 20px;
+}
+
+.easysetup_sprite_icon_setup_print
+{
+	background: url('https://img1.wsimg.com/wcc/css/images/easysetupsprite.png') no-repeat top left;
+	background-position: 0px -452px; width: 16px; height: 16px;
+	position: absolute;
+	right: 20px;
+	cursor: pointer;
+}
+
+.easysetup_sprite_icon_setup_email
+{
+	background: url('https://img1.wsimg.com/wcc/css/images/easysetupsprite.png') no-repeat top left;
+	background-position: 0px -429px; width: 20px; height: 16px;
+	position: absolute;
+	right: 50px;
+	top: 53px;
+	cursor: pointer;
+}
+
+.easySetupButtons
+{
+	clear: both;
+	height: 10px;
+	text-align: center;
+	padding-top: 20px
+}
+
+.easySetupMail
+{
+	z-index: 14014;
+	position: absolute;
+	top: 30px;
+	border: 1px;
+	border-color: black;
+	border-style: solid;
+	width: 500px;
+	background-color: white;
+	height: 405px;
+}
+
+#componentEasySetupSendInstructionsContents
+{
+	width: 437px;
+	border-color: black;
+	border-style: solid;
+	border-width: 1px;
+	margin-left: 20px;
+	height: 190px;
+	overflow-y: scroll;
+	padding: 10px;
+
+}
+
+/***
+Fix for safari scrollbars
+*/
+/**
+::-webkit-scrollbar {
+	-webkit-appearance: none;
+	width: 7px;
+}
+::-webkit-scrollbar-thumb {
+	border-radius: 4px;
+	background-color: rgba(0,0,0,.5);
+	-webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+**/
+
+td a.email-icon , td a.files-icon , td a.calendar-icon {
+	margin-left: 15px !important;
+	margin-right: 15px !important;
+}
+
+.sf-tipper-ptr-right {
+	background-position: -5px -32px !important;
+}
+
+/*----------------------------------------------------------------
+        
+         Integrated Apps Header GD Styles
+        
+-----------------------------------------------------------------*/
+
+/*-------------------------------------
+		General Header Styles
+--------------------------------------*/
+
+.logo {
+	background-image: url(https://img1.wsimg.com/wcc/css/images/ecc-overhaul-sprite-v3.png);
+	background-position: -499px -30px;
+	background-repeat: no-repeat;
+	width: 63px;
+	margin: 0 23px 0 15px;
+	display: inline;
+}
+
+
+.new-features li a:hover,
+.new-features li:hover,
+.new-features li.sfhover {
+	background-color: #E9F2D1;
+}
+
+/*-------------------------------------
+	  End General Header Styles
+--------------------------------------*/
+
+/*-------------------------------------
+			Tabs Styles
+--------------------------------------*/
+
+.tabs-menu li {
+	background: url(https://img1.wsimg.com/wcc/css/images/tabs.gif) 100% 0px;
+	border-bottom: 1px solid #5A9401;
+}
+
+.tabs-menu li.activelink {
+	background: url(https://img1.wsimg.com/wcc/css/images/tabs.gif) 100% -200px; 
+	border-bottom: 1px solid #ffffff; /*-- This is to make it look active --*/
+}
+
+.tabs-menu li a,
+.tabs-menu li a:link,
+.tabs-menu li a:visited {
+	background: url(https://img1.wsimg.com/wcc/css/images/tabs.gif) no-repeat 0 0px; 
+	color: #000;
+}
+
+.tabs-menu li.activelink a, 
+.tabs-menu li.activelink a:link, 
+.tabs-menu li.activelink a:visited {
+	background: url(https://img1.wsimg.com/wcc/css/images/tabs.gif) 0 -200px; 
+	border-bottom: 1px solid #ffffff; /*-- This is to make it look active --*/
+}
+
+.tabs-menu ul li:hover a,
+.tabs-menu ul li:hover a:link,
+.tabs-menu ul li:hover a:visited,
+.tabs-menu ul li.sfhover a,
+.tabs-menu ul li.sfhover a:link,
+.tabs-menu ul li.sfhover a:visited {
+	color: #000000;
+}
+
+/*-------------------------------------
+		    End Tabs Styles
+--------------------------------------*/
+
+.table-top-sear-box input.search-button {
+	background-position: -584px -61px;
+}
+
+.view-by-list li a:hover,
+.view-by-list li ul a.active,
+.ui-datepicker-current-day a {
+	background-color: #E4EFC7;
+}
+
+.ui-datepicker-today a,
+.ui-datepicker-calendar a.ui-state-hover {
+	background-color: #C1DD30;
+}
+
+.all-accounts-to-switch li:hover,
+.all-accounts-to-switch li.selected,
+.accounts-to-switch li:hover,
+.accounts-to-switch li.selected {
+	/*background-color: #E4EFC7 !important;*/ /*- removed per Josh Berk*/
+}
+
+
+
+
+.qtip .qtip-content{
+   padding: 10px;
+   overflow: hidden;
+}
+   
+.qtip .qtip-content .qtip-title,
+.qtip-cream .qtip-content .qtip-title{
+  background-color: #F0DE7D;
+}
+
+.qtip-light .qtip-content .qtip-title{
+  background-color: #f1f1f1;
+}
+
+.qtip-dark .qtip-content .qtip-title{
+  background-color: #404040;
+}
+
+.qtip-red .qtip-content .qtip-title{
+  background-color: #F28279;
+}
+
+.qtip-green .qtip-content .qtip-title{
+  background-color: #B9DB8C;
+}
+
+/*
+ * jQuery UI CSS Framework 1.8.14
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Theming/API
+ */
+
+/* Layout helpers
+----------------------------------*/
+.ui-helper-hidden { display: none; }
+.ui-helper-hidden-accessible { position: absolute !important; clip: rect(1px 1px 1px 1px); clip: rect(1px,1px,1px,1px); }
+.ui-helper-reset { margin: 0; padding: 0; border: 0; outline: 0; line-height: 1.3; text-decoration: none; font-size: 100%; list-style: none; }
+.ui-helper-clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+
+/* required comment for clearfix to work in Opera \*/
+
+/* end clearfix */
+.ui-helper-zfix { width: 100%; height: 100%; top: 0; left: 0; position: absolute; opacity: 0; filter:Alpha(Opacity=0); }
+
+
+/* Interaction Cues
+----------------------------------*/
+.ui-state-disabled { cursor: default !important; }
+
+
+
+/* Misc visuals
+----------------------------------*/
+
+/* Overlays */
+.ui-widget-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+/*
+ * jQuery UI Accordion 1.8.14
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Accordion#theming
+ */
+/* IE/Win - Fix animation bug - #4615 */
+.ui-accordion { width: 100%; }
+.ui-accordion .ui-accordion-header { cursor: pointer; position: relative; margin-top: 1px; zoom: 1; }
+.ui-accordion .ui-accordion-li-fix { display: inline; }
+.ui-accordion .ui-accordion-header-active { border-bottom: 0 !important; }
+.ui-accordion .ui-accordion-header a { display: block; font-size: 1em; padding: .5em .5em .5em .7em; }
+.ui-accordion-icons .ui-accordion-header a { padding-left: 2.2em; }
+.ui-accordion .ui-accordion-header .ui-icon { position: absolute; left: .5em; top: 50%; margin-top: -8px; }
+.ui-accordion .ui-accordion-content { padding: 1em 2.2em; border-top: 0; margin-top: -2px; position: relative; top: 1px; margin-bottom: 2px; overflow: auto; display: none; zoom: 1; }
+.ui-accordion .ui-accordion-content-active { display: block; }
+/*
+ * jQuery UI Autocomplete 1.8.17
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Autocomplete#theming
+ */
+.ui-autocomplete { position: absolute; cursor: default; max-height: 250px;
+		overflow-y: auto;
+		/* prevent horizontal scrollbar */
+		overflow-x: hidden;
+		/* add padding to account for vertical scrollbar */
+		padding-right: 20px;}	
+
+.ui-autocomplete { border: 1px solid #aaaaaa/*{borderColorContent}*/; background: #ffffff; color: #222222/*{fcContent}*/; }
+
+
+/* workarounds */
+* html .ui-autocomplete { width:1px; } /* without this, the menu expands to 100% in IE6 */
+
+/*
+ * jQuery UI Menu 1.8.17
+ *
+ * Copyright 2010, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Menu#theming
+ */
+.ui-menu {
+	list-style:none;
+	padding: 2px;
+	margin: 0;
+	display:block;
+	float: left;
+}
+.ui-menu .ui-menu {
+	margin-top: -3px;
+}
+.ui-menu .ui-menu-item {
+	margin:0;
+	padding: 0;
+	zoom: 1;
+	float: left;
+	clear: left;
+	width: 100%;
+}
+.ui-menu .ui-menu-item a {
+	text-decoration:none;
+	display:block;
+	padding:.2em .4em;
+	line-height:1.5;
+	zoom:1;
+}
+.ui-menu .ui-menu-item a.ui-state-hover,
+.ui-menu .ui-menu-item a.ui-state-active {
+	font-weight: normal;
+	margin: -1px;
+}
+/*
+ * jQuery UI Button 1.8.14
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Button#theming
+ */
+.ui-button { display: inline-block; position: relative; padding: 0; margin-right: .1em; text-decoration: none !important; cursor: pointer; text-align: center; zoom: 1; overflow: visible; } /* the overflow property removes extra width in IE */
+.ui-button-icon-only { width: 2.2em; } /* to make room for the icon, a width needs to be set here */
+button.ui-button-icon-only { width: 2.4em; } /* button elements seem to need a little more width */
+.ui-button-icons-only { width: 3.4em; } 
+button.ui-button-icons-only { width: 3.7em; } 
+
+/*button text element */
+.ui-button .ui-button-text { display: block; line-height: 1.4;  }
+.ui-button-text-only .ui-button-text { padding: .4em 1em; }
+.ui-button-icon-only .ui-button-text, .ui-button-icons-only .ui-button-text { padding: .4em; text-indent: -9999999px; }
+.ui-button-text-icon-primary .ui-button-text, .ui-button-text-icons .ui-button-text { padding: .4em 1em .4em 2.1em; }
+.ui-button-text-icon-secondary .ui-button-text, .ui-button-text-icons .ui-button-text { padding: .4em 2.1em .4em 1em; }
+.ui-button-text-icons .ui-button-text { padding-left: 2.1em; padding-right: 2.1em; }
+/* no icon support for input elements, provide padding by default */
+input.ui-button { padding: .4em 1em; }
+
+/*button icon element(s) */
+.ui-button-icon-only .ui-icon, .ui-button-text-icon-primary .ui-icon, .ui-button-text-icon-secondary .ui-icon, .ui-button-text-icons .ui-icon, .ui-button-icons-only .ui-icon { position: absolute; top: 50%; margin-top: -8px; }
+.ui-button-icon-only .ui-icon { left: 50%; margin-left: -8px; }
+.ui-button-text-icon-primary .ui-button-icon-primary, .ui-button-text-icons .ui-button-icon-primary, .ui-button-icons-only .ui-button-icon-primary { left: .5em; }
+.ui-button-text-icon-secondary .ui-button-icon-secondary, .ui-button-text-icons .ui-button-icon-secondary, .ui-button-icons-only .ui-button-icon-secondary { right: .5em; }
+.ui-button-text-icons .ui-button-icon-secondary, .ui-button-icons-only .ui-button-icon-secondary { right: .5em; }
+
+/*button sets*/
+.ui-buttonset { margin-right: 7px; }
+.ui-buttonset .ui-button { margin-left: 0; margin-right: -.3em; }
+
+/* workarounds */
+button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra padding in Firefox */
+/*
+ * jQuery UI Datepicker 1.8.14
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Datepicker#theming
+ */
+.ui-datepicker { display: none; }
+.ui-datepicker .ui-datepicker-header { position:relative; }
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next { position:absolute; top: 2px; }
+
+.ui-datepicker .ui-datepicker-prev { left:2px; }
+.ui-datepicker .ui-datepicker-next { right:2px; }
+.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span { }
+.ui-datepicker .ui-datepicker-title select { font-size:1em; margin:1px 0; }
+.ui-datepicker select.ui-datepicker-month-year {width: 100%;}
+.ui-datepicker select.ui-datepicker-month, 
+.ui-datepicker select.ui-datepicker-year { width: 49%;}
+.ui-datepicker table {width: 100%; font-size: .9em; border-collapse: collapse; margin:0 0 .4em; }
+.ui-datepicker th {text-align: center; border: 0;  }
+.ui-datepicker td { border: 0; }
+.ui-datepicker td span, .ui-datepicker td a { display: block; text-decoration: none; }
+.ui-datepicker .ui-datepicker-buttonpane { background-image: none; border-left: 0; border-right: 0; border-bottom: 0; }
+.ui-datepicker .ui-datepicker-buttonpane button { float: right; cursor: pointer; width:auto; overflow:visible; }
+.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current { float:left; }
+
+/* with multiple calendars */
+.ui-datepicker.ui-datepicker-multi { width:auto; }
+.ui-datepicker-multi .ui-datepicker-group { float:left; }
+.ui-datepicker-multi .ui-datepicker-group table { width:95%; margin:0 auto .4em; }
+.ui-datepicker-multi-2 .ui-datepicker-group { width:50%; }
+.ui-datepicker-multi-3 .ui-datepicker-group { width:33.3%; }
+.ui-datepicker-multi-4 .ui-datepicker-group { width:25%; }
+.ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header { border-left-width:0; }
+.ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header { border-left-width:0; }
+.ui-datepicker-multi .ui-datepicker-buttonpane { clear:left; }
+.ui-datepicker-row-break { clear:both; width:100%; font-size:0em; }
+
+/* RTL support */
+.ui-datepicker-rtl { direction: rtl; }
+.ui-datepicker-rtl .ui-datepicker-prev { right: 2px; left: auto; }
+.ui-datepicker-rtl .ui-datepicker-next { left: 2px; right: auto; }
+.ui-datepicker-rtl .ui-datepicker-prev:hover { right: 1px; left: auto; }
+.ui-datepicker-rtl .ui-datepicker-next:hover { left: 1px; right: auto; }
+.ui-datepicker-rtl .ui-datepicker-buttonpane { clear:right; }
+.ui-datepicker-rtl .ui-datepicker-buttonpane button { float: left; }
+.ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current { float:right; }
+.ui-datepicker-rtl .ui-datepicker-group { float:right; }
+.ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header { border-right-width:0; border-left-width:1px; }
+.ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header { border-right-width:0; border-left-width:1px; }
+
+/* IE6 IFRAME FIX (taken from datepicker 1.5.3 */
+.ui-datepicker-cover {
+    display: none; /*sorry for IE5*/
+    display/**/: block; /*sorry for IE5*/
+    position: absolute; /*must have*/
+    z-index: -1; /*must have*/
+    filter: mask(); /*must have*/
+    top: -4px; /*must have*/
+    left: -4px; /*must have*/
+    width: 200px; /*must have*/
+    height: 200px; /*must have*/
+}/*
+ * jQuery UI Dialog 1.8.14
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Dialog#theming
+ */
+.ui-dialog { position: absolute;}
+.ui-dialog .ui-dialog-titlebar {position: relative;  }
+.ui-dialog .ui-dialog-titlebar-close:hover, .ui-dialog .ui-dialog-titlebar-close:focus { padding: 0; }
+.ui-dialog .ui-dialog-buttonpane { text-align: left; border-width: 1px 0 0 0; background-image: none; margin: .5em 0 0 0; padding: .3em 1em .5em .4em; }
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset { float: right; }
+.ui-dialog .ui-dialog-buttonpane button { margin: .5em .4em .5em 0; cursor: pointer; }
+.ui-dialog .ui-resizable-se { width: 14px; height: 14px; right: 3px; bottom: 3px; }
+.ui-draggable .ui-dialog-titlebar { cursor: move; }
+/*
+ * jQuery UI Progressbar 1.8.14
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Progressbar#theming
+ */
+.ui-progressbar { text-align: left; }
+.ui-progressbar .ui-progressbar-value {margin: -1px; height:100%; }/*
+ * jQuery UI Resizable 1.8.14
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Resizable#theming
+ */
+.ui-resizable { position: relative;}
+.ui-resizable-handle { position: absolute;font-size: 0.1px;z-index: 99999; display: block; }
+.ui-resizable-disabled .ui-resizable-handle, .ui-resizable-autohide .ui-resizable-handle { display: none; }
+.ui-resizable-n { cursor: n-resize; height: 7px; width: 100%; top: -5px; left: 0; }
+.ui-resizable-s { cursor: s-resize; height: 7px; width: 100%; bottom: -5px; left: 0; }
+.ui-resizable-e { cursor: e-resize; width: 7px; right: -5px; top: 0; height: 100%; }
+.ui-resizable-w { cursor: w-resize; width: 7px; left: -5px; top: 0; height: 100%; }
+.ui-resizable-se { cursor: se-resize; width: 12px; height: 12px; right: 1px; bottom: 1px; }
+.ui-resizable-sw { cursor: sw-resize; width: 9px; height: 9px; left: -5px; bottom: -5px; }
+.ui-resizable-nw { cursor: nw-resize; width: 9px; height: 9px; left: -5px; top: -5px; }
+.ui-resizable-ne { cursor: ne-resize; width: 9px; height: 9px; right: -5px; top: -5px;}/*
+ * jQuery UI Selectable 1.8.14
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Selectable#theming
+ */
+.ui-selectable-helper { position: absolute; z-index: 100; border:1px dotted black; }
+/*
+ * jQuery UI Slider 1.8.14
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Slider#theming
+ */
+.ui-slider { position: relative; text-align: left; }
+.ui-slider .ui-slider-handle { position: absolute; z-index: 2; cursor: default; }
+.ui-slider .ui-slider-range { position: absolute; z-index: 1; font-size: .7em; display: block; border: 0; background-position: 0 0; }
+
+.ui-slider-horizontal { height: .8em; }
+.ui-slider-horizontal .ui-slider-handle {margin-left: -.6em; }
+.ui-slider-horizontal .ui-slider-range { top: 0; height: 100%; }
+.ui-slider-horizontal .ui-slider-range-min { left: 0; }
+.ui-slider-horizontal .ui-slider-range-max { right: 0; }
+
+.ui-slider-vertical { width: .8em; height: 100px; }
+.ui-slider-vertical .ui-slider-handle { left: -.3em; margin-left: 0; margin-bottom: -.6em; }
+.ui-slider-vertical .ui-slider-range { left: 0; width: 100%; }
+.ui-slider-vertical .ui-slider-range-min { bottom: 0; }
+.ui-slider-vertical .ui-slider-range-max { top: 0; }
+
+.ui-tabs .ui-tabs-hide { display: none !important; }
+
+
+/*
+ * jQuery UI CSS Framework 1.8.14
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Theming/API
+ *
+ * To view and modify this theme, visit http://jqueryui.com/themeroller/
+ */
+
+
+
+/* Interaction Cues
+----------------------------------*/
+
+.ui-state-disabled, .ui-state-disabled, .ui-widget-header .ui-state-disabled { opacity: .35; filter:Alpha(Opacity=35); background-image: none; }
+
+
+
+/* Misc visuals
+----------------------------------*/
+
+/* Overlays */
+.ui-widget-shadow { margin: -8px/*{offsetTopShadow}*/ 0 0 -8px/*{offsetLeftShadow}*/; padding: 8px/*{thicknessShadow}*/; background: #aaaaaa/*{bgColorShadow}*/ url(/css/images/ui-bg_flat_0_aaaaaa_40x100.png)/*{bgImgUrlShadow}*/ 50%/*{bgShadowXPos}*/ 50%/*{bgShadowYPos}*/ repeat-x/*{bgShadowRepeat}*/; opacity: .3;filter:Alpha(Opacity=30)/*{opacityShadow}*/; -moz-border-radius: 8px/*{cornerRadiusShadow}*/; -khtml-border-radius: 8px/*{cornerRadiusShadow}*/; -webkit-border-radius: 8px/*{cornerRadiusShadow}*/; border-radius: 8px/*{cornerRadiusShadow}*/; }
+
+
+
+
+
+/* CUSTOM ADDITIONS */
+#ui-active-menuitem{color:green; background-color: #D9D9D9}
+/* Fixes issue here http://code.google.com/p/jcrop/issues/detail?id=1 */
+.jcrop-holder { text-align: left; }
+
+.jcrop-vline, .jcrop-hline
+{
+	font-size: 0px;
+	position: absolute;
+}
+.jcrop-vline { height: 100%; width: 1px !important; }
+.jcrop-hline { width: 100%; height: 1px !important; }
+.jcrop-vline.right { right: 0px; }
+.jcrop-hline.bottom { bottom: 0px; }
+.jcrop-handle {
+	font-size: 1px;
+	width: 7px !important;
+	height: 7px !important;
+	border: 1px #eee solid;
+	background-color: #333;
+}
+
+.jcrop-tracker { width: 100%; height: 100%; }
+
+.custom .jcrop-vline,
+.custom .jcrop-hline
+{
+	background: yellow;
+}
+.custom .jcrop-handle
+{
+	border-color: black;
+	background-color: #C7BB00;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+body {
+  color:
+  black;
+  font-family: Arial, "Arial Unicode MS", verdana, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 1;
+}
+
+.ui-datepicker-prev span,.ui-datepicker-next span{
+  display: none;
+}
+
+.ui-datepicker{
+  border:1px solid #ccc;
+  background-color:#fff;
+  font-family:arial;
+  width:180px;
+  padding:7px 5px 10px
+}
+
+.ui-datepicker .ui-datepicker-header{
+  height:22px
+}
+
+.ui-datepicker .ui-datepicker-title{
+  margin:0 20px;
+  line-height:20px;
+  text-align:center
+}
+
+ a.ui-datepicker-prev,a.ui-datepicker-prev:link,a.ui-datepicker-prev:visited,a.ui-datepicker-prev:hover{
+  background-image:url(https://img1.wsimg.com/wcc/css/images/date-picker-sprt.png);
+  background-position: -16px -17px;
+  background-repeat:no-repeat;
+  width:14px;
+  height:14px;
+  display:inline-block;
+  cursor:pointer
+}
+
+a.ui-datepicker-next,a.ui-datepicker-next:link,a.ui-datepicker-next:visited,a.ui-datepicker-next:hover{
+  background-image:url(https://img1.wsimg.com/wcc/css/images/date-picker-sprt.png);
+  background-position:-35px -17px;
+  background-repeat:no-repeat;
+  width:14px;
+  height:14px;
+  display:inline-block;
+  cursor:pointer
+}
+
+a.ui-datepicker-prev:active,a.ui-datepicker-next:active{
+  cursor:pointer
+}
+
+.ui-datepicker-calendar{
+  border-bottom:1px solid #999
+}
+
+.ui-datepicker-calendar tr th{
+  border-bottom:1px solid #999;
+  font-weight:normal;
+  padding:0 0 4px;
+  font-size:12px
+}
+
+.ui-datepicker-calendar tr td{
+  text-align:center;
+  font-size:12px
+}
+
+.ui-datepicker td span,.ui-datepicker-calendar tr td a,.ui-datepicker-calendar tr td a:link,.ui-datepicker-calendar tr td a:visited{
+  color:#000;
+  display:block;
+  padding:2px 4px;
+  text-decoration:none
+}
+
+.ui-datepicker-calendar tr td.ui-datepicker-other-month{
+  background-color:#f5f5f5
+}
+
+.ui-datepicker-calendar tr td.ui-datepicker-other-month a,.ui-datepicker-calendar tr td.ui-datepicker-other-month a:link,.ui-datepicker-calendar tr td.ui-datepicker-other-month a:visited{
+  color:#aaa
+}
+
+.ui-timepicker-div dl dt{
+  font-weight:bold;
+  color:#545454;
+  width:45px;
+  float:left;
+  clear:left;
+  margin-top: 5px;
+}
+
+.ui-timepicker-div dl dd{
+  width:120px;
+  height:10px;
+  margin-top:2px;
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.ui-timepicker-div dl dd.ui_tpicker_time{
+  height:25px;
+
+}
+
+.ui-slider{
+  position:relative;
+  text-align:left
+}
+
+.ui-slider .ui-slider-handle{
+  position:absolute;
+  z-index:2;
+  cursor:pointer;
+}
+
+.ui-slider .ui-slider-range{
+  position:absolute;
+  z-index:1;
+  font-size:.7em;
+  display:block;
+  border:0;
+  background-position:0 0
+}
+
+.ui-slider-horizontal{
+  height:.8em
+}
+
+.ui-slider-horizontal .ui-slider-handle{
+  margin-left:-.6em
+}
+
+.ui-slider-horizontal .ui-slider-range{
+  top:0;
+  height:100%
+}
+
+.ui-slider-horizontal .ui-slider-range-min{
+  left:0
+}
+
+.ui-slider-horizontal .ui-slider-range-max{
+  right:0
+}
+
+.ui-slider-vertical{
+  width:.8em;
+  height:100px
+}
+
+.ui-slider-vertical .ui-slider-handle{
+  left:-.3em;
+  margin-left:0;
+  margin-bottom:-.6em
+}
+
+
+.ui-slider-vertical .ui-slider-range{
+  left:0;
+  width:100%
+}
+
+.ui-slider-vertical .ui-slider-range-min{
+  bottom:0
+}
+
+.ui-slider-vertical .ui-slider-range-max{
+  top:0
+}
+
+
+.ui-timepicker-div dl div.ui-slider-horizontal{
+  background-image:url(https://img1.wsimg.com/wcc/css/images/date-picker-sprt.png);
+  background-position: 0 0;
+  width:115px;
+  padding:0 5px;
+  height:10px;
+  margin-top:2px;
+  margin-bottom:10px
+}
+
+.ui-slider-horizontal a.ui-slider-handle{
+  background-image:url(https://img1.wsimg.com/wcc/css/images/date-picker-sprt.png);
+  background-position: 0 -15px;
+  width:11px;
+  height:19px;
+  display:inline-block;
+  top:-4px
+}
+
+.ui-datepicker-buttonpane{
+  clear:both
+}
+
+.ui-timepicker-div .ui-widget-header{
+  margin-bottom:8px
+}
+
+.ui-timepicker-div dl{
+  text-align:left
+}
+
+.ui-timepicker-div dl dt{
+  height:25px
+}
+
+.ui-timepicker-div td{
+  font-size:90%
+}
+
+
+.ui-datepicker{
+  display:none
+}
+
+.ui-datepicker .ui-datepicker-header{
+  position:relative
+}
+
+.ui-datepicker .ui-datepicker-prev,.ui-datepicker .ui-datepicker-next{
+  position:absolute;
+  top:2px
+}
+
+.ui-datepicker .ui-datepicker-prev{
+  left:2px
+}
+
+.ui-datepicker .ui-datepicker-next{
+  right:2px
+}
+
+.ui-datepicker .ui-datepicker-title select{
+  font-size:1em;
+  margin:1px 0
+}
+
+.ui-datepicker select.ui-datepicker-month-year{
+  width:100%
+}
+
+.ui-datepicker select.ui-datepicker-month,.ui-datepicker select.ui-datepicker-year{
+  width:49%
+}
+
+.ui-datepicker table{
+  width:100%;
+  font-size:.9em;
+  border-collapse:collapse;
+  margin:0 0 .4em
+}
+
+.ui-datepicker th{
+  text-align:center;
+  border:0
+}
+
+.ui-datepicker td{
+  border:0
+}
+
+.ui-datepicker td span,.ui-datepicker td a{
+  display:block;
+  text-decoration:none
+}
+
+.ui-datepicker .ui-datepicker-buttonpane{
+  background-image:none;
+  border-left:0;
+  border-right:0;
+  border-bottom:0
+}
+
+.ui-datepicker .ui-datepicker-buttonpane button{
+  float:right;
+  cursor:pointer;
+  width:auto;
+  overflow:visible
+}
+
+.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current{
+  float:left
+}
+
+.ui-datepicker.ui-datepicker-multi{
+  width:auto
+}
+
+.ui-datepicker-multi .ui-datepicker-group{
+  float:left
+}
+
+.ui-datepicker-multi .ui-datepicker-group table{
+  width:95%;
+  margin:0 auto .4em
+}
+
+.ui-datepicker-multi-2 .ui-datepicker-group{
+  width:50%
+}
+
+.ui-datepicker-multi-3 .ui-datepicker-group{
+  width:33.3%
+}
+
+.ui-datepicker-multi-4 .ui-datepicker-group{
+  width:25%
+}
+
+.ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header{
+  border-left-width:0
+}
+
+.ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header{
+  border-left-width:0
+}
+
+.ui-datepicker-multi .ui-datepicker-buttonpane{
+  clear:left
+}
+
+.ui-datepicker-row-break{
+  clear:both;
+  width:100%;
+  font-size:0em
+}
+
+.ui-datepicker-rtl{
+  direction:rtl
+}
+
+.ui-datepicker-rtl .ui-datepicker-prev{
+  right:2px;
+  left:auto
+}
+
+.ui-datepicker-rtl .ui-datepicker-next{
+  left:2px;
+  right:auto
+}
+
+.ui-datepicker-rtl .ui-datepicker-prev:hover{
+  right:1px;
+  left:auto
+}
+
+.ui-datepicker-rtl .ui-datepicker-next:hover{
+  left:1px;
+  right:auto
+}
+
+.ui-datepicker-rtl .ui-datepicker-buttonpane{
+  clear:right
+}
+
+.ui-datepicker-rtl .ui-datepicker-buttonpane button{
+  float:left
+}
+
+.ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current{
+  float:right
+}
+
+.ui-datepicker-rtl .ui-datepicker-group{
+  float:right
+}
+
+.ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header{
+  border-right-width:0;
+  border-left-width:1px
+}
+
+.ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header{
+  border-right-width:0;
+  border-left-width:1px
+}
+
+.ui-datepicker-cover{
+  display:none;
+  display:block;
+  position:absolute;
+  z-index:-1;
+  filter:mask();
+  top:-4px;
+  left:-4px;
+  width:200px;
+  height:200px
+}
+
+
+
+
+input.black-css3-button,button.black-css3-button,button.ui-datepicker-close{
+  background-image:url(https://img1.wsimg.com/wcc/css/images/black-button-bg-all-css3.png);
+  background-color:transparent;
+  border:1px solid #000;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  border-radius:3px;
+  color:#fff;
+  display:inline-block;
+  font-family:verdana;
+  font-size:12px;
+  font-weight:bold;
+  padding:2px 10px 3px;
+  /*.padding:3px 10px 3px;*/
+  line-height:14px;
+  text-decoration:none;
+  vertical-align:middle;
+  cursor:pointer;
+  width:auto;
+  overflow:visible
+}
+
+input.black-css3-button:hover,button.black-css3-button:hover,button.ui-datepicker-close:hover{
+  background-image:url(https://img1.wsimg.com/wcc/css/images/black-button-bg-all-css3.png);
+  background-position:0 -34px
+}
+
+input.black-css3-button:active,button.black-css3-button:active,button.ui-datepicker-close:active{
+  background-image:url(https://img1.wsimg.com/wcc/css/images/black-button-bg-all-css3.png);
+  background-position:0 -68px
+}
+
+input.silver-button,button.ui-datepicker-current{
+  background-color:#eaeaea;
+  border:1px solid #b1b1b1;
+  display:inline-block;
+  font-size:10px;
+  font-weight:bold;
+  font-family:Verdana;
+  padding:2px 10px 2px 10px;
+  margin:0 auto 1px auto;
+  width:auto;
+  overflow:visible;
+  cursor:pointer;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  border-radius:3px
+}
+
+button.ui-datepicker-current{
+  margin-top:3px
+}
+
+
+td a.ui-state-hover, .ui-state-highlight{
+  background-color: #E3EFC5;
+}
+td a.ui-state-active{
+  background-color: #E4EFC7;
+}
+
+.ui_tpicker_hour{
+  float:right;
+}
+.ui_tpicker_minute{
+  float:right;
+}
+
+td.ui-state-disabled span{
+  color: #E0E0E0;
+}
+
+dd.ui_tpicker_timezone{
+  float: none !important;
+  height: auto !important;
+  margin-top:-8px !important;
+  margin-bottom: 5px;
+}
+.ui_tpicker_timezone select{
+  width : 170px;
+  margin-bottom: 5px;
+  margin-top: 0px;
+}
+
+.ui_tpicker_timezone_abbr_enabled{
+  color: #0000FE;
+  text-decoration: underline;
+  font-size: 8pt;
+  margin-left: 10px;
+  cursor:pointer;
+}
+.ui_tpicker_timezone_abbr_disabled{
+  color: #0000FE;
+  font-size: 8pt;
+  margin-left: 10px;
+}

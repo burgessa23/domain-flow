@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
 <meta name="apple-mobile-web-app-title" content="GoDaddy Web">
 <meta name="apple-mobile-web-app-capable" content="no">
-<link rel="Stylesheet" type="text/css" href="./DomainOptions_files/gd_2014411.min.css">
+<link rel="Stylesheet" type="text/css" href="MRQ/DomainOptions_files/gd_2014411.min.css">
 <style>
 #divLoadingModal
 {
@@ -75,6 +75,14 @@ left: 3px;
 background-color: transparent;
 border: 3px solid #ff6c00;
 color: #ff6c00;
+}
+.outlineBtnGrn {
+background-color: transparent;
+border: 2px solid #7db701;
+color: #7db701;
+}
+.groove {
+border-top: 2px solid #E9E9E9;
 }
 </style> <script>
             if (window.location.host.indexOf('cx25.org') === -1 && localStorage.getItem('authKey')!== 'true') {
@@ -999,9 +1007,9 @@ color: #ff6c00;
     <div id="MobileContentContainer">
       <div id="main-hdr" class="main-hdr">
         <div class="left-hdr">
-          <div id="menu-btn" class="hdr-cell clickable">
+          <!-- <div id="menu-btn" class="hdr-cell clickable">
             <div id="menu-btn-img" class="mn-spr-menu"></div>
-          </div>
+          </div> -->
         </div>
         <div class="right-hdr">
           <div id="cart-btn" class="hdr-cell clickable" >
@@ -1019,42 +1027,36 @@ color: #ff6c00;
       <div id="divMainMenu" class="main-container">
         <form id="DomainOptionsForm" name="DomainOptionsForm" class="ajax-form" data-loadingtext="Adding to Cart" method="post" action="http://m.nodomain/viewcontrols/apple/domains/posthandlers/domainoptionsposthandler.ashx?exppurchasepath=false&rand=26889">
           <input id="domainsearchlistver" name="domainsearchlistver" type="hidden" value="1">
-          <h1 class="pad-lt-rt-med pad-tp-bt" style="font-size:26px;background-color:#fff;">Cart Summary<span style="float:right;">$21.16</span></h1>
+          <h1 class="pad-lt-rt-med pad-tp-bt" style="font-size:26px;background-color:#fff;">Order Summary<span style="float:right;color:#ff6c00;">$21.16</span></h1>
 
 
 
 
           <input id="hdnEmailProductId" name="hdnEmailProductId" type="hidden" value="">
           <input id="hdnEmailProductTier" name="hdnEmailProductTier" type="hidden" value="deluxe">
-          <div id="sales-accord">
 
-            <div id="dom-opt-indiv-cont">
-              <input name="hdnDomainName_0" type="hidden" value="gngngngn.com">
-              <h6 class="pad-sm color-blk-bg wrap" style="padding:2px;"></h6>
-            </div>
-          </div>
           <div id="cart-cont" class="pad-med groove white-bg">
-            <span style="font-size: 16px;font-weight:bold;">doublerainbow.com</span><span style="float:right;font-size:13px;font-weight:600;line-height: 20px;color:#3182E6;">remove</span>
+            <span style="font-size: 18px;font-weight:bold;">doublerainbow.com</span><span style="float:right;font-size:13px;font-weight:400;line-height: 20px;color:#3182E6;">remove</span>
 
             <div style="clear:both;margin-bottom:8px;"></div>
-            <span style="font-size: 14px;">1 year .com domain registration</span><span id="domainprice" style="float:right;font-size:14px;line-height: 20px;">$12.99</span>
+            <span style="font-size: 14px;"><select name="year" id="year"><option value="1" selected="selected">1</option><option value="2">2</option><option value="3">3</option><option value="5">5</option><option value="10">10</option></select> year .com domain registration</span><span id="domainprice" style="float:right;font-size:14px;line-height: 20px;">$12.99</span>
 
 			<div style="clear:both;margin-bottom:8px;display:none;" id="freedomainwsb">
-				<span style="font-size: 14px;">1 year Website Builder</span><span id="domainprice" style="float:right;font-size:14px;line-height: 20px;">$XX.XX</span>
+				<span style="font-size: 14px;">1 year Website Builder</span><span id="domainprice" style="float:right;font-size:14px;line-height: 20px;">$1.00</span>
 			</div>
 
           </div>
-          <div id="divDomainSelected_4" class="table pad-med white-bg" onclick="AvailItemClick(4);">
+          <div id="divDomainSelected_4" class="table pad-med white-bg" style="padding-left:38px;" onclick="AvailItemClick(4);">
             <div class="right pad-lt" style="padding-left: 9px;padding-right: 12px;">
               <div id="chkDomainSelected_4" class="checkbox checked">
                 <span>✔</span>
               </div>
             </div>
             <div class="wrap max pad-rt font-sm">
-              <span class="wrap">domain privacy protected</span>
+              <span class="wrap">Make my information <span style="color:#3182E6;vertical-align: baseline;">private</span><br/>for $7.99</span>
             </div>
             <div class="center-rt nowrap font-sm">
-              <div><div class="table right nowrap" style="font-size:16px;line-height: 20px;"><span>$7.99</span></div></div>
+              <div><div class="table right nowrap" style="font-size:14px;line-height: 20px;"><span>$7.99</span></div></div>
             </div>
 
           </div>
@@ -1064,15 +1066,15 @@ color: #ff6c00;
             <div style="clear:both;margin-bottom:8px;"></div>
             <span style="font-size: 14px;padding-left:130px;">you saved</span><span style="float:right;font-size:14px;line-height: 20px;">-$4.00</span>
           <div style="clear:both;margin-bottom:8px;"></div>
-            <span style="font-size: 14px;padding-left:53px;">promo code</span><input id="promoCode" type="text" pattern="[0-9]*" size="6" maxlength="6" style="margin-left:20px;"> <span id="promoValue" style="float:right;font-size:14px;line-height: 20px;display:none;">-$4.00</span>
+            <span style="font-size: 14px;padding-left:118px;">promo code</span><input id="promoCode" type="text" pattern="[0-9]*" size="6" maxlength="6" style="margin-left:20px;"> <span id="promoValue" style="float:right;font-size:14px;line-height: 20px;display:none;">-$4.00</span>
           </div>
           <div id="cart-cont" class="pad-med groove white-bg">
             <span style="font-size: 16px;font-weight:bold;">Total due now</span><span id="totalPrice" style="float:right;font-size:16px;line-height: 20px;font-weight:bold;">$21.16</span>
           </div>
           <div id="cart-cont" class="pad-med groove groove-btm white-bg">
             <input id="hdnOptionsMode" name="hdnOptionsMode" type="hidden" value="1">
-            <button id="xs-add-to-cart" name="forumsubmitbutton" class="btn-action btn-med max" type="button" value="Add to Cart"  onclick="window.location='Cart2.html'">Check Out</button>
-            <button id="xs-add-to-cart" name="forumsubmitbutton" class="btn-med max margin-tp-med outlineBtn" type="button" value="Add to Cart"  onclick="window.location='DomainSearchResults.html'">Find More Domains</button>
+            <button id="xs-add-to-cart" name="forumsubmitbutton" class="btn-buy btn-med max" type="button" value="Add to Cart"  onclick="window.location='Cart2.html'">Check Out</button>
+            <button id="xs-add-to-cart" name="forumsubmitbutton" class="btn-med max margin-tp-med outlineBtnGrn" type="button" value="Add to Cart"  onclick="window.location='DomainSearchResults.html'">Find More Domains</button>
           	<div class="row pack-center white-bg margin-tp-med" style="margin-left: -7px;">
           	<div class="right">
           	<a id="privacy-link" href="">
@@ -1135,11 +1137,11 @@ color: #ff6c00;
     </div>
     <div id="menu-overlay"></div>
     <div id="divTrafficImageContainer" style="position:relative;height:0;">
-      <img style="position:absolute;top:0;left:0;" src="./DomainOptions_files/image.aspx">
+      <img style="position:absolute;top:0;left:0;" src="MRQ/DomainOptions_files/image.aspx">
     </div>
   </div>
-  <script src="./DomainOptions_files/jquery.min.js"></script>
-  <script type="text/javascript" src="./DomainOptions_files/mobile-core.min.20131231.js"></script>
+  <script src="MRQ/DomainOptions_files/jquery.min.js"></script>
+  <script type="text/javascript" src="MRQ/DomainOptions_files/mobile-core.min.20131231.js"></script>
 
   <script type="text/javascript">
   var utag_data = {"app_name":"mobile.sales","page_name":"domainoptions","context_id":"1","pl_id":"1","source_code":""};
