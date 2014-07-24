@@ -1,36 +1,385 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>UX Mobile project dashboard</title>
+    <link rel="shortcut icon" href="http://img1.wsimg.com/assets/godaddy.ico">
+    <meta name="description" content="Access all of GoDaddy&#39;s products and services directly from your mobile phone.">
+    <link rel="canonical" href="gdhome_files/gdhome.html">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="apple-mobile-web-app-title" content="GoDaddy Web">
 
- </head>
+    <link href="http://img1.wsimg.com/mobile/img/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+    <link href="http://img1.wsimg.com/mobile/img/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+    <link href="http://img1.wsimg.com/mobile/img/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+    <meta name="apple-mobile-web-app-capable" content="no">
+    <link rel="Stylesheet" type="text/css" href="MRQ/gdhome_files/gd_2014411.min.css">
+	<style>
+		.jheader1, .jheader2 {
+			-webkit-transition: all 0.25s ease-out;
+			-webkit-transform: rotate(90deg);
+		}
+		.rotated {
+			-webkit-transform: rotate(-90deg);
+		}
+		.navbar-toggle {
+	        position: relative;
+	        float: right;
+	        padding: 9px 10px;
+	        margin-top: 0px;
+	        margin-right: 3px;
+	        margin-bottom: 8px;
+	        background-color: transparent;
+	        border: 1px solid transparent;
+	        border-radius: 0;
+	        width: 30px;
+	        height: 30px;
+	    }
 
-<body onLoad="passWord()">
-<SCRIPT>
-function passWord() {
-	if (localStorage.getItem('authKey')=== 'true') {
-        window.location='index2.html';
-        return;
-    }
-    var testV = 1;
-    var pass1 = prompt('Please Enter Your Password','');
-    while (testV < 3) {
-        if (!pass1)
-        //history.go(-1);
-            return;
-        if (pass1.toLowerCase() == "uxmobilecontributor") {
-            localStorage.setItem('authKey','true');
-            window.location='index2.html';
-            break;
+	    .navbar-toggle .icon-bar {
+	        display: block;
+	        width: 22px;
+	        height: 2px;
+	        border-radius: 1px;
+	        background-color: #FFF;
+	    }
+
+	    .navbar-toggle .icon-bar+.icon-bar {
+	        margin-top: 4px;
+	        /*transition: all 0.25s ease-out;*/
+	    }
+
+		.icon-bar#leftSide, .icon-bar#leftSide2 {
+			-webkit-transform: rotate(-135deg);
+			-webkit-transform-origin: center;
+			width: 16px;
+			background-color: #555;
+			position: absolute;
+			top: 18px;
+			left: 0px;
+			-webkit-transition: all 0.5s;
+			/*animation: leftSideFlip 0.25s 0.0s ease both 1;*/
+		}
+
+		.animateLeftSide {
+			-webkit-animation: leftSideFlip 0.3s 0.0s ease both 1;
+		}
+		.animateLeftSideBack {
+			-webkit-animation: leftSideFlipBack 0.3s 0.0s ease both 1;
+		}
+
+		@-webkit-keyframes leftSideFlip {
+			0% {
+				-webkit-transform: rotate(-135deg);
+				width: 16px;
+			}
+			50% {
+				/*width: 10px;*/
+			}
+			100% {
+				-webkit-transform: rotate(-225deg);
+				width: 16px;
+			}
+		}
+		@-webkit-keyframes leftSideFlipBack {
+			0% {
+				-webkit-transform: rotate(-225deg);
+				width: 16px;
+			}
+			50% {
+				/*width: 10px;*/
+			}
+			100% {
+				-webkit-transform: rotate(-135deg);
+				width: 16px;
+			}
+		}
+
+		.icon-bar#rightSide, .icon-bar#rightSide2 {
+			-webkit-transform: rotate(135deg);
+			width: 16px;
+			-webkit-transform-origin: center;
+			background-color: #555;
+			position: absolute;
+			-webkit-transition: all 0.5s;
+		}
+		.animateRightSide {
+			-webkit-animation: rightSideFlip 0.3s 0.0s ease both 1;
+		}
+		.animateRightSideBack {
+			-webkit-animation: rightSideFlipBack 0.3s 0.0s ease both 1;
+		}
+
+		@-webkit-keyframes rightSideFlip {
+			0% {
+				-webkit-transform: rotate(135deg);
+				width: 16px;
+			}
+			50% {
+				/*width: 10px;*/
+			}
+			100% {
+				-webkit-transform: rotate(225deg);
+				width: 16px;
+			}
+		}
+		@-webkit-keyframes rightSideFlipBack {
+			0% {
+				-webkit-transform: rotate(225deg);
+				width: 16px;
+			}50% {
+				/*width: 10px;*/
+			}
+			100% {
+				-webkit-transform: rotate(135deg);
+				width: 16px;
+			}
+		}
+	</style>
+    </head>
+
+    <body>
+        <div id="MobileBodyContainer" style="min-height: 568px;">
+            <div id="MobileContentContainer">
+                <div id="main-hdr" class="main-hdr">
+                    <div class="left-hdr">
+                    </div>
+                    <div class="right-hdr">
+
+                    </div>
+                    <div id="hdr-logo" style="display: inline-block;margin-top: 8px; font-size: 20px;">gc&e Mobile UX</div>
+
+                </div>
+
+                <div id="dppConversionSection" class="sep-bottom">
+
+					<div class="right" style="display:none;margin-top: -25px;margin-right: 10px;">
+			            <div class="mn-spr-chevron jheader1"></div>
+			        </div>
+			        <div id="tapZone" style="width: 35px;height:35px;float:right;">
+						<button id="uxh-mobile-nav" class="navbar-toggle" type="button" data-toggle="collapse" data-target=".uxc-header-nav">
+							<span id="leftSide" class="icon-bar"></span>
+
+							<span id="rightSide" class="icon-bar"></span>
+						</button>
+					</div>
+					<h1 class="pad-lt-rt-med pad-tp-bt" style="font-size:16px;background-color:#fff;">DPP Conversion Optimization</h1>
+                </div>
+                <div id="site-links" style="display:none;">
+                    <div id="main-site-links">
+                        <div id="site-link-domains" class="row pad font-sm main-bg sep-bottom row-clickable" style="background-color: darkgray;color: #fff;" onclick="">
+                            <div class="margin-lt-med max">Sprint ending 7-25-14</div>
+                        </div>
+                        <div id="site-link-wsb" class="row pad font-sm main-bg sep-bottom row-clickable" onclick="window.location='DomainSearchResults.html'">
+                            <div class="margin-lt-med max">SERP</div>
+                            <div><div class="mn-spr-chevron"></div></div>
+                        </div>
+                        <!-- <div id="site-link-wsb" class="row pad font-sm main-bg sep-bottom row-clickable" onclick="window.location='MRQNewUser/DomainOptions.html'">
+                            <div class="margin-lt-med max">Cart</div>
+                            <div><div class="mn-spr-chevron"></div></div>
+                        </div> -->
+                        <div id="site-link-wsb" class="row pad font-sm main-bg sep-bottom row-clickable" onclick="window.location='MRQNewUser/Login.html'">
+                            <div class="margin-lt-med max">Sign in / Create account</div>
+                            <div><div class="mn-spr-chevron"></div></div>
+                        </div>
+
+
+                        <!-- <div id="site-link-wsb" class="row pad font-sm main-bg sep-bottom row-clickable">
+                            <div class="margin-lt-med max">Order</div>
+                            <div><div class="mn-spr-chevron"></div></div>
+                        </div> -->
+
+
+                        <div id="site-link-domains" class="row pad font-sm main-bg sep-bottom row-clickable" style="background-color: darkgray;color: #fff;" onclick="">
+                            <div class="margin-lt-med max">Sprint ending 8-08-14</div>
+                        </div>
+                        <div id="site-link-wsb" class="row pad font-sm main-bg sep-bottom row-clickable" onclick="window.location='MRQNewUser/PaymentMethod.html'">
+                            <div class="margin-lt-med max">Payment Method</div>
+                            <div><div class="mn-spr-chevron"></div></div>
+                        </div>
+                        <div id="site-link-wsb" class="row pad font-sm main-bg sep-bottom row-clickable" onclick="window.location='MRQNewUser/DomainOptions.html'">
+                            <div class="margin-lt-med max">Cart Summary</div>
+                            <div><div class="mn-spr-chevron"></div></div>
+                        </div>
+
+                        <div id="site-link-wsb" class="row pad font-sm main-bg sep-bottom row-clickable" onclick="window.location='MRQNewUser/OrderConfirmation.html'">
+                            <div class="margin-lt-med max">Confirmation</div>
+                            <div><div class="mn-spr-chevron"></div></div>
+                        </div>
+                        <div id="site-link-wsb" class="row pad font-sm main-bg sep-bottom row-clickable" onclick="window.location='MRQ/tldEmail.html'">
+                            <div class="margin-lt-med max">Email Marketing Flow</div>
+                            <div><div class="mn-spr-chevron"></div></div>
+                        </div>
+                        <!-- <div id="site-link-domains" class="row pad font-sm main-bg sep-bottom row-clickable" style="background-color: darkgray;color: #fff;" onclick="">
+                            <div class="margin-lt-med max">Sprint ending 7-11-14</div>
+                        </div> -->
+                        <div id="site-link-domains" class="row pad font-sm main-bg sep-bottom row-clickable" style="background-color: darkgray;color: #fff;" onclick="">
+                            <div class="margin-lt-med max">Full experience flows</div>
+                        </div>
+                        <div id="site-link-domains" class="row pad font-sm main-bg sep-bottom row-clickable" onclick="window.location='http://m.godaddy.com'">
+                            <div class="margin-lt-med max">Live Production Flow - for reference</div>
+                            <div><div class="mn-spr-chevron"></div></div>
+                        </div>
+                        <div id="site-link-wsb" class="row pad font-sm main-bg sep-bottom row-clickable" onclick="window.location='MRQ/gdhome.html'">
+                            <div class="margin-lt-med max">Authenticated customer flow - v1.3</div>
+                            <div><div class="mn-spr-chevron"></div></div>
+                        </div>
+                        <div id="site-link-wsb" class="row pad font-sm main-bg sep-bottom row-clickable" onclick="window.location='MRQNewUser/gdhome.html'">
+                            <div class="margin-lt-med max">Unauthenticated/new user flow - v1.2</div>
+                            <div><div class="mn-spr-chevron"></div></div>
+                        </div>
+                        <div id="site-link-wsb" class="row pad font-sm main-bg sep-bottom row-clickable" onclick="window.location='MRQ/tldEmail.html'">
+                            <div class="margin-lt-med max">Email entry point flow - v1.2</div>
+                            <div><div class="mn-spr-chevron"></div></div>
+                        </div>
+                        <div id="site-link-wsb" class="row pad font-sm main-bg sep-bottom row-clickable" onclick="window.location='MRQ/parkPage.html'">
+                            <div class="margin-lt-med max">Parked domain entry point flow - v1.2</div>
+                            <div><div class="mn-spr-chevron"></div></div>
+                        </div>
+                        <div id="site-link-wsb" class="row pad font-sm main-bg sep-bottom row-clickable" onclick="window.location='DomainSearchResults.html'">
+                            <div class="margin-lt-med max">Free domain with WSB purchase - Cart add from search results - v1.4</div>
+                            <div><div class="mn-spr-chevron"></div></div>
+                        </div>
+                        <div id="site-link-wsb" class="row pad font-sm main-bg sep-bottom row-clickable" onclick="window.location='hpExp.html'">
+                            <div class="margin-lt-med max">Homepage Exploration</div>
+                            <div><div class="mn-spr-chevron"></div></div>
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+                <div style="border-bottom: 3px solid #999;"></div>
+
+				<div id="respNavSection" class="sep-bottom">
+
+					<div class="right" style="display:none;margin-top: -25px;margin-right: 10px;">
+				        <div class="mn-spr-chevron jheader2"></div>
+				    </div>
+				    <div id="tapZone2" style="width: 35px;height:35px;float:right;">
+						<button id="uxh-mobile-nav" class="navbar-toggle" type="button" data-toggle="collapse" data-target=".uxc-header-nav">
+							<span id="leftSide2" class="icon-bar"></span>
+
+							<span id="rightSide2" class="icon-bar"></span>
+						</button>
+					</div>
+					<h1 class="pad-lt-rt-med pad-tp-bt" style="font-size:16px;background-color:#fff;">UXCore Responsive Nav update</h1>
+                </div>
+                <div id="site-links2" style="display:none;">
+                    <div id="main-site-links">
+
+                        <!-- <div id="site-link-wsb" class="row pad font-sm main-bg sep-bottom row-clickable" onclick="window.location='uxcoreRespNav.html'">
+                            <div class="margin-lt-med max">NEMO - Collapsed secondary nav for < 768 wide v1.0</div>
+                            <div><div class="mn-spr-chevron"></div></div>
+                        </div> -->
+
+                         <div id="site-link-wsb" class="row pad font-sm main-bg sep-bottom row-clickable" onclick="window.location='uxcoreRespNavExp.html'">
+                            <div class="margin-lt-med max">NEMO - Tap-optimised secondary nav for < 768 wide v1.4</div>
+                            <div><div class="mn-spr-chevron"></div></div>
+                        </div>
+
+						<div id="site-link-wsb" class="row pad font-sm main-bg sep-bottom row-clickable" onclick="window.location='DomainDetails.html'">
+                            <div class="margin-lt-med max">DCC - responsive work area and secondary nav v1.4</div>
+                            <div><div class="mn-spr-chevron"></div></div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div style="border-bottom: 3px solid #999;"></div>
+
+
+
+
+            </div>
+        </div>
+        <script src="MRQ/gdhome_files/jquery.min.js"></script>
+        <script type="text/javascript" src="MRQ/gdhome_files/mobile-core.min.20131231.js"></script>
+
+        <script>
+        var sectionsToSave;
+        if (localStorage.getItem('cx25DashSavedSection') !== null) {
+        		sectionsToSave = localStorage.getItem('cx25DashSavedSection').split(',');
+        } else {
+        	sectionsToSave = new Array();
         }
-        testV+=1;
-        var pass1 =
-        prompt('Access Denied - Password Incorrect, Please Try Again.','Password');
-    }
-    if (pass1.toLowerCase()!=="password" & testV ==3)
-    //history.go(-1);
-    return " ";
-}
-</SCRIPT>
+        function saveSelection (sectionToSave, state) {
+        	console.log(state);
+        	if (sectionsToSave.indexOf(sectionToSave) === -1 && state === true) {
+        		sectionsToSave.push(sectionToSave);
+        	}
+        	if (state === false) {
+        		var idx = sectionsToSave.indexOf(sectionToSave);
+        		if (idx > -1) {
+        			sectionsToSave.splice(idx, 1);
+        		}
+        	}
+        	localStorage.setItem('cx25DashSavedSection', sectionsToSave);
+        }
+        $('#dppConversionSection').click(function (e) {
+        	e.preventDefault();
+        	$('#site-links').slideToggle(300);
+        	$('.jheader1').toggleClass('rotated');
+        	saveSelection('dppConversionSection',$('.jheader1').hasClass('rotated'));
 
-</body>
-</html>
+        	$('#leftSide').toggleClass('animateLeftSide');
+        	$('#rightSide').toggleClass('animateRightSide');
+        	// $('#leftSide').toggleClass('animateLeftSideBack');
+        	// $('#rightSide').toggleClass('animateRightSideBack');
+        	if (!$('.jheader1').hasClass('rotated')) {
+        		$('#leftSide').toggleClass('animateLeftSideBack');
+        		$('#rightSide').toggleClass('animateRightSideBack');
+    			setTimeout(function(){
+					$('#leftSide').removeClass('animateLeftSideBack');
+					$('#rightSide').removeClass('animateRightSideBack');
+				},300);
+        	}
+        });
+        $('#respNavSection').click(function (e) {
+        	e.preventDefault();
+        	$('#site-links2').slideToggle(300);
+        	$('.jheader2').toggleClass('rotated');
+        	saveSelection('respNavSection',$('.jheader2').hasClass('rotated'));
+
+        	$('#leftSide2').toggleClass('animateLeftSide');
+        	$('#rightSide2').toggleClass('animateRightSide');
+        	// $('#leftSide').toggleClass('animateLeftSideBack');
+        	// $('#rightSide').toggleClass('animateRightSideBack');
+        	if (!$('.jheader2').hasClass('rotated')) {
+        		$('#leftSide2').toggleClass('animateLeftSideBack');
+        		$('#rightSide2').toggleClass('animateRightSideBack');
+    			setTimeout(function(){
+					$('#leftSide2').removeClass('animateLeftSideBack');
+					$('#rightSide2').removeClass('animateRightSideBack');
+				},300);
+        	}
+        });
+
+        jQuery(document).ready(function($) {
+        	if (sectionsToSave.length > 0) {
+        		sectionsToSave.forEach(function(iter){
+        			$('#'+iter).click();
+        		});
+        	}
+        });
+  //       $('#tapZone').click(function(e) {
+		// 	e.preventDefault();
+		// 	$('#leftSide').toggleClass('animateLeftSide');
+		// 	$('#rightSide').toggleClass('animateRightSide');
+		// });
+		// $('#tapZone').mouseleave(function() {
+		// 	$('#leftSide').toggleClass('animateLeftSide');
+		// 	$('#rightSide').toggleClass('animateRightSide');
+		// 	$('#leftSide').toggleClass('animateLeftSideBack');
+		// 	$('#rightSide').toggleClass('animateRightSideBack');
+		// 	setTimeout(function(){
+		// 		$('#leftSide').removeClass('animateLeftSideBack');
+		// 		$('#rightSide').removeClass('animateRightSideBack');
+		// 	},300);
+
+		// });
+        </script>
+    </body>
+    </html>

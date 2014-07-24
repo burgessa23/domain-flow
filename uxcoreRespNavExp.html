@@ -141,9 +141,9 @@ padding-top: 13px;
             </ul>
             <ul id="uxh-nav-right" class="nav navbar-nav navbar-right" role="menubar">
                 <li id="uxh-nav-support"><a id="uxhNavSupportLink" role="menuitem" href="">Support</a></li>
-                <li id="uxh-nav-user" class="dropdown">
-                    <a id="uxh-nav-user-link" role="button" class="dropdown-toggle" href="" data-toggle="dropdown"><span id="uxh-s-name-prefix" style="display: none;">Customer #</span><span id="uxh-s-name">Andrew</span><span id="logoutLinkMobile" style="font-size: 12px;color:#ddd;line-height:37px;padding-left:10px;"></span> <b id="userCaret" class="caret"></b></a>
-                    <ul id="uxh-nav-user-menu" class="dropdown-menu shopper-menu" role="menu">
+                <li id="uxh-nav-user" class="">
+                    <a id="uxh-nav-user-link" role="button" class="dropdown-toggle" href="" data-toggle="dropdown"><span id="uxh-s-name-prefix" style="display: none;">Customer #</span><span id="uxh-s-name">Andrew Johnson</span><span id="logoutLinkMobile" style="font-size: 16px;color:#ddd;line-height:37px;padding-left:10px;"></span> </a>
+                    <ul id="uxh-nav-user-menu" class=" shopper-menu"  role="menu">
                         <li id="uxh-s-header" class="uxh-logged-in shopper-header dropdown-header">
                             <div id="uxh-s-fullname" class="uxc-nowrap" style="">Andrew Burgess</div>
                             <div id="uxh-s-status" class="uxc-nowrap" style="display: none;"></div>
@@ -169,7 +169,7 @@ padding-top: 13px;
                             </div>
                         </li>
 
-                        <li id="uxh-nav-logged-in" class="uxh-logged-in"><a role="menuitem" href="" class="logoutlink">Log Out</a></li>
+                        <li id="uxh-nav-logged-in" class="uxh-logged-in" style="list-style:none;margin-bottom:6px;"><a role="menuitem" href="" class="logoutlink" style="color: #FFF;background-color: #333;line-height:20px;">Log Out</a></li>
                         <li id="uxh-nav-logged-out" class="uxh-logged-out" style="display: none;"><a role="menuitem" href="https://www.godaddy.com/?">Log In</a></li>
 
                     </ul>
@@ -669,7 +669,7 @@ padding-top: 13px;
 			$('#caretForFirstItem').css({'-webkit-transform': 'rotate(0deg)'});
 		});
   	//$('#uxh-nav-user-link').attr('data-toggle', '');
-  	$('#logoutLinkMobile').show().html('  (Customer# u9g)');
+  	$('#logoutLinkMobile').show().html('  (Customer# U9G)');
   	//$('#uxh-s-name').html('Logout');
 
   	$('#uxh-nav-app-menu').show();

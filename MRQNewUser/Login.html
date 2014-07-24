@@ -9,6 +9,9 @@
 <meta name="apple-mobile-web-app-capable" content="no">
 <link rel="Stylesheet" type="text/css" href="./Cart2_files/gd_2014411.min.css">
 <style>
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
 #divLoadingModal
 {
   width:225px;
@@ -70,6 +73,13 @@ position: absolute;
 top: 0px;
 left: 3px;
 }
+.outlineBtn {
+	background-color: transparent;
+	border: 3px solid #7db701;
+	color: #7db701;
+
+}
+
 </style>
  <script>
             if (window.location.host.indexOf('cx25.org') === -1 && localStorage.getItem('authKey')!== 'true') {
@@ -1035,28 +1045,28 @@ left: 3px;
       <div id="master-content">
         <div id="placeorder-main-container" class="white-bg">
 
-            <h1 class="pad-lt-rt-med pad-tp-bt" style="font-size:26px;background-color:#fff;">Sign in to Your Account</h1>
+            <h1 class="pad-lt-rt-med pad-tp-bt" style="font-size:20px;background-color:#fff;">Sign in to Your Account</h1>
             <h6 class="pad-sm color-blk-bg wrap" style="padding:2px;"></h6>
             <div id="other-pay-row" class="pay-opt-row  clickable" style="padding: 15px 15px 0 15px" data-paytype="paymentMethod">
               <span style="font-size:14px;width:100%;">Username</span>
 
             </div>
             <div id="other-pay-row" class="pay-opt-row clickable " style="padding: 3px 15px 0 15px" data-paytype="paymentMethod">
-              <input type="text" placeholder="" style="width: 92%;">
+              <input type="text" placeholder="" style="width: 100%;">
 
             </div>
 
               <div id="other-pay-row" class="pay-opt-row  clickable" style="padding: 15px 15px 0 15px" data-paytype="paymentMethod">
-                <span style="font-size:14px;width:100%;">Password</span>
+                <span style="font-size:14px;width:100%;">Password</span><span style="float:right;font-size:12px;padding-right:5%;" onclick="pinFieldHide(this, 'passwd');">hide</span>
 
               </div>
               <div id="other-pay-row" class="pay-opt-row  clickable " style="padding: 3px 15px 0 15px" data-paytype="paymentMethod">
-                <input type="password" placeholder="" style="width: 92%;">
+                <input id="passwd" type="password" placeholder="" style="width: 100%;">
 
               </div>
 
               <div id="other-pay-row" class="pay-opt-row table clickable pad-med" style="width:93%"  data-paytype="paymentMethod">
-                <span style="text-align:center;font-size:13px;">Forgot Username or Password</span>
+                <span style="text-align:center;font-size:13px;color:#3182e6">Forgot Username or Password</span>
 
               </div>
 
@@ -1069,7 +1079,7 @@ left: 3px;
                 <button id="" class="btn-action btn-med max" type="button" onclick="window.location='Cart2.html'">Login</button>
               </div>
               <div class="pad-med">
-                <button id="" class="btn-buy btn-med max" type="button" onclick="window.location='Cart.html'">Create Account</button>
+                <button id="" class="outlineBtn btn-med max" type="button" onclick="window.location='Cart.html'">Create Account</button>
               </div>
             </div>
 
@@ -1694,5 +1704,14 @@ left: 3px;
     window.addEventListener('popstate', function(e) {
       SiteHistory.handleEventState(e.state);
     });
+    function pinFieldHide(element, inputName) {
+  	if ($(element).html() === 'hide') {
+  		$('#'+inputName).attr('type', 'password');
+  		$(element).html('show');
+  	} else {
+  		$('#'+inputName).attr('type', 'text');
+  		$(element).html('hide');
+  	}
+  }
     history.replaceState(JSON.stringify({name: "home", id: "", href: window.location.href}), "", window.location.href);
     </script></body></html>

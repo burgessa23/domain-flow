@@ -713,40 +713,39 @@ function __doPostBack(eventTarget, eventArgument) {
 				</ul>
 				<ul id="uxh-nav-right" class="nav navbar-nav navbar-right" role="menubar">
 					<li id="uxh-nav-support"><a id="uxhNavSupportLink" role="menuitem" href="">Support</a></li>
-					<li id="uxh-nav-user" class="dropdown">
-						<a id="uxh-nav-user-link" role="button" class="dropdown-toggle" href="/admin#" data-toggle="dropdown"><span id="uxh-s-name-prefix" style="display: none;">Customer #</span><span id="uxh-s-name">Garrett</span><span id="logoutLinkMobile" style="font-size: 12px;color:#ddd;line-height:37px;padding-left:10px;"></span> <b class="caret"></b></a>
+					<li id="uxh-nav-user" class="">
+                    <a id="uxh-nav-user-link" role="button" class="dropdown-toggle" href="" data-toggle="dropdown"><span id="uxh-s-name-prefix" style="display: none;">Customer #</span><span id="uxh-s-name">Andrew Johnson</span><span id="logoutLinkMobile" style="font-size: 16px;color:#ddd;line-height:37px;padding-left:10px;"></span> </a>
+                    <ul id="uxh-nav-user-menu" class=" shopper-menu"  role="menu">
+                        <li id="uxh-s-header" class="uxh-logged-in shopper-header dropdown-header" style="display:none;">
+                            <div id="uxh-s-fullname" class="uxc-nowrap" style="">Andrew Burgess</div>
+                            <div id="uxh-s-status" class="uxc-nowrap" style="display: none;"></div>
+                            <div id="uxh-mi-custid" class="uxc-nowrap" style="">
+                                <span class="uxc-shopper-menu-label" style="font-size:14px;">Customer #:</span>
+                                <span id="uxh-s-id" style="margin-left:25px;">u9g</span>
+                            </div>
+                            <div id="uxh-mi-mgrid" class="uxc-nowrap" style="font-size: 14px; margin-bottom: 5px;">
+                                <span class="uxc-shopper-menu-label">Manager ID</span>
+                                <span id="uxh-mgr-id" style="margin-left: 31px;">XXXXX</span>
+                            </div>
+                            <div id="uxh-mi-mgrname" class="uxc-nowrap" style="font-size: 14px; margin-bottom: 5px;">
+                                <span class="uxc-shopper-menu-label">Manager Name</span>
+                                <span id="uxh-mgr-name" style="margin-left:7px;">Gern Blanston</span>
+                            </div>
+                            <div id="uxh-vip-info" class="uxc-nowrap" style="font-size: 14px;">
+                                <span id="uxh-vip-label" class="uxc-shopper-menu-label">VIP Acct Exec</span>
+                                <div id="uhx-vip-details">
+                                    <div id="uxh-vip-repname" style="margin-left:15px;margin-bottom:13px;">Hector Plasm</div>
+                                    <div id="uxh-vip-phone" style="margin-left:15px;margin-bottom:10px;">1-800-555-1212</div>
+                                    <div style="margin-left:15px;">hplasm@godaddy.com</div>
+                                </div>
+                            </div>
+                        </li>
 
-						<ul id="uxh-nav-user-menu" class="dropdown-menu shopper-menu" role="menu">
-							<li id="uxh-s-header" class="uxh-logged-in shopper-header dropdown-header">
-								<div id="uxh-s-fullname" class="uxc-nowrap" style="">Garrett Matsudaira</div>
-								<div id="uxh-s-status" class="uxc-nowrap" style="display: none;"></div>
-								<div id="uxh-mi-custid" class="uxc-nowrap" style="">
-									<span class="uxc-shopper-menu-label">Customer #:</span>
-									<span id="uxh-s-id">3pw</span>
-								</div>
-								<div id="uxh-mi-mgrid" class="uxc-nowrap" style="">
-									<span class="uxc-shopper-menu-label">Manager ID:</span>
-									<span id="uxh-mgr-id">23456</span>
-								</div>
-								<div id="uxh-mi-mgrname" class="uxc-nowrap" style="">
-									<span class="uxc-shopper-menu-label">Manager Name:</span>
-									<span id="uxh-mgr-name">Gern Blanston</span>
-								</div>
-								<div id="uxh-vip-info" class="uxc-nowrap" style="">
-									<span id="uxh-vip-label" class="uxc-shopper-menu-label">VIP Acct Exec:</span>
-									<div id="uhx-vip-details">
-										<div id="uxh-vip-repname">Hector Plasm</div>
-										<div id="uxh-vip-phone">1-800-456-1212</div>
-										<div><a id="uxh-vip-email" href="">hplasm@godaddy.com</a></div>
-									</div>
-								</div>
-							</li>
+                        <li id="uxh-nav-logged-in" class="uxh-logged-in" style="list-style:none;margin-bottom:6px;margin-left:40px;"><a role="menuitem" href="" class="logoutlink" style="color: #FFF;background-color: #333;line-height:20px;font-size:16px;">Log Out</a></li>
+                        <li id="uxh-nav-logged-out" class="uxh-logged-out" style="display: none;"><a role="menuitem" href="https://www.godaddy.com/?">Log In</a></li>
 
-							<li id="uxh-nav-logged-in" class="uxh-logged-in"><a role="menuitem" href="">Log Out</a></li>
-							<li id="uxh-nav-logged-out" class="uxh-logged-out" style="display: none;"><a role="menuitem" href="">Log In</a></li>
-
-						</ul>
-					</li>
+                    </ul>
+                </li>
 
 				</ul>
 
@@ -1469,8 +1468,8 @@ function __doPostBack(eventTarget, eventArgument) {
 
 
 		$('#uxh-nav-user-link').attr('data-toggle', '');
-		$('#logoutLinkMobile').show().html('Garrett - Customer#: 3pw');
-		$('#uxh-s-name').html('Logout');
+		$('#logoutLinkMobile').show().html('  (Customer# U9G)');
+		// $('#uxh-s-name').html('Logout');
 
 		$('#uxh-nav-app-menu').show();
 		$('#domainProdLinkGreen').click(false);
